@@ -1,0 +1,36 @@
+ARTISANS OF SOUND WEBSITE: HOW TO PUBLISH ON www.artisansofsound.in
+
+This folder is the complete site. Upload it as it is. Open index.html first.
+
+OPTION A: VERCEL (free)
+1. Vercel's dashboard cannot take a folder upload. Put this folder's contents in a GitHub repository (github.com, New repository, Add file, Upload files), then create a free account at vercel.com with GitHub and choose Add New, Project, and import that repository.
+2. Framework preset: Other. Build command: leave empty. Output directory: leave empty (the root folder).
+3. In the project, open Settings, Domains, and add www.artisansofsound.in. Also add artisansofsound.in and set it to redirect to www.
+4. Vercel then shows the exact DNS records to add. Open Hostinger, Domains, artisansofsound.in, DNS / Nameservers, and add:
+   - an A record for the root (@) with the IP address Vercel shows (usually 76.76.21.21)
+   - a CNAME record for www with the value Vercel shows
+   Delete any older A or CNAME record for @ or www that points to Hostinger parking.
+5. Do not touch the MX records. They keep any @artisansofsound.in email working.
+6. Wait 10 to 60 minutes for the domain to go live. Vercel issues the https certificate by itself.
+
+OPTION B: HOSTINGER HOSTING (only if you have a hosting plan)
+1. Hostinger hPanel, Websites, File Manager, open public_html and delete the default files.
+2. Upload the contents of this folder (not the folder itself) so index.html sits directly in public_html.
+3. Keep the .htaccess file. It forces https and redirects artisansofsound.in to www.
+4. In hPanel, SSL, install the free SSL for the domain.
+
+TO ADD OR REMOVE AN ACT LATER
+Open acts.js. Each line is one act: name, format code, city, label, photo, tag, more (1 = wider network), extra occasions.
+Photo-less acts show initials. Add a photo by putting the file in img/ and writing its path in the photo field.
+Change it once and every page updates. Re-upload only acts.js.
+
+NOTES
+- The site shows no phone numbers, emails or fees. The workbook stays private.
+- The enquiry form opens WhatsApp (+91 91292 37566) or copies an email to artisanofsounds@gmail.com. Check both are the ones you want public.
+- The "19 states" figure on the home page was not changed. Update it if the wider network changes the count.
+
+ARTIST VIDEOS
+Clicking an act opens a viewer. Add a video for an act by editing videos.js: one line, the act's name exactly as it appears on the site, then its video link.
+Links that play inside the site: YouTube (watch, youtu.be, shorts), Instagram reels and posts, Google Drive FILE links shared as "Anyone with the link", or a direct .mp4 link.
+Acts with no line show a "Ask for videos on WhatsApp" button instead.
+The old Videos folder link was removed from the footer because that Drive folder is private and visitors saw "You need access".
