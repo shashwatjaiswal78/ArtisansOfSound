@@ -11,11 +11,12 @@ import build_artists as A
 ROOT, SITE, esc = U.ROOT, U.SITE, U.esc
 L = json.load(open(os.path.join(ROOT, "tools", "landing.json"), encoding="utf8"))
 LAB, OCC = A.LAB, A.OCC
-MIN_FMT, MIN_OCC, MIN_CITY, MIN_COMBO = 3, 10, 3, 3
+MIN_FMT, MIN_OCC, MIN_CITY, MIN_COMBO = 1, 1, 3, 3
 CAP = 72
 _dims = {}
 
 def has_copy(d): return bool(d.get("intro"))
+def na(n): return f"{n} act" if n == 1 else f"{n} acts"
 
 def plan(acts):
     reg = {"fmt": {}, "occ": {}, "city": {}, "combo": set(), "top": {}}
@@ -101,12 +102,12 @@ def category(k, acts, reg):
     d = L["formats"][k]; mine = [a for a in acts if k in a["f"]]
     name = d["name"]; ph = A.phrase(name); url = f"{SITE}/book/{d['slug']}/"
     title = f"{name} to Book in India | Artisans of Sound"
-    desc = trim(f"Book {ph} for weddings and events across India. {len(mine)} acts, videos and one clear quote within 24 hours.")
+    desc = trim(f"Book {ph} for weddings and events across India. {na(len(mine))}, videos and one clear quote within 24 hours.")
     w = wa(f"Hi Artisans of Sound, I am looking for {ph} for my event.")
     occs = [(f"/occasions/{reg['occ'][o]}/", L["occasions"][o]["name"]) for o in A.FO.get(k, []) if o in reg["occ"]][:8]
     cities = [(f"/book/{d['slug']}/{L['cities'][c]['slug']}/", f"{name} in {c}") for c in reg["city"] if (k, c) in reg["combo"]]
     other = [(f"/book/{L['formats'][x]['slug']}/", L["formats"][x]["name"]) for x in sorted(reg["fmt"], key=lambda x: -sum(x in a["f"] for a in acts)) if x != k][:8]
-    body = (head_block(f"{len(mine)} acts", d["h1"], d["intro"], w) +
+    body = (head_block(na(len(mine)), d["h1"], d["intro"], w) +
             sec("Acts you can book", grid(mine) + (f'<p class="anote">Showing {CAP} of {len(mine)}. <a href="/artists/">See every act</a>.</p>' if len(mine) > CAP else "")) +
             sec("How to choose", f'<div class="ubody"><p>{esc(d["tips"])}</p></div>') +
             (sec("Popular for", links(occs)) if occs else "") + (sec("In your city", links(cities)) if cities else "") +
@@ -134,7 +135,7 @@ def top(t, acts, reg):
     label = t[0]; d = L["tops"][label]; url = f"{SITE}/top/{d['slug']}/"
     mine = top_acts(t, acts)
     title = f"{label} in India | Artisans of Sound"
-    desc = trim(f"{d['intro'].split('. ')[0].rstrip('.')}. {len(mine)} acts, videos and one clear quote within 24 hours.")
+    desc = trim(f"{d['intro'].split('. ')[0].rstrip('.')}. {na(len(mine))}, videos and one clear quote within 24 hours.")
     w = wa(f"Hi Artisans of Sound, I am looking for: {label}.")
     rel = []
     for f in t[1][:3]:
@@ -142,7 +143,7 @@ def top(t, acts, reg):
     for o in t[2]:
         if o in reg["occ"]: rel.append((f"/occasions/{reg['occ'][o]}/", L["occasions"][o]["name"]))
     other = [(f"/top/{L['tops'][x[0]]['slug']}/", x[0]) for x in A.TAX["TOP"] if x[0] in reg["top"] and x[0] != label][:10]
-    body = (head_block(f"{len(mine)} acts", label, d["intro"], w) +
+    body = (head_block(na(len(mine)), label, d["intro"], w) +
             sec("Acts you can book", grid(mine) + (f'<p class="anote">Showing {CAP} of {len(mine)}. <a href="/artists/">See every act</a>.</p>' if len(mine) > CAP else "")) +
             (sec("Related", links(rel)) if rel else "") + cta(w, CTA) + sec("More top lists", links(other + [("/top/", "All top lists")])))
     write(["top", d["slug"]], shell(url, title, desc, [("Home", "/"), ("Top lists", "/top/"), (label, f"/top/{d['slug']}/")], body, sorted(mine, key=rank)[:CAP], None, f"Hi Artisans of Sound, I am looking for: {label}."))
@@ -200,7 +201,7 @@ def build(acts, reg):
     first = lambda d: d["intro"].split(". ")[0].rstrip(".") + "."
     urls.append(hub(["book"], "Book artists by category | Artisans of Sound", "Book artists by category",
         "Live bands, DJs, singers, anchors, celebrity and special acts. Pick a category to see the acts and videos.",
-        [(f"/book/{L['formats'][k]['slug']}/", L["formats"][k]["name"], f"{sum(k in a['f'] for a in acts)} acts. {first(L['formats'][k])}") for k in reg["fmt"]], "Categories"))
+        [(f"/book/{L['formats'][k]['slug']}/", L["formats"][k]["name"], f"{na(sum(k in a['f'] for a in acts))}. {first(L['formats'][k])}") for k in reg["fmt"]], "Categories"))
     urls.append(hub(["occasions"], "Book artists by occasion | Artisans of Sound", "Book artists by occasion",
         "Weddings, sangeets, parties, corporate events and festivals. Find the right kind of act for your occasion.",
         [(f"/occasions/{L['occasions'][k]['slug']}/", L["occasions"][k]["name"], first(L["occasions"][k])) for k in reg["occ"]], "Occasions"))

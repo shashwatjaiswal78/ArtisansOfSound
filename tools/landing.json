@@ -407,6 +407,57 @@
      "Cocktail nights, lounges, corporate dinners and festivals."
     ]
    ]
+  },
+  "bollyretro": {
+   "slug": "bollywood-retro-acts",
+   "name": "Bollywood retro acts",
+   "h1": "Bollywood retro acts to book in India",
+   "intro": "Classic Bollywood songs from the golden era, performed live. Retro acts suit weddings, anniversaries, family evenings and corporate dinners where guests of every age want to sing along.",
+   "tips": "Ask for the song list and the eras covered, from the fifties to the nineties. Share the age mix of your guests so the set leans on the songs they know best.",
+   "faq": [
+    [
+     "What events suit a retro Bollywood act?",
+     "Weddings, anniversaries, retirement parties, family evenings and corporate dinners."
+    ],
+    [
+     "Can the act take song requests?",
+     "Often yes. Share your must-play songs when you enquire and we will confirm with the act."
+    ]
+   ]
+  },
+  "intl": {
+   "slug": "international-bands",
+   "name": "International bands",
+   "h1": "International bands and acts to book in India",
+   "intro": "International and internationally styled acts for weddings, corporate galas, luxury events and festivals. Share your date and venue and we will confirm availability and travel.",
+   "tips": "International acts need more lead time for travel, stay and permissions. Share the date, city, venue and audience size early so the quote covers everything.",
+   "faq": [
+    [
+     "How early should I book an international act?",
+     "As early as your date is fixed, since travel and logistics take planning."
+    ],
+    [
+     "Can you arrange travel and stay?",
+     "Yes. We plan travel and stay with you and include them in the quote."
+    ]
+   ]
+  },
+  "reality": {
+   "slug": "indian-idol-and-reality-tv-singers",
+   "name": "Indian Idol and reality TV singers",
+   "h1": "Indian Idol and reality TV singers to book",
+   "intro": "Singers who have appeared on Indian Idol, Sa Re Ga Ma Pa and similar shows, available for weddings, corporate events and shows.",
+   "tips": "Share the date, venue, audience and the kind of set you want. Ask about the set length, the band or track support, and whether the artist can do a short appearance as well as a full show.",
+   "faq": [
+    [
+     "Can a reality TV singer perform a full set?",
+     "Yes, in most cases. Share the length and format and we will confirm."
+    ],
+    [
+     "How do I check availability?",
+     "Share your date and city with us and we will confirm and send videos with a quote."
+    ]
+   ]
   }
  },
  "occasions": {
@@ -656,10 +707,25 @@
    "slug": "anniversary",
    "name": "Anniversaries",
    "h1": "Artists for anniversary celebrations",
-   "intro": "",
-   "tips": "",
-   "formats": [],
-   "faq": []
+   "intro": "An anniversary calls for music with feeling: soft retro songs, a ghazal or a singer who can dedicate a number. It works as well for a family dinner as for a big party.",
+   "tips": "Share the guests, the songs that mean something to the couple and the setting. A singer, duo or instrumentalist suits a dinner, while a band or DJ suits a larger celebration.",
+   "formats": [
+    "ghazal",
+    "solosing",
+    "duotrio",
+    "soloinst",
+    "live"
+   ],
+   "faq": [
+    [
+     "What music suits an anniversary?",
+     "Retro Bollywood, ghazals and soft favourites, with a DJ or band for a bigger celebration."
+    ],
+    [
+     "Can the artist dedicate a song?",
+     "Many can. Mention it when you enquire."
+    ]
+   ]
   },
   "babyshower": {
    "slug": "baby-shower",
@@ -1046,10 +1112,25 @@
    "slug": "private-dinner",
    "name": "Private dinners",
    "h1": "Artists for private dinners",
-   "intro": "",
-   "tips": "",
-   "formats": [],
-   "faq": []
+   "intro": "Private dinners need music that sits with the conversation. Ghazal, instrumental and soft vocal acts add atmosphere without taking over the room.",
+   "tips": "Share the venue, the guest count and the mood you want. Ask about compact setups and the volume the act plays at.",
+   "formats": [
+    "ghazal",
+    "soloinst",
+    "solosing",
+    "duotrio",
+    "lounge"
+   ],
+   "faq": [
+    [
+     "What suits a private dinner?",
+     "Ghazal singers, instrumentalists and soft vocal acts at a conversational volume."
+    ],
+    [
+     "Can the act play at a home or a small venue?",
+     "Yes, compact acts suit homes and small venues. Share the space."
+    ]
+   ]
   },
   "house": {
    "slug": "house-party",
