@@ -36,5 +36,12 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/artists/veronika-x-taishul/",
+      "destination": "/artists/taishul/",
+      "permanent": true
+    }
   ]
 }
