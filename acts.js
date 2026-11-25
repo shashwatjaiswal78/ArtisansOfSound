@@ -17,7 +17,7 @@ window.AOS_BIOS = {
     ],
     facts: [
       ["Performance length", "30 to 120 minutes"],
-      ["Team size", "5 to 8 musicians"],
+      ["Team size", "4 core members, more added if needed"],
       ["Languages", "English, Hindi"],
       ["Based in", "Mumbai"],
       ["Open to travel", "Worldwide"]
