@@ -57,7 +57,7 @@ def header(active='updates'):
 
 FOOTER = ('<footer>\n  <div class="in foot">\n    <img src="/img/logo-dark.png" alt="Artisans of Sound">\n'
  '    <nav aria-label="Footer"><a href="/categories.html">Artists</a><a href="/about.html">About</a><a href="/updates.html">Updates</a><a href="/terms.html">Terms</a><a href="/book/">Book by category</a><a href="/occasions/">Book by event</a><a href="/top/">Top lists</a><a href="/cities/">Cities</a><a href="/#enquiry">Enquire</a><a href="/#acts" target="_blank" rel="noopener">Videos</a></nav>\n'
- '    <p>Artisans of Sound, Delhi, Lucknow. Artist management and live events.</p>\n  </div>\n</footer>\n')
+ '    <p>Artisans of Sound, Delhi, Lucknow. Artist management and live events.</p>\n  </div>\n</footer>\n<script src="/search.js" defer></script>\n')
 
 def url(p): return f"{SITE}/updates/{p['slug']}/"
 

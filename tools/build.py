@@ -9,6 +9,7 @@ acts = build_artists.load_acts()
 reg = build_landing.plan(acts)
 extra = build_artists.build(acts, reg) + build_landing.build(acts, reg)
 build_landing.write_links(acts, reg)
+build_landing.write_search_index(acts, reg)
 import re, subprocess
 def gitdate(*paths):
     try:
