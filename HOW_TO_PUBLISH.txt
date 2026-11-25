@@ -22,7 +22,7 @@ OPTION B: HOSTINGER HOSTING (only if you have a hosting plan)
 TO ADD OR REMOVE AN ACT LATER
 Open acts.js. Each line is one act: name, format code, city, label, photo, tag, more (1 = wider network), extra occasions.
 Photo-less acts show initials. Add a photo by putting the file in img/ and writing its path in the photo field.
-Change it once and every page updates. Re-upload only acts.js.
+Change it once and every page updates. Then run python3 tools/build.py and commit (see README), so the artist pages update.
 
 NOTES
 - The site shows no phone numbers, emails or fees. The workbook stays private.

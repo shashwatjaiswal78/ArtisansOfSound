@@ -2,7 +2,7 @@
 """Build the static Updates pages.
 
 Source of truth: posts.json (edit or add posts there, newest first).
-Run:  python3 tools/build_updates.py
+Normally run via:  python3 tools/build.py  (builds updates and artist pages)
 Writes: updates.html, updates/<slug>/index.html, sitemap.xml
 Commit the generated files; Vercel serves them as they are (no build step).
 """
@@ -28,7 +28,7 @@ HEAD_ICONS = ('<link rel="icon" href="/favicon.ico" sizes="any">\n'
  '<link rel="apple-touch-icon" href="/apple-touch-icon.png">\n')
 FONTS = '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">\n<link rel="stylesheet" href="/updates.css">\n'
 
-def head(title, desc, canon, og_type="website", extra="", ld=None):
+def head(title, desc, canon, og_type="website", extra="", ld=None, css=""):
     t, d = esc(title), esc(desc)
     out = ('<!doctype html>\n<html lang="en"><head>\n<meta charset="utf-8">\n'
      '<meta name="viewport" content="width=device-width,initial-scale=1">\n'
@@ -42,16 +42,16 @@ def head(title, desc, canon, og_type="website", extra="", ld=None):
      + extra +
      '<meta name="twitter:card" content="summary_large_image">\n'
      f'<meta name="twitter:title" content="{t}">\n<meta name="twitter:description" content="{d}">\n'
-     f'<meta name="twitter:image" content="{SITE}/img/og.jpg">\n' + FONTS)
+     f'<meta name="twitter:image" content="{SITE}/img/og.jpg">\n' + FONTS + css)
     if ld:
         out += '<script type="application/ld+json">' + json.dumps(ld, ensure_ascii=False).replace("</", "<\\/") + '</script>\n'
     return out + '</head><body>\n'
 
-def header(current_updates=True):
+def header(active='updates'):
     return ('<header class="top">\n  <div class="in">\n    <nav class="nav" aria-label="Main">\n'
      '      <a href="/"><img src="/img/logo-dark.png" alt="Artisans of Sound"></a>\n'
-     '      <ul id="mmenu"><li class="navdd"><button type="button" class="navddb" aria-expanded="false" aria-haspopup="true" aria-controls="navddm">Artists<svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M1.5 3.5L5 7l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="navddm" id="navddm" hidden><a href="/top-artists.html">Top artists</a><a href="/events.html">Book for any event</a><a href="/categories.html">Artist categories</a></div></li>'
-     '<li><a href="/about.html">About</a></li><li><a href="/updates.html" aria-current="page">Updates</a></li><li><a href="/terms.html">Terms</a></li><li><a href="/join.html">Join us</a></li></ul>\n'
+     '      <ul id="mmenu"><li class="navdd"><button type="button" class="navddb' + (' on' if active == 'artists' else '') + '" aria-expanded="false" aria-haspopup="true" aria-controls="navddm">Artists<svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M1.5 3.5L5 7l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="navddm" id="navddm" hidden><a href="/top-artists.html">Top artists</a><a href="/events.html">Book for any event</a><a href="/categories.html">Artist categories</a><a href="/artists/">All artists</a></div></li>'
+     '<li><a href="/about.html">About</a></li><li><a href="/updates.html"' + (' aria-current="page"' if active == 'updates' else '') + '>Updates</a></li><li><a href="/terms.html">Terms</a></li><li><a href="/join.html">Join us</a></li></ul>\n'
      '      <button type="button" class="mbtn" id="mbtn" aria-expanded="false" aria-controls="mmenu">Menu</button>\n'
      '      <a class="dark-pill" href="/#enquiry">Book an act</a>\n    </nav>\n  </div>\n</header>\n')
 
@@ -131,16 +131,20 @@ def build_list():
     open(os.path.join(ROOT, "updates.html"), "w", encoding="utf8").write(body)
 
 # ---------- sitemap ----------
-def build_sitemap():
+def build_sitemap(extra=()):
     static = ["", "top-artists.html", "events.html", "categories.html", "about.html", "updates.html", "join.html", "terms.html"]
     last = max(iso(p["date"]) for p in posts)
     rows = [f"<url><loc>{SITE}/{s}</loc>" + (f"<lastmod>{last}</lastmod>" if s == "updates.html" else "") + "</url>" for s in static]
     rows += [f"<url><loc>{url(p)}</loc><lastmod>{iso(p['date'])}</lastmod></url>" for p in posts]
+    rows += list(extra)
     open(os.path.join(ROOT, "sitemap.xml"), "w", encoding="utf8").write(
         '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "\n".join(rows) + "\n</urlset>\n")
 
-if __name__ == "__main__":
+def build_all(sitemap_extra=()):
     shutil.rmtree(os.path.join(ROOT, "updates"), ignore_errors=True)
     for p in posts: build_post(p)
-    build_list(); build_sitemap()
+    build_list(); build_sitemap(sitemap_extra)
+
+if __name__ == "__main__":
+    build_all()
     print(f"built {len(posts)} posts")

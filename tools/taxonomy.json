@@ -1,0 +1,961 @@
+{
+ "FORMATS": [
+  [
+   "instrband",
+   "Instrumental band"
+  ],
+  [
+   "lounge",
+   "Lounge acts"
+  ],
+  [
+   "intl",
+   "International band"
+  ],
+  [
+   "western",
+   "Western band"
+  ],
+  [
+   "jazz",
+   "Jazz band"
+  ],
+  [
+   "choir",
+   "Choir, carol group"
+  ],
+  [
+   "live",
+   "Bollywood, Punjabi"
+  ],
+  [
+   "bollyretro",
+   "Bollywood retro"
+  ],
+  [
+   "bollyrock",
+   "Bollywood rock"
+  ],
+  [
+   "sufibolly",
+   "Sufi Bollywood band"
+  ],
+  [
+   "sufiq",
+   "Sufi Qawwali band"
+  ],
+  [
+   "soloinst",
+   "Solo instrumental"
+  ],
+  [
+   "rajfusion",
+   "Rajasthani fusion"
+  ],
+  [
+   "ghazal",
+   "Ghazal and classical"
+  ],
+  [
+   "magiccomedy",
+   "Magic and comedy"
+  ],
+  [
+   "solosing",
+   "Solo singers"
+  ],
+  [
+   "duotrio",
+   "Duo and trio"
+  ],
+  [
+   "dj",
+   "DJ"
+  ],
+  [
+   "djband",
+   "DJ based band"
+  ],
+  [
+   "djperc",
+   "DJ + percussions"
+  ],
+  [
+   "anchor",
+   "Anchors"
+  ],
+  [
+   "celeb",
+   "Celebrity artists"
+  ],
+  [
+   "standup",
+   "Celebrity stand-up comedians"
+  ],
+  [
+   "reality",
+   "Indian Idol and Sa Re Ga Ma Pa"
+  ],
+  [
+   "allgirl",
+   "All girls band"
+  ],
+  [
+   "devotional",
+   "Devotional, Bhajan"
+  ],
+  [
+   "rap",
+   "Rap and hip hop"
+  ]
+ ],
+ "OCCS": [
+  [
+   "newyear",
+   "New Year"
+  ],
+  [
+   "wedding",
+   "Wedding"
+  ],
+  [
+   "engagement",
+   "Engagement or Roka"
+  ],
+  [
+   "mehendi",
+   "Mehendi"
+  ],
+  [
+   "reception",
+   "Reception"
+  ],
+  [
+   "sangeet",
+   "Sangeet/Cocktail Night"
+  ],
+  [
+   "haldi",
+   "Haldi"
+  ],
+  [
+   "baraat",
+   "Baraat"
+  ],
+  [
+   "pheras",
+   "Musical pheras"
+  ],
+  [
+   "chowki",
+   "Mata ki chowki"
+  ],
+  [
+   "birthday",
+   "Birthday"
+  ],
+  [
+   "kidsbday",
+   "Kids birthday"
+  ],
+  [
+   "anniversary",
+   "Anniversary"
+  ],
+  [
+   "babyshower",
+   "Baby shower or Godh bharai"
+  ],
+  [
+   "housewarming",
+   "Housewarming"
+  ],
+  [
+   "retirement",
+   "Retirement or farewell party"
+  ],
+  [
+   "bachelor",
+   "Bachelor or bachelorette party"
+  ],
+  [
+   "diwali",
+   "Diwali party"
+  ],
+  [
+   "garba",
+   "Garba or Dandiya night"
+  ],
+  [
+   "holi",
+   "Holi party"
+  ],
+  [
+   "christmas",
+   "Christmas"
+  ],
+  [
+   "house",
+   "House party"
+  ],
+  [
+   "pool",
+   "Pool party or beach party"
+  ],
+  [
+   "college",
+   "College fests"
+  ],
+  [
+   "corporate",
+   "Corporate event"
+  ],
+  [
+   "launch",
+   "Product launch or brand event"
+  ],
+  [
+   "annualday",
+   "Annual day or award night"
+  ],
+  [
+   "venue",
+   "Restaurant, cafe or hotel nights"
+  ],
+  [
+   "brunch",
+   "Brunch or lounge"
+  ],
+  [
+   "dinner",
+   "Private dinner"
+  ]
+ ],
+ "GENRES": [
+  [
+   "bollywood",
+   "Bollywood"
+  ],
+  [
+   "retro",
+   "Retro and classic"
+  ],
+  [
+   "punjabi",
+   "Punjabi"
+  ],
+  [
+   "pop",
+   "Pop and English"
+  ],
+  [
+   "rock",
+   "Rock"
+  ],
+  [
+   "jazz",
+   "Jazz and blues"
+  ],
+  [
+   "sufi",
+   "Sufi and qawwali"
+  ],
+  [
+   "devotional",
+   "Devotional and bhajan"
+  ],
+  [
+   "edm",
+   "Electronic and EDM"
+  ],
+  [
+   "hiphop",
+   "Hip hop"
+  ],
+  [
+   "folk",
+   "Folk"
+  ],
+  [
+   "ghazal",
+   "Ghazal"
+  ],
+  [
+   "open",
+   "Open format"
+  ]
+ ],
+ "FO": {
+  "live": [
+   "newyear",
+   "wedding",
+   "reception",
+   "sangeet",
+   "haldi",
+   "birthday",
+   "diwali",
+   "garba",
+   "christmas",
+   "house",
+   "college",
+   "corporate",
+   "engagement",
+   "mehendi",
+   "retirement",
+   "housewarming",
+   "bachelor",
+   "launch",
+   "annualday",
+   "venue",
+   "pool",
+   "holi"
+  ],
+  "bollyretro": [
+   "newyear",
+   "wedding",
+   "reception",
+   "sangeet",
+   "haldi",
+   "birthday",
+   "diwali",
+   "garba",
+   "christmas",
+   "house",
+   "college",
+   "corporate",
+   "engagement",
+   "mehendi",
+   "retirement",
+   "housewarming",
+   "launch",
+   "annualday",
+   "venue"
+  ],
+  "bollyrock": [
+   "newyear",
+   "wedding",
+   "reception",
+   "sangeet",
+   "haldi",
+   "birthday",
+   "diwali",
+   "garba",
+   "christmas",
+   "house",
+   "college",
+   "corporate",
+   "engagement",
+   "bachelor",
+   "launch",
+   "annualday",
+   "venue",
+   "pool"
+  ],
+  "djband": [
+   "newyear",
+   "wedding",
+   "reception",
+   "sangeet",
+   "baraat",
+   "birthday",
+   "diwali",
+   "garba",
+   "christmas",
+   "house",
+   "college",
+   "corporate",
+   "engagement",
+   "bachelor",
+   "launch",
+   "pool",
+   "holi"
+  ],
+  "allgirl": [
+   "newyear",
+   "wedding",
+   "reception",
+   "sangeet",
+   "haldi",
+   "birthday",
+   "diwali",
+   "christmas",
+   "house",
+   "college",
+   "corporate",
+   "brunch",
+   "engagement",
+   "mehendi",
+   "bachelor",
+   "launch",
+   "annualday",
+   "pool",
+   "holi"
+  ],
+  "dj": [
+   "newyear",
+   "wedding",
+   "reception",
+   "sangeet",
+   "haldi",
+   "baraat",
+   "birthday",
+   "diwali",
+   "garba",
+   "christmas",
+   "house",
+   "college",
+   "corporate",
+   "brunch",
+   "kidsbday",
+   "engagement",
+   "mehendi",
+   "bachelor",
+   "launch",
+   "annualday",
+   "pool",
+   "holi"
+  ],
+  "djperc": [
+   "newyear",
+   "wedding",
+   "reception",
+   "sangeet",
+   "haldi",
+   "birthday",
+   "diwali",
+   "garba",
+   "christmas",
+   "house",
+   "college",
+   "corporate",
+   "engagement",
+   "bachelor",
+   "pool",
+   "holi"
+  ],
+  "solosing": [
+   "newyear",
+   "wedding",
+   "reception",
+   "sangeet",
+   "haldi",
+   "birthday",
+   "diwali",
+   "christmas",
+   "house",
+   "college",
+   "corporate",
+   "brunch",
+   "kidsbday",
+   "engagement",
+   "mehendi",
+   "babyshower",
+   "retirement",
+   "housewarming",
+   "annualday",
+   "venue"
+  ],
+  "duotrio": [
+   "newyear",
+   "wedding",
+   "reception",
+   "sangeet",
+   "haldi",
+   "birthday",
+   "diwali",
+   "christmas",
+   "house",
+   "college",
+   "corporate",
+   "brunch",
+   "kidsbday",
+   "engagement",
+   "mehendi",
+   "babyshower",
+   "retirement",
+   "housewarming",
+   "annualday",
+   "venue"
+  ],
+  "instrband": [
+   "newyear",
+   "wedding",
+   "reception",
+   "sangeet",
+   "haldi",
+   "birthday",
+   "diwali",
+   "christmas",
+   "house",
+   "college",
+   "corporate",
+   "brunch",
+   "pheras",
+   "engagement",
+   "mehendi",
+   "babyshower",
+   "retirement",
+   "housewarming",
+   "launch",
+   "venue"
+  ],
+  "lounge": [
+   "newyear",
+   "wedding",
+   "reception",
+   "birthday",
+   "diwali",
+   "christmas",
+   "house",
+   "corporate",
+   "brunch",
+   "engagement",
+   "mehendi",
+   "babyshower",
+   "retirement",
+   "housewarming",
+   "launch",
+   "venue"
+  ],
+  "ghazal": [
+   "wedding",
+   "reception",
+   "sangeet",
+   "birthday",
+   "anniversary",
+   "diwali",
+   "house",
+   "corporate",
+   "dinner",
+   "pheras",
+   "engagement",
+   "mehendi",
+   "babyshower",
+   "retirement",
+   "housewarming",
+   "venue"
+  ],
+  "magiccomedy": [
+   "newyear",
+   "wedding",
+   "reception",
+   "sangeet",
+   "birthday",
+   "diwali",
+   "christmas",
+   "house",
+   "college",
+   "corporate",
+   "kidsbday",
+   "babyshower",
+   "bachelor",
+   "launch",
+   "annualday"
+  ],
+  "standup": [
+   "newyear",
+   "wedding",
+   "reception",
+   "sangeet",
+   "birthday",
+   "diwali",
+   "christmas",
+   "house",
+   "college",
+   "corporate",
+   "kidsbday",
+   "babyshower",
+   "bachelor",
+   "launch",
+   "annualday"
+  ],
+  "soloinst": [
+   "newyear",
+   "wedding",
+   "reception",
+   "birthday",
+   "diwali",
+   "christmas",
+   "house",
+   "corporate",
+   "brunch",
+   "pheras",
+   "engagement",
+   "mehendi",
+   "babyshower",
+   "retirement",
+   "housewarming",
+   "venue"
+  ],
+  "intl": [
+   "newyear",
+   "wedding",
+   "reception",
+   "sangeet",
+   "haldi",
+   "birthday",
+   "diwali",
+   "christmas",
+   "house",
+   "college",
+   "corporate",
+   "engagement",
+   "bachelor",
+   "launch",
+   "annualday",
+   "pool"
+  ],
+  "western": [
+   "newyear",
+   "wedding",
+   "reception",
+   "sangeet",
+   "birthday",
+   "christmas",
+   "house",
+   "college",
+   "corporate",
+   "brunch",
+   "engagement",
+   "bachelor",
+   "launch",
+   "venue",
+   "pool"
+  ],
+  "jazz": [
+   "newyear",
+   "wedding",
+   "reception",
+   "sangeet",
+   "birthday",
+   "christmas",
+   "house",
+   "college",
+   "corporate",
+   "brunch",
+   "engagement",
+   "retirement",
+   "housewarming",
+   "launch",
+   "venue"
+  ],
+  "choir": [
+   "newyear",
+   "wedding",
+   "reception",
+   "sangeet",
+   "birthday",
+   "diwali",
+   "christmas",
+   "college",
+   "corporate",
+   "brunch"
+  ],
+  "sufibolly": [
+   "newyear",
+   "wedding",
+   "reception",
+   "sangeet",
+   "birthday",
+   "diwali",
+   "house",
+   "college",
+   "corporate",
+   "pheras",
+   "engagement",
+   "mehendi",
+   "retirement",
+   "housewarming",
+   "annualday",
+   "venue"
+  ],
+  "sufiq": [
+   "newyear",
+   "wedding",
+   "reception",
+   "sangeet",
+   "birthday",
+   "diwali",
+   "house",
+   "college",
+   "corporate",
+   "pheras",
+   "engagement",
+   "mehendi",
+   "venue"
+  ],
+  "rajfusion": [
+   "newyear",
+   "wedding",
+   "reception",
+   "sangeet",
+   "birthday",
+   "diwali",
+   "house",
+   "college",
+   "corporate",
+   "engagement",
+   "mehendi",
+   "annualday",
+   "holi"
+  ],
+  "devotional": [
+   "chowki",
+   "garba",
+   "diwali",
+   "wedding",
+   "reception",
+   "house",
+   "pheras",
+   "housewarming"
+  ],
+  "anchor": [
+   "newyear",
+   "wedding",
+   "reception",
+   "sangeet",
+   "haldi",
+   "baraat",
+   "chowki",
+   "birthday",
+   "diwali",
+   "garba",
+   "christmas",
+   "house",
+   "college",
+   "corporate",
+   "brunch",
+   "kidsbday",
+   "engagement",
+   "mehendi",
+   "babyshower",
+   "retirement",
+   "housewarming",
+   "bachelor",
+   "launch",
+   "annualday",
+   "holi"
+  ],
+  "celeb": [
+   "newyear",
+   "wedding",
+   "reception",
+   "sangeet",
+   "haldi",
+   "birthday",
+   "diwali",
+   "garba",
+   "christmas",
+   "house",
+   "college",
+   "corporate",
+   "engagement",
+   "launch",
+   "annualday"
+  ],
+  "reality": [
+   "newyear",
+   "wedding",
+   "reception",
+   "sangeet",
+   "haldi",
+   "birthday",
+   "diwali",
+   "garba",
+   "christmas",
+   "house",
+   "college",
+   "corporate",
+   "engagement",
+   "launch",
+   "annualday"
+  ],
+  "rap": [
+   "newyear",
+   "birthday",
+   "house",
+   "college",
+   "corporate",
+   "bachelor",
+   "launch",
+   "annualday",
+   "venue",
+   "pool"
+  ]
+ },
+ "FG": {
+  "live": [
+   "bollywood",
+   "retro",
+   "punjabi",
+   "pop",
+   "rock",
+   "open"
+  ],
+  "bollyretro": [
+   "bollywood",
+   "retro"
+  ],
+  "bollyrock": [
+   "bollywood",
+   "rock"
+  ],
+  "djband": [
+   "bollywood",
+   "punjabi",
+   "pop",
+   "edm",
+   "hiphop",
+   "open"
+  ],
+  "allgirl": [
+   "bollywood",
+   "retro",
+   "punjabi",
+   "pop",
+   "rock",
+   "open"
+  ],
+  "dj": [
+   "bollywood",
+   "punjabi",
+   "pop",
+   "edm",
+   "hiphop",
+   "open"
+  ],
+  "djperc": [
+   "bollywood",
+   "punjabi",
+   "edm",
+   "folk",
+   "open"
+  ],
+  "solosing": [
+   "bollywood",
+   "retro",
+   "pop",
+   "ghazal",
+   "sufi",
+   "open"
+  ],
+  "duotrio": [
+   "bollywood",
+   "retro",
+   "pop",
+   "ghazal",
+   "sufi",
+   "open"
+  ],
+  "instrband": [
+   "bollywood",
+   "retro",
+   "pop",
+   "open"
+  ],
+  "lounge": [
+   "bollywood",
+   "retro",
+   "pop",
+   "jazz",
+   "open"
+  ],
+  "soloinst": [
+   "bollywood",
+   "retro",
+   "pop",
+   "jazz",
+   "open"
+  ],
+  "intl": [
+   "pop",
+   "rock",
+   "edm",
+   "jazz",
+   "open"
+  ],
+  "western": [
+   "pop",
+   "rock",
+   "retro",
+   "open"
+  ],
+  "jazz": [
+   "jazz",
+   "retro",
+   "open"
+  ],
+  "choir": [
+   "pop",
+   "devotional",
+   "open"
+  ],
+  "sufibolly": [
+   "sufi",
+   "bollywood",
+   "ghazal",
+   "retro"
+  ],
+  "sufiq": [
+   "sufi",
+   "ghazal",
+   "devotional",
+   "folk"
+  ],
+  "rajfusion": [
+   "folk",
+   "open",
+   "bollywood"
+  ],
+  "ghazal": [
+   "ghazal",
+   "retro",
+   "sufi",
+   "folk"
+  ],
+  "devotional": [
+   "devotional",
+   "folk",
+   "sufi"
+  ],
+  "anchor": [],
+  "celeb": [
+   "bollywood",
+   "open"
+  ],
+  "rap": [
+   "hiphop",
+   "pop",
+   "open"
+  ]
+ },
+ "LAB": {
+  "live": "Live band",
+  "djband": "DJ based band",
+  "allgirl": "All-girl band",
+  "dj": "DJ",
+  "djperc": "DJ + percussion",
+  "solosing": "Solo singer",
+  "duotrio": "Duo or trio",
+  "instrband": "Instrumental band",
+  "lounge": "Lounge act",
+  "intl": "International band",
+  "western": "Western band",
+  "jazz": "Jazz band",
+  "choir": "Choir, carol group",
+  "sufibolly": "Sufi Bollywood",
+  "sufiq": "Sufi Qawwali",
+  "bollyretro": "Bollywood retro",
+  "bollyrock": "Bollywood rock",
+  "rajfusion": "Rajasthani fusion",
+  "ghazal": "Ghazal and classical",
+  "magiccomedy": "Magic and comedy",
+  "soloinst": "Solo instrumental",
+  "devotional": "Devotional band",
+  "anchor": "Anchor",
+  "celeb": "Celebrity artist",
+  "standup": "Celebrity stand-up comedian",
+  "reality": "Reality TV singer",
+  "rap": "Rapper"
+ }
+}
