@@ -13,7 +13,7 @@ window.AOS_BIOS = {
       "The Bombay Tux is a Mumbai-based multi-genre fusion band of four exceptionally talented musicians from diverse musical backgrounds. The band has made a strong mark in the entertainment industry with their peppy covers and groovy original compositions, all performed with their signature style and panache.",
       "The band features Dani (producer and keyboardist), Rahul (guitarist and producer), Galvin (guitarist and bassist) and Kaushal (producer and singer-songwriter). Together, they create a vibrant musical experience that captivates audiences.",
       "Known for their stylish stage presence and signature tuxedo look, The Bombay Tux delivers high-energy performances across genres including Bollywood, English pop and rock, blues and more. Their versatile repertoire makes them a perfect choice for sangeet ceremonies, wedding receptions, corporate events, college fests and premium live shows.",
-      "The Bombay Tux is available for booking across India. Use Book this act to check availability and event requirements."
+      "The Bombay Tux is available for booking across India. Use Check availability on WhatsApp to confirm your date and event requirements."
     ],
     facts: [
       ["Performance length", "30 to 120 minutes"],
@@ -26,7 +26,8 @@ window.AOS_BIOS = {
   "Sonu Nigam": {
     about: [
       "Sonu Nigam is one of India's best-known playback singers, also working as a music director, actor and dubbing artist. He began singing on stage with his father, the singer Agam Kumar Nigam, as a child, and trained in Hindustani classical music under Ustad Ghulam Mustafa Khan before moving to Mumbai to build his career.",
-      "His breakthrough came with \"Sandese Aate Hain\" from Border (1997). He has since recorded thousands of songs across many Indian languages, released pop albums and received the Padma Shri in 2022."
+      "His breakthrough came with \"Sandese Aate Hain\" from Border (1997). He has since recorded thousands of songs across many Indian languages, released pop albums and received the Padma Shri in 2022.",
+      "Sonu Nigam is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Sandese Aate Hain, Abhi Mujh Mein Kahin"],
@@ -36,7 +37,8 @@ window.AOS_BIOS = {
   "Shreya Ghoshal": {
     about: [
       "Shreya Ghoshal is one of India's most celebrated playback singers. Born in Berhampore, West Bengal, she wanted to be a singer from childhood and made her Bollywood debut with Devdas (2002), a performance that won her both a National Film Award and a Filmfare Award for Best Female Playback Singer.",
-      "She has since recorded songs in around twenty languages, including \"Barso Re\", \"Deewani Mastani\", \"Ghoomar\" and \"Samjhawan\", won multiple National Film Awards, judged television music shows and performs in concerts around the world."
+      "She has since recorded songs in around twenty languages, including \"Barso Re\", \"Deewani Mastani\", \"Ghoomar\" and \"Samjhawan\", won multiple National Film Awards, judged television music shows and performs in concerts around the world.",
+      "Shreya Ghoshal is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Barso Re, Deewani Mastani, Ghoomar"],
@@ -46,7 +48,8 @@ window.AOS_BIOS = {
   "Sunidhi Chauhan": {
     about: [
       "Sunidhi Chauhan is a playback singer from New Delhi who began singing as a child and became a household name after the Mast soundtrack in 1999. She has gone on to sing for hundreds of films and is known for her powerful, versatile voice.",
-      "Her best-known songs include \"Dhoom Machale\", \"Beedi\", \"Sheila Ki Jawani\" and \"Kamli\". She has won Filmfare Awards and other honours and is a regular on live stages."
+      "Her best-known songs include \"Dhoom Machale\", \"Beedi\", \"Sheila Ki Jawani\" and \"Kamli\". She has won Filmfare Awards and other honours and is a regular on live stages.",
+      "Sunidhi Chauhan is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Dhoom Machale, Beedi, Sheila Ki Jawani"],
@@ -56,7 +59,8 @@ window.AOS_BIOS = {
   "Shaan": {
     about: [
       "Shaan (Shantanu Mukherjee) is a playback singer, composer and television host from a musical family: his grandfather was a lyricist and his father a music director. He began his playback career in 1999 with Pyaar Mein Kabhi Kabhi.",
-      "He is known for songs such as \"Chand Sifarish\" from Fanaa, \"Jab Se Tere Naina\" from Saawariya and \"Behti Hawa Sa Tha Woh\" from 3 Idiots. He has released independent albums, including Naujawan, and has been a coach on The Voice India."
+      "He is known for songs such as \"Chand Sifarish\" from Fanaa, \"Jab Se Tere Naina\" from Saawariya and \"Behti Hawa Sa Tha Woh\" from 3 Idiots. He has released independent albums, including Naujawan, and has been a coach on The Voice India.",
+      "Shaan is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Chand Sifarish, Jab Se Tere Naina, Behti Hawa Sa Tha Woh"],
@@ -66,7 +70,8 @@ window.AOS_BIOS = {
   "Armaan Malik": {
     about: [
       "Armaan Malik is a Mumbai-born singer, songwriter and record producer, and the younger brother of composer Amaal Malik. He has sung for many Hindi films, including the Jai Ho title track and M.S. Dhoni: The Untold Story, and has also worked in Telugu, Kannada and other languages.",
-      "He received the Filmfare R. D. Burman Award for New Music Talent in 2016, sang Hindi songs for The Lion King and voiced Aladdin in the Hindi version of the film. He also releases independent and English-language singles."
+      "He received the Filmfare R. D. Burman Award for New Music Talent in 2016, sang Hindi songs for The Lion King and voiced Aladdin in the Hindi version of the film. He also releases independent and English-language singles.",
+      "Armaan Malik is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Jai Ho (title track), M.S. Dhoni: The Untold Story"],
@@ -75,7 +80,8 @@ window.AOS_BIOS = {
   },
   "Aditya Narayan": {
     about: [
-      "Aditya Narayan is a singer, television host and actor, and the son of playback singer Udit Narayan. He began performing as a child and later became one of Indian television's best-known music-show hosts, fronting Indian Idol, Sa Re Ga Ma Pa and other singing shows."
+      "Aditya Narayan is a singer, television host and actor, and the son of playback singer Udit Narayan. He began performing as a child and later became one of Indian television's best-known music-show hosts, fronting Indian Idol, Sa Re Ga Ma Pa and other singing shows.",
+      "Aditya Narayan is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Hosting Indian Idol and music reality shows"]
@@ -84,7 +90,8 @@ window.AOS_BIOS = {
   "Amit Trivedi": {
     about: [
       "Amit Trivedi is a music composer, singer and lyricist from Mumbai who began his career writing jingles. He made his film debut with Aamir (2008) and broke through with the Dev.D soundtrack, which won him a National Film Award for Best Music Direction.",
-      "His film work includes Queen, Dear Zindagi and Andhadhun, and he runs his own independent label, AT Azaad."
+      "His film work includes Queen, Dear Zindagi and Andhadhun, and he runs his own independent label, AT Azaad.",
+      "Amit Trivedi is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Dev.D, Queen, Dear Zindagi, Andhadhun"],
@@ -94,7 +101,8 @@ window.AOS_BIOS = {
   "Darshan Raval": {
     about: [
       "Darshan Raval is a singer, composer and songwriter from Ahmedabad, Gujarat. He first gained national attention on the talent show India's Raw Star in 2014 and has since become a popular film playback singer and pop artist.",
-      "His film songs include \"Ek Ladki Ko Dekha Toh Aisa Laga\", \"Chogada\" from Loveyatri, \"Kabhi Tumhe\" from Shershaah and \"Mehrama\" from Love Aaj Kal, and his independent singles include \"Tera Zikr\" and \"Asal Mein\"."
+      "His film songs include \"Ek Ladki Ko Dekha Toh Aisa Laga\", \"Chogada\" from Loveyatri, \"Kabhi Tumhe\" from Shershaah and \"Mehrama\" from Love Aaj Kal, and his independent singles include \"Tera Zikr\" and \"Asal Mein\".",
+      "Darshan Raval is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Chogada, Kabhi Tumhe, Mehrama, Tera Zikr"],
@@ -104,7 +112,8 @@ window.AOS_BIOS = {
   "Jonita Gandhi": {
     about: [
       "Jonita Gandhi is a playback singer born in New Delhi and raised in Canada, trained in both Western and Hindustani classical singing. She began with YouTube covers before making her film debut with the title song of Chennai Express (2013).",
-      "She is known for \"The Breakup Song\" from Ae Dil Hai Mushkil and the Tamil hit \"Arabic Kuthu\" from Beast, for which she won the SIIMA Award for Best Playback Singer, Female (Tamil), and has worked with A. R. Rahman."
+      "She is known for \"The Breakup Song\" from Ae Dil Hai Mushkil and the Tamil hit \"Arabic Kuthu\" from Beast, for which she won the SIIMA Award for Best Playback Singer, Female (Tamil), and has worked with A. R. Rahman.",
+      "Jonita Gandhi is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Chennai Express title track, The Breakup Song, Arabic Kuthu"],
@@ -114,7 +123,8 @@ window.AOS_BIOS = {
   "Palak Muchhal": {
     about: [
       "Palak Muchhal is a playback singer and lyricist from Indore, widely known for her film songs and for her charity work. Her \"Save Little Hearts\" shows have raised funds for children needing heart surgery.",
-      "Her songs include \"Kaun Tujhe\" from M.S. Dhoni: The Untold Story, which won her a Star Screen Award in 2017, tracks from Aashiqui 2 and \"Naiyo Lagda\" from Kisi Ka Bhai Kisi Ki Jaan."
+      "Her songs include \"Kaun Tujhe\" from M.S. Dhoni: The Untold Story, which won her a Star Screen Award in 2017, tracks from Aashiqui 2 and \"Naiyo Lagda\" from Kisi Ka Bhai Kisi Ki Jaan.",
+      "Palak Muchhal is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Kaun Tujhe, Aashiqui 2 songs, Naiyo Lagda"],
@@ -124,7 +134,8 @@ window.AOS_BIOS = {
   "Rahul Vaidya": {
     about: [
       "Rahul Vaidya is a singer and composer from Nagpur who came to national attention as second runner-up on the first season of Indian Idol. His debut album, Tera Intezar, followed in 2005 with music by Sajid-Wajid.",
-      "He has sung for Hindi films and appeared on reality television, finishing as first runner-up on Bigg Boss 14 and reaching the finals of Khatron Ke Khiladi 11."
+      "He has sung for Hindi films and appeared on reality television, finishing as first runner-up on Bigg Boss 14 and reaching the finals of Khatron Ke Khiladi 11.",
+      "Rahul Vaidya is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Indian Idol season 1, Bigg Boss 14"],
@@ -134,7 +145,8 @@ window.AOS_BIOS = {
   "Nakash Aziz": {
     about: [
       "Nakash Aziz is a singer and composer from Mangaluru who started out making jingles and devotional albums, and worked as an assistant to A. R. Rahman on films including Highway and Raanjhanaa before establishing himself as a playback singer.",
-      "He is known for high-energy numbers such as \"Jabra Fan\" from Fan, \"Dhating Nach\" and \"Sari Ke Fall Sa\", and sings in Hindi, Telugu, Tamil, Kannada, Bengali and Marathi."
+      "He is known for high-energy numbers such as \"Jabra Fan\" from Fan, \"Dhating Nach\" and \"Sari Ke Fall Sa\", and sings in Hindi, Telugu, Tamil, Kannada, Bengali and Marathi.",
+      "Nakash Aziz is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Jabra Fan, Dhating Nach, Sari Ke Fall Sa"],
@@ -144,7 +156,8 @@ window.AOS_BIOS = {
   "Neha Bhasin": {
     about: [
       "Neha Bhasin is a singer, songwriter and performer who won Coke [V] Popstars in 2002 and was a member of the pop group Viva! before building a career in film music.",
-      "She is best known for \"Jag Ghoomeya\" from Sultan and \"Dhunki\" from Mere Brother Ki Dulhan, performs Punjabi folk-inspired numbers and releases independent songs. She has also appeared on Bigg Boss."
+      "She is best known for \"Jag Ghoomeya\" from Sultan and \"Dhunki\" from Mere Brother Ki Dulhan, performs Punjabi folk-inspired numbers and releases independent songs. She has also appeared on Bigg Boss.",
+      "Neha Bhasin is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Jag Ghoomeya, Dhunki"],
@@ -154,7 +167,8 @@ window.AOS_BIOS = {
   "Meet Bros": {
     about: [
       "Meet Bros is a composer-singer duo of brothers Manmeet and Harmeet Singh from Gwalior, formerly known as Meet Bros Anjjan. They began with independent hits before breaking through in films.",
-      "Their best-known songs include \"Baby Doll\" from Ragini MMS 2 and \"Chittiyaan Kalaiyaan\" from Roy, and they continue to release independent and regional music."
+      "Their best-known songs include \"Baby Doll\" from Ragini MMS 2 and \"Chittiyaan Kalaiyaan\" from Roy, and they continue to release independent and regional music.",
+      "Meet Bros is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Baby Doll, Chittiyaan Kalaiyaan"],
@@ -164,7 +178,8 @@ window.AOS_BIOS = {
   "Ash King": {
     about: [
       "Ash King (Ashutosh Ganguly) is a London-raised singer, songwriter and composer of Bengali and Gujarati origin. He made his Hindi film debut with Delhi-6 and has since become a familiar playback voice.",
-      "His songs include \"I Love You\" from Bodyguard, \"Aunty Ji\" from Ek Main Aur Ekk Tu, \"Baarish\" from Half Girlfriend and \"Meherban Hua\" from Bang Bang!."
+      "His songs include \"I Love You\" from Bodyguard, \"Aunty Ji\" from Ek Main Aur Ekk Tu, \"Baarish\" from Half Girlfriend and \"Meherban Hua\" from Bang Bang!.",
+      "Ash King is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "I Love You, Baarish, Meherban Hua"],
@@ -174,7 +189,8 @@ window.AOS_BIOS = {
   "Salman Ali": {
     about: [
       "Salman Ali is a singer from Punhana in Haryana's Mewat region, from a family of singers. He was first runner-up on Sa Re Ga Ma Pa Lil Champs in 2011 and won the tenth season of Indian Idol in December 2018.",
-      "He has since sung for films, released songs with Salim-Sulaiman and appeared as a captain on Superstar Singer."
+      "He has since sung for films, released songs with Salim-Sulaiman and appeared as a captain on Superstar Singer.",
+      "Salman Ali is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Winner, Indian Idol 10"],
@@ -183,7 +199,8 @@ window.AOS_BIOS = {
   },
   "Rohanpreet Singh": {
     about: [
-      "Rohanpreet Singh is a Punjabi singer from Patiala. He was runner-up on Rising Star season 2 and has released Punjabi and Hindi songs and music videos, including \"Bang Gang\", \"Hello Hi\" and \"Sohni Lagdi\"."
+      "Rohanpreet Singh is a Punjabi singer from Patiala. He was runner-up on Rising Star season 2 and has released Punjabi and Hindi songs and music videos, including \"Bang Gang\", \"Hello Hi\" and \"Sohni Lagdi\".",
+      "Rohanpreet Singh is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Rising Star runner-up, Bang Gang, Sohni Lagdi"],
@@ -193,7 +210,8 @@ window.AOS_BIOS = {
   "AP Dhillon": {
     about: [
       "AP Dhillon (Amritpal Singh Dhillon) is a Punjabi singer, rapper and producer who grew up in Punjab and moved to Canada as a student. He broke through in 2020 with \"Brown Munde\", released independently with his label Run-Up Records, and the song became a global anthem for the Punjabi diaspora.",
-      "His other well-known tracks include \"Excuses\", \"Insane\", \"With You\" and \"Majhail\". In 2023 he became the first Punjabi Canadian to perform at the Juno Awards."
+      "His other well-known tracks include \"Excuses\", \"Insane\", \"With You\" and \"Majhail\". In 2023 he became the first Punjabi Canadian to perform at the Juno Awards.",
+      "AP Dhillon is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Brown Munde, Excuses, Insane, With You"],
@@ -203,7 +221,8 @@ window.AOS_BIOS = {
   "Badshah": {
     about: [
       "Badshah (Aditya Prateek Singh Sisodia) is a rapper, singer, songwriter and producer from Delhi. He began writing rap while studying at Punjab Engineering College and is one of the best-known voices of Indian hip hop and pop, working in Hindi, Punjabi and Haryanvi.",
-      "His songs include \"DJ Waley Babu\", \"Kar Gayi Chull\" from Kapoor & Sons, \"Proper Patola\" from Namaste England, \"Paagal\" and \"Garmi\" from Street Dancer 3D. He is also a familiar face on television as a judge on talent shows."
+      "His songs include \"DJ Waley Babu\", \"Kar Gayi Chull\" from Kapoor & Sons, \"Proper Patola\" from Namaste England, \"Paagal\" and \"Garmi\" from Street Dancer 3D. He is also a familiar face on television as a judge on talent shows.",
+      "Badshah is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "DJ Waley Babu, Kar Gayi Chull, Paagal, Garmi"],
@@ -213,7 +232,8 @@ window.AOS_BIOS = {
   "Yo Yo Honey Singh": {
     about: [
       "Yo Yo Honey Singh (Hirdesh Singh) is a rapper, music producer, singer and actor from Punjab, credited with bringing hip hop and Punjabi rap into the mainstream. He studied in New Delhi and built his career as a bhangra and pop producer before moving into Bollywood.",
-      "His best-known songs include \"Angreji Beat\", \"Lungi Dance\", \"Dope Shope\", \"Desi Kalakaar\", \"Blue Eyes\" and \"Dheere Dheere\"."
+      "His best-known songs include \"Angreji Beat\", \"Lungi Dance\", \"Dope Shope\", \"Desi Kalakaar\", \"Blue Eyes\" and \"Dheere Dheere\".",
+      "Yo Yo Honey Singh is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Angreji Beat, Lungi Dance, Blue Eyes, Desi Kalakaar"],
@@ -223,7 +243,8 @@ window.AOS_BIOS = {
   "Daler Mehndi": {
     about: [
       "Daler Mehndi is a Punjabi singer, songwriter and record producer who helped take bhangra pop to audiences around the world. His debut album Bolo Ta Ra Ra became a landmark of independent Indian pop, and \"Tunak Tunak Tun\" remains one of the most recognisable Punjabi songs.",
-      "His other well-known songs include \"Sajan Mere Satrangiya\", \"Dard Di Rab Rab\" and \"Ho Jayegi Balle Balle\", and he has sung for films including Rang De Basanti and Dangal."
+      "His other well-known songs include \"Sajan Mere Satrangiya\", \"Dard Di Rab Rab\" and \"Ho Jayegi Balle Balle\", and he has sung for films including Rang De Basanti and Dangal.",
+      "Daler Mehndi is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Tunak Tunak Tun, Bolo Ta Ra Ra, Ho Jayegi Balle Balle"],
@@ -233,7 +254,8 @@ window.AOS_BIOS = {
   "B Praak": {
     about: [
       "B Praak (Pratik Bachan) is a singer, music director and composer from Chandigarh working in Punjabi and Hindi music. He began as a producer, often working with lyricist Jaani, and became known as a singer with songs such as \"Mann Bharrya\", \"Qismat\" and \"Filhall\".",
-      "He won a National Film Award for Best Male Playback Singer for \"Teri Mitti\" from Kesari, and later moved into music direction for Hindi films."
+      "He won a National Film Award for Best Male Playback Singer for \"Teri Mitti\" from Kesari, and later moved into music direction for Hindi films.",
+      "B Praak is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Teri Mitti, Mann Bharrya, Filhall, Qismat"],
@@ -243,7 +265,8 @@ window.AOS_BIOS = {
   "Jasmine Sandlas": {
     about: [
       "Jasmine Sandlas is a Punjabi singer and songwriter, born in Jalandhar and raised in California. She released her first album, The Diamond, in 2008, and her 2012 album Gulabi, made with rapper Bohemia, brought her wider recognition in Punjabi music.",
-      "Her Bollywood break came with \"Yaar Na Miley\" from Kick. She is also known for \"Illegal Weapon\" with Garry Sandhu, \"Bamb Jatt\" with Amrit Maan and the experimental album TGPE."
+      "Her Bollywood break came with \"Yaar Na Miley\" from Kick. She is also known for \"Illegal Weapon\" with Garry Sandhu, \"Bamb Jatt\" with Amrit Maan and the experimental album TGPE.",
+      "Jasmine Sandlas is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Yaar Na Miley, Illegal Weapon, Bamb Jatt"],
@@ -253,7 +276,8 @@ window.AOS_BIOS = {
   "Jassi Gill": {
     about: [
       "Jassie Gill is a Punjabi and Hindi singer and actor from Ludhiana. He released his debut album Batchmate in 2011, and is known for songs such as \"Lancer\", \"Nikle Currant\" and \"Bapu Zimidar\".",
-      "He entered Punjabi cinema with Mr & Mrs 420 (2014) and Hindi cinema with Happy Phirr Bhag Jayegi (2018), and has since appeared in films including Panga and Kisi Ka Bhai Kisi Ki Jaan."
+      "He entered Punjabi cinema with Mr & Mrs 420 (2014) and Hindi cinema with Happy Phirr Bhag Jayegi (2018), and has since appeared in films including Panga and Kisi Ka Bhai Kisi Ki Jaan.",
+      "Jassi Gill is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Nikle Currant, Lancer, Bapu Zimidar"],
@@ -263,7 +287,8 @@ window.AOS_BIOS = {
   "Gippy Grewal": {
     about: [
       "Gippy Grewal is a Punjabi singer, actor and filmmaker from Ludhiana. He began with the album Chakkh Lai, and his collaboration with Yo Yo Honey Singh, \"Angreji Beat\", became a hit that also featured in the Bollywood film Cocktail.",
-      "He is a major name in Punjabi cinema, with films such as Carry On Jatta, and has also acted in Hindi films. He runs the production company Humble Motion Pictures and directed Ardaas."
+      "He is a major name in Punjabi cinema, with films such as Carry On Jatta, and has also acted in Hindi films. He runs the production company Humble Motion Pictures and directed Ardaas.",
+      "Gippy Grewal is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Angreji Beat, Phulkari, Carry On Jatta"],
@@ -273,7 +298,8 @@ window.AOS_BIOS = {
   "Babbu Maan": {
     about: [
       "Babbu Maan (Tejinder Singh Maan) is a Punjabi singer-songwriter, music director, actor and film producer, known for writing his own lyrics. He made his debut in 1999 with Tu Meri Miss India and has since become one of the most popular names in Punjabi music.",
-      "His albums include Saaun Di Jhadi, Ohi Chann Ohi Rataan and Pyaas, one of the best-selling Punjabi albums of its time, and he has also acted in and composed music for films such as Hawayein and Rabb Ne Banaiyan Jodiean."
+      "His albums include Saaun Di Jhadi, Ohi Chann Ohi Rataan and Pyaas, one of the best-selling Punjabi albums of its time, and he has also acted in and composed music for films such as Hawayein and Rabb Ne Banaiyan Jodiean.",
+      "Babbu Maan is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Pyaas, Saaun Di Jhadi, Ohi Chann Ohi Rataan"],
@@ -283,7 +309,8 @@ window.AOS_BIOS = {
   "Garry Sandhu": {
     about: [
       "Garry Sandhu is a Punjabi singer, songwriter, rapper and actor from Jalandhar, who began his singing career in 2010 and built his audience in the United Kingdom. He won Best Newcomer and Best Male Act at the Brit Asia TV Music Awards in 2011.",
-      "His hits include \"Illegal Weapon\" with Jasmine Sandlas, \"Yeah Baby\" (also used in the film De De Pyaar De as \"Hauli Hauli\") and \"Banda Ban Ja\". He runs his own label, Fresh Media Records."
+      "His hits include \"Illegal Weapon\" with Jasmine Sandlas, \"Yeah Baby\" (also used in the film De De Pyaar De as \"Hauli Hauli\") and \"Banda Ban Ja\". He runs his own label, Fresh Media Records.",
+      "Garry Sandhu is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Illegal Weapon, Yeah Baby, Banda Ban Ja"],
@@ -293,7 +320,8 @@ window.AOS_BIOS = {
   "Amrit Maan": {
     about: [
       "Amrit Maan is a Punjabi singer, songwriter and actor from Goniana Mandi, Punjab. He began as a songwriter, writing \"Jatt Fire Karda\" for Diljit Dosanjh, and released his own debut single, \"Desi Da Drum\", in 2015.",
-      "He is known for songs including \"Bambiha Bole\", \"Kaali Camaro\", \"Bamb Jatt\" and \"Trending Nakhra\", and has acted in Punjabi films such as Channa Mereya."
+      "He is known for songs including \"Bambiha Bole\", \"Kaali Camaro\", \"Bamb Jatt\" and \"Trending Nakhra\", and has acted in Punjabi films such as Channa Mereya.",
+      "Amrit Maan is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Bambiha Bole, Kaali Camaro, Bamb Jatt"],
@@ -303,7 +331,8 @@ window.AOS_BIOS = {
   "Ranjit Bawa": {
     about: [
       "Ranjit Bawa is a Punjabi singer and actor from Gurdaspur. He became known through \"Jatt Di Akal\" from his debut album Mitti Da Bawa, which won Best World Album at the Brit Asia TV Music Awards.",
-      "His other songs include \"Yaari Chandigarh Waliye\" and \"Impress\", and he has acted in Punjabi films including Toofan Singh and High End Yaariyaan."
+      "His other songs include \"Yaari Chandigarh Waliye\" and \"Impress\", and he has acted in Punjabi films including Toofan Singh and High End Yaariyaan.",
+      "Ranjit Bawa is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Jatt Di Akal, Yaari Chandigarh Waliye, Impress"],
@@ -313,7 +342,8 @@ window.AOS_BIOS = {
   "Parmish Verma": {
     about: [
       "Parmish Verma is a Punjabi singer, rapper, actor and director from Patiala. He began as a music video director, then moved into acting with Rocky Mental (2017) and released his first singles the same year, including \"Le Chakk Main Aa Gaya\" and \"Gaal Ni Kadni\".",
-      "He has acted in films such as Singham and Dil Diyan Gallan, which he also wrote and directed."
+      "He has acted in films such as Singham and Dil Diyan Gallan, which he also wrote and directed.",
+      "Parmish Verma is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Le Chakk Main Aa Gaya, Gaal Ni Kadni, Rocky Mental"],
@@ -323,7 +353,8 @@ window.AOS_BIOS = {
   "Sunanda Sharma": {
     about: [
       "Sunanda Sharma is a Punjabi pop singer and actress who first gained attention by posting cover versions on YouTube. Her debut single was \"Billi Akh\", and she has since had hits including \"Patake\", \"Morni\", \"Sandal\" and \"Jaani Tera Naa\".",
-      "She made her acting debut in the Punjabi film Sajjan Singh Rangroot (2018) and has sung with B Praak and Tanishk Bagchi."
+      "She made her acting debut in the Punjabi film Sajjan Singh Rangroot (2018) and has sung with B Praak and Tanishk Bagchi.",
+      "Sunanda Sharma is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Jaani Tera Naa, Patake, Morni, Sandal"],
@@ -333,7 +364,8 @@ window.AOS_BIOS = {
   "Kaur B": {
     about: [
       "Kaur B (Baljinder Kaur) is a Punjabi pop singer who made her debut with \"Just Desi\" in 2013 and became widely known for songs such as \"Paranda\", \"Kaniyan\", \"Mittran De Boot\" and \"Velly Jatt\".",
-      "She has collaborated with artists including Ranjit Bawa and Dilpreet Dhillon, and also releases devotional songs."
+      "She has collaborated with artists including Ranjit Bawa and Dilpreet Dhillon, and also releases devotional songs.",
+      "Kaur B is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Paranda, Kaniyan, Mittran De Boot"],
@@ -343,7 +375,8 @@ window.AOS_BIOS = {
   "Miss Pooja": {
     about: [
       "Miss Pooja (Gurinder Kaur Kainth) is a Punjabi singer and actress known for bhangra, pop and folk, and often called the \"Queen of Duets\" for her many duets with male Punjabi singers. She began her professional career in 2006 with the duet \"Jaan Ton Piyari\".",
-      "Her songs include \"Wrong Number\", \"Prince N Pooja\" and \"Sohnea\", and she crossed over to Bollywood with \"Second Hand Jawaani\" from Cocktail. She won Best International Act at the UK Asian Music Awards."
+      "Her songs include \"Wrong Number\", \"Prince N Pooja\" and \"Sohnea\", and she crossed over to Bollywood with \"Second Hand Jawaani\" from Cocktail. She won Best International Act at the UK Asian Music Awards.",
+      "Miss Pooja is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Second Hand Jawaani, Wrong Number, Sohnea"],
@@ -353,7 +386,8 @@ window.AOS_BIOS = {
   "Aastha Gill": {
     about: [
       "Aastha Gill is a Delhi-born singer and songwriter known for Bollywood and Punjabi pop. She made her film debut with \"Dhup Chik\" in Fugly (2014) and became widely known for \"DJ Waley Babu\" and \"Abhi Toh Party Shuru Hui Hai\", both with Badshah.",
-      "Her film songs include \"Proper Patola\" from Namaste England, \"Kamariya\" from Stree and \"Happy Happy\" from Blackmail, alongside independent singles such as \"Buzz\" and \"Hermosa\"."
+      "Her film songs include \"Proper Patola\" from Namaste England, \"Kamariya\" from Stree and \"Happy Happy\" from Blackmail, alongside independent singles such as \"Buzz\" and \"Hermosa\".",
+      "Aastha Gill is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "DJ Waley Babu, Proper Patola, Kamariya, Buzz"],
@@ -363,7 +397,8 @@ window.AOS_BIOS = {
   "Baani Sandhu": {
     about: [
       "Baani Sandhu (Rupinder Kaur Sandhu) is a Punjabi singer and actress who studied computer science engineering at Panjab University while pursuing music. Her career began in 2018 with \"Fauji Di Bandook\", and she is best known for \"8 Parche\".",
-      "Her other songs include \"Photo\", \"Sarpanchi\", \"Khani Jatti Di\" and \"Punjaban\", and she has collaborated with Dilpreet Dhillon on tracks such as \"Gunday Ik Vaar Fer\". She also acts in Punjabi films."
+      "Her other songs include \"Photo\", \"Sarpanchi\", \"Khani Jatti Di\" and \"Punjaban\", and she has collaborated with Dilpreet Dhillon on tracks such as \"Gunday Ik Vaar Fer\". She also acts in Punjabi films.",
+      "Baani Sandhu is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "8 Parche, Fauji Di Bandook, Photo"],
@@ -373,7 +408,8 @@ window.AOS_BIOS = {
   "Gurdeep Mehndi": {
     about: [
       "Gurdeep Mehndi is a Delhi-born Punjabi singer, actor and music director, and the son of Daler Mehndi. He has been building his own path since releasing \"Saheli\" with Bohemia in 2014, and his Gurdeepmix project blends rock, funk, blues and jazz with Sufi and Punjabi folk.",
-      "He has acted in films including Bala and Meri Shadi Karao, and has recorded a duet with his father on \"Na Na Na\"."
+      "He has acted in films including Bala and Meri Shadi Karao, and has recorded a duet with his father on \"Na Na Na\".",
+      "Gurdeep Mehndi is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Saheli, Kangna Tera Ni, Gurdeepmix"],
@@ -383,7 +419,8 @@ window.AOS_BIOS = {
   "Navraj Hans": {
     about: [
       "Navraj Hans is a singer and actor from Jalandhar, Punjab, and the son of singer Hans Raj Hans. He has sung playback for many Bollywood and Punjabi films, including \"Jind Meriye\" from Purani Jeans, and has appeared in Punjabi films such as Punjabian Da King and Canada Di Flight.",
-      "His other songs include \"Saiyaan\", \"Jhootha Kahin Ka\" and \"Thok De Killi\", and he released the album Hans Brothers with his brother Yuvraaj Hans."
+      "His other songs include \"Saiyaan\", \"Jhootha Kahin Ka\" and \"Thok De Killi\", and he released the album Hans Brothers with his brother Yuvraaj Hans.",
+      "Navraj Hans is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Jind Meriye, Saiyaan, Jhootha Kahin Ka"],
@@ -393,7 +430,8 @@ window.AOS_BIOS = {
   "Rupali Jagga": {
     about: [
       "Rupali Jagga is a pop and playback singer who trained in classical music in the Agra Gharana and came up through television talent shows, including Bhajan Samrat and Indian Idol. She made her Bollywood debut with \"Tere Bin Jeena Kya\" from Operation Romeo.",
-      "She has worked with Himesh Reshammiya on songs such as \"Piyaa Rangeela\" and \"Aajaa Bheeg Le Piyyaa\" and has released Hindi-Punjabi singles including \"Tere Piche\"."
+      "She has worked with Himesh Reshammiya on songs such as \"Piyaa Rangeela\" and \"Aajaa Bheeg Le Piyyaa\" and has released Hindi-Punjabi singles including \"Tere Piche\".",
+      "Rupali Jagga is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Tere Bin Jeena Kya, Piyaa Rangeela, Tere Piche"],
@@ -403,7 +441,8 @@ window.AOS_BIOS = {
   "Sara Gurpal": {
     about: [
       "Sara Gurpal is a Punjabi singer, actress and model from Haryana. She began as a model in 2013 with Ranjit Bawa's \"Jean\", made her film debut in Manje Bistre (2017) and has appeared in several Punjabi films.",
-      "Her songs include \"Slow Motion\", \"Lagdi Att\" and \"Ki Main Kalli Aa\". She was also a contestant on Bigg Boss 14."
+      "Her songs include \"Slow Motion\", \"Lagdi Att\" and \"Ki Main Kalli Aa\". She was also a contestant on Bigg Boss 14.",
+      "Sara Gurpal is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Slow Motion, Lagdi Att, Ki Main Kalli Aa"],
@@ -413,7 +452,8 @@ window.AOS_BIOS = {
   "Yuvraaj Hans": {
     about: [
       "Yuvraaj Hans is a Punjabi actor and singer from Jalandhar, the son of singer Hans Raj Hans and the younger brother of Navraj Hans. He made his film debut in Yaar Annmulle (2011), which did well and earned him a debut award.",
-      "As a singer he released his debut album Yuvraj in 2015, which included the song \"Paani\", and has since appeared in Punjabi films including Mr & Mrs 420 and Lahoriye."
+      "As a singer he released his debut album Yuvraj in 2015, which included the song \"Paani\", and has since appeared in Punjabi films including Mr & Mrs 420 and Lahoriye.",
+      "Yuvraaj Hans is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Yaar Annmulle, Paani"],
@@ -423,7 +463,8 @@ window.AOS_BIOS = {
   "Manj Musik": {
     about: [
       "Manj Musik (Manjeet Singh Ral) is a British Indian composer, singer and music producer. He was one of the composers of the bhangra group RDB, formed with his brothers, before starting his solo career in 2014 and winning Best Urban Single at the Brit Asia TV Music Awards.",
-      "He has composed for Hindi films, including \"Whistle Baja\" from Heropanti, produced Guru Randhawa's \"High Rated Gabru\" and founded the label Muzik ONE Records. His own songs include \"Make Some Space\" and \"Gallan\"."
+      "He has composed for Hindi films, including \"Whistle Baja\" from Heropanti, produced Guru Randhawa's \"High Rated Gabru\" and founded the label Muzik ONE Records. His own songs include \"Make Some Space\" and \"Gallan\".",
+      "Manj Musik is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Whistle Baja, High Rated Gabru, Make Some Space"],
@@ -433,7 +474,8 @@ window.AOS_BIOS = {
   "Pav Dharia": {
     about: [
       "Pav Dharia is a Punjabi-Australian singer, songwriter and music video director. He first gained attention with his 2012 debut \"Bewafa\" and the 2013 album Red, which won him Best Non-Resident Punjabi Music Director at the PTC Punjabi Music Awards.",
-      "He is best known for \"Na Ja\", released in 2017, and has also sung \"Najaa\" from Sooryavanshi and directed music videos for other Punjabi artists."
+      "He is best known for \"Na Ja\", released in 2017, and has also sung \"Najaa\" from Sooryavanshi and directed music videos for other Punjabi artists.",
+      "Pav Dharia is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Na Ja, Najaa (Sooryavanshi), Bewafa"],
@@ -443,7 +485,8 @@ window.AOS_BIOS = {
   "Prem Dhillon": {
     about: [
       "Prem Dhillon (Premjeet Singh Dhillon) is a Punjabi singer, songwriter and rapper from Amritsar. His first credit was \"Patt Tenu\" in the film Mr & Mrs 420 Returns, and his debut single, \"Chan Milondi\", followed in 2018.",
-      "He is best known for \"Bootcut\", \"Old Skool\" and \"Majha Block\", and his collaboration with Barbie Maan, \"Liv In\", reached the BBC Asian Music Chart."
+      "He is best known for \"Bootcut\", \"Old Skool\" and \"Majha Block\", and his collaboration with Barbie Maan, \"Liv In\", reached the BBC Asian Music Chart.",
+      "Prem Dhillon is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Bootcut, Old Skool, Majha Block"],
@@ -453,7 +496,8 @@ window.AOS_BIOS = {
   "Master Saleem": {
     about: [
       "Master Saleem is a Punjabi devotional, Sufi and playback singer from Shahkot, near Jalandhar. The son of Sufi singer Ustad Puran Shah Koti, he trained from childhood and gave his first public performance at the age of seven.",
-      "He returned to the stage in 2000 with the Sufi song \"Aj Hona Deedar Mahi Da\" and has released devotional albums dedicated to Goddess Durga. His film songs include \"Mast Kalandar\" from Heyy Babyy and \"Aahun\" from Love Aaj Kal."
+      "He returned to the stage in 2000 with the Sufi song \"Aj Hona Deedar Mahi Da\" and has released devotional albums dedicated to Goddess Durga. His film songs include \"Mast Kalandar\" from Heyy Babyy and \"Aahun\" from Love Aaj Kal.",
+      "Master Saleem is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Mast Kalandar, Aahun, Aj Hona Deedar Mahi Da"],
@@ -463,7 +507,8 @@ window.AOS_BIOS = {
   "Papon": {
     about: [
       "Papon (Angaraag Mahanta) is a singer and composer from Assam, the son of folk singers Khagen and Archana Mahanta. He began with Assamese songs in 1998 and formed the folk-fusion band Papon and The East India Company in 2007.",
-      "He is known for \"Jiyein Kyun\" from Dum Maaro Dum, \"Kyon\" from Barfi!, \"Moh Moh Ke Dhaage\" from Dum Laga Ke Haisha and \"Bulleya\" from Sultan, and has sung in Hindi, Assamese, Bengali and other languages. He is closely associated with Coke Studio India."
+      "He is known for \"Jiyein Kyun\" from Dum Maaro Dum, \"Kyon\" from Barfi!, \"Moh Moh Ke Dhaage\" from Dum Laga Ke Haisha and \"Bulleya\" from Sultan, and has sung in Hindi, Assamese, Bengali and other languages. He is closely associated with Coke Studio India.",
+      "Papon is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Moh Moh Ke Dhaage, Kyon, Jiyein Kyun, Bulleya"],
@@ -483,7 +528,8 @@ window.AOS_BIOS = {
   "Sawai Bhatt": {
     about: [
       "Sawai Bhatt is a Rajasthani folk singer and puppeteer from Rajasthan's Nagaur district who rose to national attention on Indian Idol season 12. His rendition of the folk song \"Kesariya Balma\" is among his most-viewed performances.",
-      "After the show he released his single \"Sanseinn\", which drew over four million views in its first 24 hours."
+      "After the show he released his single \"Sanseinn\", which drew over four million views in its first 24 hours.",
+      "Sawai Bhatt is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Kesariya Balma, Sanseinn"],
@@ -492,7 +538,8 @@ window.AOS_BIOS = {
   },
   "DJ Aqeel": {
     about: [
-      "DJ Aqeel is an Indian DJ, singer and composer who began his career around 2000 and became known for his Bollywood remixes, including the early-2000s \"Shake It Daddy Mix\". His DJ Aqeel Forever albums are among his best-known releases."
+      "DJ Aqeel is an Indian DJ, singer and composer who began his career around 2000 and became known for his Bollywood remixes, including the early-2000s \"Shake It Daddy Mix\". His DJ Aqeel Forever albums are among his best-known releases.",
+      "DJ Aqeel is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Bollywood remixes, Shake It Daddy Mix"]
@@ -501,7 +548,8 @@ window.AOS_BIOS = {
   "DJ Chetas": {
     about: [
       "DJ Chetas (Chetas Shah) is a Mumbai-born DJ and music producer known for Bollywood mashups and remixes. A 2012 Salman Khan mashup released through T-Series brought him wide attention, and he became the first Indian DJ to enter DJ Mag's Top 100, reaching number 33 in 2016.",
-      "He has worked on film music, been an official DJ for the Kolkata Knight Riders in the IPL and released the album Life Is a Mashup."
+      "He has worked on film music, been an official DJ for the Kolkata Knight Riders in the IPL and released the album Life Is a Mashup.",
+      "DJ Chetas is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Bollywood mashups, DJ Mag Top 100"]
@@ -510,7 +558,8 @@ window.AOS_BIOS = {
   "DJ Lijo George": {
     about: [
       "Lijo George is a Mumbai-born DJ, producer and composer who moved from DJing into Hindi film music. He is known for mashups with DJ Notorious and for his work with DJ Chetas, including the track \"Jaana Samjho Na\" from Bhool Bhulaiyaa 3.",
-      "His film credits include Golmaal Again, Loveyatri, Simmba and Sooryavanshi."
+      "His film credits include Golmaal Again, Loveyatri, Simmba and Sooryavanshi.",
+      "DJ Lijo George is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Bollywood mashups, film music"]
@@ -519,7 +568,8 @@ window.AOS_BIOS = {
   "DJ Nikhil Chinapa": {
     about: [
       "Nikhil Chinapa is a DJ, television host and festival curator, often credited with bringing electronic dance music to a wide Indian audience. He began on television after winning the MTV VJ Hunt and went on to host MTV Select.",
-      "In 2001 he launched Submerge, an EDM events company, and was later festival director of Sunburn in Goa. His DJ sets are known for being varied and moody."
+      "In 2001 he launched Submerge, an EDM events company, and was later festival director of Sunburn in Goa. His DJ sets are known for being varied and moody.",
+      "DJ Nikhil Chinapa is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "MTV VJ, Submerge, Sunburn Festival"]
@@ -528,7 +578,8 @@ window.AOS_BIOS = {
   "Nucleya": {
     about: [
       "Nucleya (Udyan Sagar) is an electronic producer and DJ who began in the band Bandish Projekt before launching his solo project. He blends Indian folk sounds with bass music and is often described as a leading figure of India's desi bass scene.",
-      "His albums include Bass Rani (2015) and Raja Baja (2016), and he released the EP Baaraat with Ritviz in 2021."
+      "His albums include Bass Rani (2015) and Raja Baja (2016), and he released the EP Baaraat with Ritviz in 2021.",
+      "Nucleya is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Bass Rani, Raja Baja, desi bass"]
@@ -537,7 +588,8 @@ window.AOS_BIOS = {
   "Gayathri Asokan": {
     about: [
       "Gayatri Asokan is a playback singer from Kerala who sings in Malayalam and performs ghazal, Hindustani classical music and bhajans. Her playback career began in 2000 and she has sung over 350 songs, winning a Kerala State Film Award for Best Singer.",
-      "Her interest in ghazal grew through her friendship with the ghazal singer and tabla player Philip Francis. She has hosted the ghazal show Khayal on Media One TV."
+      "Her interest in ghazal grew through her friendship with the ghazal singer and tabla player Philip Francis. She has hosted the ghazal show Khayal on Media One TV.",
+      "Gayathri Asokan is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Ghazal, Malayalam film songs"],
@@ -547,7 +599,8 @@ window.AOS_BIOS = {
   "Kavya Limaye": {
     about: [
       "Kavya Limaye is a young singer who took part in the 13th season of Indian Idol and was second runner-up in the first season of The Voice India Kids. She has also performed ghazals, including the project Nuqoosh, built on the poetry of Ajay Sahaab.",
-      "Reviewers have noted the composure of her singing for her age."
+      "Reviewers have noted the composure of her singing for her age.",
+      "Kavya Limaye is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Indian Idol 13, The Voice India Kids"]
@@ -556,7 +609,8 @@ window.AOS_BIOS = {
   "Aakash Gupta": {
     about: [
       "Aakash Gupta is a stand-up comedian, actor and YouTuber from Delhi. He worked as an auditor before moving into comedy, posted his first stand-up video in 2017 and went on to co-win the second season of Comicstaan, sharing the title with Samay Raina.",
-      "His video \"Sarojini Nagar\" topped YouTube's trending list in India, and he has toured across the country and acted in web series including Couple Goals."
+      "His video \"Sarojini Nagar\" topped YouTube's trending list in India, and he has toured across the country and acted in web series including Couple Goals.",
+      "Aakash Gupta is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Comicstaan season 2 co-winner"]
@@ -565,7 +619,8 @@ window.AOS_BIOS = {
   "Abhishek Upmanyu": {
     about: [
       "Abhishek Upmanyu is a stand-up comedian, writer and YouTuber. He trained as a chemical engineer at Panjab University in Chandigarh, then moved to Mumbai to pursue comedy and joined the writing team of On Air with AIB in 2015.",
-      "He is known for observational humour and personal storytelling, with specials including Thoda Saaf Bol and Jealous of Sabjiwala."
+      "He is known for observational humour and personal storytelling, with specials including Thoda Saaf Bol and Jealous of Sabjiwala.",
+      "Abhishek Upmanyu is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Thoda Saaf Bol, On Air with AIB"]
@@ -574,7 +629,8 @@ window.AOS_BIOS = {
   "Anubhav Singh Bassi": {
     about: [
       "Anubhav Singh Bassi is a stand-up comedian, actor and YouTuber. He studied law and worked as a lawyer, then tried for the civil services before walking into an open mic in 2017 and turning to comedy.",
-      "He is known for nostalgic, anecdotal storytelling about school and college life. His first stand-up special, Bas Kar Bassi, streamed on Amazon Prime Video in 2023, and he made his Bollywood debut in Tu Jhoothi Main Makkaar the same year."
+      "He is known for nostalgic, anecdotal storytelling about school and college life. His first stand-up special, Bas Kar Bassi, streamed on Amazon Prime Video in 2023, and he made his Bollywood debut in Tu Jhoothi Main Makkaar the same year.",
+      "Anubhav Singh Bassi is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Bas Kar Bassi, nostalgic storytelling"]
@@ -583,7 +639,8 @@ window.AOS_BIOS = {
   "Harsh Gujral": {
     about: [
       "Harsh Gujral is a stand-up comedian and YouTuber from Kanpur who trained as an engineer before taking up comedy, starting at open mics and then quitting his job to perform full-time.",
-      "He is known for observational humour and crowd work, his show Jo Bolta Hai, Wohi Hota Hai, and his collaboration with Anubhav Singh Bassi, Harsh & Bassi Unleashed. He made his television debut on Good Night India in 2022."
+      "He is known for observational humour and crowd work, his show Jo Bolta Hai, Wohi Hota Hai, and his collaboration with Anubhav Singh Bassi, Harsh & Bassi Unleashed. He made his television debut on Good Night India in 2022.",
+      "Harsh Gujral is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Crowd work, Harsh & Bassi Unleashed"]
@@ -592,7 +649,8 @@ window.AOS_BIOS = {
   "Rajiv Thakur": {
     about: [
       "Rajiv Thakur is a stand-up comedian, actor, television host and director. He was a runner-up on the Punjabi comedy show Hasde Hasande Ravo in 2006 and became known through Hindi television, including Comedy Circus and The Great Indian Laughter Challenge.",
-      "He has also worked in Punjabi films and appeared on The Great Indian Kapil Show."
+      "He has also worked in Punjabi films and appeared on The Great Indian Kapil Show.",
+      "Rajiv Thakur is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Comedy Circus, The Great Indian Laughter Challenge"],
@@ -620,7 +678,8 @@ window.AOS_BIOS = {
   "The SIVAMANI Trio": {
     about: [
       "The Sivamani Trio is built around Anandan Sivamani, one of India's best-known percussionists. Born in Chennai, he began drumming at seven under his father, a drummer in the South Indian film industry, and is best known as A. R. Rahman's lead percussionist.",
-      "He was awarded the Padma Shri in 2019 and has performed across the world, including on Bombay Dreams."
+      "He was awarded the Padma Shri in 2019 and has performed across the world, including on Bombay Dreams.",
+      "The SIVAMANI Trio is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Percussion, A. R. Rahman collaborations"],
@@ -630,7 +689,8 @@ window.AOS_BIOS = {
   "Sivamani (percussion)": {
     about: [
       "Anandan Sivamani is a percussionist from Chennai who began drumming at seven under his father, a drummer in the South Indian film industry. He plays drums, octoban, darbuka and other instruments and is best known as A. R. Rahman's lead percussionist.",
-      "He was awarded the Padma Shri in 2019 and has performed across the world, including on Bombay Dreams."
+      "He was awarded the Padma Shri in 2019 and has performed across the world, including on Bombay Dreams.",
+      "Sivamani is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Percussion, A. R. Rahman collaborations"],
@@ -639,7 +699,8 @@ window.AOS_BIOS = {
   },
   "Suhani Shah (Ruhani Shah)": {
     about: [
-      "Suhani Shah is a mentalist, magician and YouTuber who has been performing magic since childhood. She worked as an illusionist for many years before moving into mentalism, which blends psychology, suggestion and showmanship."
+      "Suhani Shah is a mentalist, magician and YouTuber who has been performing magic since childhood. She worked as an illusionist for many years before moving into mentalism, which blends psychology, suggestion and showmanship.",
+      "Suhani Shah is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Mentalism, magic"]
@@ -648,7 +709,8 @@ window.AOS_BIOS = {
   "Hussain K": {
     about: [
       "Hussain Kuwajerwala is a television actor, host and model, best known for playing Sumit Wadhwa in Kumkum and Chirag Virani in Kyunki Saas Bhi Kabhi Bahu Thi. He won the dance reality show Nach Baliye 2 in 2006.",
-      "As a host he fronted Shabaash India and Kuch Kar Dikhana Hai and was a familiar presenter of Indian Idol."
+      "As a host he fronted Shabaash India and Kuch Kar Dikhana Hai and was a familiar presenter of Indian Idol.",
+      "Hussain K is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Kumkum, Indian Idol host, Nach Baliye 2 winner"]
@@ -657,7 +719,8 @@ window.AOS_BIOS = {
   "Roshni Chopra": {
     about: [
       "Roshni Chopra is a model, actress and television presenter. She won the reality show Dil Jeetegi Desi Girl and is best known for playing Pia in the serial Kasamh Se.",
-      "She has hosted television programmes including Cinemascope and presented cricket coverage on Doordarshan."
+      "She has hosted television programmes including Cinemascope and presented cricket coverage on Doordarshan.",
+      "Roshni Chopra is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Kasamh Se, Dil Jeetegi Desi Girl"]
@@ -666,10 +729,563 @@ window.AOS_BIOS = {
   "Shruti Seth": {
     about: [
       "Shruti Seth is an actress, video jockey and television host who began by hosting shows on Channel V. She rose to fame as Jiya Malhotra in the comedy series Shararat and also starred in The Suite Life of Karan & Kabir.",
-      "Her film credits include Fanaa and Slumdog Millionaire, and she has hosted shows such as Comedy Circus."
+      "Her film credits include Fanaa and Slumdog Millionaire, and she has hosted shows such as Comedy Circus.",
+      "Shruti Seth is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
     ],
     facts: [
       ["Known for", "Shararat, Fanaa, Comedy Circus host"]
+    ]
+  },
+  "Sonam C Chabbra": {
+    about: [
+      "Sonam C Chhabra is a live host, anchor, actor and content creator from Delhi. She graduated from Hansraj College, Delhi University, and earned a master's in mass communication. She has said she began anchoring by chance, when an emcee failed to show up at a college event and friends pushed her to step in.",
+      "More than a decade into her career, she was named India's Best Anchor (Female) in 2019 by Business World. She has hosted the television show Safar Kamyabi Ka, made her Bollywood debut in Kirket (2019) and hosts the fashion-entrepreneur reality series Pitch to Get Rich on Jio Hotstar.",
+      "She hosts weddings, brand events and corporate shows, and also works as a motivational speaker.",
+      "Sonam C Chabbra is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Based in", "Delhi"],
+      ["Known for", "Best Anchor (Female) 2019, Pitch to Get Rich"]
+    ]
+  },
+  "Kunal Ganjawala": {
+    about: [
+      "Kunal Ganjawala is a playback singer from Pune, working mainly in Hindi and Kannada films and also singing in Marathi, Bengali and other languages. His breakthrough was \"Bheege Honth Tere\" from the 2004 film Murder, which won him the Zee Cine Award for Best Playback Singer (Male).",
+      "He sang four songs in Saawariya, directed by his cousin Sanjay Leela Bhansali, and is also known for \"O Humdum Suniyo Re\" and \"Dil Keh Raha Hai\". In Kannada cinema he is known for \"Neene Neene\" from Akash (2005).",
+      "Kunal Ganjawala is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Known for", "Bheege Honth Tere, O Humdum Suniyo Re"],
+      ["Languages", "Hindi, Kannada, Marathi, Bengali"]
+    ]
+  },
+  "Sanam": {
+    about: [
+      "Sanam is an Indian pop-rock band formed in Mumbai in 2010, made up of lead vocalist Sanam Puri, lead guitarist Samar Puri, bassist Venky S and drummer Keshav Dhanraj. The group won the nationwide pop band hunt Supastars, launched by Times Music in 2010.",
+      "They are best known for \"Main Hoon\", featured in the Hindi version of The Amazing Spider-Man 2, and for their covers of classic Bollywood songs such as \"Gulabi Aankhen\", which built their online audience. They released the album Sanam Revolution in 2018, and Sanam Puri also works as a playback singer.",
+      "Their sets mix original songs with Bollywood favourites.",
+      "Sanam is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Line-up", "Sanam Puri (vocals), Samar Puri (guitar), Venky S (bass), Keshav Dhanraj (drums)"]
+    ]
+  },
+  "Progressive Brothers": {
+    about: [
+      "Progressive Brothers is an electronic music duo from New Delhi, made up of Sunny Sharma and Karan Bhalla, who work as producers, DJs, singers and songwriters. They formed in 2012 after leaving careers in banking and insurance to pursue music full time.",
+      "Their debut track \"Veda\", made with Richard Durand, was signed to Black Hole Recordings. They were named India's Best Trance DJs for 2012 to 2013 at the Myfavdj Awards, and have played major Indian festivals including Sunburn and VH1 Supersonic. Their sound mixes progressive and electro house with trap and hard style.",
+      "They are also listed as Pro Bros.",
+      "Progressive Brothers is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Based in", "Delhi"],
+      ["Line-up", "Sunny Sharma, Karan Bhalla"]
+    ]
+  },
+  "Gaurav Gupta": {
+    about: [
+      "Gaurav Gupta is a stand-up comedian from Uttar Pradesh who trained and practised as a dentist before moving into comedy. He began performing in 2015 and won a radio comedy contest that year, and later appeared on The Great Indian Laughter Challenge in 2017.",
+      "His comedy draws on Baniya stereotypes and Delhi life. His solo show Not Just Baniya led to the stand-up special Market Down Hai on Amazon Prime Video, and he has performed in Dubai and on international tours.",
+      "Gaurav Gupta is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Known for", "Not Just Baniya, Market Down Hai"]
+    ]
+  },
+  "Dino James": {
+    about: [
+      "Dino James is a rapper, singer, lyricist and composer from Madhya Pradesh, known for storytelling in his songs. Raised in Bhopal, he built his career in Mumbai and signed with Def Jam Recordings India.",
+      "His songs include \"Yaadein\", \"Unstoppable\", \"Dooriyan\" and \"Maa\", and he sang \"Kaal Kaal\" for the film Laal Kaptaan (2019). He won Khatron Ke Khiladi season 13 in 2023.",
+      "Dino James is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Known for", "Yaadein, Unstoppable, Khatron Ke Khiladi 13 winner"],
+      ["Languages", "Hindi"]
+    ]
+  },
+  "Emiway Bantai": {
+    about: [
+      "Emiway Bantai (Bilal Shaikh) is a Mumbai-based independent rapper who raps in Hindi, English, Marathi and Tamil. He began on YouTube in 2013 and released his first rap, \"Aur Bantai\", in 2014. His public feud with rapper Raftaar in 2018 brought him a much wider audience.",
+      "His signature track is \"Machayenge\", followed by \"Firse Machayenge\" in 2020, and he featured on \"Asli Hip Hop\" in the film Gully Boy. He has stayed independent throughout his career.",
+      "Emiway Bantai is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Known for", "Machayenge, Firse Machayenge, Asli Hip Hop"],
+      ["Languages", "Hindi, English, Marathi, Tamil"]
+    ]
+  },
+  "MC Square": {
+    about: [
+      "MC Square (Abhishek Baisla) is a rapper, poet and dancer from Palwal, Haryana, who studied civil engineering and has no formal training in music. He started rapping in 2016, drawing on the folk form Ragini from his hometown, and writes in Haryanvi.",
+      "He won MTV Hustle 2.0 in 2022, taking the trophy and a cash prize of Rs 10 lakh; Paradox (Tanishq Singh) was runner-up. His track \"Chehre\" was among his performances on the show.",
+      "MC Square is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Known for", "MTV Hustle 2.0 winner, Chehre"],
+      ["Languages", "Haryanvi, Hindi"]
+    ]
+  },
+  "Paradox": {
+    about: [
+      "Paradox (Tanishq Singh) is a rapper, lyricist and music composer from Delhi, who grew up in Najafgarh and attended school in Dwarka. He took up hip hop as a teenager and rose to attention on MTV Hustle 2.0 in 2022, finishing as first runner-up on rapper King's team.",
+      "He later joined King's music group. His style blends pop and traditional hip hop, and his tracks include \"Jaadugar\", \"Cowboy\" and \"Gang Wale Munde\". He released the project Overthink in 2022.",
+      "Paradox is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Based in", "Delhi"],
+      ["Known for", "MTV Hustle 2.0 runner-up, Jaadugar, Cowboy"],
+      ["Languages", "Hindi"]
+    ]
+  },
+  "Raja Kumari": {
+    about: [
+      "Raja Kumari (Svetha Yallapragada Rao) is a rapper, singer and songwriter born in California to a Telugu family. She discovered hip hop as a child and was a freestyle MC by fourteen, then began as a songwriter, co-writing \"Centuries\" with Fall Out Boy and receiving a BMI Pop Award in 2016.",
+      "Her debut EP The Come Up followed in 2016, and her albums include HBIC, Bloodline and Out of Love. She calls her style \"BollyHood\", blending Indian classical traditions with hip hop. She was a judge on the first season of MTV Hustle and appeared in the film Gully Boy.",
+      "Raja Kumari is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Known for", "BollyHood, HBIC, MTV Hustle judge"]
+    ]
+  },
+  "L Subramaniam (violin)": {
+    about: [
+      "Dr. L. Subramaniam is a violinist, composer and conductor from Chennai, one of the most celebrated Indian violinists in both Carnatic and global fusion music. He began learning from his father, Prof. V. Lakshminarayana, and holds a medical doctorate though he chose music as his career.",
+      "He has accompanied Carnatic greats, recorded his first fusion album Garland with Svend Asmussen in 1978 and collaborated with Stephane Grappelli, Larry Coryell and Jean-Luc Ponty. In 1983 he composed a Double Concerto for violin and flute, and in 1992 he founded the Lakshminarayana Global Music Festival in memory of his father.",
+      "L Subramaniam is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Instrument", "Violin"],
+      ["Known for", "Carnatic and global fusion music"]
+    ]
+  },
+  "Purbayan Chatterjee (sitar)": {
+    about: [
+      "Purbayan Chatterjee is a sitar player born in Kolkata and based in Mumbai, known for blending Indian classical music with contemporary world music. He learned from his father, Parthapratim Chatterjee, a student of Pandit Nikhil Banerjee and Ustad Ali Akbar Khan, and belongs to the Senia Maihar Gharana.",
+      "His albums include Lehar (2008) and Stringstruck, which won Best World Music Album at the Iraa Palm Expo in 2009, and he has performed with tabla maestro Ustad Zakir Hussain and released Saath Saath with bansuri player Rakesh Chaurasia.",
+      "Purbayan Chatterjee is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Instrument", "Sitar"],
+      ["Based in", "Mumbai"]
+    ]
+  },
+  "Raghav Sachar": {
+    about: [
+      "Raghav Sachar is a singer, composer and film scorer from Kolkata, active since 2003 and known as a multi-instrumentalist who started on the harmonica at four. He made his debut as composer and singer with Kabul Express and has worked on films including Rustom, Phhir, Monsoon Shootout and Andhadhun, where he is credited for saxophone and clarinet.",
+      "He founded the label Raghav Sachar Music in 2009 and Raghav Sachar Productions in 2011, which works on films, live events and music videos.",
+      "Raghav Sachar is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Known for", "Kabul Express, multi-instrumental performances"]
+    ]
+  },
+  "Ronu Majumdar (flute)": {
+    about: [
+      "Pandit Ronu Majumdar is a Hindustani classical bansuri (flute) player born in Varanasi, taught by his father and later by Pt. Laxman Prasad Jaipurwale and Pt. Vijay Raghav Rao, with training from his grand-guru Pt. Ravi Shankar. He won first prize at the All India Radio competition in 1981.",
+      "A pioneer of Indo-world fusion, he recorded for the Merchant Ivory film In Custody, with music by Zakir Hussain, has over twenty albums to his name and received the Padma Shri in 2025.",
+      "Ronu Majumdar is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Instrument", "Bansuri (flute)"],
+      ["Known for", "Hindustani classical and Indo-world fusion"]
+    ]
+  },
+  "Bismil Ki Mehfil": {
+    about: [
+      "Bismil Ki Mehfil is a modern live Sufi music project built around the singer and songwriter Bismil (Mohd Asif) from Delhi. Bismil and his manager, Vibhor Hasija, created the concept in 2013, while he was still in college, to bring live Sufi music to audiences in a fresher, more intimate way.",
+      "Shows blend Sufi, qawwali and ghazal-based music, starting softly and building to high-energy sections where the crowd sings along. Bismil cites Nusrat Fateh Ali Khan and Rahat Fateh Ali Khan as inspirations, and the project has grown into a touring brand, with releases such as \"Ki Kita\" and covers like \"Kehna Galat Galat\".",
+      "Bismil Ki Mehfil is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Based in", "Delhi"],
+      ["Known for", "Live Sufi shows, Ki Kita"],
+      ["Languages", "Hindi, Urdu, Punjabi"]
+    ]
+  },
+  "Divya Kumar": {
+    about: [
+      "Divya Kumar is a playback singer who sings in Hindi, Gujarati and Telugu, with a folk and Sufi texture to his voice. His Bollywood debut was around 2012 with \"Aafaton Ke Parinde\" in Ishaqzaade.",
+      "He is known for \"Maston Ka Jhund\" from Bhaag Milkha Bhaag, \"Shubhaarambh\" from Kai Po Che and \"Shake Your Bootiya\", and was nominated for Best Male Playback Singer for \"Jee Karda\" from Badlapur. His credits also include Baahubali: The Beginning and Stree 2.",
+      "Divya Kumar is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Known for", "Maston Ka Jhund, Shubhaarambh, Jee Karda"],
+      ["Languages", "Hindi, Gujarati, Telugu"]
+    ]
+  },
+  "Mame Khan": {
+    about: [
+      "Mame Khan is a Rajasthani folk singer from the Manganiyar community, born in Satto, a village near Jaisalmer, and the son of the folk singer Ustad Rana Khan. He grew up surrounded by Manganiyar music from childhood.",
+      "His wider fame came through Coke Studio @ MTV, where he sang \"Chaudhary\" with Amit Trivedi. He has sung for films including Luck by Chance, I Am, Mirzya and Sonchiriya, won Best Folk Single at the GiMA Awards in 2016 and has been reported as the first Indian folk artist to walk the Cannes red carpet.",
+      "Mame Khan is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Known for", "Chaudhary (Coke Studio), Manganiyar folk"],
+      ["Languages", "Rajasthani, Hindi"]
+    ]
+  },
+  "Sagar Bhatia": {
+    about: [
+      "Sagar Bhatia is a Delhi-based qawwali singer, composer and guitarist, known for fusing Sufi music with rock. He began in the Delhi jagran scene and as a guitarist for the singer Narendra Chanchal, and reached the top six of India's Raw Star in 2014.",
+      "His Sufi-rock project, Sagar Wali Qawwali, gave its first public performance in July 2022. He made his playback debut with \"Khudaya\" in the Akshay Kumar film Sarfira and is also known for \"Kiven Mukhre Ton\" and \"Mera Ishq\".",
+      "Sagar Bhatia is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Based in", "Delhi"],
+      ["Known for", "Sagar Wali Qawwali, Khudaya"],
+      ["Languages", "Hindi, Urdu, Punjabi"]
+    ]
+  },
+  "Salman Zaman": {
+    about: [
+      "Salman-Zaman is a brother duo, Salman Khan Niazi and Zaman Khan, who perform Sufi rock and contemporary qawwali in the tradition of the Rampur Sahaswan Gharana. They are billed as \"Sufi Ke Sultan\".",
+      "They mix Indian classical traditions with new-age Sufi rock and host a web series, The Salman-Zaman Show.",
+      "Salman Zaman is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Line-up", "Salman Khan Niazi, Zaman Khan"],
+      ["Known for", "Sufi rock, contemporary qawwali"]
+    ]
+  },
+  "Sharib & Toshi (Sabri)": {
+    about: [
+      "Sharib and Toshi Sabri are brothers who compose and sing together as Sharib-Toshi. Toshi first appeared on Amul STAR Voice of India and became known for \"Maahi\" from Raaz: The Mystery Continues, while Sharib took part in Music Ka Maha Muqqabla on STAR Plus.",
+      "As a duo they composed the album of Jashnn and the songs of Ghost (2012) and Yamla Pagla Deewana 2.",
+      "Sharib & Toshi is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Line-up", "Sharib Sabri, Toshi Sabri"],
+      ["Known for", "Maahi, Jashnn, Yamla Pagla Deewana 2"]
+    ]
+  },
+  "Sharib Toshi": {
+    about: [
+      "Sharib and Toshi Sabri are brothers who compose and sing together as Sharib-Toshi. Toshi first appeared on Amul STAR Voice of India and became known for \"Maahi\" from Raaz: The Mystery Continues, while Sharib took part in Music Ka Maha Muqqabla on STAR Plus.",
+      "As a duo they composed the album of Jashnn and the songs of Ghost (2012) and Yamla Pagla Deewana 2.",
+      "Sharib Toshi is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Line-up", "Sharib Sabri, Toshi Sabri"],
+      ["Known for", "Maahi, Jashnn, Yamla Pagla Deewana 2"]
+    ]
+  },
+  "Stree Shakti (Anuradha Pal)": {
+    about: [
+      "Stree Shakti is an all-female Indian classical percussion and fusion ensemble founded by the tabla player Anuradha Pal in Mumbai on International Women's Day in 1996, to give women a platform in Indian music. It blends the instruments and repertoires of the Hindustani and Carnatic traditions.",
+      "The group performed at the WOMAD Festival in the UK in 1999, in a show broadcast by the BBC to audiences in many countries, and has played festivals including the Bangkok International Festival. Its releases include the album Passion (2000).",
+      "Stree Shakti is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Based in", "Mumbai"],
+      ["Led by", "Anuradha Pal (tabla)"]
+    ]
+  },
+  "Vishaal Rasquinha": {
+    about: [
+      "Vishaal Rasquinha is a Mumbai-based emcee, anchor and voiceover artist. He is best known for hosting the 2021 wedding of Vicky Kaushal and Katrina Kaif, and has hosted events for clients including the Rajasthan Royals, the IPL and the United Nations in India.",
+      "He has been named Best Wedding Emcee at the WeddingSutra awards in more than one year.",
+      "Vishaal Rasquinha is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Based in", "Mumbai"],
+      ["Known for", "Wedding and corporate hosting"]
+    ]
+  },
+  "Parikrama": {
+    about: [
+      "Parikrama is a Delhi rock band formed in 1991 by Subir Malik, Nitin Malik and Sonam Sherpa, and one of the longest-running rock bands in India. They began with classic rock covers, developed a blues-based rock style and later added shades of metal.",
+      "Their songs include \"But It Rained\", \"Till I'm No One Again\", \"Whiskey Blues\" and \"Open Skies\". They toured internationally with Iron Maiden and played the Download Festival in England in 2007.",
+      "Parikrama is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Based in", "Delhi"],
+      ["Known for", "But It Rained, Open Skies"],
+      ["Formed", "1991"]
+    ]
+  },
+  "The Yellow Diaries": {
+    about: [
+      "The Yellow Diary is a Mumbai alternative pop-rock band formed in 2015, with Rajan Batra as lead vocalist and lyricist, Himonshu Parikh as singer-keyboardist and composer, and Stuart DaCosta on bass. Their sound blends rock, electronic and Indian classical influences.",
+      "They signed with Sony Music in 2017 and released the EP Marz, followed by singles including \"Roz Roz\" with Shilpa Rao and their debut album In Case We Forget in 2025. They opened for A. R. Rahman's Wonderment Tour and have played Lollapalooza India.",
+      "The Yellow Diaries is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Based in", "Mumbai"],
+      ["Known for", "Roz Roz, Marz, In Case We Forget"]
+    ]
+  },
+  "Zikrr": {
+    about: [
+      "Zikrr is a Delhi fusion rock band formed in 2012 by a group of schoolmates, playing Sufi and Punjabi folk songs in a rock setting. They began with covers of Sufi legends such as Nusrat Fateh Ali Khan, mixed with Punjabi folk and Bollywood songs, and their later work blends rock with Indian classical ragas.",
+      "The band has seven members and is known for songs such as \"Bam Bhole Bam\" and \"Yaraane\".",
+      "Zikrr is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Based in", "Delhi"],
+      ["Known for", "Sufi rock, Bam Bhole Bam"]
+    ]
+  },
+  "Bryden & Parth Choir": {
+    about: [
+      "Bryden-Parth is a cross-genre act from Bengaluru, formed by the guitarist Bryden Lewis, who played in the prog band Slain, and the flautist Parth Chandiramani, who met in 2012 while touring with the Raghu Dixit Project. Their live show brings together a band and an 11-member choir.",
+      "Their sound draws on Western and Indian classical backgrounds, with gospel-influenced harmonies, and their debut album is Chameleon World.",
+      "Bryden & Parth Choir is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Based in", "Bengaluru"],
+      ["Line-up", "Bryden Lewis (guitar), Parth Chandiramani (flute), choir"]
+    ]
+  },
+  "Parth Chandiramani (flute)": {
+    about: [
+      "Parth Chandiramani is a flautist who, with the guitarist Bryden Lewis, forms the Bengaluru cross-genre duo Bryden-Parth. The two met in 2012 while touring with the Raghu Dixit Project.",
+      "Their live show adds a choir to the band, mixing Western and Indian classical influences, and their debut album is Chameleon World.",
+      "Parth Chandiramani is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Instrument", "Flute"],
+      ["Based in", "Bengaluru"]
+    ]
+  },
+  "El Fe Choir (Chennai)": {
+    about: [
+      "El Fé Choir is a Chennai vocal group, live band and choir founded by the playback singer, vocal arranger and producer Roe Vincent around 2009 to 2010. Vincent is known for singing \"Adiye\" from Kadal and \"Hey\" from Vanakkam Chennai.",
+      "The group has worked on film music, including 3 (Moonu) and Maan Karate, and performs at weddings, corporate events and college fests.",
+      "El Fe Choir is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Based in", "Chennai"],
+      ["Founded by", "Roe Vincent"]
+    ]
+  },
+  "Prateek Kuhad": {
+    about: [
+      "Prateek Kuhad is a singer-songwriter from Jaipur who makes independent music in Hindi and English, ranging from indie folk to adult pop. He took up the guitar as a teenager, studied maths and economics at New York University and became a notable name in the Indian indie scene with the 2013 EP Raat Raazi and the 2015 album Tokens & Charms.",
+      "He is best known for \"cold/mess\", which appeared on Barack Obama's list of favourite music of 2019, and for \"Kasoor\". He was the first Indian artist signed to Elektra Records, released the album The Way That Lovers Do in 2022 and has written for films, including \"Kho Gaye Hum Kahan\" and \"Saansein\".",
+      "Prateek Kuhad is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Known for", "cold/mess, Kasoor, Tokens & Charms"],
+      ["Languages", "Hindi, English"]
+    ]
+  },
+  "Anuv Jain": {
+    about: [
+      "Anuv Jain is an indie singer-songwriter and composer known for simple, chord-based songs about love and heartbreak, built on acoustic guitar or ukulele. He began writing songs at sixteen and has never had formal musical training.",
+      "His songs include \"Baarishein\", \"Husn\", \"Alag Aasmaan\" and \"Gul\". He was named to the Forbes India 30 Under 30 list in 2023 and is one of India's most-streamed indie artists.",
+      "Anuv Jain is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Known for", "Baarishein, Husn, Alag Aasmaan, Gul"],
+      ["Languages", "Hindi"]
+    ]
+  },
+  "Ritviz": {
+    about: [
+      "Ritviz Srivastava is a singer-songwriter, electronic musician and producer from Pune, trained in Hindustani classical music as a child; his parents were a classical vocalist and a tabla player. His breakout came in 2017 to 2018 with \"Udd Gaye\", which won a party-anthem competition run by Bacardi.",
+      "His songs include \"Liggi\" and \"Sun Toh\", and his releases include the EPs Yuv, Ved, Dev and Baaraat and the debut album Mimmi. He has played festivals including Sunburn and EDC Las Vegas and curated the YUV Fest.",
+      "Ritviz is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Known for", "Udd Gaye, Liggi, Sun Toh"],
+      ["Languages", "Hindi, English"]
+    ]
+  },
+  "Amaal Mallik": {
+    about: [
+      "Amaal Mallik is a music composer, singer and lyricist working mainly in Hindi cinema. He is the son of music director Daboo Malik, the grandson of Sardar Malik and the elder brother of singer Armaan Malik, and began learning music at around eight.",
+      "He made his film composing debut in 2014 with Jai Ho, and his credits include M.S. Dhoni: The Untold Story and Kabir Singh. He also releases independent pop singles.",
+      "Amaal Mallik is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Known for", "Jai Ho, M.S. Dhoni: The Untold Story, Kabir Singh"],
+      ["Languages", "Hindi"]
+    ]
+  },
+  "Shirley Setia": {
+    about: [
+      "Shirley Setia is a singer and actress from New Zealand, born in India and raised in Auckland. She became known through YouTube, where she was nicknamed the \"pyjama popstar\" by the New Zealand Herald, and went on to sing and act in Indian films.",
+      "Her screen work includes Maska and Nikamma, and her music is a mix of Hindi and English songs.",
+      "Shirley Setia is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Known for", "YouTube covers, Maska, Nikamma"],
+      ["Languages", "Hindi, English"]
+    ]
+  },
+  "Hans Raj Hans": {
+    about: [
+      "Hans Raj Hans is a Punjabi folk and Sufi singer from Jalandhar who also sings film songs and Punjabi pop. He trained as a young man under Ustad Puran Shahkoti, who gave him the surname \"Hans\", and later recorded Gurbani and devotional songs.",
+      "He sang with Nusrat Fateh Ali Khan in the film Kachche Dhaage, received the Padma Shri and a Sangeet Natak Akademi Award, and was reportedly the first Punjabi singer formally invited to perform at Gaddafi Stadium in Lahore, in 1997.",
+      "Hans Raj Hans is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Based in", "Jalandhar"],
+      ["Known for", "Punjabi folk, Sufi, Padma Shri"],
+      ["Languages", "Punjabi, Hindi"]
+    ]
+  },
+  "Qutbi Brothers (Arshad and Adnan Qutbi)": {
+    about: [
+      "The Qutbi Brothers are a qawwali group led by Haji Mohammad Idris, who performs with his two sons, Arshad and Adnan. Idris began his career in the 1970s, and his sons joined him on stage from the age of four or five. Arshad is the co-lead singer, with an emphasis on Sufi qawwali, and Adnan holds a postgraduate degree from the University of Delhi.",
+      "They describe themselves as the inheritors of a centuries-old qawwali tradition. They report a non-stop 12-hour qawwali performance at the Sangeet Natak Akademi in Delhi in 2016, were included in the Limca Book of Records and are graded at the top level by All India Radio. They have also toured abroad.",
+      "Qutbi Brothers is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Based in", "Delhi"],
+      ["Line-up", "Haji Mohammad Idris, Arshad Qutbi, Adnan Qutbi"]
+    ]
+  },
+  "Haji Mohammad Idris": {
+    about: [
+      "Haji Mohammad Idris is a qawwali singer who leads the Qutbi Brothers with his sons Arshad and Adnan. His career began in the 1970s, and he has taught his sons to carry the qawwali tradition forward.",
+      "The group performs Sufi qawwali and Sufi-Bollywood sets and has toured abroad.",
+      "Haji Mohammad Idris is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Based in", "Delhi"],
+      ["Leads", "Qutbi Brothers"]
+    ]
+  },
+  "Nizami Bandhu": {
+    about: [
+      "Nizami Bandhu is a qawwali group made up of Ustad Chand Nizami and his nephews Shadab and Sohrab Faridi Nizami, the Darbari Qawwals of the shrine of Hazrat Nizamuddin Auliya in Delhi. Their wider fame came partly from the family's appearance in the film Rockstar, which was shot at the Nizamuddin shrine.",
+      "They perform Sufi qawwali in the tradition of the Nizamuddin dargah.",
+      "Nizami Bandhu is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Based in", "Delhi"],
+      ["Line-up", "Ustad Chand Nizami, Shadab Faridi Nizami, Sohrab Faridi Nizami"]
+    ]
+  },
+  "Ustad Chand Nizami": {
+    about: [
+      "Ustad Chand Nizami is a qawwali singer and, with his nephews Shadab and Sohrab Faridi Nizami, one of the Darbari Qawwals of the shrine of Hazrat Nizamuddin Auliya in Delhi. The group is known as Nizami Bandhu.",
+      "The family appeared in the film Rockstar, which was shot at the Nizamuddin shrine.",
+      "Ustad Chand Nizami is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Based in", "Delhi"],
+      ["Group", "Nizami Bandhu"]
+    ]
+  },
+  "Shadab Faridi": {
+    about: [
+      "Shadab Faridi Nizami is a qawwali singer who performs with his uncle Ustad Chand Nizami and his brother Sohrab as the group Nizami Bandhu, the Darbari Qawwals of the shrine of Hazrat Nizamuddin Auliya in Delhi.",
+      "The family appeared in the film Rockstar, which was shot at the Nizamuddin shrine.",
+      "Shadab Faridi is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Based in", "Delhi"],
+      ["Group", "Nizami Bandhu"]
+    ]
+  },
+  "Kavita Seth": {
+    about: [
+      "Kavita Seth is a singer from Bareilly, Uttar Pradesh, known for Sufi music and ghazals as well as Hindi film playback. A performance at a Sufi festival led to her first film song, for Vaada (2005), and she later moved to Mumbai.",
+      "She has won the Filmfare Award for Best Female Playback Singer twice: for \"Iktara\" from Wake Up Sid and for \"Rangisari\" from Jugjugg Jeeyo, which she also composed with her son Kanishk Seth. Her 2008 album Sufiana is built on verses by Rumi.",
+      "Kavita Seth is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Known for", "Iktara, Rangisari, Sufiana"],
+      ["Languages", "Hindi"]
+    ]
+  },
+  "Motherjane": {
+    about: [
+      "Motherjane is a rock band from Kochi, Kerala, formed in 1996 by drummer John Thomas, guitarist Mithun Raju and bassist Clyde Rozario. They are known for progressive rock with Carnatic influences.",
+      "Their debut album Insane Biography (2002) won Best Indian Rock Album, and their second album Maktub (2008) reached global charts. Suraj Mani joined as vocalist and wrote the band's original songs, beginning with \"Disillusioned\". The band reunited in 2024 and released the EP 1 1 1.",
+      "Motherjane is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Based in", "Kochi"],
+      ["Known for", "Insane Biography, Maktub, progressive rock"]
+    ]
+  },
+  "Suraj Mani": {
+    about: [
+      "Suraj Mani is a singer and songwriter who joined the Kochi rock band Motherjane as vocalist after meeting the band at the Ancient Mariner in Kochi, and wrote the band's original songs beginning with \"Disillusioned\".",
+      "He also performs as an indie singer.",
+      "Suraj Mani is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Known for", "Motherjane vocalist"]
+    ]
+  },
+  "Lisa Mishra": {
+    about: [
+      "Lisa Mishra is a singer, songwriter and actress born in Odisha and raised in Chicago. She began posting cover versions on YouTube in 2007 and became known for the reprise of \"Tareefan\" in Veere Di Wedding (2018).",
+      "Her songs include \"Chandigarh Mein\" from Good Newwz, \"The Wakhra Song\" from Judgementall Hai Kya and \"Coka 2.0\" from Liger. She signed with Universal Music India's VYRL Originals in 2019 and released her debut single, \"Nai Chaida\", in 2020.",
+      "Lisa Mishra is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Known for", "Tareefan, Chandigarh Mein, The Wakhra Song"],
+      ["Languages", "Hindi, Punjabi, English"]
+    ]
+  },
+  "Stephen Devassy": {
+    about: [
+      "Stephen Devassy is a pianist, keytarist, keyboardist, composer and music director from Kerala, active since 1998. He began his own band, Seven, at nineteen, and has worked with A. R. Rahman, Hariharan and Shankar-Ehsaan-Loy, joining Rahman's Jai Ho tour.",
+      "He founded Musik Lounge, an audio technology school and studio in Chennai, and his profile says he has performed in more than 60 countries.",
+      "Stephen Devassy is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Instrument", "Piano, keytar, keyboards"],
+      ["Known for", "Rahman's Jai Ho tour, Musik Lounge"]
+    ]
+  },
+  "Salil Bhatt (Satvik Veena)": {
+    about: [
+      "Salil Bhatt is a classical musician from Jaipur and the creator of the Satvik Veena, an instrument that resembles a cello. He belongs to the tenth generation of the Bhatt family of musicians and is the son and disciple of the Grammy-winning Mohan Veena player Pandit Vishwa Mohan Bhatt.",
+      "He gave his first solo concert at seventeen, in Birmingham, and his official site says he was the first Indian musician to perform in the Bavarian and Icelandic parliaments.",
+      "Salil Bhatt is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Instrument", "Satvik Veena"],
+      ["Based in", "Jaipur"]
+    ]
+  },
+  "Hansraj Raghuwanshi": {
+    about: [
+      "Hansraj Raghuwanshi is a devotional singer from Himachal Pradesh, known mainly for Shiva bhajans. He became popular in 2019 with \"Mera Bhola Hai Bhandari\", which spread widely on social media.",
+      "He made his film singing debut in Pal Pal Dil Ke Paas, released \"Duntara\" with Richa Sharma in 2020 and has sung a bhajan for OMG 2.",
+      "Hansraj Raghuwanshi is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Known for", "Mera Bhola Hai Bhandari, Shiva bhajans"]
+    ]
+  },
+  "Lakhbir Singh Lakkha": {
+    about: [
+      "Lakhbir Singh Lakkha is a bhajan and jagran singer of Punjabi origin, known for energetic Mata Rani devotional music. He began singing professionally at the Shiv temple in Deoghar, Jharkhand, and is based in Mumbai.",
+      "He is known for Navratri bhajans such as \"Pyara Saja Hai\" and \"Maiya Ka Chola\", has performed abroad and released the album Maa Shakti Teri Mahima Apar Jai Jai Purnagiri Darbar in 2022.",
+      "Lakhbir Singh Lakkha is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Known for", "Mata Rani bhajans, Navratri jagrans"],
+      ["Based in", "Mumbai"]
+    ]
+  },
+  "Hemant Brijwasi": {
+    about: [
+      "Hemant Brijwasi is a singer who won the reality show Rising Star 2 in 2018. His father is also a singer, and his three younger brothers sing as well.",
+      "He has sung playback for films including Soorma (2018) and Manikarnika, and performs bhajans at jagran events.",
+      "Hemant Brijwasi is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Known for", "Rising Star 2 winner"],
+      ["Languages", "Hindi"]
+    ]
+  },
+  "Urvashi Radadiya": {
+    about: [
+      "Urvashi Radadiya is a Gujarati folk singer, often called \"Kathiawar's cuckoo\", who began singing at a young age and performs live across Gujarat, from Gandhinagar to Kutch.",
+      "Her releases include songs such as \"Gamdu\" and \"Gajanand\", and she has also performed for Gujarati audiences in Australia.",
+      "Urvashi Radadiya is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Known for", "Gujarati folk"],
+      ["Languages", "Gujarati"]
     ]
   }
 };
