@@ -1416,7 +1416,7 @@ footer{padding:56px 0 72px;border-top:1px solid var(--line);margin-top:clamp(64p
   var FNAME = nameMap(FORMATS), ONAME = nameMap(OCCS), GNAME = nameMap(GENRES);
   function hay(a){
     if (!a.h) {
-      var parts = [a.n, a.c, a.l || '', a.t || ''];
+      var parts = [a.n, a.c, a.l || '', a.t || '', (window.AOS_ALIASES || {})[a.n] || ''];
       a.f.forEach(function(k){ parts.push(FNAME[k] || ''); });
       a.o.forEach(function(k){ parts.push(ONAME[k] || ''); });
       a.g.forEach(function(k){ parts.push(GNAME[k] || ''); });
