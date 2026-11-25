@@ -1,0 +1,48 @@
+name: Rebuild generated pages
+
+# When the roster, videos, posts or landing copy change, regenerate the artist pages,
+# updates pages, landing pages and sitemap.xml, and commit them back to main.
+on:
+  push:
+    branches: [main]
+    paths:
+      - acts.js
+      - videos.js
+      - posts.json
+      - tools/**
+      - artists.css
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rebuild
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # sitemap lastmod dates come from git history
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - run: pip install pillow
+      - run: python3 tools/build.py
+      - name: Commit generated files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Generated files already up to date."
+          else
+            git commit -m "Rebuild generated pages and sitemap"
+            git push
+          fi

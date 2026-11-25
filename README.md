@@ -20,3 +20,9 @@ Format, occasion and genre names come from `tools/taxonomy.json` (copied from `i
 `/occasions/<occasion>/`, `/cities/<city>/` and the hubs `/book/`, `/occasions/`, `/cities/`.
 The copy for every page (intro, tips, FAQs, which formats to recommend) is in `tools/landing.json`; edit it and rebuild.
 A page is skipped when its entry has no `intro`, or when too few acts match (see the `MIN_*` values in `tools/build_landing.py`).
+
+## Automatic rebuild
+`.github/workflows/build.yml` runs `python3 tools/build.py` on GitHub whenever `acts.js`, `videos.js`, `posts.json`, `artists.css` or anything in `tools/` is pushed to `main`,
+and commits the regenerated pages and `sitemap.xml` back to `main` (usually within a couple of minutes, then Vercel redeploys).
+You can also run it from the repository's Actions tab. Running `python3 tools/build.py` yourself still works; the action then finds nothing to change.
+Pull before you edit again, since the bot adds a commit after your push.
