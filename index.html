@@ -1250,6 +1250,7 @@ footer{padding:56px 0 72px;border-top:1px solid var(--line);margin-top:clamp(64p
 .vm .vchips{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.vm .vchip{border:1px solid rgba(246,242,232,.35);background:transparent;color:inherit;border-radius:999px;padding:7px 14px;font:600 13px var(--body,sans-serif);cursor:pointer}.vm .vchip[aria-pressed=true]{background:#F6F2E8;color:#0E0B1A}
 .vm .vact{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
 .vm .vbio{margin-top:18px;max-width:68ch}.vm .vbio p{margin:0 0 10px;font-size:15px;line-height:1.55;color:#D8D2C2}.vm .vbio p:last-child{margin-bottom:0}
+.vm .vfacts{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;margin:18px 0 0;padding:0}.vm .vfacts div{border:1px solid rgba(246,242,232,.22);border-radius:12px;padding:10px 14px}.vm .vfacts dt{margin:0 0 4px;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#BDB5A3}.vm .vfacts dd{margin:0;font-size:15px;color:#F6F2E8}
 @media (max-width:600px){.vm .vbox{padding:18px 16px 20px}.vm h3{font-size:26px}}
 </style>
 <script src="acts.js"></script>
@@ -1509,8 +1510,9 @@ footer{padding:56px 0 72px;border-top:1px solid var(--line);margin-top:clamp(64p
       });
       box.appendChild(chips);
     }
-    var bio = BIOS[a.n];
-    if (bio) { var bd = vmEl('div', 'vbio'); (Array.isArray(bio) ? bio : [bio]).forEach(function(t){ bd.appendChild(vmEl('p', '', t)); }); box.appendChild(bd); }
+    var bio = BIOS[a.n], about = Array.isArray(bio) ? bio : (bio && bio.about) || (typeof bio === 'string' ? [bio] : []), facts = (bio && !Array.isArray(bio) && bio.facts) || [];
+    if (about.length) { var bd = vmEl('div', 'vbio'); about.forEach(function(t){ bd.appendChild(vmEl('p', '', t)); }); box.appendChild(bd); }
+    if (facts.length) { var fl = vmEl('dl', 'vfacts'); facts.forEach(function(f){ var g = vmEl('div'); g.appendChild(vmEl('dt', '', f[0])); g.appendChild(vmEl('dd', '', f[1])); fl.appendChild(g); }); box.appendChild(fl); }
     var acts = vmEl('div', 'vact');
     if (info && info.t === 'link') { var ol = vmEl('a', 'pill', 'Open video'); ol.href = info.src; ol.target = '_blank'; ol.rel = 'noopener'; acts.appendChild(ol); }
     var book = vmEl('a', 'pill' + (info && info.t === 'link' ? ' ghost' : ''), 'Book this act');
