@@ -26,7 +26,7 @@ HEAD_ICONS = ('<link rel="icon" href="/favicon.ico" sizes="any">\n'
  '<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">\n'
  '<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">\n'
  '<link rel="apple-touch-icon" href="/apple-touch-icon.png">\n')
-FONTS = '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">\n<link rel="stylesheet" href="/updates.css">\n'
+FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com">\n<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">\n<link rel="stylesheet" href="/updates.css">\n'
 
 def head(title, desc, canon, og_type="website", extra="", ld=None, css=""):
     t, d = esc(title), esc(desc)
