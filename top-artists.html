@@ -1551,23 +1551,23 @@ footer{padding:56px 0 72px;border-top:1px solid var(--line);margin-top:clamp(64p
   // categories with no acts yet borrow a photo of their own
   var COVEROVER = {lounge:'img/act-ayush.jpg', choir:'img/cat-choir.jpg', devotional:'img/cat-devotional.jpg', intl:'img/act-stellar.jpg', jazz:'img/cat-westjazz.jpg', western:'img/cat-westjazz.jpg', solosing:'img/cat-solo.jpg', celeb:'img/cat-celeb.jpg'};
   var OCCOVER = {chowki:'img/occ-chowki.jpg'};
-  // photos an event tile must never use as its cover
-  var OCCSKIP = {christmas:['img/act-sunidhi.jpg']};
+  // only photos listed in AOS_COVERS (acts.js) may be a tile cover; other artist photos stay on their own card
+  function coverOK(p){ return !window.AOS_COVERS || window.AOS_COVERS.indexOf(p) > -1; }
   // every distinct photo we have, so rows with many cards do not keep repeating the same one
   function photoPool(){
     var out = [];
-    ACTS.forEach(function(a){ if (a.p && out.indexOf(a.p) < 0) out.push(a.p); });
+    ACTS.forEach(function(a){ if (coverOK(a.p) && out.indexOf(a.p) < 0) out.push(a.p); });
     Object.keys(COVEROVER).concat(Object.keys(OCCOVER)).forEach(function(k){ var v = COVEROVER[k] || OCCOVER[k]; if (v && out.indexOf(v) < 0) out.push(v); });
     return out;
   }
   function pickCover(test, used, loose){
-    var found = ''; ACTS.some(function(a){ if (a.p && test(a) && used.indexOf(a.p) < 0) { found = a.p; return true; } return false; });
+    var found = ''; ACTS.some(function(a){ if (coverOK(a.p) && test(a) && used.indexOf(a.p) < 0) { found = a.p; return true; } return false; });
     if (!found && loose) {
       // all photos used once already: take the least used one, never the same as the card before
       var pool = photoPool(), best = 1e9, last = used[used.length - 1];
       pool.forEach(function(p){ var n = used.filter(function(u){ return u === p; }).length; if (n < best && p !== last) { best = n; found = p; } });
     }
-    if (!found) ACTS.some(function(a){ if (a.p && test(a)) { found = a.p; return true; } return false; });
+    if (!found) ACTS.some(function(a){ if (coverOK(a.p) && test(a)) { found = a.p; return true; } return false; });
     return found;
   }
   // the same landing for a click on a card here and for a link from the Show all pages: the roster section from its top, results below the filters
@@ -1613,7 +1613,7 @@ footer{padding:56px 0 72px;border-top:1px solid var(--line);margin-top:clamp(64p
     }));
     var used = [];
     buildRail('rocc', 'Book for any event', '', '', OCCS.map(function(oc){
-      var key = oc[0], skip = OCCSKIP[key] || [], cv = OCCOVER[key] || pickCover(function(a){ return a.o.indexOf(key) > -1 && skip.indexOf(a.p) < 0; }, used.concat(skip), true); if (cv) used.push(cv);
+      var key = oc[0], cv = OCCOVER[key] || pickCover(function(a){ return a.o.indexOf(key) > -1; }, used, true); if (cv) used.push(cv);
       return {key:key, label:oc[1], cover:cv, code:oc[1].charAt(0), go:function(){ st.o = [key]; st.x = []; st.shown = STEP; pick('ev:' + key); openList(); }};
     }), -1);
     buildRail('rcats', 'Artist categories', '', '', FORMATS.map(function(fm){
