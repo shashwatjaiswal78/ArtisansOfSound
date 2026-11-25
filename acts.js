@@ -1496,6 +1496,183 @@ window.AOS_BIOS = {
       ["Based in", "Mumbai"],
       ["Band", "The Yellow Diary"]
     ]
+  },
+  "Chugge Khan and Rajasthan Josh": {
+    about: [
+      "Rajasthan Josh is a collective of Manganiyar musicians from the Barmer and Jaisalmer districts of Rajasthan, formed in 2009 and led by Chugge Khan. The group brings together three strains of music that are rarely heard together: qawwali, Manganiyar court music and a big, boisterous Rajasthani brass band.",
+      "Chugge Khan plays traditional Rajasthani instruments such as the morchang, khartal and bhappang and writes Rajasthani folk lyrics. The group's repertoire reaches into Sufi qawwali, bhajans, Sindhi and Punjabi folk and contemporary fusion, and its album Rajasthan Josh: Chugge Khan and Band was released in 2012.",
+      "Chugge Khan and Rajasthan Josh is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Line-up", "Manganiyar musicians led by Chugge Khan"],
+      ["Known for", "Manganiyar folk, qawwali and brass-band fusion"],
+      ["Languages", "Rajasthani, Hindi, Punjabi, Sindhi"]
+    ]
+  },
+  "Deene Khan": {
+    about: [
+      "Deene Khan is a folk and Sufi singer from a Manganiyar family of master singers in Rajasthan, taught by his father Ramjan Khan. His career began in Chelak, a village near Jaisalmer, and his repertoire covers traditional folk and Sufi songs in the Manganiyar style.",
+      "Deene Khan is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Known for", "Manganiyar folk and Sufi singing"],
+      ["Languages", "Rajasthani, Hindi"]
+    ]
+  },
+  "Sadho": {
+    about: [
+      "Sadho is a Delhi folk-pop ensemble that aims to represent and revive Indian classical music, traditional genres, Sufi and folk for a younger audience. Its repertoire spans Sufi, qawwali, Bollywood, folk, ghazal and classical music.",
+      "The band performs at weddings, corporate events and stage shows.",
+      "Sadho is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Based in", "Delhi"],
+      ["Known for", "Folk-pop, Sufi and qawwali sets"]
+    ]
+  },
+  "Rana Dholi (folk music and dance)": {
+    about: [
+      "Rana Dholi is a Rajasthani folk entertainment group offering folk music along with Ghoomar and Kalbeliya dance, with packages for weddings and events. The Dholi community takes its name from the dhol, the barrel-shaped drum at the heart of its music, and claims descent from the poet Chand Bardai.",
+      "Rana Dholi is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Known for", "Rajasthani folk music, Ghoomar and Kalbeliya dance"],
+      ["Languages", "Rajasthani, Hindi"]
+    ]
+  },
+  "Osho Jain": {
+    about: [
+      "Osho Jain is an indie singer-songwriter, composer and producer born in Indore and based in Mumbai. He began as lead singer and songwriter of the indie rock band Aankh Micholi and moved to a solo career in 2016, sharing covers and originals on YouTube.",
+      "He is known for poetic Hindi and Urdu lyrics and songs such as \"Khush To Hai Na\", \"Khud Se\" and \"Tu Aisa Kaise Hai\". His debut album Saar has nine tracks, five of them duets, mostly with Sanchi Mannotra.",
+      "Osho Jain is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Based in", "Mumbai"],
+      ["Known for", "Khush To Hai Na, Khud Se, Saar"],
+      ["Languages", "Hindi, Urdu"]
+    ]
+  },
+  "Zaeden": {
+    about: [
+      "Zaeden is the stage name of Sahil Sharma, a singer and producer from Gurugram who began as a DJ at fourteen and later studied sound engineering in Mumbai. In 2016 he was a closing act at David Guetta's Mumbai concert, and he is one of the few Indian artists to have played Belgium's Tomorrowland festival.",
+      "He moved from electronic music to singing and songwriting around 2019, released his debut album Genesis 1:1 in 2021 and is also known for \"Aa Mil\" with Lisa Mishra and \"Tere Jaane Se\" with Ankit Tiwari.",
+      "Zaeden is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Known for", "Genesis 1:1, Aa Mil, Tomorrowland"],
+      ["Languages", "Hindi, English"]
+    ]
+  },
+  "Twin Strings": {
+    about: [
+      "Twin Strings is a Delhi indie act that began with twin brothers Sagar and Sahil, who were later joined by Manav and Mohit. They started during their engineering studies and left it to take up music full time.",
+      "They are known for acoustic covers and original songs, and have collaborated with brands and institutions including Netflix, Google and the Indian Army.",
+      "Twin Strings is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Based in", "Delhi"],
+      ["Known for", "Acoustic covers and originals"]
+    ]
+  },
+  "Nirakar": {
+    about: [
+      "Nirakar is an Indian jazz band, listed as based in London, that formed in 2004 to build a sound for ambient listening. Its music blends traditional North Indian melodies with contemporary jazz and Latin grooves.",
+      "The band has played corporate events, weddings and private functions.",
+      "Nirakar is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Known for", "Indo jazz"]
+    ]
+  },
+  "Mangesh Desai": {
+    about: [
+      "Mangesh Desai is a stand-up illusionist and mentalist who began performing magic at the age of five. His act combines magic and mind reading with comedy, and he has performed across India and as an on-board magician on American cruise ships.",
+      "He is a partner in Magic Terminal, which describes itself as India's first magic training company, has appeared on talent shows including India's Got Talent, and gave a TEDxPanchgani talk titled \"Understanding illusions, improving decisions\".",
+      "Mangesh Desai is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Known for", "Illusion and mentalism with comedy"],
+      ["Languages", "Hindi, English"]
+    ]
+  },
+  "Rakesh Syam": {
+    about: [
+      "Rakesh Syam is a mentalist and mind reader based in Mumbai whose act mixes telepathy-style mind reading with close-up illusions that can be customised for each event. His profile says he has headlined on Carnival Cruise Lines for more than a decade and performed at corporate conferences.",
+      "Rakesh Syam is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Based in", "Mumbai"],
+      ["Known for", "Mentalism and mind reading"]
+    ]
+  },
+  "Ankit Batra": {
+    about: [
+      "Ankit Batra is a Delhi singer, composer and guitarist who left an engineering career and a corporate job in 2010 to take up music full time. He is described as a pioneer of musical pheras in India, where the wedding mantras are sung in a musical style while their meaning is explained.",
+      "He is best known for his devotional rendition of the Achyutam Keshavam bhajan and is also booked for Mata ki chowki, Sai sandhya and Sufi-Bollywood evenings. He sang the Vedic mantras at the 2026 wedding of Nupur Sanon and Stebin Ben in Udaipur.",
+      "Ankit Batra is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Based in", "Delhi"],
+      ["Known for", "Musical pheras, Achyutam Keshavam"],
+      ["Languages", "Hindi, Sanskrit"]
+    ]
+  },
+  "Mehul Pandit": {
+    about: [
+      "Mehul Pandit is a Bengaluru singer whose wedding act sings during the pheras and the wedding chants as well as across the ceremony and reception. Clients praise his Punjabi folk performances and his ability to get the whole reception dancing.",
+      "He travels for destination weddings.",
+      "Mehul Pandit is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Based in", "Bengaluru"],
+      ["Known for", "Musical pheras, Punjabi folk"]
+    ]
+  },
+  "Siddharth Mohan": {
+    about: [
+      "Siddharth Mohan is a devotional singer and composer from New Delhi who sings bhajans and works in playback. He began singing at eleven, was encouraged by Sri Sri Ravi Shankar, and trained as an engineer and worked for a multinational company before taking up music full time. He plays flute and guitar.",
+      "His albums include Shukrana, Nithya and Shivansh, released through labels such as Saregama, The Art of Living and T-Series, and he works closely with the composers Bawa-Gulzar.",
+      "Siddharth Mohan is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Based in", "Delhi"],
+      ["Known for", "Bhajans, Shukrana, Nithya"],
+      ["Languages", "Hindi, Punjabi, Tamil"]
+    ]
+  },
+  "Bombay Chamber Orchestra": {
+    about: [
+      "The Bombay Chamber Orchestra is one of India's oldest active Western classical orchestras. It grew out of the Bombay Philharmonia and was set up in 1962 by Jini Dinshaw as an educational trust, offering free coaching to young local musicians.",
+      "It is often described as the longest-running orchestra in Mumbai's history.",
+      "Bombay Chamber Orchestra is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Based in", "Mumbai"],
+      ["Founded", "1962"],
+      ["Style", "Western classical orchestra"]
+    ]
+  },
+  "Hiten Panwar": {
+    about: [
+      "Hiten Panwar is a percussionist based in Delhi NCR who plays more than fifteen percussion instruments, including the darbuka, cajon, tabla and drums. He was earlier part of bands including Nasha and Nasya before becoming a solo percussionist.",
+      "He is known for blending traditional rhythms with contemporary music, and adds live percussion over recorded or DJ sets.",
+      "Hiten Panwar is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Based in", "Delhi NCR"],
+      ["Instruments", "Darbuka, cajon, tabla, drums and more"]
+    ]
+  },
+  "Mohsick": {
+    about: [
+      "Mohsick is the stage name of Mohsin Khan, a percussionist and live act based in Mumbai. He performs live percussion alongside DJs, blending percussion with electronic dance music at clubs, private events and festivals, and has performed with DJ Ekant.",
+      "He also makes original music.",
+      "Mohsick is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Based in", "Mumbai"],
+      ["Known for", "Live percussion with DJs"]
+    ]
   }
 };
 
