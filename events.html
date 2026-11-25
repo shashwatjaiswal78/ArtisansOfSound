@@ -1222,7 +1222,7 @@ footer{padding:56px 0 72px;border-top:1px solid var(--line);margin-top:clamp(64p
   var FORMATS = [['instrband','Instrumental band'],['lounge','Lounge acts'],['intl','International band'],['western','Western band'],['jazz','Jazz band'],
     ['choir','Choir, carol group'],['live','Bollywood, Punjabi'],['bollyretro','Bollywood retro'],['bollyrock','Bollywood rock'],['sufibolly','Sufi Bollywood band'],['sufiq','Sufi Qawwali band'],['soloinst','Solo instrumental'],
     ['rajfusion','Rajasthani fusion'],['ghazal','Ghazal and classical'],['magiccomedy','Magic and comedy'],['solosing','Solo singers'],['duotrio','Duo and trio'],['dj','DJ'],['djband','DJ based band'],['djperc','DJ + percussions'],
-    ['anchor','Anchors'],['celeb','Celebrity artists'],['standup','Celebrity stand-up comedians'],['allgirl','All girls band'],['devotional','Devotional, Bhajan'],['rap','Rap and hip hop']];
+    ['anchor','Anchors'],['celeb','Celebrity artists'],['standup','Celebrity stand-up comedians'],['reality','Indian Idol and Sa Re Ga Ma Pa'],['allgirl','All girls band'],['devotional','Devotional, Bhajan'],['rap','Rap and hip hop']];
   FORMATS.sort(function(a,b){return a[1].toLowerCase()<b[1].toLowerCase()?-1:1;});
   var CITIES = [['Delhi','Delhi'],['Lucknow','Lucknow'],['Mumbai','Mumbai'],['Bangalore','Bangalore'],['Ahmedabad','Ahmedabad']];
   var OCCS = [['newyear','New Year'],['wedding','Wedding'],['engagement','Engagement or Roka'],['mehendi','Mehendi'],['reception','Reception'],['sangeet','Sangeet/Cocktail Night'],['haldi','Haldi'],['baraat','Baraat'],['pheras','Musical pheras'],
@@ -1256,6 +1256,7 @@ footer{padding:56px 0 72px;border-top:1px solid var(--line);margin-top:clamp(64p
     devotional:['chowki','garba','diwali','wedding','reception','house','pheras','housewarming'],
     anchor:['newyear','wedding','reception','sangeet','haldi','baraat','chowki','birthday','diwali','garba','christmas','house','college','corporate','brunch','kidsbday','engagement','mehendi','babyshower','retirement','housewarming','bachelor','launch','annualday','holi'],
     celeb:['newyear','wedding','reception','sangeet','haldi','birthday','diwali','garba','christmas','house','college','corporate','engagement','launch','annualday'],
+    reality:['newyear','wedding','reception','sangeet','haldi','birthday','diwali','garba','christmas','house','college','corporate','engagement','launch','annualday'],
     rap:['newyear','birthday','house','college','corporate','bachelor','launch','annualday','venue','pool']
   };
 
@@ -1292,7 +1293,7 @@ footer{padding:56px 0 72px;border-top:1px solid var(--line);margin-top:clamp(64p
 
   var LAB = {live:'Live band',djband:'DJ based band',allgirl:'All-girl band',dj:'DJ',djperc:'DJ + percussion',solosing:'Solo singer',duotrio:'Duo or trio',
     instrband:'Instrumental band',lounge:'Lounge act',intl:'International band',western:'Western band',jazz:'Jazz band',choir:'Choir, carol group',
-    sufibolly:'Sufi Bollywood',sufiq:'Sufi Qawwali',bollyretro:'Bollywood retro',bollyrock:'Bollywood rock',rajfusion:'Rajasthani fusion',ghazal:'Ghazal and classical',magiccomedy:'Magic and comedy',soloinst:'Solo instrumental',devotional:'Devotional band',anchor:'Anchor',celeb:'Celebrity artist',standup:'Celebrity stand-up comedian',rap:'Rapper'};
+    sufibolly:'Sufi Bollywood',sufiq:'Sufi Qawwali',bollyretro:'Bollywood retro',bollyrock:'Bollywood rock',rajfusion:'Rajasthani fusion',ghazal:'Ghazal and classical',magiccomedy:'Magic and comedy',soloinst:'Solo instrumental',devotional:'Devotional band',anchor:'Anchor',celeb:'Celebrity artist',standup:'Celebrity stand-up comedian',reality:'Reality TV singer',rap:'Rapper'};
   // name, formats, city, label, photo, tag
   var RAW = window.AOS_RAW || [];
   // m or f, used by the Top artists cards (first pass from names, to be confirmed)
@@ -1438,7 +1439,7 @@ footer{padding:56px 0 72px;border-top:1px solid var(--line);margin-top:clamp(64p
   }
 
   // one box per format: the default view of the roster
-  var CODE = {instrband:'IB',lounge:'LA',intl:'IN',western:'WB',jazz:'JB',choir:'CC',live:'LB',sufibolly:'SB',sufiq:'SQ',bollyretro:'BR',bollyrock:'BK',rajfusion:'RF',ghazal:'GC',magiccomedy:'MC',soloinst:'SI',solosing:'SS',duotrio:'DT',dj:'DJ',djband:'DB',djperc:'DP',anchor:'AN',celeb:'CA',standup:'SC',allgirl:'AG',devotional:'DV',rap:'RP'};
+  var CODE = {instrband:'IB',lounge:'LA',intl:'IN',western:'WB',jazz:'JB',choir:'CC',live:'LB',sufibolly:'SB',sufiq:'SQ',bollyretro:'BR',bollyrock:'BK',rajfusion:'RF',ghazal:'GC',magiccomedy:'MC',soloinst:'SI',solosing:'SS',duotrio:'DT',dj:'DJ',djband:'DB',djperc:'DP',anchor:'AN',celeb:'CA',standup:'SC',reality:'IS',allgirl:'AG',devotional:'DV',rap:'RP'};
   function mk(tag, cls, txt){ var e = document.createElement(tag); if (cls) e.className = cls; if (txt) e.textContent = txt; return e; }
   var ARR_L = '<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3L5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
   var ARR_R = '<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
