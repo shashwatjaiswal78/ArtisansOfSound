@@ -1551,6 +1551,8 @@ footer{padding:56px 0 72px;border-top:1px solid var(--line);margin-top:clamp(64p
   // categories with no acts yet borrow a photo of their own
   var COVEROVER = {lounge:'img/act-ayush.jpg', choir:'img/cat-choir.jpg', devotional:'img/cat-devotional.jpg', intl:'img/act-stellar.jpg', jazz:'img/cat-westjazz.jpg', western:'img/cat-westjazz.jpg', solosing:'img/cat-solo.jpg', celeb:'img/cat-celeb.jpg'};
   var OCCOVER = {chowki:'img/occ-chowki.jpg'};
+  // photos an event tile must never use as its cover
+  var OCCSKIP = {christmas:['img/act-sunidhi.jpg']};
   // every distinct photo we have, so rows with many cards do not keep repeating the same one
   function photoPool(){
     var out = [];
@@ -1611,7 +1613,7 @@ footer{padding:56px 0 72px;border-top:1px solid var(--line);margin-top:clamp(64p
     }));
     var used = [];
     buildRail('rocc', 'Book for any event', '', '', OCCS.map(function(oc){
-      var key = oc[0], cv = OCCOVER[key] || pickCover(function(a){ return a.o.indexOf(key) > -1; }, used, true); if (cv) used.push(cv);
+      var key = oc[0], skip = OCCSKIP[key] || [], cv = OCCOVER[key] || pickCover(function(a){ return a.o.indexOf(key) > -1 && skip.indexOf(a.p) < 0; }, used.concat(skip), true); if (cv) used.push(cv);
       return {key:key, label:oc[1], cover:cv, code:oc[1].charAt(0), go:function(){ st.o = [key]; st.x = []; st.shown = STEP; pick('ev:' + key); openList(); }};
     }), -1);
     buildRail('rcats', 'Artist categories', '', '', FORMATS.map(function(fm){
