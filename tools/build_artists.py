@@ -116,6 +116,13 @@ def page(a, acts, reg):
         top_occ = ", ".join(occ_names[:k])
         desc = (f"Book {n} ({ph}) {where(a)}. " + (f"Suited to {top_occ}. " if top_occ else "") + "Videos and a clear quote within 24 hours.")
         if len(desc) <= 160: break
+    if a["bio"]:
+        first = (paras_bio := (a["bio"] if isinstance(a["bio"], list) else a["bio"].get("about", [])))[0] if (a["bio"] and (a["bio"] if isinstance(a["bio"], list) else a["bio"].get("about", []))) else ""
+        if first:
+            first = first.split(". ")[0].rstrip(".") + "."
+            desc = first if len(first) <= 130 else first[:127].rsplit(" ", 1)[0] + "..."
+            desc = (desc + " Book through Artisans of Sound.")
+            if len(desc) > 160: desc = desc[:157].rsplit(" ", 1)[0] + "..."
     msg = f"Hi Artisans of Sound, I would like to check availability of {a['name']} for my event."
     wa = "https://wa.me/919129237566?text=" + __import__("urllib.parse").parse.quote(msg)
     dims = img_dims(a["photo"]) if a["photo"] else None
@@ -131,7 +138,7 @@ def page(a, acts, reg):
     fl = f"/book/{reg['fmt'][a['main']]}/" if a["main"] in reg["fmt"] else None
     cl = f"/cities/{reg['city'][a['city']]}/" if a["city"] in reg["city"] else None
     chips = [("Format", a["fmt_label"], fl), ("Based in" if a["city"] != "Pan-India" else "Available", a["city"] if a["city"] != "Pan-India" else "Across India", cl)]
-    if a["tag"]: chips.append(("Known for", a["tag"], None))
+    if a["tag"] and not any(f[0] == "Known for" for f in facts): chips.append(("Known for", a["tag"], None))
     chips += [(f[0], f[1], None) for f in facts]
     hero_img = (f'<img class="aph" src="/{esc(a["photo"])}" alt="{esc(n)}, {esc(a["fmt_label"].lower())}" width="{dims[0]}" height="{dims[1]}" fetchpriority="high">'
                 if dims else f'<div class="aph aph0" aria-hidden="true">{esc(initials(n))}</div>')
