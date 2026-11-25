@@ -27,5 +27,6 @@ window.AOS_BIOS = {
 
 // Other spellings people search for. Used only by the search box, never shown. "Act name exactly as on the site": "other spelling, other spelling"
 window.AOS_ALIASES = {
-  "Qutbi Brothers (Arshad and Adnan Qutbi)": "Qutubi Brothers, Kutubi Brothers"
+  "Qutbi Brothers (Arshad and Adnan Qutbi)": "Qutubi Brothers, Kutubi Brothers",
+  "Nizami Bandhu": "Sohrab Faridi, Sohrab Faridi Nizami, Ustad Chand Nizami, Chand Nizami"
 };
