@@ -129,12 +129,13 @@ def page(a, acts, reg):
     # ---- about text: real bio if present, else a short factual summary built from roster data
     if a["bio"]:
         b = a["bio"]; paras = b if isinstance(b, list) else b.get("about", []); facts = [] if isinstance(b, list) else b.get("facts", [])
+        why = [] if isinstance(b, list) else b.get("why", [])
     else:
         paras = [f"{n} ({ph}) is available to book {where(a)} through Artisans of Sound"
                  + (f", known as {a['tag']}" if a["tag"] else "") + (f". {a['par']}" if a["par"] else "") + ".",
                  ("Artisans of Sound handles the whole booking: we check availability for your date, send videos and give you one clear quote within 24 hours, "
                   "with a replacement act arranged if anyone drops out.")]
-        facts = []
+        facts = []; why = []
     fl = f"/book/{reg['fmt'][a['main']]}/" if a["main"] in reg["fmt"] else None
     cl = f"/cities/{reg['city'][a['city']]}/" if a["city"] in reg["city"] else None
     chips = [("Format", a["fmt_label"], fl), ("Based in" if a["city"] != "Pan-India" else "Available", a["city"] if a["city"] != "Pan-India" else "Across India", cl)]
@@ -142,6 +143,7 @@ def page(a, acts, reg):
     chips += [(f[0], f[1], None) for f in facts]
     hero_img = (f'<img class="aph" src="/{esc(a["photo"])}" alt="{esc(n)}, {esc(a["fmt_label"].lower())}" width="{dims[0]}" height="{dims[1]}" fetchpriority="high">'
                 if dims else f'<div class="aph aph0" aria-hidden="true">{esc(initials(n))}</div>')
+    why_html = ('<section class="asec"><h2>Why book ' + esc(n) + '</h2><ul class="awhy">' + "".join(f"<li>{esc(x)}</li>" for x in why) + '</ul></section>\n') if why else ""
     vids = ""
     if a["vid"]:
         vids = ('<section class="asec"><h2>Watch ' + esc(n) + '</h2><div class="avid">' +
@@ -183,7 +185,7 @@ def page(a, acts, reg):
       f'      <div class="ask"><a class="dark-pill" href="{esc(wa)}" target="_blank" rel="noopener">Check availability on WhatsApp</a><a class="ghost-pill" href="/#enquiry">Get a quote</a></div>\n'
       '    </div></header>\n'
       '    <section class="asec"><h2>About ' + esc(n) + '</h2><div class="ubody">' + "".join(f"<p>{esc(p)}</p>" for p in paras) + '</div></section>\n'
-      + vids + occ_html + gen_html +
+      + why_html + vids + occ_html + gen_html +
       f'    <div class="ucta"><h2>Planning an event?</h2><p>Tell us the date, city and venue. We check {esc(n)}\'s availability and send videos with a clear quote within 24 hours.</p>'
       f'<div class="ask"><a class="dark-pill" href="/#enquiry">Get a quote</a><a class="ghost-pill" href="{esc(wa)}" target="_blank" rel="noopener">Message us on WhatsApp</a></div></div>\n'
       + rel_html + '  </article>\n</main>\n'

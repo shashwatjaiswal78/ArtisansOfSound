@@ -5,7 +5,8 @@ window.AOS_COVERS = ["img/act-ayush.jpg", "img/act-checkmate.jpg", "img/act-diwa
 window.AOS_RAW = [["Checkmate", "live", "Delhi", "", "img/act-checkmate.jpg", ""], ["Filmysthan", "djband", "Delhi", "", "img/act-filmysthan.jpg", ""], ["Khushi Walia Live", "allgirl", "Delhi", "", "img/act-khushi.jpg", ""], ["DJ Perisha", "dj", "Delhi", "", "img/act-perisha.jpg", ""], ["Kartikk", "dj", "Delhi", "", "img/act-kartikk.jpg", ""], ["Panda Music", "dj", "Delhi", "", "img/act-panda.jpg", ""], ["Maneswita", "dj,djperc", "Delhi", "DJ, percussion", "img/act-maneswita.jpg", ""], ["Piano Wali", "lounge,soloinst", "Delhi", "Instrumental, keyboard", "img/act-pianowali.jpg", ""], ["Izhar", "lounge,soloinst,instrband", "Delhi", "Instrumental, violin (duet or trio)", "img/act-izhar.jpg", ""], ["Stellar Strings", "intl,instrband", "Delhi", "", "img/act-stellar.jpg", ""], ["Diwan-e-Khas", "sufibolly", "Delhi", "", "img/act-diwan.jpg", ""], ["Nikhil Majotra", "sufibolly", "Delhi", "", "img/act-nikhil2.jpg", ""], ["Sahibjeet Kaur", "anchor", "Delhi", "", "img/act-sahibjeet.jpg", ""], ["DJ Ravetek", "dj", "Lucknow", "", "img/act-ravetek.jpg", ""], ["DJ Zaad", "dj", "Lucknow", "", "img/act-zaad.jpg", ""], ["Aayush", "lounge,soloinst,instrband", "Lucknow", "Instrumental, violin", "img/act-ayush.jpg", ""], ["Jyotsna Navandar", "allgirl,celeb", "Mumbai", "", "img/act-jyotsna.jpg", "Celebrity artist"], ["Raavana Live", "djperc", "Mumbai", "", "img/act-raavana3.jpg", ""], ["Aayush", "live", "Delhi", "", "", ""], ["Amyr Khandani", "live", "Delhi", "", "", ""], ["The Band Nadaan", "live", "Delhi", "", "", ""], ["Classico & Naina Live", "live", "Delhi", "", "", ""], ["Dark White", "live", "Delhi", "", "", ""], ["Ketan Verma", "live", "Delhi", "", "", ""], ["Navjot", "live", "Delhi", "", "", ""], ["Piyush", "live", "Delhi", "", "", ""], ["Raaul", "live", "Delhi", "", "", ""], ["Saurav", "live", "Delhi", "", "", ""], ["Swarism", "live", "Delhi", "", "", ""], ["Aqua Beats", "djband", "Delhi", "", "", ""], ["Blockbuster", "djband", "Delhi", "", "", ""], ["Filmeewood", "djband", "Delhi", "", "", ""], ["Malhaar", "djband", "Delhi", "", "", ""], ["Tathastu", "djband", "Delhi", "", "", ""], ["DJ Ashu", "dj", "Delhi", "", "", ""], ["DJ Ruddy", "dj", "Delhi", "", "", ""], ["Ananya", "duotrio", "Delhi", "Duo", "", ""], ["Devanshu", "duotrio", "Delhi", "Duo", "", ""], ["Hardil Gulwan", "solosing,duotrio", "Delhi", "Solo to band", "", ""], ["Naman Sharma", "solosing,duotrio", "Delhi", "Solo to band", "", ""], ["Satin Soul Collective", "western,jazz", "Delhi", "", "", ""], ["Lavisha", "anchor", "Delhi", "", "", ""], ["Maddy", "anchor", "Delhi", "", "", ""], ["Megha", "anchor", "Delhi", "", "", ""], ["Shikha Pandey", "anchor", "Delhi", "", "", ""], ["Arush", "live", "Lucknow", "", "", ""], ["The Harmony Band", "live", "Lucknow", "", "", ""], ["Madtown Funk", "live", "Lucknow", "", "", ""], ["Neptune", "live", "Lucknow", "", "", ""], ["Naacheez", "live", "Lucknow", "", "", ""], ["Supriya Collective", "live", "Lucknow", "", "", ""], ["DJ Aahana", "dj", "Lucknow", "", "", ""], ["DJ Ayush", "dj", "Lucknow", "", "", ""], ["DJ Prince", "dj", "Lucknow", "", "", ""], ["DJ Shubh", "dj", "Lucknow", "", "", ""], ["DJ Sufi", "dj", "Lucknow", "", "", ""], ["DJ Tapasvi", "dj", "Lucknow", "", "", ""], ["Shiva", "solosing,duotrio", "Lucknow", "Solo or duo", "", ""], ["Shivansh Srivastava", "solosing", "Lucknow", "Solo", "", ""], ["Vansh", "duotrio", "Lucknow", "Duo", "", ""], ["Ak Singh", "live", "Mumbai", "", "", ""], ["Desi Chord", "live", "Mumbai", "", "", ""], ["Joshua", "live", "Mumbai", "", "", ""], ["Siddharth Singh Live", "live", "Mumbai", "Live band (trio to band)", "", ""], ["A Trebled Soul", "solosing,duotrio", "Mumbai", "Solo to band", "", ""], ["Srishhti Bhitrikothiy", "solosing,duotrio", "Mumbai", "Duo to band", "", ""], ["Suyash Medh", "solosing", "Mumbai", "Solo", "", ""], ["Seher Band", "live", "Bangalore", "", "", ""], ["Jay Patel", "live", "Ahmedabad", "", "", ""], ["Hussain K", "anchor", "Pan-India", "", "img/act-hussain.jpg", "TV celebrity", 1], ["Roshni Chopra", "anchor", "Pan-India", "", "img/act-roshni.jpg", "TV celebrity", 1], ["Shruti Seth", "anchor", "Pan-India", "", "img/act-shruti.jpg", "TV celebrity", 1], ["Sonam C Chabbra", "anchor", "Pan-India", "", "img/act-sonam.jpg", "", 1], ["Kunal Ganjawala", "bollyretro", "Pan-India", "", "img/act-kunalg.jpg", "", 1], ["Sanam", "bollyretro", "Pan-India", "", "img/act-sanam.jpg", "", 1], ["AP Dhillon", "live,celeb", "Pan-India", "", "img/act-apdhillon.jpg", "Celebrity artist", 1], ["Aastha Gill", "live,celeb", "Pan-India", "", "img/act-aastha.jpg", "Celebrity artist", 1], ["Aditya Narayan", "live,celeb", "Pan-India", "", "img/act-aditya.jpg", "Celebrity artist", 1], ["Amit Trivedi", "live,celeb", "Pan-India", "", "img/act-amit.jpg", "Celebrity artist", 1], ["Amrit Maan", "live,celeb", "Pan-India", "", "img/act-amrit.jpg", "Celebrity artist", 1], ["Armaan Malik", "live,celeb", "Pan-India", "", "img/act-armaan.jpg", "Celebrity artist", 1], ["B Praak", "live,celeb", "Pan-India", "", "img/act-bpraak.jpg", "Celebrity artist", 1], ["Baani Sandhu", "live,celeb", "Pan-India", "", "img/act-baani.jpg", "Celebrity artist", 1], ["Badshah", "live,celeb", "Pan-India", "", "img/act-badshah.jpg", "Celebrity artist", 1], ["Daler Mehndi", "live,celeb", "Pan-India", "", "img/act-daler.jpg", "Celebrity artist", 1], ["Darshan Raval", "live,celeb", "Pan-India", "", "img/act-darshan.jpg", "Celebrity artist", 1], ["Garry Sandhu", "live,celeb", "Pan-India", "", "img/act-garry.jpg", "Celebrity artist", 1], ["Gurdeep Mehndi", "live,celeb", "Pan-India", "", "img/act-gurdeep.jpg", "Celebrity artist", 1], ["Jasmine Sandlas", "live,celeb", "Pan-India", "", "img/act-jasmine.jpg", "Celebrity artist", 1], ["Jassi Gill", "live,celeb", "Pan-India", "", "img/act-jassigill.jpg", "Celebrity artist", 1], ["Jonita Gandhi", "live,celeb", "Pan-India", "", "img/act-jonita.jpg", "Celebrity artist", 1], ["Kaur B", "live,celeb", "Pan-India", "", "img/act-kaurb.jpg", "Celebrity artist", 1], ["Meet Bros", "live,celeb", "Pan-India", "", "img/act-meetbros.jpg", "Celebrity artist", 1], ["Miss Pooja", "live,celeb", "Pan-India", "", "img/act-misspooja.jpg", "Celebrity artist", 1], ["Nakash Aziz", "live,celeb", "Pan-India", "", "img/act-nakash.jpg", "Celebrity artist", 1], ["Navraj Hans", "live,celeb", "Pan-India", "", "img/act-navraj.jpg", "Celebrity artist", 1], ["Neha Bhasin", "live,celeb", "Pan-India", "", "img/act-neha.jpg", "Celebrity artist", 1], ["Palak Muchhal", "live,celeb", "Pan-India", "", "img/act-palak.jpg", "Celebrity artist", 1], ["Parmish Verma", "live,celeb", "Pan-India", "", "img/act-parmish.jpg", "Celebrity artist", 1], ["Rahul Vaidya", "live,celeb", "Pan-India", "", "img/act-rahul.jpg", "Celebrity artist", 1], ["Ranjit Bawa", "live,celeb", "Pan-India", "", "img/act-ranjit.jpg", "Celebrity artist", 1], ["Rupali Jagga", "live,celeb", "Pan-India", "", "img/act-rupali.jpg", "Celebrity artist", 1], ["Sara Gurpal", "live,celeb", "Pan-India", "", "img/act-sara.jpg", "Celebrity artist", 1], ["Shaan", "live,celeb", "Pan-India", "", "img/act-shaan.jpg", "Celebrity artist", 1], ["Shreya Ghoshal", "live,celeb", "Pan-India", "", "img/act-shreya.jpg", "Celebrity artist", 1], ["Sonu Nigam", "live,celeb", "Pan-India", "", "img/act-sonu.jpg", "Celebrity artist", 1], ["Sunanda Sharma", "live,celeb", "Pan-India", "", "img/act-sunanda.jpg", "Celebrity artist", 1], ["Sunidhi Chauhan", "live,celeb", "Pan-India", "", "img/act-sunidhi.jpg", "Celebrity artist", 1], ["Yo Yo Honey Singh", "live,celeb", "Pan-India", "", "img/act-honey.jpg", "Celebrity artist", 1], ["Yuvraaj Hans", "live,celeb", "Pan-India", "", "img/act-yuvraaj.jpg", "Celebrity artist", 1], ["DJ Aqeel", "dj,celeb", "Pan-India", "", "img/act-aqeel.jpg", "Celebrity DJ", 1], ["DJ Chetas", "dj,celeb", "Pan-India", "", "img/act-chetas.jpg", "Celebrity DJ", 1], ["DJ Lijo George", "dj,celeb", "Pan-India", "", "img/act-lijo.jpg", "Celebrity DJ", 1], ["DJ Nikhil Chinapa", "dj,celeb", "Pan-India", "", "img/act-nikhil.jpg", "Celebrity DJ", 1], ["DJ Shadow", "dj", "Pan-India", "", "img/act-shadow.jpg", "", 1], ["DJ Yogi", "dj", "Pan-India", "", "img/act-yogi.jpg", "", 1], ["Nucleya", "dj,celeb", "Pan-India", "", "img/act-nucleya.jpg", "Celebrity DJ", 1], ["Progressive Brothers", "dj", "Pan-India", "", "img/act-progressive.jpg", "", 1], ["Gayathri Asokan", "ghazal,celeb", "Pan-India", "", "img/act-gayathri.jpg", "Celebrity artist", 1], ["Kavya Limaye", "ghazal,celeb", "Pan-India", "", "img/act-kavya.jpg", "Celebrity artist", 1], ["Papon", "ghazal,live,celeb", "Pan-India", "", "img/act-papon.jpg", "Celebrity artist", 1], ["Aakash Gupta", "magiccomedy,standup", "Pan-India", "", "img/act-aakash.jpg", "Celebrity stand-up comedian", 1], ["Abhishek Upmanyu", "magiccomedy,standup", "Pan-India", "", "img/act-abhishek.jpg", "Celebrity stand-up comedian", 1], ["Anubhav Singh Bassi", "magiccomedy,standup", "Pan-India", "", "img/act-bassi.jpg", "Celebrity stand-up comedian", 1], ["Gaurav Gupta", "magiccomedy", "Pan-India", "Stand-up comedian", "img/act-gaurav.jpg", "", 1], ["Gaurav Kapoor", "magiccomedy", "Pan-India", "Stand-up comedian", "img/act-gauravk.jpg", "", 1], ["Harsh Gujral", "magiccomedy,standup", "Pan-India", "", "img/act-harsh.jpg", "Celebrity stand-up comedian", 1], ["Rajiv Thakur", "magiccomedy,standup", "Pan-India", "", "img/act-rajiv.jpg", "Celebrity stand-up comedian", 1], ["Dino James", "rap", "Pan-India", "Rapper", "img/act-dino.jpg", "", 1], ["Emiway Bantai", "rap", "Pan-India", "Rapper", "img/act-emiway.jpg", "", 1], ["MC Square", "rap", "Pan-India", "Rapper", "img/act-mcsquare.jpg", "", 1], ["Paradox", "rap", "Pan-India", "Rapper", "img/act-paradox.jpg", "", 1], ["Raja Kumari", "rap", "Pan-India", "Rapper", "img/act-rajakumari.jpg", "", 1], ["L Subramaniam (violin)", "soloinst", "Pan-India", "", "img/act-lsubramaniam.jpg", "", 1], ["Parth Chandiramani (flute)", "soloinst", "Pan-India", "", "img/act-parth.jpg", "", 1], ["Purbayan Chatterjee (sitar)", "soloinst", "Pan-India", "", "img/act-purbayan.jpg", "", 1], ["Raghav Sachar", "soloinst", "Pan-India", "", "img/act-raghav.jpg", "", 1], ["Ronu Majumdar (flute)", "soloinst", "Pan-India", "", "img/act-ronu.jpg", "", 1], ["Salil Bhatt (Satvik Veena)", "soloinst", "Pan-India", "", "img/act-salil.jpg", "", 1], ["Sivamani (percussion)", "soloinst", "Pan-India", "", "img/act-sivamanisolo.jpg", "", 1], ["Stephen Devassy", "soloinst", "Pan-India", "", "img/act-stephen.jpg", "", 1], ["Bismil Ki Mehfil", "sufibolly", "Pan-India", "", "img/act-bismil.jpg", "", 1], ["Divya Kumar", "sufibolly", "Pan-India", "", "img/act-divya.jpg", "", 1], ["Mame Khan", "sufibolly", "Pan-India", "", "img/act-mamekhan.jpg", "", 1], ["Sagar Bhatia", "sufibolly", "Pan-India", "", "img/act-sagar.jpg", "", 1], ["Salman Zaman", "sufibolly", "Pan-India", "", "img/act-salmanzaman.jpg", "", 1], ["Sharib & Toshi (Sabri)", "sufibolly", "Pan-India", "", "img/act-sharibtoshi.jpg", "", 1], ["Lets Nacho Band (Delhi)", "djband", "Pan-India", "", "img/act-nacho.jpg", "", 1], ["Stree Shakti (Anuradha Pal)", "allgirl", "Pan-India", "", "img/act-streeshakti.jpg", "", 1], ["The Womaniaz (Mumbai)", "allgirl", "Pan-India", "", "img/act-womaniaz.jpg", "", 1], ["Amit Siyaram", "anchor", "Pan-India", "", "img/act-amitsiyaram.jpg", "", 1], ["Megha Kedia", "anchor", "Pan-India", "", "img/act-megha.jpg", "", 1], ["Sharon Aamir", "anchor", "Pan-India", "", "img/act-sharon.jpg", "", 1], ["Vishaal Rasquinha", "anchor", "Pan-India", "", "img/act-vishaal.jpg", "", 1], ["Parikrama", "bollyrock", "Pan-India", "", "img/act-parikrama.jpg", "", 1], ["The Yellow Diaries", "bollyrock", "Pan-India", "", "img/act-yellow.jpg", "", 1], ["Zikrr", "bollyrock", "Pan-India", "", "img/act-zikrr.jpg", "", 1], ["Bryden & Parth Choir", "choir", "Pan-India", "", "img/act-bryden.jpg", "", 1], ["El Fe Choir (Chennai)", "choir", "Pan-India", "", "img/act-elfe.jpg", "", 1], ["Nandan Borker Collective", "choir", "Pan-India", "", "img/act-nandan.jpg", "", 1], ["Quavers Chamber Choir", "choir", "Pan-India", "", "img/act-quavers.jpg", "", 1], ["The Bollywood Tales (choir experience)", "choir", "Pan-India", "", "img/act-bollytales.jpg", "", 1], ["DJ Anna Breathe", "dj", "Pan-India", "", "img/act-annabreathe.jpg", "", 1], ["DJ Barkha Kaul", "dj", "Pan-India", "", "img/act-barkha.jpg", "", 1], ["DJ Rhea", "dj", "Pan-India", "", "img/act-rhea.jpg", "", 1], ["DJ Rink", "dj", "Pan-India", "", "img/act-rink.jpg", "", 1], ["Apoorv Singh Verma", "djperc", "Pan-India", "", "img/act-apoorv.jpg", "", 1], ["Hiten Panwar", "djperc", "Pan-India", "", "img/act-hiten.jpg", "", 1], ["Mohsick", "djperc", "Pan-India", "", "img/act-mohsick.jpg", "", 1], ["Taishul", "djperc", "Pan-India", "", "img/act-veronika.jpg", "", 1], ["Blu Birds", "djband", "Pan-India", "", "img/act-blubirds.jpg", "", 1], ["Infinity", "djband", "Pan-India", "", "img/act-infinity.jpg", "", 1], ["Mystic Pop", "djband", "Pan-India", "", "img/act-mysticpop.jpg", "", 1], ["Naachshala", "djband", "Pan-India", "", "img/act-naachshala.jpg", "", 1], ["Power Puff Girls", "djband", "Pan-India", "", "img/act-powerpuff.jpg", "", 1], ["Starboy Shubz", "djband", "Pan-India", "", "img/act-starboy.jpg", "", 1], ["Tamasha", "djband", "Pan-India", "", "img/act-tamasha.jpg", "", 1], ["Urban Turban", "djband", "Pan-India", "", "img/act-urbanturban.jpg", "", 1], ["Aishwarya Majumdar", "devotional", "Pan-India", "", "img/act-aishwarya.jpg", "", 1], ["Hansraj Raghuwanshi", "devotional", "Pan-India", "", "img/act-hansraj.jpg", "", 1], ["Hemant Brijwasi", "devotional", "Pan-India", "", "img/act-hemant.jpg", "", 1], ["Lakhbir Singh Lakkha", "devotional", "Pan-India", "", "img/act-lakhbir.jpg", "", 1], ["Master Saleem", "devotional,celeb", "Pan-India", "", "img/act-saleem.jpg", "Celebrity artist", 1], ["Kumar Satyamm", "ghazal", "Pan-India", "", "img/act-kumar.jpg", "", 1], ["Rathijit Bhattacharjee", "ghazal", "Pan-India", "", "img/act-rathijit.jpg", "", 1], ["Bombay Chamber Orchestra", "instrband", "Pan-India", "", "img/act-bombaychamber.jpg", "", 1], ["Made In India", "instrband", "Pan-India", "", "img/act-madeinindia.jpg", "", 1], ["Music Mansion", "instrband", "Pan-India", "", "img/act-musicmansion.jpg", "", 1], ["The Bombay Tux", "live,western", "Pan-India", "Live fusion band", "img/act-bombaytux.jpg", "", 1], ["Delhi Indie Project", "western", "Pan-India", "Indie", "img/act-delhiindie.jpg", "", 1], ["Kanishk Sethi", "solosing", "Pan-India", "Indie", "img/act-kanishk.jpg", "", 1], ["Kayan", "solosing", "Pan-India", "Indie", "img/act-kayan.jpg", "", 1], ["Suraj Mani", "solosing", "Pan-India", "Indie", "img/act-suraj.jpg", "", 1], ["Chugge Khan and Rajasthan Josh", "rajfusion", "Pan-India", "", "img/act-chugge.jpg", "", 1], ["Deene Khan", "rajfusion", "Pan-India", "", "img/act-deene.jpg", "", 1], ["Kamli Saga", "djband", "Pan-India", "", "img/act-kamli.jpg", "", 1], ["Rana Dholi (folk music and dance)", "rajfusion", "Pan-India", "", "img/act-ranadholi.jpg", "", 1], ["Sadho", "rajfusion", "Pan-India", "", "img/act-sadho.jpg", "", 1], ["Sawai Bhatt", "rajfusion,reality", "Pan-India", "", "img/act-sawai.jpg", "Indian Idol", 1], ["Ankur Chakravorty (violin, Mumbai)", "soloinst", "Pan-India", "", "img/act-ankurc.jpg", "", 1], ["Amaal Mallik", "solosing", "Pan-India", "", "img/act-amaal.jpg", "", 1], ["Anuv Jain", "solosing", "Pan-India", "", "img/act-anuv.jpg", "", 1], ["Lisa Mishra", "solosing", "Pan-India", "", "img/act-lisa.jpg", "", 1], ["Madari", "western", "Pan-India", "", "img/act-madari.jpg", "", 1], ["Osho Jain", "solosing", "Pan-India", "", "img/act-osho.jpg", "", 1], ["Prateek Kuhad", "solosing", "Pan-India", "", "img/act-prateek.jpg", "", 1], ["Ritviz", "solosing", "Pan-India", "", "img/act-ritviz.jpg", "", 1], ["Sharib Toshi", "solosing", "Pan-India", "", "img/act-sharibsolo.jpg", "", 1], ["Shirley Setia", "solosing", "Pan-India", "", "img/act-shirley.jpg", "", 1], ["Zaeden", "solosing", "Pan-India", "", "img/act-zaeden.jpg", "", 1], ["Daksh Band", "sufibolly", "Pan-India", "", "img/act-daksh.jpg", "", 1], ["Damsaaz", "sufibolly", "Pan-India", "", "img/act-damsaaz.jpg", "", 1], ["Jazba", "sufibolly", "Pan-India", "", "img/act-jazba.jpg", "", 1], ["Kavita Seth", "sufibolly", "Pan-India", "", "img/act-kavitaseth.jpg", "", 1], ["Kunaal Wason & Qawaals", "sufibolly", "Pan-India", "", "img/act-kunaal.jpg", "", 1], ["Mizaz", "sufibolly", "Pan-India", "", "img/act-mizaz.jpg", "", 1], ["Qaafila", "sufibolly", "Pan-India", "", "img/act-qaafila.jpg", "", 1], ["Rahul Rana (Saaz E Mehfil)", "sufibolly", "Pan-India", "", "img/act-rahulrana.jpg", "", 1], ["Shaheen Salmani", "sufibolly", "Pan-India", "", "img/act-shaheen.jpg", "", 1], ["The Frequency Project", "sufibolly", "Pan-India", "", "img/act-frequency.jpg", "", 1], ["Ulfat Band", "sufibolly", "Pan-India", "", "img/act-ulfat.jpg", "", 1], ["Qutbi Brothers (Arshad and Adnan Qutbi)", "sufiq", "Pan-India", "", "img/act-qutbi.jpg", "", 1], ["Haji Mohammad Idris", "sufiq", "Pan-India", "", "img/act-idris.jpg", "", 1], ["Hans Raj Hans", "sufiq", "Pan-India", "", "img/act-hansrajhans.jpg", "", 1], ["Nawaz Sabri", "sufiq", "Pan-India", "", "img/act-nawaz.jpg", "", 1], ["Nizami Bandhu", "sufiq", "Pan-India", "", "img/act-nizami.jpg", "", 1], ["Nizami Brothers", "sufiq", "Pan-India", "", "img/act-nizamibrothers.jpg", "", 1], ["Shadab Faridi", "sufiq", "Pan-India", "", "img/act-shadab.jpg", "", 1], ["Ustad Chand Nizami", "sufiq", "Pan-India", "", "img/act-chand.jpg", "", 1], ["Wadali Brothers", "sufiq", "Pan-India", "", "img/act-wadali.jpg", "", 1], ["Aflatunes Band", "western", "Pan-India", "", "img/act-aflatunes.jpg", "", 1], ["Best Kept Secret", "western", "Pan-India", "", "img/act-bks.jpg", "", 1], ["Lylaa x Soul", "western", "Pan-India", "", "img/act-lylaa.jpg", "", 1], ["Motherjane", "western", "Pan-India", "", "img/act-motherjane.jpg", "", 1], ["Abhinav Nagpal", "bollyrock", "Pan-India", "", "img/act-nagpal.jpg", "", 1], ["Abhinav Narula", "bollyrock", "Pan-India", "", "img/act-narula.jpg", "", 1], ["Himonshu Parikh", "bollyrock", "Pan-India", "", "img/act-himonshu.jpg", "", 1], ["Rajan Batra", "bollyrock", "Pan-India", "", "img/act-rajan.jpg", "", 1], ["Sameer Walizada", "bollyrock", "Pan-India", "", "img/act-sameer.jpg", "", 1], ["Sid K", "bollyrock", "Pan-India", "", "img/act-sidk.jpg", "", 1], ["Stuart DaCosta", "bollyrock", "Pan-India", "", "img/act-stuart.jpg", "", 1], ["Ash King", "live,celeb", "Pan-India", "", "img/act-ashking.jpg", "Celebrity artist", 1], ["Babbu Maan", "live,celeb", "Pan-India", "", "img/act-babbu.jpg", "Celebrity artist", 1], ["Gippy Grewal", "live,celeb", "Pan-India", "", "img/act-gippy.jpg", "Celebrity artist", 1], ["Manj Musik", "live,celeb", "Pan-India", "", "img/act-manj.jpg", "Celebrity artist", 1], ["Pav Dharia", "live,celeb", "Pan-India", "", "img/act-pav.jpg", "Celebrity artist", 1], ["Prem Dhillon", "live,celeb", "Pan-India", "", "img/act-prem.jpg", "Celebrity artist", 1], ["Rohanpreet Singh", "live,celeb", "Pan-India", "", "img/act-rohanpreet.jpg", "Celebrity artist", 1], ["Salman Ali", "live,celeb", "Pan-India", "", "img/act-salman.jpg", "Celebrity artist", 1], ["Vibhor Parashar", "live,celeb", "Pan-India", "", "img/act-vibhor.jpg", "Celebrity artist", 1], ["Jassi Gill & Babbal Rai", "duotrio,celeb", "Pan-India", "", "img/act-jassibabbal.jpg", "Celebrity artist", 1], ["SIRAHA Trio (Harmeet Manseta, U Rajesh, Sivamani)", "duotrio,celeb", "Pan-India", "", "img/act-siraha.jpg", "Celebrity artist", 1], ["The SIVAMANI Trio", "duotrio,celeb", "Pan-India", "", "img/act-sivamani.jpg", "Celebrity artist", 1], ["Twin Strings", "duotrio", "Pan-India", "", "img/act-twinstrings.jpg", "", 1], ["Nirakar", "jazz", "Pan-India", "Indo jazz band", "img/act-nirakar.jpg", "", 1], ["SIRAHA Trio", "jazz", "Pan-India", "", "", "", 1], ["Mangesh Desai", "magiccomedy", "Pan-India", "Magic and illusion", "img/act-mangesh.jpg", "", 1], ["Rakesh Syam", "magiccomedy", "Pan-India", "Magic and mentalism", "img/act-rakesh.jpg", "", 1], ["Suhani Shah (Ruhani Shah)", "magiccomedy,celeb", "Pan-India", "Mentalist", "img/act-suhani.jpg", "Celebrity mentalist", 1], ["Ankit Batra", "solosing", "Pan-India", "Musical pheras", "img/act-ankit.jpg", "", 1, ["pheras"]], ["Himanshu Sharma", "solosing", "Pan-India", "Musical pheras", "img/act-himanshu.jpg", "", 1, ["pheras"]], ["Mehul Pandit", "solosing", "Pan-India", "Musical pheras", "img/act-mehul.jpg", "", 1, ["pheras"]], ["Mohit Chopra", "solosing", "Pan-India", "Musical pheras", "img/act-mohit.jpg", "", 1, ["pheras"]], ["Sheena Chawla", "solosing", "Pan-India", "Musical pheras", "img/act-sheena.jpg", "", 1, ["pheras"]], ["Siddharth Mohan", "solosing", "Pan-India", "Musical pheras", "img/act-siddharth.jpg", "", 1, ["pheras"]], ["Anupam Singh (Wow Music)", "solosing", "Pan-India", "", "img/act-anupam.jpg", "", 1], ["Urvashi Radadiya", "devotional,solosing", "Pan-India", "Gujarati folk singer", "img/act-urvashi.jpg", "", 1]];
 
 // Profile pop-up content. One entry per act: "Act name exactly as on the site":
-//   either [paragraph, ...]  or  {about: [paragraph, ...], facts: [[label, value], ...]}
+//   either [paragraph, ...]  or  {about: [paragraph, ...], facts: [[label, value], ...], why: [reason, ...]}
+// why = 2 to 4 short reasons to book the act, shown as a "Why book" list on its page.
 // Facts show as small boxes under the description. Never put phone numbers, emails or fees here.
 window.AOS_BIOS = {
   "The Bombay Tux": {
@@ -21,6 +22,11 @@ window.AOS_BIOS = {
       ["Languages", "English, Hindi"],
       ["Based in", "Mumbai"],
       ["Open to travel", "Worldwide"]
+    ],
+    why: [
+      "A tight four-piece of producers and musicians whose stylish tuxedo look and polished stage presence suit premium events.",
+      "Covers Bollywood, English pop and rock and blues, so mixed family and corporate crowds all get songs they know.",
+      "A strong fit for sangeets, wedding receptions, corporate events, college fests and premium live shows."
     ]
   },
   "Sonu Nigam": {
@@ -32,6 +38,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Sandese Aate Hain, Abhi Mujh Mein Kahin"],
       ["Languages", "Hindi, Kannada, Bengali and many more"]
+    ],
+    why: [
+      "One of India's best-known playback voices, so the name alone lifts a wedding, gala or brand evening.",
+      "Decades on stage and thousands of recorded songs make a full set of recognisable hits easy to build.",
+      "Suits a grand reception, corporate gala or concert-style night where the headline act matters."
     ]
   },
   "Shreya Ghoshal": {
@@ -43,6 +54,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Barso Re, Deewani Mastani, Ghoomar"],
       ["Languages", "Hindi, Bengali, Tamil, Telugu and more"]
+    ],
+    why: [
+      "A National Film Award winner whose songs are known across generations, which makes her a true headline act.",
+      "Her repertoire spans romantic, classical-leaning and dance songs in many languages, so one set can please a mixed audience.",
+      "Well suited to weddings, receptions and large brand or award events."
     ]
   },
   "Sunidhi Chauhan": {
@@ -54,6 +70,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Dhoom Machale, Beedi, Sheila Ki Jawani"],
       ["Languages", "Hindi and several other Indian languages"]
+    ],
+    why: [
+      "Known for a powerful, versatile voice and a catalogue of dance and party hits.",
+      "Regular on live stages, she brings energy that keeps a large crowd on its feet.",
+      "A strong choice for sangeets, receptions, New Year parties and corporate shows."
     ]
   },
   "Shaan": {
@@ -65,6 +86,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Chand Sifarish, Jab Se Tere Naina, Behti Hawa Sa Tha Woh"],
       ["Languages", "Hindi, Bengali, Kannada, Telugu"]
+    ],
+    why: [
+      "A familiar voice with hits like \"Chand Sifarish\" and \"Jab Se Tere Naina\", so guests sing along.",
+      "His mix of romantic and upbeat songs works from a cocktail hour to a late dance floor.",
+      "Suits weddings, receptions, corporate evenings and festival stages."
     ]
   },
   "Armaan Malik": {
@@ -76,6 +102,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Jai Ho (title track), M.S. Dhoni: The Untold Story"],
       ["Languages", "Hindi, English, Telugu, Kannada"]
+    ],
+    why: [
+      "A popular young playback singer whose songs appeal strongly to a younger crowd.",
+      "Also releases English and independent music, giving his sets range.",
+      "Works for sangeets, college fests, brand launches and receptions."
     ]
   },
   "Aditya Narayan": {
@@ -85,6 +116,11 @@ window.AOS_BIOS = {
     ],
     facts: [
       ["Known for", "Hosting Indian Idol and music reality shows"]
+    ],
+    why: [
+      "A seasoned TV host as well as a singer, so he can sing and keep a crowd engaged between songs.",
+      "His hosting experience on Indian Idol and other shows suits events with a programme to run.",
+      "A good fit for award nights, corporate shows and large celebrations."
     ]
   },
   "Amit Trivedi": {
@@ -96,6 +132,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Dev.D, Queen, Dear Zindagi, Andhadhun"],
       ["Languages", "Hindi"]
+    ],
+    why: [
+      "The composer behind Dev.D, Queen and Andhadhun, and a National Film Award winner for music direction.",
+      "Performs his own compositions, so the set feels distinctive rather than a standard playlist.",
+      "Suits concert-style evenings, brand events and receptions that want a music-led headline."
     ]
   },
   "Darshan Raval": {
@@ -107,6 +148,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Chogada, Kabhi Tumhe, Mehrama, Tera Zikr"],
       ["Languages", "Hindi, Gujarati"]
+    ],
+    why: [
+      "His songs such as \"Chogada\" and \"Kabhi Tumhe\" are well known among younger audiences.",
+      "Writes and releases his own music, so shows mix film hits with independent favourites.",
+      "Works for sangeets, college fests, brand events and large receptions."
     ]
   },
   "Jonita Gandhi": {
@@ -118,6 +164,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Chennai Express title track, The Breakup Song, Arabic Kuthu"],
       ["Languages", "Hindi, Tamil"]
+    ],
+    why: [
+      "A trained singer with big hits like \"The Breakup Song\" and \"Arabic Kuthu\".",
+      "Moves easily between Hindi and Tamil crowd-pleasers, so a mixed audience stays engaged.",
+      "A strong pick for sangeets, receptions and brand evenings."
     ]
   },
   "Palak Muchhal": {
@@ -129,6 +180,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Kaun Tujhe, Aashiqui 2 songs, Naiyo Lagda"],
       ["Languages", "Hindi, Kannada"]
+    ],
+    why: [
+      "A well-loved playback voice with hits such as \"Kaun Tujhe\" and \"Naiyo Lagda\".",
+      "Known for her charity work, which many clients value in a headline artist.",
+      "Suits weddings, receptions and family-friendly celebrations."
     ]
   },
   "Rahul Vaidya": {
@@ -140,6 +196,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Indian Idol season 1, Bigg Boss 14"],
       ["Languages", "Hindi"]
+    ],
+    why: [
+      "Familiar to TV audiences from Indian Idol and Bigg Boss 14, so guests recognise him on sight.",
+      "A singer with film and independent songs, giving sets variety.",
+      "Suits sangeets, receptions and corporate or festive evenings."
     ]
   },
   "Nakash Aziz": {
@@ -151,6 +212,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Jabra Fan, Dhating Nach, Sari Ke Fall Sa"],
       ["Languages", "Hindi, Telugu, Tamil, Kannada, Bengali, Marathi"]
+    ],
+    why: [
+      "Known for high-energy numbers like \"Jabra Fan\" and \"Dhating Nach\" that fill a dance floor.",
+      "Sings in many languages, which helps at weddings with guests from different regions.",
+      "Ideal for sangeets, receptions and college fests."
     ]
   },
   "Neha Bhasin": {
@@ -162,6 +228,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Jag Ghoomeya, Dhunki"],
       ["Languages", "Hindi, Punjabi, Tamil"]
+    ],
+    why: [
+      "A strong live performer, known for \"Jag Ghoomeya\" and Punjabi folk renditions.",
+      "Her pop background and TV profile bring stage presence and crowd energy.",
+      "Suits sangeets, cocktail nights and brand events."
     ]
   },
   "Meet Bros": {
@@ -173,6 +244,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Baby Doll, Chittiyaan Kalaiyaan"],
       ["Languages", "Hindi"]
+    ],
+    why: [
+      "Composers of \"Baby Doll\" and \"Chittiyaan Kalaiyaan\", so the crowd knows the songs.",
+      "A brother act with a party-ready catalogue that suits dance-floor sets.",
+      "A good fit for sangeets, receptions, New Year parties and club-style events."
     ]
   },
   "Ash King": {
@@ -184,6 +260,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "I Love You, Baarish, Meherban Hua"],
       ["Languages", "Hindi, English"]
+    ],
+    why: [
+      "A voice behind hits like \"Baarish\" and \"Meherban Hua\", with a soulful, romantic sound.",
+      "Raised in London, he brings a polished English and Hindi mix.",
+      "Suits receptions, cocktail nights and corporate evenings."
     ]
   },
   "Salman Ali": {
@@ -195,6 +276,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Winner, Indian Idol 10"],
       ["Languages", "Hindi"]
+    ],
+    why: [
+      "Winner of Indian Idol 10, so he arrives with a ready audience and strong live credentials.",
+      "From a family of singers, he has the training to carry a full set.",
+      "Works for weddings, receptions and festive or corporate shows."
     ]
   },
   "Rohanpreet Singh": {
@@ -205,6 +291,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Rising Star runner-up, Bang Gang, Sohni Lagdi"],
       ["Languages", "Punjabi, Hindi"]
+    ],
+    why: [
+      "A Punjabi singer known for \"Bang Gang\" and \"Sohni Lagdi\", popular with younger crowds.",
+      "Rising Star finalist and TV host, comfortable on a large stage.",
+      "Suits sangeets, college fests and Punjabi-themed celebrations."
     ]
   },
   "AP Dhillon": {
@@ -216,6 +307,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Brown Munde, Excuses, Insane, With You"],
       ["Languages", "Punjabi"]
+    ],
+    why: [
+      "A global Punjabi act with \"Brown Munde\", which guests know instantly.",
+      "First Punjabi Canadian to perform at the Juno Awards, so a headline draw for big events.",
+      "A strong fit for college fests, brand launches and high-energy parties."
     ]
   },
   "Badshah": {
@@ -227,6 +323,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "DJ Waley Babu, Kar Gayi Chull, Paagal, Garmi"],
       ["Languages", "Hindi, Punjabi, Haryanvi"]
+    ],
+    why: [
+      "Hits like \"DJ Waley Babu\" and \"Kar Gayi Chull\" guarantee a loud, singalong dance floor.",
+      "One of India's best-known rappers, he brings genuine star power.",
+      "Ideal for sangeets, college fests, New Year parties and brand events."
     ]
   },
   "Yo Yo Honey Singh": {
@@ -238,6 +339,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Angreji Beat, Lungi Dance, Blue Eyes, Desi Kalakaar"],
       ["Languages", "Punjabi, Hindi"]
+    ],
+    why: [
+      "A pioneer of Punjabi rap with party anthems like \"Angreji Beat\" and \"Dheere Dheere\".",
+      "His catalogue is built for dance floors, so energy stays high from the first song.",
+      "Suits sangeets, college fests, New Year events and brand launches."
     ]
   },
   "Daler Mehndi": {
@@ -249,6 +355,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Tunak Tunak Tun, Bolo Ta Ra Ra, Ho Jayegi Balle Balle"],
       ["Languages", "Punjabi, Hindi"]
+    ],
+    why: [
+      "\"Tunak Tunak Tun\" is one of the most recognisable Punjabi songs, an instant crowd-pleaser.",
+      "Decades of bhangra-pop stage experience bring easy audience participation.",
+      "A great pick for sangeets, baraats and big celebrations."
     ]
   },
   "B Praak": {
@@ -260,6 +371,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Teri Mitti, Mann Bharrya, Filhall, Qismat"],
       ["Languages", "Punjabi, Hindi"]
+    ],
+    why: [
+      "A National Film Award winner for \"Teri Mitti\", with emotional and romantic songs guests know.",
+      "Also a composer, so his shows can mix soulful and upbeat music.",
+      "Suits sangeets, receptions and concert-style evenings."
     ]
   },
   "Jasmine Sandlas": {
@@ -271,6 +387,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Yaar Na Miley, Illegal Weapon, Bamb Jatt"],
       ["Languages", "Punjabi, Hindi"]
+    ],
+    why: [
+      "A powerful voice with Punjabi hits and Bollywood credits such as \"Yaar Na Miley\".",
+      "Known for bold, high-energy stage performances.",
+      "Works for sangeets, college fests and club-style nights."
     ]
   },
   "Jassi Gill": {
@@ -282,6 +403,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Nikle Currant, Lancer, Bapu Zimidar"],
       ["Languages", "Punjabi, Hindi"]
+    ],
+    why: [
+      "A popular Punjabi singer and actor, so his name draws fans as well as guests.",
+      "Hits like \"Nikle Currant\" and \"Lancer\" suit a party mood.",
+      "Suits sangeets, college fests and Punjabi weddings."
     ]
   },
   "Gippy Grewal": {
@@ -293,6 +419,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Angreji Beat, Phulkari, Carry On Jatta"],
       ["Languages", "Punjabi, Hindi"]
+    ],
+    why: [
+      "A Punjabi star of music and cinema, behind the hit \"Angreji Beat\".",
+      "His film fame brings extra audience recognition.",
+      "A strong fit for Punjabi weddings, sangeets and brand events."
     ]
   },
   "Babbu Maan": {
@@ -304,6 +435,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Pyaas, Saaun Di Jhadi, Ohi Chann Ohi Rataan"],
       ["Languages", "Punjabi"]
+    ],
+    why: [
+      "Writes his own lyrics and has a long-loved Punjabi catalogue.",
+      "Pyaas was among the best-selling Punjabi albums of its time.",
+      "Suits Punjabi weddings, cultural evenings and large celebrations."
     ]
   },
   "Garry Sandhu": {
@@ -315,6 +451,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Illegal Weapon, Yeah Baby, Banda Ban Ja"],
       ["Languages", "Punjabi, Hindi"]
+    ],
+    why: [
+      "Hits like \"Illegal Weapon\" and \"Yeah Baby\" keep a dance floor busy.",
+      "Established UK Asian audience and Bollywood crossover add polish.",
+      "Ideal for sangeets, receptions and Punjabi parties."
     ]
   },
   "Amrit Maan": {
@@ -326,6 +467,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Bambiha Bole, Kaali Camaro, Bamb Jatt"],
       ["Languages", "Punjabi"]
+    ],
+    why: [
+      "Known for energetic songs like \"Bambiha Bole\" and \"Bamb Jatt\" that younger guests love.",
+      "Also an actor, giving him easy stage charisma.",
+      "Suits sangeets, college fests and Punjabi celebrations."
     ]
   },
   "Ranjit Bawa": {
@@ -337,6 +483,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Jatt Di Akal, Yaari Chandigarh Waliye, Impress"],
       ["Languages", "Punjabi"]
+    ],
+    why: [
+      "\"Jatt Di Akal\" is a Punjabi favourite with Brit Asia award recognition.",
+      "A singer-actor with a strong rural-Punjabi appeal.",
+      "A good fit for Punjabi weddings, sangeets and cultural events."
     ]
   },
   "Parmish Verma": {
@@ -348,6 +499,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Le Chakk Main Aa Gaya, Gaal Ni Kadni, Rocky Mental"],
       ["Languages", "Punjabi"]
+    ],
+    why: [
+      "A singer, rapper and actor, so his shows blend music and screen-star appeal.",
+      "Songs like \"Gaal Ni Kadni\" suit a high-energy crowd.",
+      "Works for sangeets, college fests and club-style events."
     ]
   },
   "Sunanda Sharma": {
@@ -359,6 +515,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Jaani Tera Naa, Patake, Morni, Sandal"],
       ["Languages", "Punjabi"]
+    ],
+    why: [
+      "Punjabi pop hits like \"Jaani Tera Naa\" and \"Morni\" are familiar to younger audiences.",
+      "She began on YouTube covers and builds sets around her pop songs.",
+      "Suits sangeets, mehendis and party evenings."
     ]
   },
   "Kaur B": {
@@ -370,6 +531,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Paranda, Kaniyan, Mittran De Boot"],
       ["Languages", "Punjabi, Hindi"]
+    ],
+    why: [
+      "Known for upbeat Punjabi pop like \"Paranda\" and \"Mittran De Boot\".",
+      "Also performs devotional songs, adding range for family events.",
+      "Suits sangeets, mehendis and Punjabi celebrations."
     ]
   },
   "Miss Pooja": {
@@ -381,6 +547,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Second Hand Jawaani, Wrong Number, Sohnea"],
       ["Languages", "Punjabi, Hindi"]
+    ],
+    why: [
+      "Known as the Queen of Duets, with a bhangra and pop catalogue that fills a floor.",
+      "Crossed over to Bollywood with \"Second Hand Jawaani\".",
+      "A natural fit for Punjabi weddings, sangeets and parties."
     ]
   },
   "Aastha Gill": {
@@ -392,6 +563,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "DJ Waley Babu, Proper Patola, Kamariya, Buzz"],
       ["Languages", "Hindi, Punjabi"]
+    ],
+    why: [
+      "Voice behind \"DJ Waley Babu\" and \"Proper Patola\", which instantly lift a crowd.",
+      "Equally at home with Bollywood and Punjabi pop.",
+      "Suits sangeets, club-style nights and corporate parties."
     ]
   },
   "Baani Sandhu": {
@@ -403,6 +579,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "8 Parche, Fauji Di Bandook, Photo"],
       ["Languages", "Punjabi"]
+    ],
+    why: [
+      "Best known for \"8 Parche\", her Punjabi breakout song.",
+      "A young Punjabi singer-actress with strong appeal for younger guests.",
+      "Suits sangeets, college fests and Punjabi celebrations."
     ]
   },
   "Gurdeep Mehndi": {
@@ -414,6 +595,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Saheli, Kangna Tera Ni, Gurdeepmix"],
       ["Languages", "Punjabi, Hindi"]
+    ],
+    why: [
+      "From the Mehndi family and a performer in his own right, blending rock and jazz with Sufi and Punjabi folk.",
+      "Brings a different, contemporary take on Punjabi sound.",
+      "Suits sangeets, receptions and youth-focused events."
     ]
   },
   "Navraj Hans": {
@@ -425,6 +611,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Jind Meriye, Saiyaan, Jhootha Kahin Ka"],
       ["Languages", "Punjabi, Hindi"]
+    ],
+    why: [
+      "A singer-actor from a respected musical family with Bollywood and Punjabi film credits.",
+      "Songs like \"Jind Meriye\" give a warm, romantic option alongside party tracks.",
+      "Suits Punjabi weddings, sangeets and receptions."
     ]
   },
   "Rupali Jagga": {
@@ -436,6 +627,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Tere Bin Jeena Kya, Piyaa Rangeela, Tere Piche"],
       ["Languages", "Hindi, Punjabi"]
+    ],
+    why: [
+      "Classically trained and a Bollywood playback singer, so strong vocals come standard.",
+      "Hindi-Punjabi songs like \"Tere Piche\" suit mixed audiences.",
+      "A good fit for receptions, cocktail nights and corporate events."
     ]
   },
   "Sara Gurpal": {
@@ -447,6 +643,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Slow Motion, Lagdi Att, Ki Main Kalli Aa"],
       ["Languages", "Punjabi"]
+    ],
+    why: [
+      "A Punjabi singer, actress and model whose songs like \"Slow Motion\" are familiar to young fans.",
+      "TV profile from Bigg Boss 14 adds crowd interest.",
+      "Suits sangeets, college fests and brand events."
     ]
   },
   "Yuvraaj Hans": {
@@ -458,6 +659,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Yaar Annmulle, Paani"],
       ["Languages", "Punjabi"]
+    ],
+    why: [
+      "A Punjabi actor-singer from a well-known musical family.",
+      "Hit song \"Paani\" and film fame give him recognisable appeal.",
+      "Suits Punjabi weddings, sangeets and cultural events."
     ]
   },
   "Manj Musik": {
@@ -469,6 +675,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Whistle Baja, High Rated Gabru, Make Some Space"],
       ["Languages", "Punjabi, Hindi"]
+    ],
+    why: [
+      "A composer-producer behind Bollywood hits, bringing a modern, club-ready Punjabi sound.",
+      "Former member of the bhangra group RDB, so he knows how to run a dance floor.",
+      "Ideal for sangeets, college fests and New Year parties."
     ]
   },
   "Pav Dharia": {
@@ -480,6 +691,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Na Ja, Najaa (Sooryavanshi), Bewafa"],
       ["Languages", "Punjabi, Hindi"]
+    ],
+    why: [
+      "\"Na Ja\" is a Punjabi hit with a huge following, plus Bollywood credits.",
+      "Writer and director as well as singer, giving his shows a polished feel.",
+      "Suits sangeets, receptions and Punjabi celebrations."
     ]
   },
   "Prem Dhillon": {
@@ -491,6 +707,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Bootcut, Old Skool, Majha Block"],
       ["Languages", "Punjabi"]
+    ],
+    why: [
+      "Songs like \"Bootcut\" and \"Old Skool\" are popular with young Punjabi audiences.",
+      "A singer-songwriter-rapper, so sets mix singing and rap.",
+      "Suits college fests, sangeets and youth-focused events."
     ]
   },
   "Master Saleem": {
@@ -502,6 +723,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Mast Kalandar, Aahun, Aj Hona Deedar Mahi Da"],
       ["Languages", "Punjabi, Hindi"]
+    ],
+    why: [
+      "A respected Punjabi Sufi and devotional voice from a Sufi singing family.",
+      "Also known for film songs like \"Mast Kalandar\", so he can switch from devotional to energetic.",
+      "A strong fit for jagrans, Sufi nights, weddings and festive evenings."
     ]
   },
   "Papon": {
@@ -513,6 +739,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Moh Moh Ke Dhaage, Kyon, Jiyein Kyun, Bulleya"],
       ["Languages", "Hindi, Assamese, Bengali"]
+    ],
+    why: [
+      "A distinctive voice behind \"Moh Moh Ke Dhaage\", \"Kyon\" and \"Bulleya\".",
+      "Coke Studio fame and folk-fusion roots give sets depth.",
+      "Suits concert-style evenings, cultural events and corporate shows."
     ]
   },
   "Jassi Gill & Babbal Rai": {
@@ -523,6 +754,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Nikle Currant, Lancer (Jassie Gill); Girlfriend (Babbal Rai)"],
       ["Languages", "Punjabi"]
+    ],
+    why: [
+      "Two popular Punjabi singer-actors on one stage, a draw for fans of both.",
+      "Punjabi hits and screen fame bring easy crowd recognition.",
+      "Suits Punjabi weddings, sangeets and large celebrations."
     ]
   },
   "Sawai Bhatt": {
@@ -534,6 +770,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Kesariya Balma, Sanseinn"],
       ["Languages", "Rajasthani, Hindi"]
+    ],
+    why: [
+      "A Rajasthani folk singer made famous on Indian Idol 12, known for \"Kesariya Balma\".",
+      "Authentic folk voice adds colour and tradition to an evening.",
+      "Suits welcome moments, mehendis, cultural nights and weddings."
     ]
   },
   "DJ Aqeel": {
@@ -543,6 +784,11 @@ window.AOS_BIOS = {
     ],
     facts: [
       ["Known for", "Bollywood remixes, Shake It Daddy Mix"]
+    ],
+    why: [
+      "A veteran of the Indian remix scene since around 2000, known for his Bollywood remixes.",
+      "\"Shake It Daddy Mix\" and the DJ Aqeel Forever albums give him recognisable material.",
+      "Suits sangeets, club nights and parties that want a classic Bollywood-remix feel."
     ]
   },
   "DJ Chetas": {
@@ -553,6 +799,11 @@ window.AOS_BIOS = {
     ],
     facts: [
       ["Known for", "Bollywood mashups, DJ Mag Top 100"]
+    ],
+    why: [
+      "The first Indian DJ in DJ Mag's Top 100, reaching number 33 in 2016.",
+      "Known for Bollywood mashups, so the music is instantly familiar.",
+      "Suits sangeets, receptions, club nights and sports or brand events, where he has also played."
     ]
   },
   "DJ Lijo George": {
@@ -563,6 +814,11 @@ window.AOS_BIOS = {
     ],
     facts: [
       ["Known for", "Bollywood mashups, film music"]
+    ],
+    why: [
+      "A DJ who also composes for Hindi films, so he blends club skills with film-music instinct.",
+      "Known for mashups and work with DJ Chetas, including a track from Bhool Bhulaiyaa 3.",
+      "Suits sangeets, receptions and party nights."
     ]
   },
   "DJ Nikhil Chinapa": {
@@ -573,6 +829,11 @@ window.AOS_BIOS = {
     ],
     facts: [
       ["Known for", "MTV VJ, Submerge, Sunburn Festival"]
+    ],
+    why: [
+      "Credited with bringing electronic dance music to a wide Indian audience.",
+      "A former MTV VJ and festival director of Sunburn, he reads a crowd well.",
+      "Suits club nights, brand events and festival-style parties."
     ]
   },
   "Nucleya": {
@@ -583,6 +844,11 @@ window.AOS_BIOS = {
     ],
     facts: [
       ["Known for", "Bass Rani, Raja Baja, desi bass"]
+    ],
+    why: [
+      "A leading name in India's desi bass scene, blending folk sounds with heavy bass.",
+      "Albums like Bass Rani and Raja Baja show a distinctive sound beyond a standard DJ set.",
+      "Suits college fests, festivals, New Year parties and brand events."
     ]
   },
   "Gayathri Asokan": {
@@ -594,6 +860,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Ghazal, Malayalam film songs"],
       ["Languages", "Malayalam, Hindi, Urdu"]
+    ],
+    why: [
+      "A Kerala State Film Award winner who also performs ghazal and Hindustani classical music.",
+      "Hosts the ghazal show Khayal, showing deep comfort with the form.",
+      "Suits intimate evenings, anniversaries, dinners and cultural events."
     ]
   },
   "Kavya Limaye": {
@@ -604,6 +875,11 @@ window.AOS_BIOS = {
     ],
     facts: [
       ["Known for", "Indian Idol 13, The Voice India Kids"]
+    ],
+    why: [
+      "A young Indian Idol 13 finalist and The Voice India Kids runner-up with notable composure on stage.",
+      "Also performs ghazals, adding depth beyond pop.",
+      "Suits dinners, cultural evenings and reception cocktail hours."
     ]
   },
   "Aakash Gupta": {
@@ -614,6 +890,11 @@ window.AOS_BIOS = {
     ],
     facts: [
       ["Known for", "Comicstaan season 2 co-winner"]
+    ],
+    why: [
+      "Co-winner of Comicstaan season 2, so he comes with a proven stand-up reputation.",
+      "Relatable Delhi-flavoured observational humour that works for broad audiences.",
+      "Suits corporate evenings, college events and private shows."
     ]
   },
   "Abhishek Upmanyu": {
@@ -624,6 +905,11 @@ window.AOS_BIOS = {
     ],
     facts: [
       ["Known for", "Thoda Saaf Bol, On Air with AIB"]
+    ],
+    why: [
+      "A stand-up comedian and former On Air with AIB writer, known for sharp observational material.",
+      "Specials like Thoda Saaf Bol show a polished, tested act.",
+      "Suits corporate events, college fests and private shows."
     ]
   },
   "Anubhav Singh Bassi": {
@@ -634,6 +920,11 @@ window.AOS_BIOS = {
     ],
     facts: [
       ["Known for", "Bas Kar Bassi, nostalgic storytelling"]
+    ],
+    why: [
+      "A top stand-up name with the Prime Video special Bas Kar Bassi and a Bollywood debut.",
+      "Nostalgic school-and-college storytelling lands with a wide crowd.",
+      "Suits corporate events, college fests and large shows."
     ]
   },
   "Harsh Gujral": {
@@ -644,6 +935,11 @@ window.AOS_BIOS = {
     ],
     facts: [
       ["Known for", "Crowd work, Harsh & Bassi Unleashed"]
+    ],
+    why: [
+      "Known for crowd work, so he can tailor a set to the room.",
+      "Collaborated with Anubhav Singh Bassi on Harsh & Bassi Unleashed.",
+      "Suits corporate offsites, college events and private parties."
     ]
   },
   "Rajiv Thakur": {
@@ -655,6 +951,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Comedy Circus, The Great Indian Laughter Challenge"],
       ["Languages", "Hindi, Punjabi"]
+    ],
+    why: [
+      "A television comedian from Comedy Circus and The Great Indian Laughter Challenge.",
+      "Works in Hindi and Punjabi, which suits Punjabi-speaking audiences.",
+      "Suits family events, corporate evenings and festive shows."
     ]
   },
   "SIRAHA Trio (Harmeet Manseta, U Rajesh, Sivamani)": {
@@ -664,6 +965,11 @@ window.AOS_BIOS = {
     ],
     facts: [
       ["Line-up", "Harmeet Manseta (piano), U. Rajesh (mandolin), Sivamani (percussion)"]
+    ],
+    why: [
+      "A jazz piano, mandolin and world-percussion line-up, an unusual sound for premium events.",
+      "Three accomplished musicians give a rich, textured live set.",
+      "Suits lounges, receptions, corporate dinners and festivals."
     ]
   },
   "SIRAHA Trio": {
@@ -673,6 +979,11 @@ window.AOS_BIOS = {
     ],
     facts: [
       ["Line-up", "Harmeet Manseta (piano), U. Rajesh (mandolin), Sivamani (percussion)"]
+    ],
+    why: [
+      "A jazz piano, mandolin and world-percussion line-up, an unusual sound for premium events.",
+      "Three accomplished musicians give a rich, textured live set.",
+      "Suits lounges, receptions, corporate dinners and festivals."
     ]
   },
   "The SIVAMANI Trio": {
@@ -684,6 +995,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Percussion, A. R. Rahman collaborations"],
       ["Based in", "Chennai"]
+    ],
+    why: [
+      "Built around Sivamani, A. R. Rahman's lead percussionist and a Padma Shri recipient.",
+      "Percussion-led sets bring rhythm and spectacle to a stage.",
+      "Suits receptions, concert-style evenings and corporate galas."
     ]
   },
   "Sivamani (percussion)": {
@@ -695,6 +1011,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Percussion, A. R. Rahman collaborations"],
       ["Based in", "Chennai"]
+    ],
+    why: [
+      "A Padma Shri recipient and A. R. Rahman's lead percussionist.",
+      "Plays drums, octoban, darbuka and other instruments, so one artist offers real variety.",
+      "Suits concert-style evenings, galas and large celebrations."
     ]
   },
   "Suhani Shah (Ruhani Shah)": {
@@ -704,6 +1025,11 @@ window.AOS_BIOS = {
     ],
     facts: [
       ["Known for", "Mentalism, magic"]
+    ],
+    why: [
+      "A mentalist and magician performing since childhood, so the act is practised and smooth.",
+      "Mind-reading entertains all ages and gives guests something to talk about.",
+      "Suits weddings, cocktail hours, corporate evenings and private parties."
     ]
   },
   "Hussain K": {
@@ -714,6 +1040,11 @@ window.AOS_BIOS = {
     ],
     facts: [
       ["Known for", "Kumkum, Indian Idol host, Nach Baliye 2 winner"]
+    ],
+    why: [
+      "A familiar TV face as Sumit Wadhwa in Kumkum and a long-time Indian Idol host.",
+      "His hosting experience keeps a programme moving and engages the room.",
+      "Suits weddings, award nights and corporate events."
     ]
   },
   "Roshni Chopra": {
@@ -724,6 +1055,11 @@ window.AOS_BIOS = {
     ],
     facts: [
       ["Known for", "Kasamh Se, Dil Jeetegi Desi Girl"]
+    ],
+    why: [
+      "A TV actress and presenter known as Pia in Kasamh Se and winner of Dil Jeetegi Desi Girl.",
+      "Hosting experience on TV and cricket coverage means polished stage presence.",
+      "Suits weddings, brand events and corporate evenings."
     ]
   },
   "Shruti Seth": {
@@ -734,6 +1070,11 @@ window.AOS_BIOS = {
     ],
     facts: [
       ["Known for", "Shararat, Fanaa, Comedy Circus host"]
+    ],
+    why: [
+      "A TV and film actress known from Shararat, Fanaa and Slumdog Millionaire.",
+      "Years of hosting, including Comedy Circus, give her easy comic timing.",
+      "Suits award nights, weddings and corporate shows."
     ]
   },
   "Sonam C Chabbra": {
@@ -746,6 +1087,11 @@ window.AOS_BIOS = {
     facts: [
       ["Based in", "Delhi"],
       ["Known for", "Best Anchor (Female) 2019, Pitch to Get Rich"]
+    ],
+    why: [
+      "Named India's Best Anchor (Female) in 2019 by Business World.",
+      "An experienced live host who has hosted TV shows and brand events.",
+      "Suits weddings, sangeets and corporate events."
     ]
   },
   "Kunal Ganjawala": {
@@ -757,6 +1103,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Bheege Honth Tere, O Humdum Suniyo Re"],
       ["Languages", "Hindi, Kannada, Marathi, Bengali"]
+    ],
+    why: [
+      "His hit \"Bheege Honth Tere\" won a Zee Cine Award and is still a crowd favourite.",
+      "Sings in Hindi, Kannada and other languages, so mixed audiences are covered.",
+      "Suits weddings, receptions and festive shows."
     ]
   },
   "Sanam": {
@@ -768,6 +1119,11 @@ window.AOS_BIOS = {
     ],
     facts: [
       ["Line-up", "Sanam Puri (vocals), Samar Puri (guitar), Venky S (bass), Keshav Dhanraj (drums)"]
+    ],
+    why: [
+      "A pop-rock band whose Bollywood covers and \"Main Hoon\" are known to many.",
+      "Won the Times Music Supastars band hunt and plays a polished live set.",
+      "Suits sangeets, college fests and corporate parties."
     ]
   },
   "Progressive Brothers": {
@@ -780,6 +1136,11 @@ window.AOS_BIOS = {
     facts: [
       ["Based in", "Delhi"],
       ["Line-up", "Sunny Sharma, Karan Bhalla"]
+    ],
+    why: [
+      "A Delhi duo named India's Best Trance DJs 2012 to 2013 who have played Sunburn and VH1 Supersonic.",
+      "Their sets suit big dance floors.",
+      "Suits college fests, New Year parties and club-style events."
     ]
   },
   "Gaurav Gupta": {
@@ -790,6 +1151,11 @@ window.AOS_BIOS = {
     ],
     facts: [
       ["Known for", "Not Just Baniya, Market Down Hai"]
+    ],
+    why: [
+      "A dentist-turned comedian whose Delhi-flavoured humour is built on Baniya stereotypes and everyday life.",
+      "Has a Prime Video special, Market Down Hai, and performed on The Great Indian Laughter Challenge.",
+      "Suits corporate evenings and private shows."
     ]
   },
   "Dino James": {
@@ -801,6 +1167,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Yaadein, Unstoppable, Khatron Ke Khiladi 13 winner"],
       ["Languages", "Hindi"]
+    ],
+    why: [
+      "A rapper and Khatron Ke Khiladi 13 winner, so he arrives with a TV fan base.",
+      "Known for storytelling in songs like \"Yaadein\" and \"Unstoppable\".",
+      "Suits college fests, brand events and youth-focused parties."
     ]
   },
   "Emiway Bantai": {
@@ -812,6 +1183,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Machayenge, Firse Machayenge, Asli Hip Hop"],
       ["Languages", "Hindi, English, Marathi, Tamil"]
+    ],
+    why: [
+      "A genuinely independent rapper whose \"Machayenge\" is a streaming favourite.",
+      "Rhymes in several languages, widening his appeal.",
+      "Suits college fests, club nights and brand events."
     ]
   },
   "MC Square": {
@@ -823,6 +1199,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "MTV Hustle 2.0 winner, Chehre"],
       ["Languages", "Haryanvi, Hindi"]
+    ],
+    why: [
+      "Winner of MTV Hustle 2.0, bringing authentic Haryanvi rap to the stage.",
+      "A fresh, high-energy act for younger crowds.",
+      "Suits college fests, brand events and club nights."
     ]
   },
   "Paradox": {
@@ -835,6 +1216,11 @@ window.AOS_BIOS = {
       ["Based in", "Delhi"],
       ["Known for", "MTV Hustle 2.0 runner-up, Jaadugar, Cowboy"],
       ["Languages", "Hindi"]
+    ],
+    why: [
+      "MTV Hustle 2.0 runner-up from Delhi with a blend of pop and traditional hip hop.",
+      "Tracks like \"Jaadugar\" and \"Cowboy\" suit a party crowd.",
+      "Suits college fests and youth-focused events."
     ]
   },
   "Raja Kumari": {
@@ -845,6 +1231,11 @@ window.AOS_BIOS = {
     ],
     facts: [
       ["Known for", "BollyHood, HBIC, MTV Hustle judge"]
+    ],
+    why: [
+      "A songwriter for Fall Out Boy and a rapper whose \"BollyHood\" style mixes Indian classical with hip hop.",
+      "Was an MTV Hustle judge and appeared in Gully Boy.",
+      "Suits college fests, brand events and festival stages."
     ]
   },
   "L Subramaniam (violin)": {
@@ -856,6 +1247,11 @@ window.AOS_BIOS = {
     facts: [
       ["Instrument", "Violin"],
       ["Known for", "Carnatic and global fusion music"]
+    ],
+    why: [
+      "A globally respected violinist who has played with Grappelli and Ponty.",
+      "Moves between Carnatic and fusion, so the set can be elegant or adventurous.",
+      "Suits classical evenings, galas and cultural events."
     ]
   },
   "Purbayan Chatterjee (sitar)": {
@@ -867,6 +1263,11 @@ window.AOS_BIOS = {
     facts: [
       ["Instrument", "Sitar"],
       ["Based in", "Mumbai"]
+    ],
+    why: [
+      "A sitarist from the Senia Maihar Gharana who blends classical and world music.",
+      "Has performed with Ustad Zakir Hussain and released the bestselling album Lehar.",
+      "Suits cultural evenings, galas and elegant receptions."
     ]
   },
   "Raghav Sachar": {
@@ -877,6 +1278,11 @@ window.AOS_BIOS = {
     ],
     facts: [
       ["Known for", "Kabul Express, multi-instrumental performances"]
+    ],
+    why: [
+      "A multi-instrumentalist who started on the harmonica at four, so sets can be visually varied.",
+      "Composer and singer with film credits including Andhadhun.",
+      "Suits lounges, receptions and corporate evenings."
     ]
   },
   "Ronu Majumdar (flute)": {
@@ -888,6 +1294,11 @@ window.AOS_BIOS = {
     facts: [
       ["Instrument", "Bansuri (flute)"],
       ["Known for", "Hindustani classical and Indo-world fusion"]
+    ],
+    why: [
+      "A Padma Shri bansuri master trained in Pt. Ravi Shankar's tradition.",
+      "Soothing live flute adds a refined mood to ceremonies and dinners.",
+      "Suits weddings, cultural evenings and galas."
     ]
   },
   "Bismil Ki Mehfil": {
@@ -900,6 +1311,11 @@ window.AOS_BIOS = {
       ["Based in", "Delhi"],
       ["Known for", "Live Sufi shows, Ki Kita"],
       ["Languages", "Hindi, Urdu, Punjabi"]
+    ],
+    why: [
+      "A Sufi project built to feel intimate yet build to a singalong, so the mood rises through the set.",
+      "Shows blend Sufi, qawwali and ghazal, and the group tours widely.",
+      "Suits sangeets, corporate evenings and Sufi nights."
     ]
   },
   "Divya Kumar": {
@@ -911,6 +1327,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Maston Ka Jhund, Shubhaarambh, Jee Karda"],
       ["Languages", "Hindi, Gujarati, Telugu"]
+    ],
+    why: [
+      "A playback singer with a folk and Sufi texture and credits including Bhaag Milkha Bhaag and Stree 2.",
+      "Sings in Hindi, Gujarati and Telugu.",
+      "Suits weddings, receptions and festive evenings."
     ]
   },
   "Mame Khan": {
@@ -922,6 +1343,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Chaudhary (Coke Studio), Manganiyar folk"],
       ["Languages", "Rajasthani, Hindi"]
+    ],
+    why: [
+      "A Manganiyar folk singer made famous on Coke Studio with \"Chaudhary\".",
+      "Authentic Rajasthani voice and a Sangeet Natak Akademi honour.",
+      "Suits welcome ceremonies, cultural evenings and weddings."
     ]
   },
   "Sagar Bhatia": {
@@ -934,6 +1360,11 @@ window.AOS_BIOS = {
       ["Based in", "Delhi"],
       ["Known for", "Sagar Wali Qawwali, Khudaya"],
       ["Languages", "Hindi, Urdu, Punjabi"]
+    ],
+    why: [
+      "A qawwali and Sufi-rock singer-guitarist, so the set has both devotion and rock energy.",
+      "A top-six India's Raw Star finalist with Bollywood playback credits.",
+      "Suits sangeets, Sufi nights and corporate parties."
     ]
   },
   "Salman Zaman": {
@@ -945,6 +1376,11 @@ window.AOS_BIOS = {
     facts: [
       ["Line-up", "Salman Khan Niazi, Zaman Khan"],
       ["Known for", "Sufi rock, contemporary qawwali"]
+    ],
+    why: [
+      "A brother duo known as Sufi Ke Sultan, with a Sufi-rock and contemporary qawwali sound.",
+      "Rooted in the Rampur Sahaswan Gharana.",
+      "Suits Sufi nights, sangeets and cultural events."
     ]
   },
   "Sharib & Toshi (Sabri)": {
@@ -956,6 +1392,11 @@ window.AOS_BIOS = {
     facts: [
       ["Line-up", "Sharib Sabri, Toshi Sabri"],
       ["Known for", "Maahi, Jashnn, Yamla Pagla Deewana 2"]
+    ],
+    why: [
+      "Brothers who compose and sing together, known for \"Maahi\" from Raaz: The Mystery Continues.",
+      "Composed the albums of Jashnn and Ghost, so they know film-style songwriting.",
+      "Suits receptions, sangeets and music evenings."
     ]
   },
   "Sharib Toshi": {
@@ -967,6 +1408,11 @@ window.AOS_BIOS = {
     facts: [
       ["Line-up", "Sharib Sabri, Toshi Sabri"],
       ["Known for", "Maahi, Jashnn, Yamla Pagla Deewana 2"]
+    ],
+    why: [
+      "Brothers who compose and sing together, known for \"Maahi\" from Raaz: The Mystery Continues.",
+      "Composed the albums of Jashnn and Ghost, so they know film-style songwriting.",
+      "Suits receptions, sangeets and music evenings."
     ]
   },
   "Stree Shakti (Anuradha Pal)": {
@@ -978,6 +1424,11 @@ window.AOS_BIOS = {
     facts: [
       ["Based in", "Mumbai"],
       ["Led by", "Anuradha Pal (tabla)"]
+    ],
+    why: [
+      "An all-female percussion ensemble led by tabla player Anuradha Pal, performing since 1996.",
+      "Played WOMAD UK in 1999, a performance broadcast by the BBC.",
+      "Suits cultural events, corporate galas and celebrations that want a distinctive act."
     ]
   },
   "Vishaal Rasquinha": {
@@ -989,6 +1440,11 @@ window.AOS_BIOS = {
     facts: [
       ["Based in", "Mumbai"],
       ["Known for", "Wedding and corporate hosting"]
+    ],
+    why: [
+      "Hosted the Vicky Kaushal and Katrina Kaif wedding and has been named Best Wedding Emcee at WeddingSutra awards.",
+      "Also hosts for the IPL, Rajasthan Royals and the United Nations in India.",
+      "Suits weddings, sangeets and corporate events."
     ]
   },
   "Parikrama": {
@@ -1001,6 +1457,11 @@ window.AOS_BIOS = {
       ["Based in", "Delhi"],
       ["Known for", "But It Rained, Open Skies"],
       ["Formed", "1991"]
+    ],
+    why: [
+      "One of India's longest-running rock bands, formed in 1991.",
+      "Toured with Iron Maiden and played the Download Festival in England.",
+      "Suits college fests, concerts and corporate rock nights."
     ]
   },
   "The Yellow Diaries": {
@@ -1012,6 +1473,11 @@ window.AOS_BIOS = {
     facts: [
       ["Based in", "Mumbai"],
       ["Known for", "Roz Roz, Marz, In Case We Forget"]
+    ],
+    why: [
+      "A pop-rock band that opened for A. R. Rahman's Wonderment Tour and has played Lollapalooza India.",
+      "Signed to Sony Music, with a polished set of original songs.",
+      "Suits corporate evenings, college fests and cocktail nights."
     ]
   },
   "Zikrr": {
@@ -1023,6 +1489,11 @@ window.AOS_BIOS = {
     facts: [
       ["Based in", "Delhi"],
       ["Known for", "Sufi rock, Bam Bhole Bam"]
+    ],
+    why: [
+      "A seven-piece Sufi-rock band from Delhi known for \"Bam Bhole Bam\".",
+      "Mixes Sufi, Punjabi folk and Bollywood, so one set covers many tastes.",
+      "Suits sangeets, weddings and corporate evenings."
     ]
   },
   "Bryden & Parth Choir": {
@@ -1034,6 +1505,11 @@ window.AOS_BIOS = {
     facts: [
       ["Based in", "Bengaluru"],
       ["Line-up", "Bryden Lewis (guitar), Parth Chandiramani (flute), choir"]
+    ],
+    why: [
+      "A band and an 11-member choir on one stage, which is visually and sonically rich.",
+      "Gospel-inspired harmonies set it apart from standard cover acts.",
+      "Suits receptions, corporate events and festivals."
     ]
   },
   "Parth Chandiramani (flute)": {
@@ -1045,6 +1521,11 @@ window.AOS_BIOS = {
     facts: [
       ["Instrument", "Flute"],
       ["Based in", "Bengaluru"]
+    ],
+    why: [
+      "A flautist who brings a warm, distinctive voice to live arrangements.",
+      "Part of the Bengaluru cross-genre duo Bryden-Parth and trained across Indian and Western styles.",
+      "Suits ceremonies, cocktail hours and lounge evenings."
     ]
   },
   "El Fe Choir (Chennai)": {
@@ -1056,6 +1537,11 @@ window.AOS_BIOS = {
     facts: [
       ["Based in", "Chennai"],
       ["Founded by", "Roe Vincent"]
+    ],
+    why: [
+      "A vocal group, live band and choir with film credits including Moonu and Maan Karate.",
+      "Founded by playback singer and vocal arranger Roe Vincent.",
+      "Suits weddings, corporate events and college fests."
     ]
   },
   "Prateek Kuhad": {
@@ -1067,6 +1553,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "cold/mess, Kasoor, Tokens & Charms"],
       ["Languages", "Hindi, English"]
+    ],
+    why: [
+      "His song \"cold/mess\" made Barack Obama's list of favourite music of 2019.",
+      "An intimate indie sound that suits attentive audiences.",
+      "Suits cocktail evenings, corporate events and concert-style nights."
     ]
   },
   "Anuv Jain": {
@@ -1078,6 +1569,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Baarishein, Husn, Alag Aasmaan, Gul"],
       ["Languages", "Hindi"]
+    ],
+    why: [
+      "One of India's most-streamed indie artists, named to Forbes India 30 Under 30 in 2023.",
+      "Simple acoustic songs like \"Baarishein\" and \"Husn\" that guests sing along to.",
+      "Suits receptions, cocktail nights and college fests."
     ]
   },
   "Ritviz": {
@@ -1089,6 +1585,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Udd Gaye, Liggi, Sun Toh"],
       ["Languages", "Hindi, English"]
+    ],
+    why: [
+      "Known for \"Udd Gaye\" and \"Liggi\", and trained in Hindustani classical music.",
+      "Has played festivals including Sunburn and EDC Las Vegas.",
+      "Suits college fests, festivals and brand events."
     ]
   },
   "Amaal Mallik": {
@@ -1100,6 +1601,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Jai Ho, M.S. Dhoni: The Untold Story, Kabir Singh"],
       ["Languages", "Hindi"]
+    ],
+    why: [
+      "A composer-singer whose film credits include M.S. Dhoni: The Untold Story and Kabir Singh.",
+      "From a family of music directors, with strong song-writing instincts.",
+      "Suits receptions, concert evenings and brand events."
     ]
   },
   "Shirley Setia": {
@@ -1111,6 +1617,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "YouTube covers, Maska, Nikamma"],
       ["Languages", "Hindi, English"]
+    ],
+    why: [
+      "A singer-actress who built her audience on YouTube.",
+      "Her Hindi and English sets work for mixed crowds.",
+      "Suits receptions, cocktail nights and youth-focused events."
     ]
   },
   "Hans Raj Hans": {
@@ -1123,6 +1634,11 @@ window.AOS_BIOS = {
       ["Based in", "Jalandhar"],
       ["Known for", "Punjabi folk, Sufi, Padma Shri"],
       ["Languages", "Punjabi, Hindi"]
+    ],
+    why: [
+      "A Padma Shri-winning Punjabi folk and Sufi singer.",
+      "Sang with Nusrat Fateh Ali Khan in Kachche Dhaage.",
+      "Suits Punjabi weddings, Sufi nights and cultural events."
     ]
   },
   "Qutbi Brothers (Arshad and Adnan Qutbi)": {
@@ -1134,6 +1650,11 @@ window.AOS_BIOS = {
     facts: [
       ["Based in", "Delhi"],
       ["Line-up", "Haji Mohammad Idris, Arshad Qutbi, Adnan Qutbi"]
+    ],
+    why: [
+      "A father-and-sons qawwali group with a reported non-stop 12-hour qawwali performance in 2016.",
+      "Graded at the top level by All India Radio.",
+      "Suits Sufi nights, sangeets and corporate evenings."
     ]
   },
   "Haji Mohammad Idris": {
@@ -1145,6 +1666,11 @@ window.AOS_BIOS = {
     facts: [
       ["Based in", "Delhi"],
       ["Leads", "Qutbi Brothers"]
+    ],
+    why: [
+      "The senior qawwal who leads the Qutbi Brothers and has performed for decades.",
+      "Teaches his sons the tradition, so the act has authentic lineage.",
+      "Suits Sufi nights, sangeets and festive gatherings."
     ]
   },
   "Nizami Bandhu": {
@@ -1156,6 +1682,11 @@ window.AOS_BIOS = {
     facts: [
       ["Based in", "Delhi"],
       ["Line-up", "Ustad Chand Nizami, Shadab Faridi Nizami, Sohrab Faridi Nizami"]
+    ],
+    why: [
+      "Darbari qawwals of the Hazrat Nizamuddin Auliya shrine in Delhi.",
+      "A family known beyond the dargah, including in the film Rockstar.",
+      "Suits Sufi nights, weddings and cultural evenings."
     ]
   },
   "Ustad Chand Nizami": {
@@ -1167,6 +1698,11 @@ window.AOS_BIOS = {
     facts: [
       ["Based in", "Delhi"],
       ["Group", "Nizami Bandhu"]
+    ],
+    why: [
+      "A senior qawwal who leads the Nizami Bandhu tradition at the Nizamuddin shrine.",
+      "Authentic dargah style gives an evening real spiritual depth.",
+      "Suits Sufi nights, weddings and cultural evenings."
     ]
   },
   "Shadab Faridi": {
@@ -1178,6 +1714,11 @@ window.AOS_BIOS = {
     facts: [
       ["Based in", "Delhi"],
       ["Group", "Nizami Bandhu"]
+    ],
+    why: [
+      "A qawwal from the Darbari Nizami family of the Nizamuddin shrine.",
+      "Performs alongside his uncle and brother as Nizami Bandhu.",
+      "Suits Sufi nights, weddings and cultural evenings."
     ]
   },
   "Kavita Seth": {
@@ -1189,6 +1730,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Iktara, Rangisari, Sufiana"],
       ["Languages", "Hindi"]
+    ],
+    why: [
+      "A two-time Filmfare Best Female Playback Singer winner for \"Iktara\" and \"Rangisari\".",
+      "Her Sufi and ghazal depth, including the Rumi-based album Sufiana, suits reflective evenings.",
+      "Suits receptions, Sufi nights and cultural concerts."
     ]
   },
   "Motherjane": {
@@ -1200,6 +1746,11 @@ window.AOS_BIOS = {
     facts: [
       ["Based in", "Kochi"],
       ["Known for", "Insane Biography, Maktub, progressive rock"]
+    ],
+    why: [
+      "A Kochi rock band formed in 1996, with Carnatic-influenced progressive rock.",
+      "Debut album Insane Biography won Best Indian Rock Album.",
+      "Suits college fests, concerts and corporate rock nights."
     ]
   },
   "Suraj Mani": {
@@ -1210,6 +1761,11 @@ window.AOS_BIOS = {
     ],
     facts: [
       ["Known for", "Motherjane vocalist"]
+    ],
+    why: [
+      "Vocalist of Motherjane who wrote the band's original songs from \"Disillusioned\".",
+      "Brings rock-band stage experience to a solo set.",
+      "Suits college fests, lounges and cocktail evenings."
     ]
   },
   "Lisa Mishra": {
@@ -1221,6 +1777,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Tareefan, Chandigarh Mein, The Wakhra Song"],
       ["Languages", "Hindi, Punjabi, English"]
+    ],
+    why: [
+      "Known for the \"Tareefan\" reprise and \"Chandigarh Mein\", party songs people recognise.",
+      "Signed to Universal Music India's VYRL Originals, with her own releases.",
+      "Suits sangeets, receptions and brand events."
     ]
   },
   "Stephen Devassy": {
@@ -1232,6 +1793,11 @@ window.AOS_BIOS = {
     facts: [
       ["Instrument", "Piano, keytar, keyboards"],
       ["Known for", "Rahman's Jai Ho tour, Musik Lounge"]
+    ],
+    why: [
+      "A pianist and keyboardist who has worked with A. R. Rahman and joined his Jai Ho tour.",
+      "Performed in more than 60 countries, according to his profile.",
+      "Suits receptions, concerts and corporate evenings."
     ]
   },
   "Salil Bhatt (Satvik Veena)": {
@@ -1243,6 +1809,11 @@ window.AOS_BIOS = {
     facts: [
       ["Instrument", "Satvik Veena"],
       ["Based in", "Jaipur"]
+    ],
+    why: [
+      "Creator of the Satvik Veena, an instrument people rarely see live.",
+      "Tenth-generation musician from a celebrated Bhatt family.",
+      "Suits classical evenings, ceremonies and cultural events."
     ]
   },
   "Hansraj Raghuwanshi": {
@@ -1253,6 +1824,11 @@ window.AOS_BIOS = {
     ],
     facts: [
       ["Known for", "Mera Bhola Hai Bhandari, Shiva bhajans"]
+    ],
+    why: [
+      "A Shiva bhajan singer who became popular with \"Mera Bhola Hai Bhandari\".",
+      "Film singing credits including Pal Pal Dil Ke Paas.",
+      "Suits jagrans, Shivratri events and devotional evenings."
     ]
   },
   "Lakhbir Singh Lakkha": {
@@ -1264,6 +1840,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Mata Rani bhajans, Navratri jagrans"],
       ["Based in", "Mumbai"]
+    ],
+    why: [
+      "A bhajan and jagran singer known for energetic Mata Rani devotional music.",
+      "Navratri favourites like \"Maiya Ka Chola\" bring communal energy.",
+      "Suits chowkis, jagrans and festive devotional nights."
     ]
   },
   "Hemant Brijwasi": {
@@ -1275,6 +1856,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Rising Star 2 winner"],
       ["Languages", "Hindi"]
+    ],
+    why: [
+      "Winner of Rising Star 2 and a playback singer for Soorma and Manikarnika.",
+      "Performs bhajans at jagran events as well as film songs.",
+      "Suits jagrans, family functions and festive shows."
     ]
   },
   "Urvashi Radadiya": {
@@ -1286,6 +1872,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Gujarati folk"],
       ["Languages", "Gujarati"]
+    ],
+    why: [
+      "A popular Gujarati folk voice, called \"Kathiawar's cuckoo\".",
+      "Her live shows across Gujarat show comfort with large garba-style crowds.",
+      "Suits garba nights, weddings and cultural events."
     ]
   },
   "Wadali Brothers": {
@@ -1298,6 +1889,11 @@ window.AOS_BIOS = {
       ["Line-up", "Puranchand Wadali, Lakhwinder Wadali"],
       ["Known for", "Sufi singing, Padma Shri"],
       ["Languages", "Punjabi, Urdu, Hindi"]
+    ],
+    why: [
+      "A fifth-generation Sufi family from Guru Ki Wadali, now carried on by Puranchand Wadali and his son Lakhwinder.",
+      "Puranchand is a Padma Shri recipient, so the lineage is authentic.",
+      "Suits Sufi nights, weddings and cultural evenings."
     ]
   },
   "Nizami Brothers": {
@@ -1310,6 +1906,11 @@ window.AOS_BIOS = {
       ["Based in", "Delhi"],
       ["Line-up", "Faizan Nizami, Zeeshan Nizami, Khwaja Hasan Nizami"],
       ["Known for", "India's Got Talent season 8 finalists"]
+    ],
+    why: [
+      "Finalists on India's Got Talent season 8, so they come with TV credibility.",
+      "A Delhi qawwali group with a stage-ready presentation.",
+      "Suits Sufi nights, weddings and corporate evenings."
     ]
   },
   "Daksh Band": {
@@ -1321,6 +1922,11 @@ window.AOS_BIOS = {
     facts: [
       ["Based in", "Delhi"],
       ["Known for", "Sufi rock, Bollywood covers"]
+    ],
+    why: [
+      "A Delhi Sufi-rock band that mixes Bollywood favourites with Sufi energy.",
+      "Has been performing live since around 2007.",
+      "Suits sangeets, receptions and corporate parties."
     ]
   },
   "The Frequency Project": {
@@ -1332,6 +1938,11 @@ window.AOS_BIOS = {
     facts: [
       ["Based in", "Delhi"],
       ["Known for", "Sufi and Bollywood live sets"]
+    ],
+    why: [
+      "A Delhi live band for Sufi and Bollywood sets, with a sold-out Sufi night at Ministry of Sound in 2023.",
+      "Over eight years of live event experience, per its listing.",
+      "Suits receptions, lounges and corporate parties."
     ]
   },
   "Aflatunes Band": {
@@ -1343,6 +1954,11 @@ window.AOS_BIOS = {
     facts: [
       ["Based in", "Mumbai"],
       ["Known for", "A cappella covers, AflaRani"]
+    ],
+    why: [
+      "An a cappella collective of beatmakers and vocalists, a fresh alternative to a standard band.",
+      "Known for Hindi-classic covers and the AflaRani medley of Nucleya's Bass Rani tracks.",
+      "Suits receptions, corporate events and college fests."
     ]
   },
   "Best Kept Secret": {
@@ -1354,6 +1970,11 @@ window.AOS_BIOS = {
     facts: [
       ["Based in", "Bengaluru"],
       ["Known for", "Coldplay tribute set, pop-rock covers"]
+    ],
+    why: [
+      "A Bengaluru pop-rock band known for its Coldplay tribute set.",
+      "Opened for Bryan Adams in Bengaluru in 2024.",
+      "Suits corporate events, lounges and college fests."
     ]
   },
   "Delhi Indie Project": {
@@ -1365,6 +1986,11 @@ window.AOS_BIOS = {
     facts: [
       ["Based in", "Delhi"],
       ["Known for", "Lakshya, opening for Bryan Adams"]
+    ],
+    why: [
+      "A Delhi band with over a thousand gigs, so very stage-ready.",
+      "Opened for Bryan Adams in Delhi in December 2024.",
+      "Suits corporate evenings, college fests and cocktail nights."
     ]
   },
   "Madari": {
@@ -1376,6 +2002,11 @@ window.AOS_BIOS = {
     facts: [
       ["Based in", "Delhi"],
       ["Set length", "90 to 120 minutes"]
+    ],
+    why: [
+      "A Delhi Hindi rock band that blends Bollywood, pop and rock.",
+      "Typical sets run 90 to 120 minutes, suiting a full evening.",
+      "Suits college fests, corporate events and parties."
     ]
   },
   "Kanishk Sethi": {
@@ -1387,6 +2018,11 @@ window.AOS_BIOS = {
     facts: [
       ["Based in", "Mumbai"],
       ["Known for", "Trance With Khusrow, Rangisari"]
+    ],
+    why: [
+      "A Mumbai composer-singer who blends electronic and Indian classical styles.",
+      "Co-created Trance With Khusrow and sang \"Rangisari\" with Kavita Seth.",
+      "Suits lounges, receptions and corporate evenings."
     ]
   },
   "Kayan": {
@@ -1399,6 +2035,11 @@ window.AOS_BIOS = {
       ["Based in", "Mumbai"],
       ["Known for", "Cool Kids, Please, No Shade"],
       ["Languages", "English, Hindi"]
+    ],
+    why: [
+      "A Mumbai singer-songwriter named to Forbes 30 Under 30 and chosen for YouTube Music Foundry.",
+      "Hits like \"Cool Kids\" and \"No Shade\" suit a younger crowd.",
+      "Suits lounges, brand events and cocktail evenings."
     ]
   },
   "Aishwarya Majumdar": {
@@ -1411,6 +2052,11 @@ window.AOS_BIOS = {
       ["Based in", "Ahmedabad"],
       ["Known for", "STAR Voice of India - Chhote Ustad winner"],
       ["Languages", "Gujarati, Hindi, Marathi"]
+    ],
+    why: [
+      "Winner of STAR Voice of India - Chhote Ustad and a three-time Gujarat State Award winner.",
+      "Sings in Hindi, Gujarati and Marathi, which suits mixed family audiences.",
+      "Suits garba nights, weddings and cultural events."
     ]
   },
   "DJ Barkha Kaul": {
@@ -1422,6 +2068,11 @@ window.AOS_BIOS = {
     facts: [
       ["Based in", "Delhi"],
       ["Known for", "Bollywood, hip hop and commercial house sets"]
+    ],
+    why: [
+      "A Delhi DJ who plays Bollywood, hip hop and commercial house.",
+      "Has worked on a mashup and a song with Darshan Raval.",
+      "Suits sangeets, club nights and parties."
     ]
   },
   "Apoorv Singh Verma": {
@@ -1433,6 +2084,11 @@ window.AOS_BIOS = {
     facts: [
       ["Based in", "Mumbai"],
       ["Known for", "The Apoorv Singh Show, MTV Rock On"]
+    ],
+    why: [
+      "A one-man show combining DJing, drums, percussion and rap.",
+      "Experience as a bandleader for Kailash Kher's band and on India's Got Talent.",
+      "Suits sangeets, receptions and brand events."
     ]
   },
   "DJ Rhea": {
@@ -1444,6 +2100,11 @@ window.AOS_BIOS = {
     facts: [
       ["Based in", "Bengaluru"],
       ["Known for", "DJ and live percussion"]
+    ],
+    why: [
+      "A DJ and percussionist, so the set can add live rhythm.",
+      "Her profile lists Filmfare Awards South and IPL KKR post-parties among past events.",
+      "Suits sangeets, club nights and parties."
     ]
   },
   "Tamasha": {
@@ -1455,6 +2116,11 @@ window.AOS_BIOS = {
     facts: [
       ["Line-up", "Vocalists, DJ, dhol, violin, percussion"],
       ["Known for", "Wedding and sangeet performances"]
+    ],
+    why: [
+      "A wedding-focused band with vocalists, DJs, dholis, percussion and violin.",
+      "Performs across Indian cities and abroad.",
+      "Suits sangeets, receptions and baraats."
     ]
   },
   "Made In India": {
@@ -1465,6 +2131,11 @@ window.AOS_BIOS = {
     facts: [
       ["Based in", "Delhi NCR"],
       ["Known for", "Instrumental Indian classical and jazz fusion"]
+    ],
+    why: [
+      "An instrumental band mixing Indian classical with jazz and Western influences.",
+      "Delhi NCR-based, which helps with local weddings and events.",
+      "Suits ceremonies, cocktail hours and dinners."
     ]
   },
   "Rajan Batra": {
@@ -1475,6 +2146,11 @@ window.AOS_BIOS = {
     facts: [
       ["Based in", "Mumbai"],
       ["Band", "The Yellow Diary"]
+    ],
+    why: [
+      "Lead vocalist and lyricist of The Yellow Diary, a Sony Music pop-rock band.",
+      "Known for \"Roz Roz\" with Shilpa Rao.",
+      "Suits corporate evenings, cocktail nights and college fests."
     ]
   },
   "Himonshu Parikh": {
@@ -1485,6 +2161,11 @@ window.AOS_BIOS = {
     facts: [
       ["Based in", "Mumbai"],
       ["Band", "The Yellow Diary"]
+    ],
+    why: [
+      "Singer-keyboardist and composer of The Yellow Diary.",
+      "The band opened for A. R. Rahman's Wonderment Tour.",
+      "Suits lounges, receptions and corporate evenings."
     ]
   },
   "Stuart DaCosta": {
@@ -1495,6 +2176,11 @@ window.AOS_BIOS = {
     facts: [
       ["Based in", "Mumbai"],
       ["Band", "The Yellow Diary"]
+    ],
+    why: [
+      "Bassist of The Yellow Diary, which released the album In Case We Forget in 2025.",
+      "Band has played Lollapalooza India.",
+      "Suits corporate evenings, lounges and college fests."
     ]
   },
   "Chugge Khan and Rajasthan Josh": {
@@ -1507,6 +2193,11 @@ window.AOS_BIOS = {
       ["Line-up", "Manganiyar musicians led by Chugge Khan"],
       ["Known for", "Manganiyar folk, qawwali and brass-band fusion"],
       ["Languages", "Rajasthani, Hindi, Punjabi, Sindhi"]
+    ],
+    why: [
+      "A Manganiyar collective blending qawwali, court music and a Rajasthani brass band.",
+      "Formed in 2009 and released the album Rajasthan Josh in 2012.",
+      "Suits baraats, welcome moments, weddings and festivals."
     ]
   },
   "Deene Khan": {
@@ -1517,6 +2208,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Manganiyar folk and Sufi singing"],
       ["Languages", "Rajasthani, Hindi"]
+    ],
+    why: [
+      "A Manganiyar folk and Sufi singer from a family of master singers.",
+      "Taught by his father Ramjan Khan, so the style is authentic.",
+      "Suits weddings, cultural evenings and Sufi nights."
     ]
   },
   "Sadho": {
@@ -1528,6 +2224,11 @@ window.AOS_BIOS = {
     facts: [
       ["Based in", "Delhi"],
       ["Known for", "Folk-pop, Sufi and qawwali sets"]
+    ],
+    why: [
+      "A Delhi folk-pop ensemble reviving Sufi, qawwali, ghazal and folk for younger audiences.",
+      "Performs at weddings, corporate events and stage shows.",
+      "Suits sangeets, corporate evenings and Sufi nights."
     ]
   },
   "Rana Dholi (folk music and dance)": {
@@ -1538,6 +2239,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Rajasthani folk music, Ghoomar and Kalbeliya dance"],
       ["Languages", "Rajasthani, Hindi"]
+    ],
+    why: [
+      "A Rajasthani folk group offering music with Ghoomar and Kalbeliya dance.",
+      "Dhol-led music brings colour and energy to an entry.",
+      "Suits baraats, welcome moments and cultural events."
     ]
   },
   "Osho Jain": {
@@ -1550,6 +2256,11 @@ window.AOS_BIOS = {
       ["Based in", "Mumbai"],
       ["Known for", "Khush To Hai Na, Khud Se, Saar"],
       ["Languages", "Hindi, Urdu"]
+    ],
+    why: [
+      "An indie singer-songwriter with poetic Hindi and Urdu lyrics.",
+      "Known for \"Khush To Hai Na\" and the album Saar.",
+      "Suits cocktail nights, lounges and intimate events."
     ]
   },
   "Zaeden": {
@@ -1561,6 +2272,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Genesis 1:1, Aa Mil, Tomorrowland"],
       ["Languages", "Hindi, English"]
+    ],
+    why: [
+      "A singer and producer who was a closing act at David Guetta's Mumbai concert and played Tomorrowland.",
+      "Electronic-pop sets with songs like \"Aa Mil\" suit a party crowd.",
+      "Suits college fests, club nights and brand events."
     ]
   },
   "Twin Strings": {
@@ -1572,6 +2288,11 @@ window.AOS_BIOS = {
     facts: [
       ["Based in", "Delhi"],
       ["Known for", "Acoustic covers and originals"]
+    ],
+    why: [
+      "A Delhi indie act known for acoustic covers and originals.",
+      "Has collaborated with Netflix, Google and the Indian Army.",
+      "Suits lounges, receptions and corporate evenings."
     ]
   },
   "Nirakar": {
@@ -1582,6 +2303,11 @@ window.AOS_BIOS = {
     ],
     facts: [
       ["Known for", "Indo jazz"]
+    ],
+    why: [
+      "A jazz band blending North Indian melodies with jazz and Latin grooves.",
+      "Has played corporate events and weddings.",
+      "Suits cocktail hours, dinners and corporate evenings."
     ]
   },
   "Mangesh Desai": {
@@ -1593,6 +2319,11 @@ window.AOS_BIOS = {
     facts: [
       ["Known for", "Illusion and mentalism with comedy"],
       ["Languages", "Hindi, English"]
+    ],
+    why: [
+      "A stand-up illusionist and mentalist performing since the age of five.",
+      "Has performed on American cruise ships and gave a TEDx talk on illusions.",
+      "Suits weddings, corporate events and family shows."
     ]
   },
   "Rakesh Syam": {
@@ -1603,6 +2334,11 @@ window.AOS_BIOS = {
     facts: [
       ["Based in", "Mumbai"],
       ["Known for", "Mentalism and mind reading"]
+    ],
+    why: [
+      "A Mumbai mentalist whose profile lists more than a decade headlining on Carnival Cruise Lines.",
+      "Customisable close-up illusions fit different venues.",
+      "Suits cocktail hours, corporate events and private parties."
     ]
   },
   "Ankit Batra": {
@@ -1615,6 +2351,11 @@ window.AOS_BIOS = {
       ["Based in", "Delhi"],
       ["Known for", "Musical pheras, Achyutam Keshavam"],
       ["Languages", "Hindi, Sanskrit"]
+    ],
+    why: [
+      "A pioneer of musical pheras, singing the wedding mantras with their meaning.",
+      "Known for the Achyutam Keshavam bhajan and celebrity-wedding coverage.",
+      "Suits musical pheras, chowkis and sai sandhyas."
     ]
   },
   "Mehul Pandit": {
@@ -1626,6 +2367,11 @@ window.AOS_BIOS = {
     facts: [
       ["Based in", "Bengaluru"],
       ["Known for", "Musical pheras, Punjabi folk"]
+    ],
+    why: [
+      "Sings through the pheras and wedding chants as well as the reception.",
+      "Clients praise his Punjabi folk performances and crowd energy.",
+      "Suits weddings, pheras and receptions."
     ]
   },
   "Siddharth Mohan": {
@@ -1638,6 +2384,11 @@ window.AOS_BIOS = {
       ["Based in", "Delhi"],
       ["Known for", "Bhajans, Shukrana, Nithya"],
       ["Languages", "Hindi, Punjabi, Tamil"]
+    ],
+    why: [
+      "A devotional singer encouraged by Sri Sri Ravi Shankar from childhood.",
+      "Albums like Shukrana and Nithya release through labels including Saregama and T-Series.",
+      "Suits pheras, chowkis and devotional evenings."
     ]
   },
   "Bombay Chamber Orchestra": {
@@ -1650,6 +2401,11 @@ window.AOS_BIOS = {
       ["Based in", "Mumbai"],
       ["Founded", "1962"],
       ["Style", "Western classical orchestra"]
+    ],
+    why: [
+      "India's oldest active Western classical orchestra, founded in 1962.",
+      "A full orchestral sound makes a statement at formal events.",
+      "Suits galas, receptions and corporate dinners."
     ]
   },
   "Hiten Panwar": {
@@ -1661,6 +2417,11 @@ window.AOS_BIOS = {
     facts: [
       ["Based in", "Delhi NCR"],
       ["Instruments", "Darbuka, cajon, tabla, drums and more"]
+    ],
+    why: [
+      "A percussionist who plays over fifteen instruments including darbuka, cajon, tabla and drums.",
+      "Can add live percussion over a DJ or recorded set.",
+      "Suits sangeets, receptions and club-style events."
     ]
   },
   "Mohsick": {
@@ -1672,6 +2433,11 @@ window.AOS_BIOS = {
     facts: [
       ["Based in", "Mumbai"],
       ["Known for", "Live percussion with DJs"]
+    ],
+    why: [
+      "A live percussionist who performs alongside DJs.",
+      "Blends percussion with electronic dance music for clubs and festivals.",
+      "Suits sangeets, parties and club-style events."
     ]
   }
 };
