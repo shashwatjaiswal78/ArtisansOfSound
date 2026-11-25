@@ -18,7 +18,7 @@ _dims = {}
 def has_copy(d): return bool(d.get("intro"))
 
 def plan(acts):
-    reg = {"fmt": {}, "occ": {}, "city": {}, "combo": set()}
+    reg = {"fmt": {}, "occ": {}, "city": {}, "combo": set(), "top": {}}
     for k, d in L["formats"].items():
         if has_copy(d) and sum(k in a["f"] for a in acts) >= MIN_FMT: reg["fmt"][k] = d["slug"]
     for k, d in L["occasions"].items():
@@ -28,7 +28,15 @@ def plan(acts):
     for k in reg["fmt"]:
         for c in reg["city"]:
             if sum(k in a["f"] and a["city"] == c for a in acts) >= MIN_COMBO: reg["combo"].add((k, c))
+    for t in A.TAX["TOP"]:
+        d = L.get("tops", {}).get(t[0])
+        if d and has_copy(d) and len(top_acts(t, acts)) >= MIN_FMT: reg["top"][t[0]] = d["slug"]
     return reg
+
+def top_acts(t, acts):
+    g = t[3] if len(t) > 3 else None
+    def sex(a): return list(A.TAX["SEX"].get(a["name"], ""))
+    return [a for a in acts if any(f in a["f"] for f in t[1]) and (not t[2] or any(o in a["occ"] for o in t[2])) and (not g or g in sex(a))]
 
 def rank(a): return (a["wider"], not a["photo"], a["name"].lower())
 
@@ -122,6 +130,24 @@ def combo(k, c, acts, reg):
     write(["book", d["slug"], cd["slug"]], shell(url, title, desc, [("Home", "/"), ("Categories", "/book/"), (name, f"/book/{d['slug']}/"), (c, f"/book/{d['slug']}/{cd['slug']}/")], body, sorted(mine, key=rank), None, f"Hi Artisans of Sound, I am looking for {ph} in {c}."))
     return url
 
+def top(t, acts, reg):
+    label = t[0]; d = L["tops"][label]; url = f"{SITE}/top/{d['slug']}/"
+    mine = top_acts(t, acts)
+    title = f"{label} in India | Artisans of Sound"
+    desc = trim(f"{d['intro'].split('. ')[0].rstrip('.')}. {len(mine)} acts, videos and one clear quote within 24 hours.")
+    w = wa(f"Hi Artisans of Sound, I am looking for: {label}.")
+    rel = []
+    for f in t[1][:3]:
+        if f in reg["fmt"]: rel.append((f"/book/{reg['fmt'][f]}/", L["formats"][f]["name"]))
+    for o in t[2]:
+        if o in reg["occ"]: rel.append((f"/occasions/{reg['occ'][o]}/", L["occasions"][o]["name"]))
+    other = [(f"/top/{L['tops'][x[0]]['slug']}/", x[0]) for x in A.TAX["TOP"] if x[0] in reg["top"] and x[0] != label][:10]
+    body = (head_block(f"{len(mine)} acts", label, d["intro"], w) +
+            sec("Acts you can book", grid(mine) + (f'<p class="anote">Showing {CAP} of {len(mine)}. <a href="/artists/">See every act</a>.</p>' if len(mine) > CAP else "")) +
+            (sec("Related", links(rel)) if rel else "") + cta(w, CTA) + sec("More top lists", links(other + [("/top/", "All top lists")])))
+    write(["top", d["slug"]], shell(url, title, desc, [("Home", "/"), ("Top lists", "/top/"), (label, f"/top/{d['slug']}/")], body, sorted(mine, key=rank)[:CAP], None, f"Hi Artisans of Sound, I am looking for: {label}."))
+    return url
+
 def occasion(k, acts, reg):
     d = L["occasions"][k]; name = d["name"]; url = f"{SITE}/occasions/{d['slug']}/"
     mine = [a for a in acts if k in a["occ"]]
@@ -163,12 +189,14 @@ def hub(parts, title, h1, intro, entries, crumb_name):
     return url
 
 def build(acts, reg):
-    for p in ("book", "occasions", "cities"): shutil.rmtree(os.path.join(ROOT, p), ignore_errors=True)
+    for p in ("book", "occasions", "cities", "top"): shutil.rmtree(os.path.join(ROOT, p), ignore_errors=True)
     urls = []
     for k in reg["fmt"]: urls.append(category(k, acts, reg))
     for k, c in sorted(reg["combo"]): urls.append(combo(k, c, acts, reg))
     for k in reg["occ"]: urls.append(occasion(k, acts, reg))
     for c in reg["city"]: urls.append(city(c, acts, reg))
+    for t in A.TAX["TOP"]:
+        if t[0] in reg["top"]: urls.append(top(t, acts, reg))
     first = lambda d: d["intro"].split(". ")[0].rstrip(".") + "."
     urls.append(hub(["book"], "Book artists by category | Artisans of Sound", "Book artists by category",
         "Live bands, DJs, singers, anchors, celebrity and special acts. Pick a category to see the acts and videos.",
@@ -176,7 +204,20 @@ def build(acts, reg):
     urls.append(hub(["occasions"], "Book artists by occasion | Artisans of Sound", "Book artists by occasion",
         "Weddings, sangeets, parties, corporate events and festivals. Find the right kind of act for your occasion.",
         [(f"/occasions/{L['occasions'][k]['slug']}/", L["occasions"][k]["name"], first(L["occasions"][k])) for k in reg["occ"]], "Occasions"))
+    urls.append(hub(["top"], "Top artist lists | Artisans of Sound", "Top artist lists",
+        "Ready-made shortlists: top wedding bands, singers, DJs, anchors, sufi acts and more.",
+        [(f"/top/{L['tops'][t[0]]['slug']}/", t[0], L["tops"][t[0]]["intro"].split(". ")[0].rstrip(".") + ".") for t in A.TAX["TOP"] if t[0] in reg["top"]], "Top lists"))
     urls.append(hub(["cities"], "Book artists by city | Artisans of Sound", "Book artists by city",
         "Acts based in Delhi, Lucknow and Mumbai, plus a wider network that travels across India.",
         [(f"/cities/{L['cities'][c]['slug']}/", c, f"{sum(a['city'] == c for a in acts)} acts based in {c}.") for c in reg["city"]], "Cities"))
     return [f"<url><loc>{u}</loc></url>" for u in urls]
+
+
+def write_links(acts, reg):
+    """links.js: lets the interactive tiles and cards on the hand-written pages link to the generated pages."""
+    data = {"cat": {k: f"/book/{v}/" for k, v in reg["fmt"].items()},
+            "occ": {k: f"/occasions/{v}/" for k, v in reg["occ"].items()},
+            "top": {k: f"/top/{v}/" for k, v in reg["top"].items()},
+            "act": {a["name"]: f"/artists/{a['slug']}/" for a in acts}}
+    open(os.path.join(ROOT, "links.js"), "w", encoding="utf8").write(
+        "// Generated by tools/build.py. Do not edit. Maps categories, occasions, top lists and acts to their pages.\nwindow.AOS_LINKS = " + json.dumps(data, ensure_ascii=False) + ";\n")

@@ -8,6 +8,7 @@ import build_updates, build_artists, build_landing
 acts = build_artists.load_acts()
 reg = build_landing.plan(acts)
 extra = build_artists.build(acts, reg) + build_landing.build(acts, reg)
+build_landing.write_links(acts, reg)
 import re, subprocess
 def gitdate(*paths):
     try:
@@ -20,7 +21,7 @@ def stamp(row):
     m = re.search(r"<loc>https://[^/]+/(.*?)</loc>", row)
     if "<lastmod>" in row or not m: return row
     path = m.group(1)
-    d = SRC if path.startswith(("artists/", "book/", "occasions/", "cities/")) else gitdate(path or "index.html")
+    d = SRC if path.startswith(("artists/", "book/", "occasions/", "cities/", "top/")) else gitdate(path or "index.html")
     return row.replace("</url>", f"<lastmod>{d}</lastmod></url>") if d else row
 build_updates.build_all([stamp(r) for r in extra])
 # static pages already in build_updates' list get their lastmod here

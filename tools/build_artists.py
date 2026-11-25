@@ -209,7 +209,7 @@ def directory(acts, reg):
     for g in sorted(groups, key=str.lower):
         secs += (f'<section class="asec" id="{slugify(g)}"><h2>{esc(g)} <small>{len(groups[g])}</small></h2><ul class="adir">' +
                  "".join(f'<li><a href="/artists/{a["slug"]}/">{esc(a["base"])}</a> <span>{esc(a["city"])}</span></li>' for a in sorted(groups[g], key=lambda x: x["base"].lower())) + '</ul></section>')
-    browse = ('<section class="asec"><h2>Browse by</h2><p><a href="/book/">All categories</a> &middot; <a href="/occasions/">All occasions</a> &middot; <a href="/cities/">Cities</a></p></section>')
+    browse = ('<section class="asec"><h2>Browse by</h2><p><a href="/book/">All categories</a> &middot; <a href="/occasions/">All occasions</a> &middot; <a href="/top/">Top lists</a> &middot; <a href="/cities/">Cities</a></p></section>')
     jump = " ".join(f'<a href="#{slugify(g)}">{esc(g)}</a>' for g in sorted(groups, key=str.lower))
     body = (U.head("All artists by category | Artisans of Sound", desc, canon, "website", "", ld, '<link rel="stylesheet" href="/artists.css">\n') + U.header("artists") +
       '<main class="in page uwrap">\n  <div class="apage">\n'
