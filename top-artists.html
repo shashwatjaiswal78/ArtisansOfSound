@@ -46,6 +46,7 @@ main.light{padding-top:0!important}
 .vm .vmsg{position:absolute;left:16px;right:16px;bottom:14px;margin:0;text-align:center;font-size:15px;color:#F6F2E8}
 .vm .vchips{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.vm .vchip{border:1px solid rgba(246,242,232,.35);background:transparent;color:inherit;border-radius:999px;padding:7px 14px;font:600 13px var(--body,sans-serif);cursor:pointer}.vm .vchip[aria-pressed=true]{background:#F6F2E8;color:#0E0B1A}
 .vm .vact{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.vm .vbio{margin-top:18px;max-width:68ch}.vm .vbio p{margin:0 0 10px;font-size:15px;line-height:1.55;color:#D8D2C2}.vm .vbio p:last-child{margin-bottom:0}
 @media (max-width:600px){.vm .vbox{padding:18px 16px 20px}.vm h3{font-size:26px}}
 </style>
 <script src="acts.js"></script>
@@ -1348,6 +1349,7 @@ footer{padding:56px 0 72px;border-top:1px solid var(--line);margin-top:clamp(64p
 
   // ---- act video player: a card opens a viewer; videos come from videos.js (name -> link) ----
   var VID = window.AOS_VIDEOS || {};
+  var BIOS = window.AOS_BIOS || {};
   var WA_NUM = '919129237566';
   function embedFor(u){
     if (!u) return null; var m;
@@ -1400,6 +1402,8 @@ footer{padding:56px 0 72px;border-top:1px solid var(--line);margin-top:clamp(64p
       });
       box.appendChild(chips);
     }
+    var bio = BIOS[a.n];
+    if (bio) { var bd = vmEl('div', 'vbio'); (Array.isArray(bio) ? bio : [bio]).forEach(function(t){ bd.appendChild(vmEl('p', '', t)); }); box.appendChild(bd); }
     var acts = vmEl('div', 'vact');
     if (info && info.t === 'link') { var ol = vmEl('a', 'pill', 'Open video'); ol.href = info.src; ol.target = '_blank'; ol.rel = 'noopener'; acts.appendChild(ol); }
     var book = vmEl('a', 'pill' + (info && info.t === 'link' ? ' ghost' : ''), 'Book this act');
