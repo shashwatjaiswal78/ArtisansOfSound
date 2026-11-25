@@ -14,3 +14,9 @@ To add or change an act, edit `acts.js` / `videos.js` as before, then run `pytho
 (needs Python 3 with Pillow, and Node) and commit the generated files. The same command rebuilds the Updates pages and `sitemap.xml`.
 A profile written in `window.AOS_BIOS` in `acts.js` is used on the act's page; acts without one get a short summary built from the roster data.
 Format, occasion and genre names come from `tools/taxonomy.json` (copied from `index.html`; update it if those lists change).
+
+## Landing pages (categories, occasions, cities)
+`python3 tools/build.py` also writes `/book/<category>/`, `/book/<category>/<city>/` (where a city has 3+ acts in a category),
+`/occasions/<occasion>/`, `/cities/<city>/` and the hubs `/book/`, `/occasions/`, `/cities/`.
+The copy for every page (intro, tips, FAQs, which formats to recommend) is in `tools/landing.json`; edit it and rebuild.
+A page is skipped when its entry has no `intro`, or when too few acts match (see the `MIN_*` values in `tools/build_landing.py`).

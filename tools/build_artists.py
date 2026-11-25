@@ -40,7 +40,7 @@ def phrase(l):
 
 def lower_first(s): return s[:1].lower() + s[1:] if s and not s[:2].isupper() else s
 
-def build():
+def load_acts():
     D = load_js("acts.js", "videos.js")
     acts = []
     for r in D["raw"]:
@@ -57,7 +57,7 @@ def build():
             for g in FG.get(k, []):
                 if g not in gen: gen.append(g)
         main = LAB["celeb"] if "celeb" in fmts else (LAB["reality"] if "reality" in fmts else LAB[fmts[0]])
-        acts.append(dict(name=name, base=base, par=par, f=fmts, city=city, label=label or main,
+        acts.append(dict(main=("celeb" if "celeb" in fmts else ("reality" if "reality" in fmts else fmts[0])), name=name, base=base, par=par, f=fmts, city=city, label=label or main,
                          fmt_label=main, photo=photo, tag=tag, occ=occ, gen=gen, wider=bool(len(r) > 6 and r[6])))
     # stable slugs: base name; fall back to full name, then -2, -3 on collision
     from collections import Counter
@@ -73,9 +73,14 @@ def build():
         a["bio"] = D["bios"].get(a["name"]); v = D["vid"].get(a["name"], [])
         a["vid"] = [{"u": x, "l": ""} if isinstance(x, str) else {"u": x["u"], "l": x.get("l", "")} for x in (v if isinstance(v, list) else [v])]
         a["alias"] = D["al"].get(a["name"], "")
+    return acts
+
+def build(acts=None, reg=None):
+    reg = reg or {'fmt': {}, 'occ': {}, 'city': {}, 'combo': set()}
+    acts = acts or load_acts()
     out = os.path.join(ROOT, "artists"); shutil.rmtree(out, ignore_errors=True); os.makedirs(out)
-    for a in acts: page(a, acts)
-    directory(acts)
+    for a in acts: page(a, acts, reg)
+    directory(acts, reg)
     return [f"<url><loc>{SITE}/artists/</loc></url>"] + [f"<url><loc>{SITE}/artists/{a['slug']}/</loc></url>" for a in acts]
 
 def where(a):
@@ -101,7 +106,7 @@ def mini(b):
     return (f'<a class="amini" href="/artists/{b["slug"]}/">{ph}<span><b>{esc(b["base"])}</b>'
             f'<small>{esc(b["label"])} &middot; {esc(b["city"])}</small></span></a>')
 
-def page(a, acts):
+def page(a, acts, reg):
     n, lab = a["base"], a["label"]
     canon = f"{SITE}/artists/{a['slug']}/"
     ph = phrase(lab)
@@ -123,9 +128,11 @@ def page(a, acts):
                  ("Artisans of Sound handles the whole booking: we check availability for your date, send videos and give you one clear quote within 24 hours, "
                   "with a replacement act arranged if anyone drops out.")]
         facts = []
-    chips = [("Format", a["fmt_label"]), ("Based in" if a["city"] != "Pan-India" else "Available", a["city"] if a["city"] != "Pan-India" else "Across India")]
-    if a["tag"]: chips.append(("Known for", a["tag"]))
-    chips += [tuple(f) for f in facts]
+    fl = f"/book/{reg['fmt'][a['main']]}/" if a["main"] in reg["fmt"] else None
+    cl = f"/cities/{reg['city'][a['city']]}/" if a["city"] in reg["city"] else None
+    chips = [("Format", a["fmt_label"], fl), ("Based in" if a["city"] != "Pan-India" else "Available", a["city"] if a["city"] != "Pan-India" else "Across India", cl)]
+    if a["tag"]: chips.append(("Known for", a["tag"], None))
+    chips += [(f[0], f[1], None) for f in facts]
     hero_img = (f'<img class="aph" src="/{esc(a["photo"])}" alt="{esc(n)}, {esc(a["fmt_label"].lower())}" width="{dims[0]}" height="{dims[1]}" fetchpriority="high">'
                 if dims else f'<div class="aph aph0" aria-hidden="true">{esc(initials(n))}</div>')
     vids = ""
@@ -136,7 +143,9 @@ def page(a, acts):
     else:
         vids = (f'<section class="asec"><h2>Videos</h2><p>Videos of {esc(n)} are shared on request.</p>'
                 f'<a class="ghost-pill" href="{esc("https://wa.me/919129237566?text=" + __import__("urllib.parse").parse.quote("Hi Artisans of Sound, please send videos of " + a["name"] + "."))}" target="_blank" rel="noopener">Ask for videos on WhatsApp</a></section>')
-    occ_html = ('<section class="asec"><h2>Suited to</h2><ul class="achips">' + "".join(f"<li>{esc(x)}</li>" for x in occ_names) + '</ul></section>') if occ_names else ""
+    def occ_li(o):
+        t = esc(OCC[o]); return f'<li><a href="/occasions/{reg["occ"][o]}/">{t}</a></li>' if o in reg["occ"] else f"<li>{t}</li>"
+    occ_html = ('<section class="asec"><h2>Suited to</h2><ul class="achips">' + "".join(occ_li(o) for o in a["occ"] if o in OCC) + '</ul></section>') if occ_names else ""
     gen_html = ('<section class="asec"><h2>Music style</h2><ul class="achips">' + "".join(f"<li>{esc(GEN[g])}</li>" for g in a["gen"] if g in GEN) + '</ul></section>') if a["gen"] else ""
     rel = related(a, acts)
     rel_html = (f'<section class="asec"><h2>More {esc(phrase(a["fmt_label"]))} acts</h2><div class="amgrid">' + "".join(mini(b) for b in rel) + '</div></section>') if rel else ""
@@ -163,7 +172,7 @@ def page(a, acts):
       f'    <header class="ahero"><div class="aphw">{hero_img}</div><div class="atxt">\n'
       f'      <p class="kicker">{esc(a["fmt_label"])} &middot; {esc(a["city"])}</p>\n      <h1 class="uh">{esc(n)}</h1>\n'
       + (f'      <p class="apar">{esc(a["par"])}</p>\n' if a["par"] else "") +
-      '      <ul class="afacts">' + "".join(f"<li><span>{esc(k)}</span><b>{esc(v)}</b></li>" for k, v in chips) + '</ul>\n'
+      '      <ul class="afacts">' + "".join(f"<li><span>{esc(k)}</span><b>" + (f'<a href="{h}">{esc(v)}</a>' if h else esc(v)) + "</b></li>" for k, v, h in chips) + '</ul>\n'
       f'      <div class="ask"><a class="dark-pill" href="{esc(wa)}" target="_blank" rel="noopener">Check availability on WhatsApp</a><a class="ghost-pill" href="/#enquiry">Get a quote</a></div>\n'
       '    </div></header>\n'
       '    <section class="asec"><h2>About ' + esc(n) + '</h2><div class="ubody">' + "".join(f"<p>{esc(p)}</p>" for p in paras) + '</div></section>\n'
@@ -186,7 +195,7 @@ if(!src){window.open(u,"_blank","noopener");return}
 s.textContent="";var f=document.createElement("iframe");f.src=src;f.allow="autoplay; fullscreen; encrypted-media";f.allowFullscreen=true;f.title="Video";s.appendChild(f);s.classList.add("on")})})();</script>
 '''
 
-def directory(acts):
+def directory(acts, reg):
     groups = {}
     for a in acts: groups.setdefault(a["fmt_label"], []).append(a)
     desc = "Browse every live band, singer, DJ, anchor and special act on the Artisans of Sound roster, grouped by category."
@@ -200,13 +209,14 @@ def directory(acts):
     for g in sorted(groups, key=str.lower):
         secs += (f'<section class="asec" id="{slugify(g)}"><h2>{esc(g)} <small>{len(groups[g])}</small></h2><ul class="adir">' +
                  "".join(f'<li><a href="/artists/{a["slug"]}/">{esc(a["base"])}</a> <span>{esc(a["city"])}</span></li>' for a in sorted(groups[g], key=lambda x: x["base"].lower())) + '</ul></section>')
+    browse = ('<section class="asec"><h2>Browse by</h2><p><a href="/book/">All categories</a> &middot; <a href="/occasions/">All occasions</a> &middot; <a href="/cities/">Cities</a></p></section>')
     jump = " ".join(f'<a href="#{slugify(g)}">{esc(g)}</a>' for g in sorted(groups, key=str.lower))
     body = (U.head("All artists by category | Artisans of Sound", desc, canon, "website", "", ld, '<link rel="stylesheet" href="/artists.css">\n') + U.header("artists") +
       '<main class="in page uwrap">\n  <div class="apage">\n'
       '    <nav class="ucrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><span>Artists</span></nav>\n'
       f'    <p class="kicker">{len(acts)} acts</p>\n    <h1 class="uh">All artists by category</h1>\n'
       '    <p class="alead">Live bands, singers, DJs, anchors, celebrity and special acts. Open any act to see its profile, videos and the events it suits.</p>\n'
-      f'    <nav class="ajump" aria-label="Jump to category">{jump}</nav>\n{secs}\n  </div>\n</main>\n' + U.FOOTER + U.tail + '</body></html>\n')
+      f'    <nav class="ajump" aria-label="Jump to category">{jump}</nav>\n{browse}{secs}\n  </div>\n</main>\n' + U.FOOTER + U.tail + '</body></html>\n')
     open(os.path.join(ROOT, "artists", "index.html"), "w", encoding="utf8").write(body)
 
 if __name__ == "__main__":

@@ -34,3 +34,19 @@
 .adir a{color:var(--ink);font-weight:600;text-underline-offset:3px}.adir span{color:var(--ink2);font-size:13px;margin-left:6px}
 @media (max-width:900px){.amgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.adir{columns:2}}
 @media (max-width:700px){.ahero{grid-template-columns:minmax(0,1fr)}.aph{max-width:340px}.amgrid{grid-template-columns:minmax(0,1fr)}.adir{columns:1}}
+/* Landing pages */
+.agrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:16px}
+.acard{display:grid;gap:3px;text-decoration:none;color:var(--ink);min-width:0;align-content:start}
+.acimg{display:block;aspect-ratio:4/5;border-radius:14px;overflow:hidden;background:#0B0A12;margin-bottom:6px}
+.acimg img{width:100%;height:100%;object-fit:cover;display:block}
+.acinit{display:grid;place-items:center;height:100%;color:#F6F2E8;font-family:var(--display);font-weight:800;font-size:44px;background:linear-gradient(135deg,#2b1f55,#0B0A12)}
+.acard b{font-size:16px;line-height:1.25;overflow-wrap:anywhere}.acard small{color:var(--ink2);font-size:13px;line-height:1.35}
+.acard:hover b{text-decoration:underline;text-underline-offset:3px}
+.achips li a{color:var(--ink);text-decoration:none}.achips li:hover{background:var(--ink)}.achips li:hover a{color:#fff}
+.anote{margin:14px 0 0;color:var(--ink2);font-size:15px}.anote a{color:var(--ink)}
+.asec h3{font-family:var(--body);font-weight:700;font-size:18px;margin:18px 0 4px}.asec h3+p{margin:0 0 6px;max-width:46em}
+.afacts a{color:var(--ink);text-underline-offset:3px}
+.hublist{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.hublist a{display:grid;gap:4px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;text-decoration:none;color:var(--ink);height:100%}
+.hublist b{font-size:18px}.hublist span{color:var(--ink2);font-size:15px;line-height:1.45}.hublist a:hover{border-color:var(--ink)}
+@media (max-width:700px){.hublist{grid-template-columns:minmax(0,1fr)}.agrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}}
