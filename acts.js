@@ -1287,6 +1287,215 @@ window.AOS_BIOS = {
       ["Known for", "Gujarati folk"],
       ["Languages", "Gujarati"]
     ]
+  },
+  "Wadali Brothers": {
+    about: [
+      "The Wadali Brothers are Sufi singers from Guru Ki Wadali, near Amritsar in Punjab, from a family that has sung the messages of Sufi saints for five generations. They began as bhajan singers at a temple in Jalandhar, and made their Bollywood debut with songs by Gulzar for the film Pinjar.",
+      "Puranchand Wadali received the Padma Shri in 2005, and the duo shared the Sangeet Natak Akademi Award. Since the death of Pyarelal Wadali in 2018, Puranchand has continued the music with his son Lakhwinder Wadali, who trained under his father and uncle and performs with him in concerts in India and abroad to keep the gharana's tradition alive.",
+      "Wadali Brothers is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Line-up", "Puranchand Wadali, Lakhwinder Wadali"],
+      ["Known for", "Sufi singing, Padma Shri"],
+      ["Languages", "Punjabi, Urdu, Hindi"]
+    ]
+  },
+  "Nizami Brothers": {
+    about: [
+      "The Nizami Brothers are a Delhi qawwali group led by Faizan Nizami, Zeeshan Nizami and Khwaja Hasan Nizami. They were finalists on India's Got Talent season 8, and their renditions led to repeat appearances on the show.",
+      "Their family is reported to descend from court singers to the Mughal emperors, and they perform Sufi qawwali for weddings, shows and festivals.",
+      "Nizami Brothers is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Based in", "Delhi"],
+      ["Line-up", "Faizan Nizami, Zeeshan Nizami, Khwaja Hasan Nizami"],
+      ["Known for", "India's Got Talent season 8 finalists"]
+    ]
+  },
+  "Daksh Band": {
+    about: [
+      "Daksh is a Delhi band playing Sufi rock with a Bollywood flavour. It was founded by Kavish Mishra, who chose the name, which means dexterous in Hindi and carries the sense of perfection. The members set out to build a professional career in music rather than treat it as a school pastime.",
+      "Wedding listings place the band's live performances from around 2007, in a high-energy Sufi rock fusion style.",
+      "Daksh Band is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Based in", "Delhi"],
+      ["Known for", "Sufi rock, Bollywood covers"]
+    ]
+  },
+  "The Frequency Project": {
+    about: [
+      "The Frequency Project is a live band from Delhi playing Sufi and Bollywood music. A booking listing says it has performed for more than eight years at all kinds of events.",
+      "It headlined a Sufi night at Ministry of Sound in Noida in April 2023.",
+      "The Frequency Project is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Based in", "Delhi"],
+      ["Known for", "Sufi and Bollywood live sets"]
+    ]
+  },
+  "Aflatunes Band": {
+    about: [
+      "Aflatunes is a Mumbai a cappella collective of beatmakers and vocalists, including beatmakers Roy Navarun, Anish Nair, Nilay Singh, Dany Marshall and Jaimish Ashar and vocalists Aruna Jade, Jennifer Fernandes and Ruchee Varghese. They gained attention with a cappella covers of Hindi classics such as \"Sar Jo Tera Chakraye\" and \"Mile Sur Mera Tumhara\".",
+      "They released \"AflaRani\", a medley of tracks from Nucleya's Bass Rani EP, with Shraddha Sharma and Enkore.",
+      "Aflatunes Band is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Based in", "Mumbai"],
+      ["Known for", "A cappella covers, AflaRani"]
+    ]
+  },
+  "Best Kept Secret": {
+    about: [
+      "Best Kept Secret is a Bengaluru band playing electro-pop, rock and funk, and is known for its Coldplay tribute set. Its live shows draw on pop, disco, blues and rock. The band was formerly known as One Nite Stand.",
+      "The current line-up includes lead vocalist Behram Siganporia, guitarist Hemanth Diwakaran, drummer Abhilash EK and keyboardist Steve Rajan. The band opened for Bryan Adams in Bengaluru in December 2024.",
+      "Best Kept Secret is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Based in", "Bengaluru"],
+      ["Known for", "Coldplay tribute set, pop-rock covers"]
+    ]
+  },
+  "Delhi Indie Project": {
+    about: [
+      "Delhi Indie Project is a Delhi experimental indie rock band launched in 2015, with Ashish Chauhan as founder and lead vocalist. It reports more than a thousand gigs in India and abroad and blends Sufi, Bollywood, folk and Punjabi music with jazz, blues, funk and Latin influences.",
+      "The band opened for Bryan Adams in Delhi in December 2024 and has played the South Asian Band Festival, Delhi International Arts Fest and Dubai Festival. Its releases include \"Lakshya\" and a reprise of \"Main Teri Yaad\" with Srijita Konar.",
+      "Delhi Indie Project is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Based in", "Delhi"],
+      ["Known for", "Lakshya, opening for Bryan Adams"]
+    ]
+  },
+  "Madari": {
+    about: [
+      "Madari is a Delhi Hindi rock band that blends Bollywood, pop and rock into a raw sound. The name refers to an entertainer who juggles many things, which the band says reflects its approach to music.",
+      "It is listed as a live band for events, with sets of around 90 to 120 minutes.",
+      "Madari is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Based in", "Delhi"],
+      ["Set length", "90 to 120 minutes"]
+    ]
+  },
+  "Kanishk Sethi": {
+    about: [
+      "Kanishk Seth is a composer, singer and songwriter based in Mumbai, whose work blends electronic music with Indian classical styles. He comes from a musical family: his mother is the Sufi and playback singer Kavita Seth.",
+      "He gained wider attention with the fusion album Trance With Khusrow (2015), made with his mother, and sang \"Rangisari\" from Jugjugg Jeeyo with her. His credits also include \"Ki Jaana\" from Double XL and \"Khumaari\" from Kesari Chapter 2.",
+      "Kanishk Sethi is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Based in", "Mumbai"],
+      ["Known for", "Trance With Khusrow, Rangisari"]
+    ]
+  },
+  "Kayan": {
+    about: [
+      "Kayan is the stage name of Ambika Nayak, a Mumbai singer, songwriter and DJ who is also classically trained as a dancer and singer; her mother is a Hindustani classical vocalist. She began releasing her own music as Kayan in 2020 and was soon one of the most-streamed independent female artists on Spotify in India.",
+      "Her singles include \"Cool Kids\", \"Please\", \"Be Alright\" and \"No Shade\" with the Singapore rapper Yung Raja. She has been named to Forbes 30 Under 30 and was selected for the YouTube Music Foundry.",
+      "Kayan is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Based in", "Mumbai"],
+      ["Known for", "Cool Kids, Please, No Shade"],
+      ["Languages", "English, Hindi"]
+    ]
+  },
+  "Aishwarya Majumdar": {
+    about: [
+      "Aishwarya Majmudar is a singer from Ahmedabad, Gujarat, who rose to fame by winning the 2007-08 season of the reality show STAR Voice of India - Chhote Ustad at the age of fifteen. She comes from a musical family: her mother and grandmother both hold Sangeet Visharad qualifications in Indian classical music.",
+      "She has sung playback for Hindi films, performs traditional Gujarati songs, has released more than fifteen independent albums in Hindi, Gujarati and Marathi and has won the Gujarat State Award for Best Playback Singer three times.",
+      "Aishwarya Majumdar is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Based in", "Ahmedabad"],
+      ["Known for", "STAR Voice of India - Chhote Ustad winner"],
+      ["Languages", "Gujarati, Hindi, Marathi"]
+    ]
+  },
+  "DJ Barkha Kaul": {
+    about: [
+      "Barkha Kaul is a Delhi DJ who moved into DJing in 2008 after about eleven years as a model. Her profile describes her sets as Bollywood, hip hop and commercial house.",
+      "She has worked with DJ Glory on a Darshan Raval mashup and with Darshan Raval on \"Ek Tarfa\", and has been featured among India's women DJs.",
+      "DJ Barkha Kaul is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Based in", "Delhi"],
+      ["Known for", "Bollywood, hip hop and commercial house sets"]
+    ]
+  },
+  "Apoorv Singh Verma": {
+    about: [
+      "Apoorv Singh Verma performs as a DJ, drummer, percussionist and rapper in a one-man show, The Apoorv Singh Show, which combines DJing, drums, percussion, rap and liquid, fire and powder drums. He began on the reality show MTV Rock On and now also works as a composer and lyricist.",
+      "He has appeared on India's Got Talent, played drums on Sa Re Ga Ma Pa Lil Champs and led the band for Kailash Kher's group Avdhu. He has also made the indie track \"Daastan\" with the singer Amit Mishra.",
+      "Apoorv Singh Verma is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Based in", "Mumbai"],
+      ["Known for", "The Apoorv Singh Show, MTV Rock On"]
+    ]
+  },
+  "DJ Rhea": {
+    about: [
+      "DJ Rhea is a Bengaluru DJ and percussionist whose vendor profile lists more than five years of experience and events including the Filmfare Awards South and IPL post-parties for Kolkata Knight Riders.",
+      "Her sets cover commercial, Punjabi, hip hop, EDM, house and Bollywood.",
+      "DJ Rhea is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Based in", "Bengaluru"],
+      ["Known for", "DJ and live percussion"]
+    ]
+  },
+  "Tamasha": {
+    about: [
+      "Tamasha is a performance-led wedding and events band that describes itself as an experimental alternative rock and pop act. Its line-up combines three vocalists, a DJ, live percussionists, dholis and a violinist, and it has performed in cities across India and abroad.",
+      "Its profile names Manish as lead vocalist, Anurag and Sukhmani as vocalists, Sukhbir and Shail as DJs, Sultan on violin and Vipin on instruments.",
+      "Tamasha is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Line-up", "Vocalists, DJ, dhol, violin, percussion"],
+      ["Known for", "Wedding and sangeet performances"]
+    ]
+  },
+  "Made In India": {
+    about: [
+      "Made In India is an instrumental band from the Delhi region that blends Indian classical music with Western and jazz influences.",
+      "Made In India is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Based in", "Delhi NCR"],
+      ["Known for", "Instrumental Indian classical and jazz fusion"]
+    ]
+  },
+  "Rajan Batra": {
+    about: [
+      "Rajan Batra is the lead vocalist and lyricist of The Yellow Diary, a Mumbai alternative pop-rock band formed in 2015. The band signed with Sony Music in 2017 and released the EP Marz, followed by singles including \"Roz Roz\" with Shilpa Rao.",
+      "Rajan Batra is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Based in", "Mumbai"],
+      ["Band", "The Yellow Diary"]
+    ]
+  },
+  "Himonshu Parikh": {
+    about: [
+      "Himonshu Parikh is the singer-keyboardist and composer of The Yellow Diary, a Mumbai alternative pop-rock band formed in 2015. The band blends rock, electronic and Indian classical music, and opened for A. R. Rahman's Wonderment Tour.",
+      "Himonshu Parikh is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Based in", "Mumbai"],
+      ["Band", "The Yellow Diary"]
+    ]
+  },
+  "Stuart DaCosta": {
+    about: [
+      "Stuart DaCosta is the bassist of The Yellow Diary, a Mumbai alternative pop-rock band formed in 2015. The band released its debut album In Case We Forget in 2025 and has played Lollapalooza India.",
+      "Stuart DaCosta is available for booking through Artisans of Sound. Share your date, city and venue and we will confirm availability and send a quote."
+    ],
+    facts: [
+      ["Based in", "Mumbai"],
+      ["Band", "The Yellow Diary"]
+    ]
   }
 };
 
