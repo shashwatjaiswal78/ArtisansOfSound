@@ -61,8 +61,12 @@
    "Ghazal and classical"
   ],
   [
-   "magiccomedy",
-   "Magic and comedy"
+   "magic",
+   "Magicians and mentalists"
+  ],
+  [
+   "comedy",
+   "Comedians"
   ],
   [
    "solosing",
@@ -563,7 +567,24 @@
    "housewarming",
    "venue"
   ],
-  "magiccomedy": [
+  "magic": [
+   "newyear",
+   "wedding",
+   "reception",
+   "sangeet",
+   "birthday",
+   "diwali",
+   "christmas",
+   "house",
+   "college",
+   "corporate",
+   "kidsbday",
+   "babyshower",
+   "bachelor",
+   "launch",
+   "annualday"
+  ],
+  "comedy": [
    "newyear",
    "wedding",
    "reception",
@@ -983,14 +1004,15 @@
   "bollyrock": "Bollywood rock",
   "rajfusion": "Rajasthani fusion",
   "ghazal": "Ghazal and classical",
-  "magiccomedy": "Magic and comedy",
   "soloinst": "Solo instrumental",
   "devotional": "Devotional band",
   "anchor": "Anchor",
   "celeb": "Celebrity artist",
   "standup": "Celebrity stand-up comedian",
   "reality": "Reality TV singer",
-  "rap": "Rapper"
+  "rap": "Rapper",
+  "magic": "Magician",
+  "comedy": "Comedian"
  },
  "SEX": {
   "Sharon Aamir": "f",
@@ -1477,7 +1499,8 @@
     "solosing",
     "duotrio",
     "lounge",
-    "magiccomedy",
+    "magic",
+    "comedy",
     "soloinst"
    ],
    [

@@ -86,6 +86,16 @@
       "source": "/book/live-bands/mumbai",
       "destination": "/book/bollywood-live/mumbai/",
       "permanent": true
+    },
+    {
+      "source": "/book/magicians-and-comedians/",
+      "destination": "/book/comedians/",
+      "permanent": true
+    },
+    {
+      "source": "/book/magicians-and-comedians",
+      "destination": "/book/comedians/",
+      "permanent": true
     }
   ]
 }

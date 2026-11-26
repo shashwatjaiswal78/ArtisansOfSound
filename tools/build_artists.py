@@ -14,7 +14,7 @@ TAX = json.load(open(os.path.join(ROOT, "tools", "taxonomy.json"), encoding="utf
 LAB, FO, FG = TAX["LAB"], TAX["FO"], TAX["FG"]
 OCC = dict(TAX["OCCS"]); GEN = dict(TAX["GENRES"])
 CITIES = {"Delhi", "Mumbai", "Lucknow", "Bangalore", "Ahmedabad", "Chennai", "Pan-India"}
-PERSON = {"dj", "solosing", "soloinst", "anchor", "standup", "reality", "magiccomedy"}
+PERSON = {"dj", "solosing", "soloinst", "anchor", "standup", "reality", "magic", "comedy"}
 
 # ---------- load acts.js / videos.js ----------
 def load_js(*files):

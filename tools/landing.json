@@ -170,20 +170,37 @@
     ]
    ]
   },
-  "magiccomedy": {
-   "slug": "magicians-and-comedians",
-   "name": "Magicians and comedians",
-   "h1": "Magicians, mentalists and comedians for events",
-   "intro": "Magic, mentalism and comedy break the ice and give guests something to talk about. They suit weddings, kids parties, corporate evenings and award nights.",
-   "tips": "Match the act to the audience. Close-up magic suits cocktail hours, stage illusions suit larger rooms, and comedy depends on the crowd and the language. Ask about the set length and any venue needs.",
+  "magic": {
+   "slug": "magicians-and-mentalists",
+   "name": "Magicians and mentalists",
+   "h1": "Magicians and mentalists for events in India",
+   "intro": "Magic and mentalism break the ice and give guests something to talk about. They suit weddings, kids parties, corporate evenings and award nights.",
+   "tips": "Match the act to the audience. Close-up magic suits cocktail hours, stage illusions suit larger rooms, and mentalism works well for a seated crowd. Ask about the set length and any venue needs.",
    "faq": [
     [
      "Can magicians perform for children and adults together?",
      "Many acts are built for mixed family audiences. Mention the age mix so the right act is suggested."
     ],
     [
+     "Can a magician or mentalist work a cocktail hour?",
+     "Often yes. Close-up and walk-around sets suit cocktail hours, while a stage show suits a seated crowd. Tell us the format when you enquire."
+    ]
+   ]
+  },
+  "comedy": {
+   "slug": "comedians",
+   "name": "Comedians",
+   "h1": "Comedians and stand-up acts for events in India",
+   "intro": "Stand-up comedians and comic acts for corporate evenings, award nights, weddings and private shows. From well-known names to polished club acts, comedy gives guests something to talk about.",
+   "tips": "Comedy depends on the crowd and the language, so share both when you enquire. Ask about the set length, the tone and the venue and sound needs. Corporate rooms usually need clean, audience-aware material.",
+   "faq": [
+    [
      "Do comedians change their material for corporate events?",
      "Corporate shows usually need clean, audience-aware material. Share the tone you want when you enquire."
+    ],
+    [
+     "How long is a typical comedy set?",
+     "Most sets run from 30 to 60 minutes. Tell us the slot you have and we will confirm what each comedian can do."
     ]
    ]
   },
@@ -689,7 +706,8 @@
     "bollylive",
     "punjabi",
     "duotrio",
-    "magiccomedy"
+    "magic",
+    "comedy"
    ],
    "faq": [
     [
@@ -709,7 +727,8 @@
    "intro": "Magicians, DJs and anchors who keep children and parents engaged with games, tricks and music.",
    "tips": "Ask for age-appropriate content and a set length that matches children's attention spans. Share the venue and the number of kids.",
    "formats": [
-    "magiccomedy",
+    "magic",
+    "comedy",
     "dj",
     "anchor",
     "solosing"
@@ -761,7 +780,8 @@
     "duotrio",
     "soloinst",
     "anchor",
-    "magiccomedy"
+    "magic",
+    "comedy"
    ],
    "faq": [
     [
@@ -1028,7 +1048,8 @@
     "anchor",
     "dj",
     "solosing",
-    "magiccomedy",
+    "magic",
+    "comedy",
     "celeb"
    ],
    "faq": [
@@ -1054,7 +1075,8 @@
     "dj",
     "bollylive",
     "punjabi",
-    "magiccomedy"
+    "magic",
+    "comedy"
    ],
    "faq": [
     [
@@ -1078,7 +1100,8 @@
     "bollylive",
     "punjabi",
     "solosing",
-    "magiccomedy",
+    "magic",
+    "comedy",
     "celeb"
    ],
    "faq": [
