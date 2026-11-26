@@ -126,6 +126,16 @@
       "source": "/artists/ankit-bhatla",
       "destination": "/artists/ankit-bathla/",
       "permanent": true
+    },
+    {
+      "source": "/artists/siraha-trio-harmeet-manseta-u-rajesh-sivamani/",
+      "destination": "/artists/siraha-trio/",
+      "permanent": true
+    },
+    {
+      "source": "/artists/siraha-trio-harmeet-manseta-u-rajesh-sivamani",
+      "destination": "/artists/siraha-trio/",
+      "permanent": true
     }
   ]
 }
