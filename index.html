@@ -290,6 +290,20 @@ h3{font-family:var(--display);font-weight:800;text-transform:uppercase;line-heig
 @media (prefers-reduced-motion:reduce){.cbtn svg{transition:none}}
 @media (max-width:420px){.crow{grid-template-columns:minmax(0,1fr)}}
 
+
+/* enquiry form: who is it for (segment chips) and segment-specific extra fields */
+.seg{border:0;margin:0 0 4px;padding:0;min-width:0}
+.seg legend{padding:0;margin:0 0 10px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#A8A8AF}
+.segrow{display:flex;flex-wrap:wrap;gap:8px}
+.segrow label{margin:0;cursor:pointer}
+.segrow input{position:absolute;opacity:0;pointer-events:none}
+.segrow span{display:inline-block;padding:10px 16px;border-radius:999px;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.06);
+  color:#FFFFFF;font-family:var(--body);font-size:14.5px;font-weight:600;letter-spacing:0;text-transform:none;line-height:1.2}
+.segrow label:hover span{border-color:rgba(255,255,255,.6)}
+.segrow input:checked + span{background:#FFFFFF;color:#1B1B1D;border-color:#FFFFFF}
+.segrow input:focus-visible + span{outline:2px solid #FFFFFF;outline-offset:2px}
+.segx{display:grid;gap:14px}
+.segx[hidden],.segx [hidden]{display:none!important}
 .cpanel .cother{margin-top:8px}
 
 .sub.wide{max-width:none}
@@ -1174,6 +1188,40 @@ footer{padding:56px 0 72px;border-top:1px solid var(--line);margin-top:clamp(64p
           </ul>
         </div>
         <form id="enqForm" novalidate>
+          <fieldset class="seg" id="g-seg">
+            <legend>I am planning</legend>
+            <div class="segrow">
+              <label><input type="radio" name="segment" value="wedding"><span>A wedding</span></label>
+              <label><input type="radio" name="segment" value="corporate"><span>A corporate event</span></label>
+              <label><input type="radio" name="segment" value="hotel"><span>Music for a hotel or restaurant</span></label>
+              <label><input type="radio" name="segment" value="other"><span>Another event</span></label>
+            </div>
+          </fieldset>
+          <div class="segx" data-seg="wedding" hidden>
+            <div class="row">
+              <div><label for="f-funcs">Functions needing music</label>
+                <select id="f-funcs" name="funcs"><option value="">Not decided</option><option>1 function</option><option>2 functions</option><option>3 functions</option><option>4 or more</option></select></div>
+              <div><label for="f-guests">Guests</label><input id="f-guests" name="guests" type="text" inputmode="numeric" placeholder="Approx. number"></div>
+            </div>
+          </div>
+          <div class="segx" data-seg="corporate" hidden>
+            <div class="row">
+              <div><label for="f-company">Company</label><input id="f-company" name="company" type="text" autocomplete="organization" placeholder="Company or agency"></div>
+              <div><label for="f-aud">Expected audience</label><input id="f-aud" name="aud" type="text" inputmode="numeric" placeholder="Approx. number"></div>
+            </div>
+          </div>
+          <div class="segx" data-seg="hotel" hidden>
+            <div class="row">
+              <div><label for="f-prop">Property name</label><input id="f-prop" name="prop" type="text" autocomplete="organization" placeholder="Hotel, resort or restaurant"></div>
+              <div><label for="f-perf">Performances needed</label>
+                <select id="f-perf" name="perf"><option value="">Not decided</option><option>One-off event</option><option>4 a month</option><option>8 a month</option><option>More than 8 a month</option></select></div>
+            </div>
+            <div class="row">
+              <div><label for="f-term">Contract length</label>
+                <select id="f-term" name="term"><option value="">Not decided</option><option>1 month trial</option><option>3 months</option><option>6 months</option><option>12 months</option></select></div>
+              <div></div>
+            </div>
+          </div>
           <div class="row">
             <div><label for="f-name">Your name</label><input id="f-name" name="name" type="text" autocomplete="name" placeholder="Name"></div>
             <div><label for="f-date">Event date</label><input id="f-date" name="date" type="date"></div>
@@ -1292,19 +1340,44 @@ a.rc{text-decoration:none}.act:focus-visible{outline:3px solid currentColor;outl
   if (!f) return;
   var said = document.getElementById('said');
   function val(id){ var el = document.getElementById(id); return el && el.value ? el.value.trim() : ''; }
+  function segment(){ var c = f.querySelector('input[name="segment"]:checked'); return c ? c.value : ''; }
+  var dateLbl = document.querySelector('label[for="f-date"]'), hoursBox = document.getElementById('f-hours').parentNode;
+  function showSeg(){
+    var seg = segment();
+    Array.prototype.forEach.call(f.querySelectorAll('.segx'), function(b){ b.hidden = b.getAttribute('data-seg') !== seg; });
+    if (dateLbl) dateLbl.textContent = seg === 'hotel' ? 'Preferred start date' : 'Event date';
+    hoursBox.hidden = seg === 'hotel';
+  }
+  f.addEventListener('change', function(e){ if (e.target && e.target.name === 'segment') { showSeg(); if (window.gtag) gtag('event', 'select_segment', { segment: segment() }); } });
+  (function(){
+    var m = /[?&]for=(wedding|corporate|hotel|other)\b/.exec(location.search);
+    if (m) { var r = f.querySelector('input[name="segment"][value="' + m[1] + '"]'); if (r) r.checked = true; }
+    showSeg();
+  })();
   function build(){
     var L = [];
-    L.push('Hello Artisans of Sound, I would like to book an act.');
+    var seg = segment();
+    var intro = {
+      wedding: 'Hello Artisans of Sound, I am planning a wedding and would like entertainment options.',
+      corporate: 'Hello Artisans of Sound, I would like a proposal for a corporate event.',
+      hotel: 'Hello Artisans of Sound, I would like to discuss live music for our hotel / restaurant.'
+    };
+    L.push(intro[seg] || 'Hello Artisans of Sound, I would like to book an act.');
     L.push('');
     if (val('f-name')) L.push('Name: ' + val('f-name'));
-    if (val('f-date')) L.push('Date: ' + val('f-date'));
+    if (seg === 'corporate' && val('f-company')) L.push('Company: ' + val('f-company'));
+    if (seg === 'hotel' && val('f-prop')) L.push('Property: ' + val('f-prop'));
+    if (val('f-date')) L.push((seg === 'hotel' ? 'Preferred start date: ' : 'Date: ') + val('f-date'));
     if (val('f-city')) L.push('City: ' + val('f-city'));
     function many(label, name){
       var v = Array.prototype.map.call(f.querySelectorAll('input[name="' + name + '"]:checked'), function(c){ return c.value; });
       if (v.length) L.push(label + ': ' + v.join(', '));
     }
     many('Occasion', 'occasion'); many('Looking for', 'format'); many('Genre', 'genre');
-    L.push('Time on stage: ' + val('f-hours'));
+    if (seg !== 'hotel') L.push('Time on stage: ' + val('f-hours'));
+    if (seg === 'wedding') { if (val('f-funcs')) L.push('Functions: ' + val('f-funcs')); if (val('f-guests')) L.push('Guests: ' + val('f-guests')); }
+    if (seg === 'corporate' && val('f-aud')) L.push('Expected audience: ' + val('f-aud'));
+    if (seg === 'hotel') { if (val('f-perf')) L.push('Performances: ' + val('f-perf')); if (val('f-term')) L.push('Contract length: ' + val('f-term')); }
     var bud = window.AOS_budget ? window.AOS_budget() : '';
     if (bud) L.push('Budget: ' + bud);
     if (val('f-notes')) { L.push(''); L.push(val('f-notes')); }

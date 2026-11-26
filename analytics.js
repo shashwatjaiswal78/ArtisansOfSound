@@ -3,7 +3,8 @@
      whatsapp_click  any link to wa.me (floating button, artist "Book", "Ask for videos" ...)
      phone_click     tel: links
      email_click     mailto: links
-     generate_lead   the homepage enquiry form: method = whatsapp | email_copy
+     select_segment  the homepage enquiry form: wedding | corporate | hotel | other
+     generate_lead   the homepage enquiry form: method = whatsapp | email_copy, segment
    No names, phone numbers or message text are ever sent. */
 (function () {
   var ID = 'G-M2K3BLQHZZ';
@@ -27,8 +28,8 @@
 
     var btn = t.closest('#waBtn, #copyBtn');
     if (btn) {
-      var city = document.getElementById('f-city');
-      ev('generate_lead', { method: btn.id === 'waBtn' ? 'whatsapp' : 'email_copy', form: 'homepage_enquiry', city: city && city.value ? city.value.trim().slice(0, 40) : '' });
+      var city = document.getElementById('f-city'), seg = document.querySelector('#enqForm input[name="segment"]:checked');
+      ev('generate_lead', { method: btn.id === 'waBtn' ? 'whatsapp' : 'email_copy', form: 'homepage_enquiry', segment: seg ? seg.value : 'not_chosen', city: city && city.value ? city.value.trim().slice(0, 40) : '' });
       return;
     }
 
