@@ -306,7 +306,7 @@ h3{font-family:var(--display);font-weight:800;text-transform:uppercase;line-heig
 .segx[hidden],.segx [hidden]{display:none!important}
 
 /* four ways in: who is the entertainment for */
-#for{padding-top:var(--sg,64px)}
+#for{padding-top:0;padding-bottom:var(--sg,64px)}
 .fgrid{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
 .fgrid a{position:relative;display:block;border-radius:18px;overflow:hidden;aspect-ratio:4/5;background:#14101f;color:#F6F2E8;text-decoration:none;isolation:isolate}
 .fgrid img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .35s ease}
@@ -320,6 +320,7 @@ h3{font-family:var(--display);font-weight:800;text-transform:uppercase;line-heig
 .fnote a{color:inherit;font-weight:700;text-underline-offset:3px}
 @media (prefers-reduced-motion:reduce){.fgrid img{transition:none}}
 @media (max-width:900px){.fgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.fgrid{gap:12px}.fgrid .ft{left:12px;right:12px;bottom:12px}.fgrid b{font-size:20px;overflow-wrap:anywhere}.fgrid span{font-size:13px}}
 .cpanel .cother{margin-top:8px}
 
 .sub.wide{max-width:none}
@@ -1068,6 +1069,20 @@ footer{padding:56px 0 72px;border-top:1px solid var(--line);margin-top:clamp(64p
 </header>
 
 <main class="light">
+  <section class="block" id="for">
+    <div class="in">
+      <p class="kicker">Start here</p>
+      <h2>What are you planning?</h2>
+      <ul class="fgrid">
+        <li><a href="occasions/wedding/"><img src="img/act-bollytales.jpg" alt="" width="362" height="362" loading="lazy"><span class="ft"><b>Weddings</b><span>Sangeet, mehendi, cocktail and reception</span></span></a></li>
+        <li><a href="corporate/"><img src="img/act-elfe.jpg" alt="" width="447" height="447" loading="lazy"><span class="ft"><b>Corporate</b><span>Award nights, launches and annual days</span></span></a></li>
+        <li><a href="hotels/"><img src="img/act-nirakar.jpg" alt="" width="720" height="720" loading="lazy"><span class="ft"><b>Hotels and Hospitality</b><span>A live music calendar for your venue</span></span></a></li>
+        <li><a href="occasions/"><img src="img/act-chetas.jpg" alt="" width="400" height="400" loading="lazy"><span class="ft"><b>Other events</b><span>Parties, festivals, college fests and more</span></span></a></li>
+      </ul>
+      <p class="fnote">Wedding planner or event agency? <a href="for-planners/">Partner with us</a>.</p>
+    </div>
+  </section>
+
   <section class="block" id="acts">
     <div class="in">
       <div class="head">
@@ -1102,20 +1117,6 @@ footer{padding:56px 0 72px;border-top:1px solid var(--line);margin-top:clamp(64p
         <p class="rstatus" id="rstatus" role="status" aria-live="polite"></p>
         <button type="button" class="line-pill rmore" id="rmore">Show more acts</button>
       </div>
-    </div>
-  </section>
-
-  <section class="block" id="for">
-    <div class="in">
-      <p class="kicker">Start here</p>
-      <h2>What are you planning?</h2>
-      <ul class="fgrid">
-        <li><a href="occasions/wedding/"><img src="img/act-bollytales.jpg" alt="" width="362" height="362" loading="lazy"><span class="ft"><b>Weddings</b><span>Sangeet, mehendi, cocktail and reception</span></span></a></li>
-        <li><a href="corporate/"><img src="img/act-elfe.jpg" alt="" width="447" height="447" loading="lazy"><span class="ft"><b>Corporate</b><span>Award nights, launches and annual days</span></span></a></li>
-        <li><a href="hotels/"><img src="img/act-nirakar.jpg" alt="" width="720" height="720" loading="lazy"><span class="ft"><b>Hotels and Hospitality</b><span>A live music calendar for your venue</span></span></a></li>
-        <li><a href="occasions/"><img src="img/act-chetas.jpg" alt="" width="400" height="400" loading="lazy"><span class="ft"><b>Other events</b><span>Parties, festivals, college fests and more</span></span></a></li>
-      </ul>
-      <p class="fnote">Wedding planner or event agency? <a href="for-planners/">Partner with us</a>.</p>
     </div>
   </section>
 
