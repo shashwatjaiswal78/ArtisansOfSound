@@ -1,10 +1,22 @@
 #!/usr/bin/env python3
-"""Business pages for the people who buy entertainment in volume: /for-planners/, /corporate/ and /hotels/.
+"""Business pages for the people who buy entertainment in volume: /for-planners/, /corporate/, /hotels/ and /destination-events/.
 Run by tools/build.py. Edit the copy in PAGES below, then rebuild. No prices are shown on these pages on purpose."""
 import build_updates as U
 import build_landing as B
 esc = U.esc
 SITE = U.SITE
+
+
+L = B.L
+def first(d): return d["intro"].split(". ")[0].rstrip(".") + "."
+def fcard(key, title=None, sub=None):
+    d = L["formats"][key]
+    return (f"/book/{d['slug']}/", title or d["name"], sub or first(d), d.get("photo"))
+def ocard(key, title=None, sub=None):
+    d = L["occasions"][key]
+    return (f"/occasions/{d['slug']}/", title or d["name"], sub or first(d), d.get("photo"))
+def cards(items):
+    return '<ul class="hublist">' + "".join(B.hub_item(e) for e in items) + "</ul>"
 
 def pick(acts, formats=(), occs=(), n=6):
     out = [a for a in acts if any(f in a["f"] for f in formats) or any(o in a["occ"] for o in occs)]
@@ -40,6 +52,14 @@ PAGES = [
      ("Availability before price", "We confirm the date with the artist first, so you do not quote your client an act that is not free."),
      ("Videos and details ready to share", "Performance videos, line-up, duration and sound needs for each act, in a form you can pass on to your client."),
    ])),
+   ("Formats we arrange for weddings", cards([
+     fcard("bollylive", sub="Live Bollywood bands and singers for sangeet, cocktail and reception nights."),
+     fcard("punjabi", sub="Punjabi singers and bands for baraat, sangeet and dance floors."),
+     fcard("sufibolly", sub="Sufi and Bollywood sets for cocktail evenings and receptions."),
+     fcard("dj", sub="Wedding DJs for sangeet and after-parties."),
+     fcard("soloinst", sub="Violin, sax, piano and more for entrances, welcomes and dinners."),
+     fcard("anchor", sub="Anchors and emcees to run the sangeet and keep the evening moving."),
+   ])),
    ("How we work with you", steps([
      ("Send the brief", "Dates, venues, functions, guest count and budget range. A short WhatsApp message is enough."),
      ("We shortlist", "A shortlist with videos for each function, and a clear quote, within 24 hours."),
@@ -47,6 +67,8 @@ PAGES = [
      ("We coordinate to the event", "We stay in touch with the artists on travel, sound and timings, and with your team on the day."),
    ])),
   ],
+  links=[("/destination-events/", "Destination weddings and events", "Palace, beach and resort celebrations, with travel and logistics handled.", L["occasions"]["wedding"].get("photo")),
+         ocard("sangeet"), ocard("reception")],
   faq=[("Do you work with planners outside Delhi NCR?", "Yes. We have artists in many states and book for weddings across India, including destination weddings. Tell us the city and dates and we check who is available."),
        ("Can you handle several functions of one wedding?", "Yes. We plan the music across mehendi, haldi, sangeet, cocktail and reception together, so the acts suit each night and the budget is kept in one place."),
        ("How quickly can I get options?", "We send a shortlist and a quote within 24 hours of a clear brief."),
@@ -63,11 +85,11 @@ PAGES = [
   cta1="Request a proposal on WhatsApp", seg_q="corporate",
   acts=dict(formats=("anchor", "bollylive", "djband", "instrband", "soloinst"), occs=("corporate", "annualday", "launch"), title="Popular for corporate events"),
   sections=[
-   ("What we can arrange", bullets([
-     ("Live bands and DJs", "Bollywood, retro, Punjabi, western and DJ-plus-live formats for after-dinner and party nights."),
-     ("Anchors and emcees", "Hosts for award nights, annual days and launches, in Hindi, English and regional languages."),
-     ("Instrumental and welcome acts", "Solo instrumentalists, duos and jazz or acoustic ensembles for arrivals, networking and dinners."),
-     ("Celebrity and special acts", "Well-known singers, comedians, magicians and performers, where your budget and date allow."),
+   ("What we can arrange", cards([
+     fcard("bollylive", "Live bands and DJs", "Bollywood, retro, Punjabi, western and DJ-plus-live formats for after-dinner and party nights."),
+     fcard("anchor", "Anchors and emcees", "Hosts for award nights, annual days and launches, in Hindi, English and regional languages."),
+     fcard("instrband", "Instrumental and welcome acts", "Solo instrumentalists, duos and jazz or acoustic ensembles for arrivals, networking and dinners."),
+     fcard("celeb", "Celebrity and special acts", "Well-known singers, comedians, magicians and performers, where your budget and date allow."),
    ])),
    ("How a corporate booking works", steps([
      ("Share the brief", "Event type, city, date, audience size, venue, and a rough budget."),
@@ -76,8 +98,7 @@ PAGES = [
      ("Event-day coordination", "We coordinate timings, sound and travel with the artists and with your production team."),
    ])),
   ],
-  links=[("/occasions/corporate-events/", "Corporate events"), ("/occasions/annual-day-award-nights/", "Annual day and award nights"), ("/occasions/product-launch-brand-events/", "Product launches and brand events"),
-         ("/occasions/new-year-party/", "New Year parties"), ("/occasions/diwali-party/", "Diwali parties"), ("/book/anchors-and-emcees/", "Anchors and emcees"), ("/book/celebrity-artists/", "Celebrity artists")],
+  links=[ocard("corporate"), ocard("annualday"), ocard("launch"), ocard("newyear"), ocard("diwali"), fcard("anchor"), fcard("celeb")],
   faq=[("Can you work with our event agency or production house?", "Yes. We regularly share shortlists and quotes with agencies. Send the brief and we reply with options you can take to your client."),
        ("Do you handle invoices and paperwork?", "We provide a quotation, booking confirmation and invoice for each booking. Tell us if your company needs specific vendor documents and we will check what we can supply."),
        ("Can you supply sound and stage?", "Many acts bring their own basic sound, and some events need a full production. Tell us the venue and we confirm what each act needs and what is included before you decide."),
@@ -94,11 +115,11 @@ PAGES = [
   cta1="Discuss a programme on WhatsApp", seg_q="hotel",
   acts=dict(formats=("lounge", "jazz", "duotrio", "soloinst", "sufibolly"), occs=("venue", "brunch", "dinner"), title="Acts that suit hotels and restaurants"),
   sections=[
-   ("A sample weekly calendar", bullets([
-     ("Friday: acoustic Bollywood", "A solo singer or duo for the dinner crowd."),
-     ("Saturday: live band", "A Bollywood, retro or party band for the busiest night."),
-     ("Sunday: jazz brunch", "Jazz, piano or instrumental acts for a relaxed afternoon."),
-     ("Monthly: Sufi or ghazal evening", "A special night that gives guests a reason to book ahead."),
+   ("A sample weekly calendar", cards([
+     fcard("duotrio", "Friday: acoustic Bollywood", "A solo singer or duo for the dinner crowd."),
+     fcard("bollylive", "Saturday: live band", "A Bollywood, retro or party band for the busiest night."),
+     fcard("jazz", "Sunday: jazz brunch", "Jazz, piano or instrumental acts for a relaxed afternoon."),
+     fcard("sufibolly", "Monthly: Sufi or ghazal evening", "A special night that gives guests a reason to book ahead."),
    ])),
    ("What a programme includes", steps([
      ("A plan for your venue", "We learn your guests, your slow and busy nights and your room, then propose a schedule and a mix of acts."),
@@ -107,14 +128,58 @@ PAGES = [
      ("Review and adjust", "After the first month we look at what worked and change the calendar."),
    ])),
   ],
-  links=[("/occasions/restaurant-cafe-hotel-nights/", "Restaurant, cafe and hotel nights"), ("/occasions/brunch-lounge/", "Brunch and lounge"), ("/book/lounge-acts/", "Lounge acts"),
-         ("/book/jazz-bands/", "Jazz bands"), ("/book/duos-and-trios/", "Duos and trios"), ("/book/sufi-bollywood-bands/", "Sufi and Bollywood bands")],
+  links=[ocard("venue"), ocard("brunch"), fcard("lounge"), fcard("jazz"), fcard("duotrio"), fcard("sufibolly")],
   faq=[("Can we start with a trial?", "Yes. A one-month programme is a sensible way to start. Tell us your venue and the nights you want covered and we propose a calendar."),
        ("Who pays for sound equipment?", "It depends on the venue and the act. We confirm sound needs for each artist and agree who provides what before the programme starts."),
        ("How is a programme priced?", "It depends on the number of performances, the acts and your venue. Share the nights you want covered and a budget range, and we send a quote."),
        ("Do you work with venues outside Delhi NCR?", "Yes. We have artists in many states. Tell us the city and we check who can perform there regularly.")],
  ),
 ]
+
+DEST_CITIES = ("Goa", "Jaipur", "Udaipur", "Jodhpur")
+# few acts are based in these cities, so each card falls back to a category photo that suits the destination
+DEST_FALLBACK = {"Goa": "western", "Jaipur": "bollyretro", "Udaipur": "sufibolly", "Jodhpur": "ghazal"}
+def city_photo(acts, aliases, city):
+    loc = sorted([a for a in acts if a["city"] in aliases and a["photo"]], key=B.rank)
+    return loc[0]["photo"] if loc else L["formats"][DEST_FALLBACK[city]].get("photo")
+
+def build_destination(acts):
+    W = L["wedding"]["cities"]
+    url = f"{SITE}/destination-events/"
+    w = B.wa("Hi Artisans of Sound, I am planning a destination wedding / event and would like entertainment options.")
+    enq = "/?for=wedding#enquiry"
+    title = "Entertainment for Destination Weddings and Events in India | Artisans of Sound"
+    desc = "Live bands, Sufi and folk acts, DJs and anchors for destination weddings and events in Goa, Jaipur, Udaipur, Jodhpur and across India, with travel and logistics handled."
+    top = [(f"/wedding/{W[c]['slug']}/", f"Wedding artists in {c}", W[c]["blurb"].split(". ")[0].rstrip(".") + ".", city_photo(acts, W[c]["alias"], c)) for c in DEST_CITIES]
+    more = [(f"/wedding/{v['slug']}/", f"Wedding artists in {c}") for c, v in W.items() if c not in DEST_CITIES]
+    faq = [("Do your artists travel for destination events?", "Many of them do. We confirm who is available for your dates and what travel, stay and local transport involve before we send a quote."),
+           ("Can we use artists based in the destination city?", "Where the city has acts on our roster we show them, and using local artists can reduce travel costs. Tell us the city and we suggest both local and travelling options."),
+           ("Who pays for travel and accommodation?", "It depends on the artist and the event. We list travel, stay and sound separately in the quote so you can see exactly what is included."),
+           ("How early should we book?", "Peak wedding dates in destination cities fill up early, so ask for options as soon as you have dates and a venue.")]
+    body = ('    <p class="kicker">Destination weddings and events</p>\n    <h1 class="uh">Entertainment for destination weddings and events</h1>\n'
+            '    <p class="alead">Palace, beach and resort celebrations need acts that suit the setting and can handle the travel. Tell us the destination, dates and functions, and we send options with one clear quote.</p>\n'
+            f'    <div class="ask"><a class="dark-pill" href="{esc(w)}" target="_blank" rel="noopener">Plan a destination event on WhatsApp</a><a class="ghost-pill" href="{enq}">Send an enquiry</a></div>\n' + CSS)
+    body += B.sec("Popular destinations", cards(top) + ('<div style="margin-top:18px">' + B.links(more) + "</div>" if more else ""))
+    body += B.sec("Formats that suit a destination event", cards([
+        fcard("sufiq", sub="Qawwali and Sufi groups for evenings in forts, palaces and courtyards."),
+        fcard("rajfusion", sub="Rajasthani folk and fusion acts for welcomes, baraat and Rajasthan weddings."),
+        fcard("bollylive", sub="Live Bollywood bands and singers for sangeet and reception nights."),
+        fcard("djperc", sub="DJ and percussion acts for sundowners and after-parties."),
+        fcard("soloinst", sub="Solo instrumentalists for arrivals, ceremonies and dinners."),
+        fcard("anchor", sub="Anchors and emcees to host multi-day programmes."),
+    ]))
+    body += B.sec("How we handle the logistics", steps([
+        ("Share the plan", "Destination, venue, dates, the functions that need music and a budget range."),
+        ("We check availability and travel", "We confirm which artists are free and able to travel, and what travel, stay and local transport would involve."),
+        ("One quote, costs listed", "The artist fee, travel, stay and sound needs are shown separately where they apply."),
+        ("Coordination to the event", "We stay in touch with the artists and your team on arrival, sound checks and timings."),
+    ]))
+    body += B.faq_block(faq)
+    body += (f'    <div class="ucta"><h2>Planning a destination event?</h2><p>Send the destination and dates. We reply with options and one clear quote within 24 hours.</p><div class="ask">'
+             f'<a class="dark-pill" href="{enq}">Send an enquiry</a><a class="ghost-pill" href="{esc(w)}" target="_blank" rel="noopener">Message us on WhatsApp</a></div></div>\n')
+    mine = pick(acts, ("sufiq", "rajfusion", "bollylive"), ("wedding",), 6)
+    B.write(["destination-events"], B.shell(url, title, desc, [("Home", "/"), ("Destination events", "/destination-events/")], body, mine, faq, "Hi Artisans of Sound, I am planning a destination wedding / event."))
+    return url
 
 def build(acts, reg):
     urls = []
@@ -130,10 +195,11 @@ def build(acts, reg):
             body += B.sec(title, inner)
         body += B.sec(a["title"], B.grid(mine, ctx=None) + '<p class="anote"><a href="/artists/">See every act</a>.</p>')
         if p.get("links"):
-            body += B.sec("Browse related pages", B.links(p["links"]))
+            body += B.sec("Browse related pages", cards(p["links"]))
         body += B.faq_block(p["faq"])
         body += (f'    <div class="ucta"><h2>Ready to talk?</h2><p>Send a short brief. We reply with options and one clear quote within 24 hours.</p><div class="ask">'
                  f'<a class="dark-pill" href="{enq}">Send an enquiry</a><a class="ghost-pill" href="{esc(w)}" target="_blank" rel="noopener">Message us on WhatsApp</a></div></div>\n')
         B.write([p["slug"]], B.shell(url, p["title"], p["desc"], [("Home", "/"), (p["name"], f"/{p['slug']}/")], body, mine, p["faq"], p["wa"]))
         urls.append(url)
+    urls.append(build_destination(acts))
     return [f"<url><loc>{u}</loc></url>" for u in urls]
