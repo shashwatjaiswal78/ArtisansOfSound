@@ -246,6 +246,96 @@
       "source": "/artists/navjot",
       "destination": "/book/bollywood-live/delhi/",
       "permanent": false
+    },
+    {
+      "source": "/artists/aayush-delhi/",
+      "destination": "/book/bollywood-live/delhi/",
+      "permanent": false
+    },
+    {
+      "source": "/artists/aayush-delhi",
+      "destination": "/book/bollywood-live/delhi/",
+      "permanent": false
+    },
+    {
+      "source": "/artists/ananya/",
+      "destination": "/book/duos-and-trios/delhi/",
+      "permanent": false
+    },
+    {
+      "source": "/artists/ananya",
+      "destination": "/book/duos-and-trios/delhi/",
+      "permanent": false
+    },
+    {
+      "source": "/artists/devanshu/",
+      "destination": "/book/duos-and-trios/delhi/",
+      "permanent": false
+    },
+    {
+      "source": "/artists/devanshu",
+      "destination": "/book/duos-and-trios/delhi/",
+      "permanent": false
+    },
+    {
+      "source": "/artists/megha/",
+      "destination": "/book/anchors-and-emcees/delhi/",
+      "permanent": false
+    },
+    {
+      "source": "/artists/megha",
+      "destination": "/book/anchors-and-emcees/delhi/",
+      "permanent": false
+    },
+    {
+      "source": "/artists/shikha-pandey/",
+      "destination": "/book/anchors-and-emcees/delhi/",
+      "permanent": false
+    },
+    {
+      "source": "/artists/shikha-pandey",
+      "destination": "/book/anchors-and-emcees/delhi/",
+      "permanent": false
+    },
+    {
+      "source": "/artists/shiva/",
+      "destination": "/cities/lucknow/",
+      "permanent": false
+    },
+    {
+      "source": "/artists/shiva",
+      "destination": "/cities/lucknow/",
+      "permanent": false
+    },
+    {
+      "source": "/artists/shivansh-srivastava/",
+      "destination": "/cities/lucknow/",
+      "permanent": false
+    },
+    {
+      "source": "/artists/shivansh-srivastava",
+      "destination": "/cities/lucknow/",
+      "permanent": false
+    },
+    {
+      "source": "/artists/vansh/",
+      "destination": "/cities/lucknow/",
+      "permanent": false
+    },
+    {
+      "source": "/artists/vansh",
+      "destination": "/cities/lucknow/",
+      "permanent": false
+    },
+    {
+      "source": "/artists/aayush-lucknow/",
+      "destination": "/artists/aayush/",
+      "permanent": true
+    },
+    {
+      "source": "/artists/aayush-lucknow",
+      "destination": "/artists/aayush/",
+      "permanent": true
     }
   ]
 }
