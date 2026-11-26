@@ -34,6 +34,23 @@
     ]
    ]
   },
+  "bollypunjabi": {
+   "slug": "bollywood-punjabi",
+   "name": "Bollywood Punjabi artists",
+   "h1": "Bollywood Punjabi artists and singers to book in India",
+   "intro": "Punjabi stars whose hits fill both Bollywood playlists and Punjabi dance floors. These artists suit weddings, sangeets, receptions, brand shows and concert-style nights that want big-name Punjabi energy with Bollywood reach.",
+   "tips": "Decide whether you want a full show or a shorter appearance, since the two are booked and priced differently. Share the date, city, venue and crowd so we can check availability with the artist's management. Popular artists tour heavily, so earlier enquiries give more choice.",
+   "faq": [
+    [
+     "Do these artists perform Bollywood and Punjabi songs?",
+     "Most perform a mix of their Punjabi hits and Bollywood numbers. Tell us the set you want and we will check with the artist's management."
+    ],
+    [
+     "How early should I enquire?",
+     "As early as your date and venue are fixed. Artists in this category tour heavily, and wedding and festive dates fill first."
+    ]
+   ]
+  },
   "celeb": {
    "slug": "celebrity-artists",
    "name": "Celebrity artists",
@@ -504,6 +521,7 @@
    "formats": [
     "bollylive",
     "punjabi",
+    "bollypunjabi",
     "solosing",
     "dj",
     "sufibolly",
@@ -530,6 +548,7 @@
    "formats": [
     "bollylive",
     "punjabi",
+    "bollypunjabi",
     "djband",
     "dj",
     "anchor",
@@ -556,6 +575,7 @@
    "formats": [
     "bollylive",
     "punjabi",
+    "bollypunjabi",
     "solosing",
     "duotrio",
     "dj",
@@ -633,6 +653,7 @@
     "dj",
     "bollylive",
     "punjabi",
+    "bollypunjabi",
     "soloinst"
    ],
    "faq": [
@@ -705,6 +726,7 @@
     "dj",
     "bollylive",
     "punjabi",
+    "bollypunjabi",
     "duotrio",
     "magic",
     "comedy"
@@ -756,7 +778,8 @@
     "duotrio",
     "soloinst",
     "bollylive",
-    "punjabi"
+    "punjabi",
+    "bollypunjabi"
    ],
    "faq": [
     [
@@ -874,6 +897,7 @@
    "formats": [
     "bollylive",
     "punjabi",
+    "bollypunjabi",
     "solosing",
     "dj",
     "sufibolly",
@@ -899,6 +923,7 @@
    "formats": [
     "bollylive",
     "punjabi",
+    "bollypunjabi",
     "dj",
     "djperc",
     "devotional",
@@ -927,6 +952,7 @@
     "djperc",
     "bollylive",
     "punjabi",
+    "bollypunjabi",
     "rajfusion"
    ],
    "faq": [
@@ -971,6 +997,7 @@
     "choir",
     "bollylive",
     "punjabi",
+    "bollypunjabi",
     "western",
     "dj",
     "solosing"
@@ -996,6 +1023,7 @@
     "dj",
     "bollylive",
     "punjabi",
+    "bollypunjabi",
     "djband",
     "western",
     "celeb"
@@ -1021,6 +1049,7 @@
     "dj",
     "bollylive",
     "punjabi",
+    "bollypunjabi",
     "bollyrock",
     "rap",
     "celeb"
@@ -1045,6 +1074,7 @@
    "formats": [
     "bollylive",
     "punjabi",
+    "bollypunjabi",
     "anchor",
     "dj",
     "solosing",
@@ -1075,6 +1105,7 @@
     "dj",
     "bollylive",
     "punjabi",
+    "bollypunjabi",
     "magic",
     "comedy"
    ],
@@ -1099,6 +1130,7 @@
     "anchor",
     "bollylive",
     "punjabi",
+    "bollypunjabi",
     "solosing",
     "magic",
     "comedy",
@@ -1127,6 +1159,7 @@
     "lounge",
     "bollylive",
     "punjabi",
+    "bollypunjabi",
     "western"
    ],
    "faq": [
@@ -1199,7 +1232,8 @@
     "solosing",
     "duotrio",
     "bollylive",
-    "punjabi"
+    "punjabi",
+    "bollypunjabi"
    ],
    "faq": [
     [
@@ -1223,7 +1257,8 @@
     "djperc",
     "djband",
     "bollylive",
-    "punjabi"
+    "punjabi",
+    "bollypunjabi"
    ],
    "faq": [
     [

@@ -33,6 +33,10 @@
    "Punjabi live"
   ],
   [
+   "bollypunjabi",
+   "Bollywood Punjabi"
+  ],
+  [
    "bollyretro",
    "Bollywood retro"
   ],
@@ -319,6 +323,30 @@
    "holi"
   ],
   "punjabi": [
+   "newyear",
+   "wedding",
+   "reception",
+   "sangeet",
+   "haldi",
+   "birthday",
+   "diwali",
+   "garba",
+   "christmas",
+   "house",
+   "college",
+   "corporate",
+   "engagement",
+   "mehendi",
+   "retirement",
+   "housewarming",
+   "bachelor",
+   "launch",
+   "annualday",
+   "venue",
+   "pool",
+   "holi"
+  ],
+  "bollypunjabi": [
    "newyear",
    "wedding",
    "reception",
@@ -846,6 +874,13 @@
    "folk",
    "open"
   ],
+  "bollypunjabi": [
+   "punjabi",
+   "bollywood",
+   "pop",
+   "folk",
+   "open"
+  ],
   "bollyretro": [
    "bollywood",
    "retro"
@@ -986,6 +1021,7 @@
  "LAB": {
   "bollylive": "Live band",
   "punjabi": "Punjabi live act",
+  "bollypunjabi": "Bollywood Punjabi artist",
   "djband": "DJ based band",
   "allgirl": "All-girl band",
   "dj": "DJ",
@@ -1305,7 +1341,13 @@
   "Suyash Medh": "m",
   "Raavana Live": "m",
   "Seher Band": "m",
-  "Jay Patel": "m"
+  "Jay Patel": "m",
+  "Diljit Dosanjh": "m",
+  "Hardy Sandhu": "m",
+  "Guru Randhawa": "m",
+  "Mika Singh": "m",
+  "Jass Manak": "m",
+  "Milind Gaba": "m"
  },
  "TOP": [
   [
