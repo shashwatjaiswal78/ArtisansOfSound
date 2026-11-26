@@ -1509,12 +1509,20 @@
    ]
   ],
   [
-   "Top Female Celebrity for Appearances",
+   "Top Female Celebrity Artists",
    [
     "celeb"
    ],
    [],
    "f"
+  ],
+  [
+   "Top Male Celebrity Artists",
+   [
+    "celeb"
+   ],
+   [],
+   "m"
   ],
   [
    "Top Grand Bands",

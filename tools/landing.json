@@ -1368,9 +1368,13 @@
    "slug": "top-birthday-party-acts",
    "intro": "Singers, duos, lounge acts, magicians and instrumentalists for birthday parties and milestone celebrations."
   },
-  "Top Female Celebrity for Appearances": {
-   "slug": "top-female-celebrity-for-appearances",
-   "intro": "Female celebrity artists available for appearances and performances at events and launches."
+  "Top Female Celebrity Artists": {
+   "slug": "top-female-celebrity-artists",
+   "intro": "Female celebrity artists and playback singers available for weddings, brand events and shows."
+  },
+  "Top Male Celebrity Artists": {
+   "slug": "top-male-celebrity-artists",
+   "intro": "Male celebrity artists and playback singers available for weddings, brand events and shows."
   },
   "Top Grand Bands": {
    "slug": "top-grand-bands",

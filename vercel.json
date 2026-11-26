@@ -96,6 +96,16 @@
       "source": "/book/magicians-and-comedians",
       "destination": "/book/comedians/",
       "permanent": true
+    },
+    {
+      "source": "/top/top-female-celebrity-for-appearances/",
+      "destination": "/top/top-female-celebrity-artists/",
+      "permanent": true
+    },
+    {
+      "source": "/top/top-female-celebrity-for-appearances",
+      "destination": "/top/top-female-celebrity-artists/",
+      "permanent": true
     }
   ]
 }
