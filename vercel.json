@@ -186,6 +186,26 @@
       "source": "/artists/naacheez",
       "destination": "/book/bollywood-live/lucknow/",
       "permanent": false
+    },
+    {
+      "source": "/artists/dark-white/",
+      "destination": "/book/bollywood-live/delhi/",
+      "permanent": false
+    },
+    {
+      "source": "/artists/dark-white",
+      "destination": "/book/bollywood-live/delhi/",
+      "permanent": false
+    },
+    {
+      "source": "/artists/piyush/",
+      "destination": "/book/bollywood-live/delhi/",
+      "permanent": false
+    },
+    {
+      "source": "/artists/piyush",
+      "destination": "/book/bollywood-live/delhi/",
+      "permanent": false
     }
   ]
 }
