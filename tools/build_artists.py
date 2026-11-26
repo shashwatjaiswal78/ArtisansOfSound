@@ -84,7 +84,7 @@ def build(acts=None, reg=None):
     return [f"<url><loc>{SITE}/artists/</loc></url>"] + [f"<url><loc>{SITE}/artists/{a['slug']}/</loc></url>" for a in acts]
 
 def where(a):
-    return "across India" if a["city"] == "Pan-India" else f"in {a['city']}"
+    return "across India" if a["city"] == "Pan-India" else f"from {a['city']}, available across India"
 
 def img_dims(path):
     try:
@@ -131,14 +131,16 @@ def page(a, acts, reg):
         b = a["bio"]; paras = b if isinstance(b, list) else b.get("about", []); facts = [] if isinstance(b, list) else b.get("facts", [])
         why = [] if isinstance(b, list) else b.get("why", [])
     else:
-        paras = [f"{n} ({ph}) is available to book {where(a)} through Artisans of Sound"
-                 + (f", known as {a['tag']}" if a["tag"] else "") + (f". {a['par']}" if a["par"] else "") + ".",
+        based = f"is based in {a['city']} and " if a["city"] != "Pan-India" else "is "
+        tg = a["tag"]
+        tag_s = (f" Seen on {tg}." if "idol" in tg.lower() else f" Known as {'an' if tg[:1].lower() in 'aeiou' else 'a'} {tg[:1].lower() + tg[1:] if not tg[:2].isupper() else tg}." if tg else "")
+        paras = [f"{n} ({ph}) {based}available to book across India through Artisans of Sound." + tag_s + (f" {a['par']}." if a["par"] else ""),
                  ("Artisans of Sound handles the whole booking: we check availability for your date, send videos and give you one clear quote within 24 hours, "
                   "with a replacement act arranged if anyone drops out.")]
         facts = []; why = []
     fl = f"/book/{reg['fmt'][a['main']]}/" if a["main"] in reg["fmt"] else None
     cl = f"/cities/{reg['city'][a['city']]}/" if a["city"] in reg["city"] else None
-    chips = [("Format", a["fmt_label"], fl), ("Based in" if a["city"] != "Pan-India" else "Available", a["city"] if a["city"] != "Pan-India" else "Across India", cl)]
+    chips = [("Format", a["fmt_label"], fl)] + ([("Based in", a["city"], cl)] if a["city"] != "Pan-India" else []) + [("Available", "Across India", None)]
     if a["tag"] and not any(f[0] == "Known for" for f in facts): chips.append(("Known for", a["tag"], None))
     chips += [(f[0], f[1], None) for f in facts]
     hero_img = (f'<img class="aph" src="/{esc(a["photo"])}" alt="{esc(n)}, {esc(a["fmt_label"].lower())}" width="{dims[0]}" height="{dims[1]}" fetchpriority="high">'
