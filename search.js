@@ -36,7 +36,7 @@
   var list = el('ul', 'aos-res'); box.appendChild(form); box.appendChild(list); panel.appendChild(box); document.body.appendChild(panel);
 
   var data = null, loading = false;
-  var QUICK = [['Category', 'All categories', '/book/'], ['Occasion', 'All occasions', '/occasions/'], ['Top list', 'Top artist lists', '/top/'], ['City', 'Cities', '/cities/'], ['Artist', 'All artists A to Z', '/artists/'], ['Guide', 'Booking guides', '/updates.html'], ['Artist', 'Join as an artist', '/join.html']];
+  var QUICK = [['Category', 'All categories', '/book/'], ['Occasion', 'All occasions', '/occasions/'], ['Top list', 'Top artist lists', '/top/'], ['Artist', 'All artists A to Z', '/artists/'], ['Guide', 'Booking guides', '/updates.html'], ['Artist', 'Join as an artist', '/join.html']];
   var BONUS = {Category: 15, 'Top list': 10, City: 8, Occasion: 6, Artist: 0, Guide: -5, Page: -2};
   function norm(s) { return String(s || '').toLowerCase().replace(/&/g, ' and ').replace(/[^a-z0-9 ]+/g, ' ').replace(/\s+/g, ' ').trim(); }
   function load() {

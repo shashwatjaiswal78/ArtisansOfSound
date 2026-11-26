@@ -336,6 +336,16 @@
       "source": "/artists/aayush-lucknow",
       "destination": "/artists/aayush/",
       "permanent": true
+    },
+    {
+      "source": "/cities/",
+      "destination": "/book/",
+      "permanent": false
+    },
+    {
+      "source": "/cities",
+      "destination": "/book/",
+      "permanent": false
     }
   ]
 }

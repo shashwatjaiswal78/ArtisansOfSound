@@ -15,7 +15,8 @@
      "Can a band play a custom set for my event?",
      "Often yes. Share the mood, languages and any must-play songs when you enquire and we will confirm what each band can do before you book."
     ]
-   ]
+   ],
+   "photo": "img/act-shreya.jpg"
   },
   "punjabi": {
    "slug": "punjabi-live",
@@ -32,7 +33,8 @@
      "Can a band play a custom set for my event?",
      "Often yes. Share the mood, languages and any must-play songs when you enquire and we will confirm what each band can do before you book."
     ]
-   ]
+   ],
+   "photo": "img/act-daler.jpg"
   },
   "bollypunjabi": {
    "slug": "bollywood-punjabi",
@@ -49,7 +51,8 @@
      "How early should I enquire?",
      "As early as your date and venue are fixed. Artists in this category tour heavily, and wedding and festive dates fill first."
     ]
-   ]
+   ],
+   "photo": "img/act-bpraak.jpg"
   },
   "celeb": {
    "slug": "celebrity-artists",
@@ -66,7 +69,8 @@
      "What is the difference between an appearance and a live show?",
      "An appearance is a short presence at your event, while a live show is a full performance with sound, a band and a set list. Our guide on choosing a celebrity guest or a live show covers this in detail."
     ]
-   ]
+   ],
+   "photo": "img/act-sonu.jpg"
   },
   "solosing": {
    "slug": "solo-singers",
@@ -83,7 +87,8 @@
      "Do solo singers bring their own sound?",
      "Arrangements vary by artist. Tell us the venue and guest count and we will confirm what is included."
     ]
-   ]
+   ],
+   "photo": "img/act-prateek.jpg"
   },
   "dj": {
    "slug": "djs",
@@ -100,7 +105,8 @@
      "Can I combine a DJ with a live act?",
      "Yes. A DJ with a percussionist, a singer or a band is a popular combination, and several acts on our roster are built that way."
     ]
-   ]
+   ],
+   "photo": "img/act-nucleya.jpg"
   },
   "sufibolly": {
    "slug": "sufi-bollywood-bands",
@@ -117,7 +123,8 @@
      "Are these bands suitable for weddings?",
      "Yes, they are popular for sangeets, receptions and cocktail evenings."
     ]
-   ]
+   ],
+   "photo": "img/act-mamekhan.jpg"
   },
   "djband": {
    "slug": "dj-based-bands",
@@ -134,7 +141,8 @@
      "How long can they play?",
      "Sets vary by act. Share your schedule and we will confirm timings and breaks."
     ]
-   ]
+   ],
+   "photo": "img/act-filmysthan.jpg"
   },
   "anchor": {
    "slug": "anchors-and-emcees",
@@ -151,7 +159,8 @@
      "Can the anchor work alongside the band or DJ?",
      "Yes. A good anchor coordinates with the artists and the production team throughout the evening."
     ]
-   ]
+   ],
+   "photo": "img/act-hussain.jpg"
   },
   "soloinst": {
    "slug": "solo-instrumentalists",
@@ -168,7 +177,8 @@
      "Is a solo instrumentalist loud enough for a big venue?",
      "Sound is arranged to suit the venue. Tell us the space and guest count so the setup is planned properly."
     ]
-   ]
+   ],
+   "photo": "img/act-sivamanisolo.jpg"
   },
   "duotrio": {
    "slug": "duos-and-trios",
@@ -185,7 +195,8 @@
      "Can a trio play a full evening?",
      "Many can, with breaks. Share your timings and we will confirm."
     ]
-   ]
+   ],
+   "photo": "img/act-jassibabbal.jpg"
   },
   "magic": {
    "slug": "magicians-and-mentalists",
@@ -202,7 +213,8 @@
      "Can a magician or mentalist work a cocktail hour?",
      "Often yes. Close-up and walk-around sets suit cocktail hours, while a stage show suits a seated crowd. Tell us the format when you enquire."
     ]
-   ]
+   ],
+   "photo": "img/act-suhani.jpg"
   },
   "comedy": {
    "slug": "comedians",
@@ -219,7 +231,8 @@
      "How long is a typical comedy set?",
      "Most sets run from 30 to 60 minutes. Tell us the slot you have and we will confirm what each comedian can do."
     ]
-   ]
+   ],
+   "photo": "img/act-bassi.jpg"
   },
   "bollyrock": {
    "slug": "bollywood-rock-bands",
@@ -236,7 +249,8 @@
      "How loud is a rock band at a banquet?",
      "Volume can be managed. Tell us the venue and any sound limits."
     ]
-   ]
+   ],
+   "photo": "img/act-parikrama.jpg"
   },
   "sufiq": {
    "slug": "sufi-qawwali-groups",
@@ -253,7 +267,8 @@
      "How many people perform?",
      "Group sizes vary from small ensembles to a full chorus. Share the venue size and we will recommend the right setup."
     ]
-   ]
+   ],
+   "photo": "img/act-legendary-wadalis.jpg"
   },
   "western": {
    "slug": "western-bands",
@@ -270,7 +285,8 @@
      "Are western bands suitable for weddings?",
      "They suit cocktail nights and receptions, especially with younger or international guests."
     ]
-   ]
+   ],
+   "photo": "img/act-motherjane.jpg"
   },
   "djperc": {
    "slug": "dj-and-percussion",
@@ -287,7 +303,8 @@
      "Can they play for a baraat?",
      "Several acts suit a baraat or entry. Mention it when you enquire."
     ]
-   ]
+   ],
+   "photo": "img/act-maneswita.jpg"
   },
   "instrband": {
    "slug": "instrumental-bands",
@@ -304,7 +321,8 @@
      "Can they play Bollywood songs?",
      "Yes, many arrange popular Bollywood and English songs."
     ]
-   ]
+   ],
+   "photo": "img/act-bombaychamber.jpg"
   },
   "devotional": {
    "slug": "devotional-and-bhajan-singers",
@@ -321,7 +339,8 @@
      "Which languages do they sing in?",
      "Hindi, Punjabi and Gujarati are common. Share your preference when you enquire."
     ]
-   ]
+   ],
+   "photo": "img/act-saleem.jpg"
   },
   "allgirl": {
    "slug": "all-girl-bands",
@@ -338,7 +357,8 @@
      "Are they available across India?",
      "Several travel. Tell us your city and date and we will confirm."
     ]
-   ]
+   ],
+   "photo": "img/act-streeshakti.jpg"
   },
   "ghazal": {
    "slug": "ghazal-and-classical-singers",
@@ -355,7 +375,8 @@
      "What setup do they need?",
      "Usually a small stage, sound and seating. We confirm details before you book."
     ]
-   ]
+   ],
+   "photo": "img/act-papon.jpg"
   },
   "standup": {
    "slug": "stand-up-comedians",
@@ -372,7 +393,8 @@
      "How long are the sets?",
      "Set length depends on the act and the event. Share your schedule and we will confirm."
     ]
-   ]
+   ],
+   "photo": "img/act-abhishek.jpg"
   },
   "rap": {
    "slug": "rappers",
@@ -389,7 +411,8 @@
      "Do they bring a DJ?",
      "Many do. Confirm the setup with us when you enquire."
     ]
-   ]
+   ],
+   "photo": "img/act-emiway.jpg"
   },
   "choir": {
    "slug": "choirs-and-carol-groups",
@@ -406,7 +429,8 @@
      "How many singers perform?",
      "It varies by group. Share your venue and we will recommend a size."
     ]
-   ]
+   ],
+   "photo": "img/cat-choir.jpg"
   },
   "rajfusion": {
    "slug": "rajasthani-folk-and-fusion",
@@ -423,7 +447,8 @@
      "Are they a fit for corporate events?",
      "Yes, for cultural evenings, festivals and themed nights."
     ]
-   ]
+   ],
+   "photo": "img/act-chugge.jpg"
   },
   "lounge": {
    "slug": "lounge-acts",
@@ -440,7 +465,8 @@
      "Are they suitable for restaurants and cafes?",
      "Yes, for hotel, restaurant and cafe nights."
     ]
-   ]
+   ],
+   "photo": "img/act-ayush.jpg"
   },
   "jazz": {
    "slug": "jazz-bands",
@@ -457,7 +483,8 @@
      "Which events suit jazz?",
      "Cocktail nights, lounges, corporate dinners and festivals."
     ]
-   ]
+   ],
+   "photo": "img/act-nirakar.jpg"
   },
   "bollyretro": {
    "slug": "bollywood-retro-acts",
@@ -474,7 +501,8 @@
      "Can the act take song requests?",
      "Often yes. Share your must-play songs when you enquire and we will confirm with the act."
     ]
-   ]
+   ],
+   "photo": "img/act-kunalg.jpg"
   },
   "intl": {
    "slug": "international-bands",
@@ -491,7 +519,8 @@
      "Can you arrange travel and stay?",
      "Yes. We plan travel and stay with you and include them in the quote."
     ]
-   ]
+   ],
+   "photo": "img/act-stellar.jpg"
   },
   "reality": {
    "slug": "indian-idol-and-reality-tv-singers",
@@ -508,7 +537,8 @@
      "How do I check availability?",
      "Share your date and city with us and we will confirm and send videos with a quote."
     ]
-   ]
+   ],
+   "photo": "img/act-salman.jpg"
   }
  },
  "occasions": {
@@ -1355,103 +1385,128 @@
  "tops": {
   "Top Wedding Bands": {
    "slug": "top-wedding-bands",
-   "intro": "Live bands for every kind of wedding: Bollywood and Punjabi bands, sufi and fusion groups, instrumental and jazz ensembles. Pick the style that fits your sangeet, reception or cocktail night."
+   "intro": "Live bands for every kind of wedding: Bollywood and Punjabi bands, sufi and fusion groups, instrumental and jazz ensembles. Pick the style that fits your sangeet, reception or cocktail night.",
+   "photo": "img/act-darshan.jpg"
   },
   "Top Wedding Singers": {
    "slug": "top-wedding-singers",
-   "intro": "Solo singers, duos, sufi and ghazal artists for weddings, from the ceremony and cocktail hour to the reception."
+   "intro": "Solo singers, duos, sufi and ghazal artists for weddings, from the ceremony and cocktail hour to the reception.",
+   "photo": "img/act-armaan.jpg"
   },
   "Top Choirs / Chorus Singers": {
    "slug": "top-choirs-chorus-singers",
-   "intro": "Choirs and chorus groups for weddings, carol evenings, corporate celebrations and festive events."
+   "intro": "Choirs and chorus groups for weddings, carol evenings, corporate celebrations and festive events.",
+   "photo": "img/cat-choir.jpg"
   },
   "Top Male DJ for Wedding": {
    "slug": "top-male-dj-for-wedding",
-   "intro": "Male DJs on our roster who play weddings, from the baraat and sangeet to the late-night reception."
+   "intro": "Male DJs on our roster who play weddings, from the baraat and sangeet to the late-night reception.",
+   "photo": "img/act-sukhbir.jpg"
   },
   "Top Female DJ for Wedding": {
    "slug": "top-female-dj-for-wedding",
-   "intro": "Female DJs on our roster who play weddings, from the sangeet to the reception dance floor."
+   "intro": "Female DJs on our roster who play weddings, from the sangeet to the reception dance floor.",
+   "photo": "img/act-perisha.jpg"
   },
   "Top Sangeet Singers": {
    "slug": "top-sangeet-singers",
-   "intro": "Singers and bands that bring sufi, Bollywood and live energy to the sangeet night."
+   "intro": "Singers and bands that bring sufi, Bollywood and live energy to the sangeet night.",
+   "photo": "img/act-nikhil2.jpg"
   },
   "Top Male Punjabi Wedding Singers": {
    "slug": "top-male-punjabi-wedding-singers",
-   "intro": "Male live singers and bands for Punjabi weddings and high-energy sangeets."
+   "intro": "Male live singers and bands for Punjabi weddings and high-energy sangeets.",
+   "photo": "img/act-gippy.jpg"
   },
   "Top Female Punjabi Wedding Singers": {
    "slug": "top-female-punjabi-wedding-singers",
-   "intro": "Female singers and all-girl bands for Punjabi weddings and sangeets."
+   "intro": "Female singers and all-girl bands for Punjabi weddings and sangeets.",
+   "photo": "img/act-baani.jpg"
   },
   "Top Sufi Artist and Singers": {
    "slug": "top-sufi-artists-and-singers",
-   "intro": "Sufi singers, bands and qawwali groups for weddings, mehfils, corporate evenings and festivals."
+   "intro": "Sufi singers, bands and qawwali groups for weddings, mehfils, corporate evenings and festivals.",
+   "photo": "img/act-divya.jpg"
   },
   "Top DJ Based Bands": {
    "slug": "top-dj-based-bands",
-   "intro": "Acts that combine a DJ set with live vocals, instruments or percussion for parties, sangeets and receptions."
+   "intro": "Acts that combine a DJ set with live vocals, instruments or percussion for parties, sangeets and receptions.",
+   "photo": "img/act-filmysthan.jpg"
   },
   "Top Live Sangeet Bands": {
    "slug": "top-live-sangeet-bands",
-   "intro": "Live bands that keep a sangeet moving, with Bollywood, Punjabi and retro sets for a mixed family crowd."
+   "intro": "Live bands that keep a sangeet moving, with Bollywood, Punjabi and retro sets for a mixed family crowd.",
+   "photo": "img/act-zikrr.jpg"
   },
   "Top Female Wedding Anchors": {
    "slug": "top-female-wedding-anchors",
-   "intro": "Female anchors who host weddings, sangeets and receptions and keep the programme running on time."
+   "intro": "Female anchors who host weddings, sangeets and receptions and keep the programme running on time.",
+   "photo": "img/act-sahibjeet.jpg"
   },
   "Top Male Wedding Anchors": {
    "slug": "top-male-wedding-anchors",
-   "intro": "Male anchors who host weddings, sangeets and receptions and keep the programme running on time."
+   "intro": "Male anchors who host weddings, sangeets and receptions and keep the programme running on time.",
+   "photo": "img/act-hussain.jpg"
   },
   "Top Male Corporate Anchors": {
    "slug": "top-male-corporate-anchors",
-   "intro": "Male anchors for corporate events, award nights, launches and annual days."
+   "intro": "Male anchors for corporate events, award nights, launches and annual days.",
+   "photo": "img/act-vishaal.jpg"
   },
   "Top Female Corporate Anchors": {
    "slug": "top-female-corporate-anchors",
-   "intro": "Female anchors for corporate events, award nights, launches and annual days."
+   "intro": "Female anchors for corporate events, award nights, launches and annual days.",
+   "photo": "img/act-megha.jpg"
   },
   "Top Celebrity Artists for Wedding": {
    "slug": "top-celebrity-artists-for-wedding",
-   "intro": "Celebrity singers and performers available for weddings and sangeets. Share your date and venue and we check availability."
+   "intro": "Celebrity singers and performers available for weddings and sangeets. Share your date and venue and we check availability.",
+   "photo": "img/act-honey.jpg"
   },
   "Top Sangeet DJs": {
    "slug": "top-sangeet-djs",
-   "intro": "DJs, and DJs with live percussion, who run the dance floor at sangeets."
+   "intro": "DJs, and DJs with live percussion, who run the dance floor at sangeets.",
+   "photo": "img/act-ravetek.jpg"
   },
   "Top Corporate Event Bands": {
    "slug": "top-corporate-event-bands",
-   "intro": "Bands for corporate dinners, galas and offsites, from live bands to jazz, western and instrumental groups."
+   "intro": "Bands for corporate dinners, galas and offsites, from live bands to jazz, western and instrumental groups.",
+   "photo": "img/act-bombaytux.jpg"
   },
   "Top New Year Party Acts": {
    "slug": "top-new-year-party-acts",
-   "intro": "DJs, bands and live acts for New Year parties. Book early, since the best acts fill their calendars months ahead."
+   "intro": "DJs, bands and live acts for New Year parties. Book early, since the best acts fill their calendars months ahead.",
+   "photo": "img/act-panda.jpg"
   },
   "Top Birthday Party Acts": {
    "slug": "top-birthday-party-acts",
-   "intro": "Singers, duos, lounge acts, magicians and instrumentalists for birthday parties and milestone celebrations."
+   "intro": "Singers, duos, lounge acts, magicians and instrumentalists for birthday parties and milestone celebrations.",
+   "photo": "img/act-pianowali.jpg"
   },
   "Top Female Celebrity Artists": {
    "slug": "top-female-celebrity-artists",
-   "intro": "Female celebrity artists and playback singers available for weddings, brand events and shows."
+   "intro": "Female celebrity artists and playback singers available for weddings, brand events and shows.",
+   "photo": "img/act-sunidhi.jpg"
   },
   "Top Male Celebrity Artists": {
    "slug": "top-male-celebrity-artists",
-   "intro": "Male celebrity artists and playback singers available for weddings, brand events and shows."
+   "intro": "Male celebrity artists and playback singers available for weddings, brand events and shows.",
+   "photo": "img/act-sonu.jpg"
   },
   "Top Grand Bands": {
    "slug": "top-grand-bands",
-   "intro": "Larger live and international bands for big stages, grand weddings and concert-style nights."
+   "intro": "Larger live and international bands for big stages, grand weddings and concert-style nights.",
+   "photo": "img/act-musicmansion.jpg"
   },
   "Top Sufi Bands": {
    "slug": "top-sufi-bands",
-   "intro": "Sufi Bollywood bands and qawwali groups for mehfils, sangeets and corporate evenings."
+   "intro": "Sufi Bollywood bands and qawwali groups for mehfils, sangeets and corporate evenings.",
+   "photo": "img/act-bismil.jpg"
   },
   "Top Ghazal and Classical Artists": {
    "slug": "top-ghazal-and-classical-artists",
-   "intro": "Ghazal and classical performers for refined evenings, anniversaries, dinners and cultural events."
+   "intro": "Ghazal and classical performers for refined evenings, anniversaries, dinners and cultural events.",
+   "photo": "img/act-rathijit.jpg"
   }
  },
  "wedding": {

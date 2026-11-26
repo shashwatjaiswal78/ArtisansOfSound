@@ -185,7 +185,7 @@ def city(c, acts, reg):
     body = (head_block(f"{len(mine)} acts in {c}", f"Live bands, DJs and singers in {c}", d["intro"], w) + (sec("Browse by category", links(combos)) if combos else "") + secs +
             sec("How to book", f'<div class="ubody"><p>{esc(d["tips"])}</p></div>') + faq_block(d["faq"]) + cta(w, CTA) +
             sec("More", links(([(f"/wedding/{WED['cities'][c]['slug']}/", f"Wedding artists in {c}")] if c in WED["cities"] else []) + [("/book/", "All categories"), ("/occasions/", "All occasions"), ("/artists/", "All artists")])))
-    write(["cities", d["slug"]], shell(url, title, desc, [("Home", "/"), ("Cities", "/cities/"), (c, f"/cities/{d['slug']}/")], body, sorted(mine, key=rank)[:CAP], d["faq"], f"Hi Artisans of Sound, I would like a quote for an event in {c}."))
+    write(["cities", d["slug"]], shell(url, title, desc, [("Home", "/"), (c, f"/cities/{d['slug']}/")], body, sorted(mine, key=rank)[:CAP], d["faq"], f"Hi Artisans of Sound, I would like a quote for an event in {c}."))
     return url
 
 def hub_item(e):
@@ -275,16 +275,14 @@ def build(acts, reg):
     first = lambda d: d["intro"].split(". ")[0].rstrip(".") + "."
     urls.append(hub(["book"], "Book artists by category | Artisans of Sound", "Book artists by category",
         "Live bands, DJs, singers, anchors, celebrity and special acts. Pick a category to see the acts and videos.",
-        [(f"/book/{L['formats'][k]['slug']}/", L["formats"][k]["name"], f"{na(sum(k in a['f'] for a in acts))}. {first(L['formats'][k])}") for k in reg["fmt"]], "Categories"))
+        [(f"/book/{L['formats'][k]['slug']}/", L["formats"][k]["name"], f"{na(sum(k in a['f'] for a in acts))}. {first(L['formats'][k])}", L["formats"][k].get("photo")) for k in reg["fmt"]], "Categories"))
     urls.append(hub(["occasions"], "Book artists by occasion | Artisans of Sound", "Book artists by occasion",
         "Weddings, sangeets, parties, corporate events and festivals. Find the right kind of act for your occasion.",
         [(f"/occasions/{L['occasions'][k]['slug']}/", L["occasions"][k]["name"], first(L["occasions"][k]), L["occasions"][k].get("photo")) for k in reg["occ"]], "Occasions"))
     urls.append(hub(["top"], "Top artist lists | Artisans of Sound", "Top artist lists",
         "Ready-made shortlists: top wedding bands, singers, DJs, anchors, sufi acts and more.",
-        [(f"/top/{L['tops'][t[0]]['slug']}/", t[0], L["tops"][t[0]]["intro"].split(". ")[0].rstrip(".") + ".") for t in A.TAX["TOP"] if t[0] in reg["top"]], "Top lists"))
-    urls.append(hub(["cities"], "Book artists by city | Artisans of Sound", "Book artists by city",
-        "Acts based in Delhi, Lucknow and Mumbai, plus a wider network that travels across India.",
-        [(f"/cities/{L['cities'][c]['slug']}/", c, f"{sum(a['city'] == c for a in acts)} acts based in {c}.") for c in reg["city"]], "Cities"))
+        [(f"/top/{L['tops'][t[0]]['slug']}/", t[0], L["tops"][t[0]]["intro"].split(". ")[0].rstrip(".") + ".", L["tops"][t[0]].get("photo")) for t in A.TAX["TOP"] if t[0] in reg["top"]], "Top lists"))
+    # no /cities/ hub page: the individual city pages stay, but nothing lists them in one place
     return [f"<url><loc>{u}</loc></url>" for u in urls]
 
 
