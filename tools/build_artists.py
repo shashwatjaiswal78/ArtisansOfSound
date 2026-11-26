@@ -214,12 +214,11 @@ def page(a, acts, reg):
 
 DISCLAIMER = (
     '<section class="asec adisc" aria-labelledby="adisc-h"><h2 id="adisc-h">Celebrity and third-party artists</h2>'
-    '<p>Artisans of Sound does not manage or represent the celebrity and third-party artists named on this site. '
-    'We contact their official management on your behalf to check availability and fees, and coordinate the booking.</p>'
-    '<p>A listing does not imply endorsement by or affiliation with the artist or their management. '
-    'Availability is not guaranteed, and fees are set by the artist\'s management and shared on request.</p>'
-    '<p>All names, images and trademarks belong to their owners. To change or remove a listing, email '
-    '<a href="mailto:artisanofsounds@gmail.com">artisanofsounds@gmail.com</a> and we will act within 48 hours.</p></section>\n')
+    '<p>Artisans of Sound does not manage, represent or hold exclusive rights to the celebrity and third-party artists named on this website. Where an artist is managed by another person or agency, we contact their official management on the client\'s behalf to check availability and fees, and we coordinate the booking from there.</p>'
+    '<p>Listing an artist on this website does not mean that the artist, their management or their agency endorses, sponsors or is affiliated with Artisans of Sound. Availability is not guaranteed, and every booking depends on the artist\'s confirmation and the terms set by their management.</p>'
+    '<p>Fees for these artists are set by the artist or their management, may change without notice, and are shared only on request for a specific date, city and event.</p>'
+    '<p>All artist names, images, logos and trademarks belong to their respective owners and are used only to identify the artist for booking enquiries. If you are an artist or represent one and would like a listing changed or removed, write to us at <a href="mailto:artisanofsounds@gmail.com">artisanofsounds@gmail.com</a> and we will act on it within 48 hours.</p>'
+    '</section>\n')
 
 PLAYER = r'''<script>(function(){var s=document.getElementById("astage");if(!s)return;
 function emb(u){var m;
