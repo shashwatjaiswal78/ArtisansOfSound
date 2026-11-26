@@ -226,6 +226,26 @@
       "source": "/artists/suyash-medh",
       "destination": "/book/solo-singers/",
       "permanent": false
+    },
+    {
+      "source": "/artists/joshua/",
+      "destination": "/book/bollywood-live/mumbai/",
+      "permanent": false
+    },
+    {
+      "source": "/artists/joshua",
+      "destination": "/book/bollywood-live/mumbai/",
+      "permanent": false
+    },
+    {
+      "source": "/artists/navjot/",
+      "destination": "/book/bollywood-live/delhi/",
+      "permanent": false
+    },
+    {
+      "source": "/artists/navjot",
+      "destination": "/book/bollywood-live/delhi/",
+      "permanent": false
     }
   ]
 }
