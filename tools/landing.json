@@ -1,15 +1,32 @@
 {
  "formats": {
-  "live": {
-   "slug": "live-bands",
-   "name": "Bollywood and Punjabi live bands",
-   "h1": "Bollywood and Punjabi live bands to book in India",
-   "intro": "A live band turns a function into an event. Our roster covers Bollywood, Punjabi, retro and pop sets, from tight five-piece bands for a sangeet to larger groups for a reception or concert-style night.",
-   "tips": "Start with the room and the crowd. Ask how long the band plays, how many sets it can break into, and whether it brings its own sound and backline. A band that can mix Bollywood and Punjabi hits with a few English numbers suits a mixed family crowd best.",
+  "bollylive": {
+   "slug": "bollywood-live",
+   "name": "Bollywood live bands and singers",
+   "h1": "Bollywood live bands and singers to book in India",
+   "intro": "Playback singers and live bands that perform Bollywood hits, from chartbusters to melodies guests sing along to. Our roster covers solo celebrity singers and full bands for weddings, sangeets, receptions and concert-style nights.",
+   "tips": "Share the mood of the evening and the crowd. Ask for the song mix, how long the act plays and whether it brings its own sound and backline. A set that blends current Bollywood hits with a few retro favourites suits a mixed family crowd best.",
    "faq": [
     [
      "How do I choose between a live band and a DJ?",
      "A live band brings energy and a stage moment, while a DJ keeps the floor going for hours. Many weddings book a band for the first part of the night and a DJ after it. Our guide on choosing between a DJ and a live band explains the trade-offs."
+    ],
+    [
+     "Can a band play a custom set for my event?",
+     "Often yes. Share the mood, languages and any must-play songs when you enquire and we will confirm what each band can do before you book."
+    ]
+   ]
+  },
+  "punjabi": {
+   "slug": "punjabi-live",
+   "name": "Punjabi singers and live bands",
+   "h1": "Punjabi singers and live bands to book in India",
+   "intro": "Punjabi stars and live bands that bring bhangra, pop and folk-led sets to weddings, sangeets and receptions. Our roster covers headline celebrity singers as well as bands that play a full Punjabi set for a dancing crowd.",
+   "tips": "Decide whether you want a big-name appearance or a full band set, because they are booked differently. Ask for the repertoire, the language mix and how long the act plays. For a wedding, a few Bollywood numbers alongside the Punjabi hits keep every guest on the floor.",
+   "faq": [
+    [
+     "Can a Punjabi act also play Bollywood songs?",
+     "Many can. Tell us the mix you want when you enquire and we will confirm what each act performs before you book."
     ],
     [
      "Can a band play a custom set for my event?",
@@ -468,7 +485,8 @@
    "intro": "A wedding has many moments, and each one needs a different kind of act. We help you build the line-up, from the baraat and ceremony to the sangeet and reception.",
    "tips": "Map the day first, then match acts to moments: a singer or instrumentalist for the ceremony, a band for the sangeet, a DJ for the late night. Share the dates, venues and guest count, and we will suggest a mix and send videos with a quote.",
    "formats": [
-    "live",
+    "bollylive",
+    "punjabi",
     "solosing",
     "dj",
     "sufibolly",
@@ -493,7 +511,8 @@
    "intro": "The sangeet is the loudest, most personal night of the wedding. The right act keeps families on the floor and the programme moving.",
    "tips": "Pair a high-energy band or DJ with an anchor to run performances and games. Share the family mix so the set list works for all ages.",
    "formats": [
-    "live",
+    "bollylive",
+    "punjabi",
     "djband",
     "dj",
     "anchor",
@@ -518,7 +537,8 @@
    "intro": "A reception needs music that feels polished and keeps a mixed crowd comfortable, from arrival to the last dance.",
    "tips": "Plan a quieter first hour with a singer, instrumentalist or duo, and move to a band or DJ for the dance floor. Share the timeline and stage space.",
    "formats": [
-    "live",
+    "bollylive",
+    "punjabi",
     "solosing",
     "duotrio",
     "dj",
@@ -594,7 +614,8 @@
     "solosing",
     "duotrio",
     "dj",
-    "live",
+    "bollylive",
+    "punjabi",
     "soloinst"
    ],
    "faq": [
@@ -665,7 +686,8 @@
    "formats": [
     "solosing",
     "dj",
-    "live",
+    "bollylive",
+    "punjabi",
     "duotrio",
     "magiccomedy"
    ],
@@ -714,7 +736,8 @@
     "solosing",
     "duotrio",
     "soloinst",
-    "live"
+    "bollylive",
+    "punjabi"
    ],
    "faq": [
     [
@@ -829,7 +852,8 @@
    "intro": "Diwali parties run from family evenings to corporate celebrations. Bands, singers and DJs set the festive mood.",
    "tips": "Book early, because festive dates fill fast. Share the format of the evening and the guest mix.",
    "formats": [
-    "live",
+    "bollylive",
+    "punjabi",
     "solosing",
     "dj",
     "sufibolly",
@@ -853,7 +877,8 @@
    "intro": "Garba and dandiya nights need rhythm, folk songs and a crowd that keeps moving. Live singers and DJs bring the beat.",
    "tips": "Ask for a set that suits circle dances and traditional steps. Confirm the sound, stage and floor space.",
    "formats": [
-    "live",
+    "bollylive",
+    "punjabi",
     "dj",
     "djperc",
     "devotional",
@@ -880,7 +905,8 @@
     "dj",
     "djband",
     "djperc",
-    "live",
+    "bollylive",
+    "punjabi",
     "rajfusion"
    ],
    "faq": [
@@ -923,7 +949,8 @@
    "tips": "Book early in the festive season. Share the setting and the mix of carols and party songs.",
    "formats": [
     "choir",
-    "live",
+    "bollylive",
+    "punjabi",
     "western",
     "dj",
     "solosing"
@@ -947,7 +974,8 @@
    "tips": "Book as early as possible, since the best acts fill their calendars months ahead. Share the venue, capacity and the sets you want before and after midnight.",
    "formats": [
     "dj",
-    "live",
+    "bollylive",
+    "punjabi",
     "djband",
     "western",
     "celeb"
@@ -971,7 +999,8 @@
    "tips": "Share the budget range, the venue and the headline slot. Ask about sound, backline and set length.",
    "formats": [
     "dj",
-    "live",
+    "bollylive",
+    "punjabi",
     "bollyrock",
     "rap",
     "celeb"
@@ -994,7 +1023,8 @@
    "intro": "From annual dinners to team celebrations, corporate events need acts that are reliable, on time and right for the audience.",
    "tips": "Share the audience profile, the programme and any content guidelines. We handle the contract and the coordination.",
    "formats": [
-    "live",
+    "bollylive",
+    "punjabi",
     "anchor",
     "dj",
     "solosing",
@@ -1022,7 +1052,8 @@
     "celeb",
     "anchor",
     "dj",
-    "live",
+    "bollylive",
+    "punjabi",
     "magiccomedy"
    ],
    "faq": [
@@ -1044,7 +1075,8 @@
    "tips": "Share the run of show and the stage. An anchor and one or two performances keep it on schedule.",
    "formats": [
     "anchor",
-    "live",
+    "bollylive",
+    "punjabi",
     "solosing",
     "magiccomedy",
     "celeb"
@@ -1070,7 +1102,8 @@
     "solosing",
     "duotrio",
     "lounge",
-    "live",
+    "bollylive",
+    "punjabi",
     "western"
    ],
    "faq": [
@@ -1142,7 +1175,8 @@
     "dj",
     "solosing",
     "duotrio",
-    "live"
+    "bollylive",
+    "punjabi"
    ],
    "faq": [
     [
@@ -1165,7 +1199,8 @@
     "dj",
     "djperc",
     "djband",
-    "live"
+    "bollylive",
+    "punjabi"
    ],
    "faq": [
     [

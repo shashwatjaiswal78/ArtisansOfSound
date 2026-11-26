@@ -51,6 +51,41 @@
       "source": "/artists/veronika-x-taishul/",
       "destination": "/artists/taishul/",
       "permanent": true
+    },
+    {
+      "source": "/book/live-bands/",
+      "destination": "/book/bollywood-live/",
+      "permanent": true
+    },
+    {
+      "source": "/book/live-bands/delhi/",
+      "destination": "/book/bollywood-live/delhi/",
+      "permanent": true
+    },
+    {
+      "source": "/book/live-bands/delhi",
+      "destination": "/book/bollywood-live/delhi/",
+      "permanent": true
+    },
+    {
+      "source": "/book/live-bands/lucknow/",
+      "destination": "/book/bollywood-live/lucknow/",
+      "permanent": true
+    },
+    {
+      "source": "/book/live-bands/lucknow",
+      "destination": "/book/bollywood-live/lucknow/",
+      "permanent": true
+    },
+    {
+      "source": "/book/live-bands/mumbai/",
+      "destination": "/book/bollywood-live/mumbai/",
+      "permanent": true
+    },
+    {
+      "source": "/book/live-bands/mumbai",
+      "destination": "/book/bollywood-live/mumbai/",
+      "permanent": true
     }
   ]
 }

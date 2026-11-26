@@ -25,8 +25,12 @@
    "Choir, carol group"
   ],
   [
-   "live",
-   "Bollywood, Punjabi"
+   "bollylive",
+   "Bollywood live"
+  ],
+  [
+   "punjabi",
+   "Punjabi live"
   ],
   [
    "bollyretro",
@@ -286,7 +290,31 @@
   ]
  ],
  "FO": {
-  "live": [
+  "bollylive": [
+   "newyear",
+   "wedding",
+   "reception",
+   "sangeet",
+   "haldi",
+   "birthday",
+   "diwali",
+   "garba",
+   "christmas",
+   "house",
+   "college",
+   "corporate",
+   "engagement",
+   "mehendi",
+   "retirement",
+   "housewarming",
+   "bachelor",
+   "launch",
+   "annualday",
+   "venue",
+   "pool",
+   "holi"
+  ],
+  "punjabi": [
    "newyear",
    "wedding",
    "reception",
@@ -784,12 +812,17 @@
   ]
  },
  "FG": {
-  "live": [
+  "bollylive": [
    "bollywood",
    "retro",
-   "punjabi",
    "pop",
    "rock",
+   "open"
+  ],
+  "punjabi": [
+   "punjabi",
+   "pop",
+   "folk",
    "open"
   ],
   "bollyretro": [
@@ -930,7 +963,8 @@
   ]
  },
  "LAB": {
-  "live": "Live band",
+  "bollylive": "Live band",
+  "punjabi": "Punjabi live act",
   "djband": "DJ based band",
   "allgirl": "All-girl band",
   "dj": "DJ",
@@ -1230,7 +1264,8 @@
   [
    "Top Wedding Bands",
    [
-    "live",
+    "bollylive",
+    "punjabi",
     "djband",
     "allgirl",
     "intl",
@@ -1293,7 +1328,8 @@
    [
     "sufibolly",
     "sufiq",
-    "live"
+    "bollylive",
+    "punjabi"
    ],
    [
     "sangeet"
@@ -1302,7 +1338,7 @@
   [
    "Top Male Punjabi Wedding Singers",
    [
-    "live"
+    "punjabi"
    ],
    [
     "wedding"
@@ -1312,7 +1348,7 @@
   [
    "Top Female Punjabi Wedding Singers",
    [
-    "live",
+    "punjabi",
     "allgirl"
    ],
    [
@@ -1338,7 +1374,8 @@
   [
    "Top Live Sangeet Bands",
    [
-    "live"
+    "bollylive",
+    "punjabi"
    ],
    [
     "sangeet"
@@ -1406,7 +1443,8 @@
   [
    "Top Corporate Event Bands",
    [
-    "live",
+    "bollylive",
+    "punjabi",
     "intl",
     "western",
     "jazz",
@@ -1425,7 +1463,8 @@
     "djperc",
     "djband",
     "intl",
-    "live",
+    "bollylive",
+    "punjabi",
     "allgirl"
    ],
    [
@@ -1456,7 +1495,8 @@
   [
    "Top Grand Bands",
    [
-    "live",
+    "bollylive",
+    "punjabi",
     "intl"
    ],
    []
