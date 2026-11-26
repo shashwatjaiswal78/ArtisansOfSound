@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Business pages for the people who buy entertainment in volume: /for-planners/, /corporate/, /hotels/ and /destination-events/.
+"""Business pages for the people who buy entertainment in volume: /for-planners/, /corporate/, /hotels/, /destination-events/ and /other-events/.
 Run by tools/build.py. Edit the copy in PAGES below, then rebuild. No prices are shown on these pages on purpose."""
 import build_updates as U
 import build_landing as B
@@ -15,6 +15,9 @@ def fcard(key, title=None, sub=None):
 def ocard(key, title=None, sub=None):
     d = L["occasions"][key]
     return (f"/occasions/{d['slug']}/", title or d["name"], sub or first(d), d.get("photo"))
+def qcard(seg, key, title, sub, kind="fmt"):
+    d = L["formats" if kind == "fmt" else "occasions"][key]
+    return (f"/?for={seg}#enquiry", title, sub, d.get("photo"))
 def cards(items):
     return '<ul class="hublist">' + "".join(B.hub_item(e) for e in items) + "</ul>"
 
@@ -90,6 +93,8 @@ PAGES = [
      fcard("anchor", "Anchors and emcees", "Hosts for award nights, annual days and launches, in Hindi, English and regional languages."),
      fcard("instrband", "Instrumental and welcome acts", "Solo instrumentalists, duos and jazz or acoustic ensembles for arrivals, networking and dinners."),
      fcard("celeb", "Celebrity and special acts", "Well-known singers, comedians, magicians and performers, where your budget and date allow."),
+     qcard("corporate", "djband", "Dealer meets and sales conferences", "DJ-based bands, hosts and high-energy acts for dealer meets, conferences and gala dinners."),
+     qcard("corporate", "magic", "Employee engagement events", "Magicians, mentalists, comedians and interactive acts for team days and offsites."),
    ])),
    ("How a corporate booking works", steps([
      ("Share the brief", "Event type, city, date, audience size, venue, and a rough budget."),
@@ -121,6 +126,11 @@ PAGES = [
      fcard("jazz", "Sunday: jazz brunch", "Jazz, piano or instrumental acts for a relaxed afternoon."),
      fcard("sufibolly", "Monthly: Sufi or ghazal evening", "A special night that gives guests a reason to book ahead."),
    ])),
+   ("Resident and seasonal programming", cards([
+     fcard("dj", "Resident DJs", "A regular DJ for lounge, poolside and weekend nights."),
+     ocard("diwali", "Festive entertainment", "Holi, Diwali and Christmas programmes that give guests a reason to visit."),
+     ocard("newyear", "New Year's Eve programming", "A full New Year's Eve line-up: live acts, DJs and a host."),
+   ])),
    ("What a programme includes", steps([
      ("A plan for your venue", "We learn your guests, your slow and busy nights and your room, then propose a schedule and a mix of acts."),
      ("Artist rotation", "Different acts through the month so regulars see something new."),
@@ -133,6 +143,38 @@ PAGES = [
        ("Who pays for sound equipment?", "It depends on the venue and the act. We confirm sound needs for each artist and agree who provides what before the programme starts."),
        ("How is a programme priced?", "It depends on the number of performances, the acts and your venue. Share the nights you want covered and a budget range, and we send a quote."),
        ("Do you work with venues outside Delhi NCR?", "Yes. We have artists in many states. Tell us the city and we check who can perform there regularly.")],
+ ),
+ dict(
+  slug="other-events", name="Other events", seg="other",
+  title="Live Entertainment for Festivals, College Fests and Private Events | Artisans of Sound",
+  desc="Bands, DJs and performers for college festivals, music festivals, cultural and government events, exhibitions, private parties and brand collaborations across India.",
+  kicker="Festivals, fests, private and special events",
+  h1="Live entertainment for every other kind of event",
+  lead="College fests, festivals, cultural programmes, exhibitions, private parties and brand collaborations. Tell us the event and the crowd, and we suggest the acts and send one clear quote.",
+  wa="Hi Artisans of Sound, I would like entertainment options for an event.",
+  cta1="Plan an event on WhatsApp", seg_q="other",
+  acts=dict(formats=("intl", "bollyrock", "western", "dj", "rap"), occs=("college", "house", "birthday"), title="Popular for fests and parties"),
+  sections=[
+   ("What we cover", cards([
+     ocard("college", "College festivals", "DJs, bands, rappers and celebrity performers for fest nights and cultural evenings."),
+     qcard("other", "bollyrock", "Music festivals and concerts", "Rock, Bollywood and live bands for ticketed shows and open-air festivals."),
+     qcard("other", "rajfusion", "Government and cultural events", "Folk, classical and ghazal acts for cultural programmes and official functions."),
+     qcard("other", "lounge", "Exhibitions and trade shows", "Instrumentalists and lounge acts for exhibition openings and networking evenings."),
+     ocard("house", "Private parties", "Singers, DJs and hosts for birthdays, house parties and family celebrations."),
+     fcard("intl", "International acts", "International bands and performers, where dates and travel allow."),
+     ocard("launch", "Brand collaborations", "Artists and performers for brand activations, launches and campaigns."),
+   ])),
+   ("How it works", steps([
+     ("Share the brief", "Event type, city, date, audience size, venue and a rough budget."),
+     ("We shortlist", "A shortlist with videos and one clear quote within 24 hours."),
+     ("Confirm in writing", "An advance and written confirmation of the artist, fee and timings."),
+     ("We coordinate to the event", "We stay in touch with the artists and your team on travel, sound and timings."),
+   ])),
+  ],
+  faq=[("Can you supply a full line-up for a festival?", "Tell us the format, the crowd and the budget. We suggest acts across headliners, supporting bands and DJs, and send one quote."),
+       ("Do you handle college fests outside Delhi NCR?", "Yes. We have artists in many states. Share the city and dates and we check who is available."),
+       ("Can you help with brand collaborations?", "Yes. Send the brief and we suggest artists and performers that suit the brand and the audience, and quote for the activation."),
+       ("Do you supply sound, stage and lighting?", "Many acts bring basic sound, and bigger events need a full production. Tell us the venue and we confirm what each act needs and what is included.")],
  ),
 ]
 
