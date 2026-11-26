@@ -207,10 +207,19 @@ def page(a, acts, reg):
       + why_html + vids + occ_html + gen_html +
       f'    <div class="ucta"><h2>Planning an event?</h2><p>Tell us the date, city and venue. We check {esc(n)}\'s availability and send '+('' if celeb else 'videos with ')+'a clear quote within 24 hours.</p>'
       f'<div class="ask"><a class="dark-pill" href="/#enquiry">Get a quote</a><a class="ghost-pill" href="{esc(wa)}" target="_blank" rel="noopener">Message us on WhatsApp</a></div></div>\n'
-      + rel_html + '  </article>\n</main>\n'
+      + rel_html + DISCLAIMER + '  </article>\n</main>\n'
       f'<a class="uwa" href="{esc(wa)}" target="_blank" rel="noopener" aria-label="Message us on WhatsApp">WhatsApp</a>\n' + U.FOOTER + PLAYER + U.tail + '</body></html>\n')
     d = os.path.join(ROOT, "artists", a["slug"]); os.makedirs(d)
     open(os.path.join(d, "index.html"), "w", encoding="utf8").write(body)
+
+DISCLAIMER = (
+    '<section class="asec adisc" aria-labelledby="adisc-h"><h2 id="adisc-h">Celebrity and third-party artists</h2>'
+    '<p>Artisans of Sound does not manage or represent the celebrity and third-party artists named on this site. '
+    'We contact their official management on your behalf to check availability and fees, and coordinate the booking.</p>'
+    '<p>A listing does not imply endorsement by or affiliation with the artist or their management. '
+    'Availability is not guaranteed, and fees are set by the artist\'s management and shared on request.</p>'
+    '<p>All names, images and trademarks belong to their owners. To change or remove a listing, email '
+    '<a href="mailto:artisanofsounds@gmail.com">artisanofsounds@gmail.com</a> and we will act within 48 hours.</p></section>\n')
 
 PLAYER = r'''<script>(function(){var s=document.getElementById("astage");if(!s)return;
 function emb(u){var m;
