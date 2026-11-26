@@ -140,6 +140,8 @@ def page(a, acts, reg):
                  ("Artisans of Sound handles the whole booking: we check availability for your date, " + ("" if celeb else "send videos and ") + "give you one clear quote within 24 hours, "
                   "with a replacement act arranged if anyone drops out.")]
         facts = []; why = []
+    # every artist text ends with the booking line; the third-party notice follows it in the same paragraph
+    if paras: paras = list(paras[:-1]) + [paras[-1] + " " + THIRD_PARTY]
     fl = f"/book/{reg['fmt'][a['main']]}/" if a["main"] in reg["fmt"] else None
     cl = f"/cities/{reg['city'][a['city']]}/" if a["city"] in reg["city"] else None
     chips = [("Format", a["fmt_label"], fl)] + ([("Based in", a["city"], cl)] if a["city"] != "Pan-India" else []) + [("Available", "Across India", None)]
@@ -214,6 +216,8 @@ def page(a, acts, reg):
 
 # The full disclaimer lives only on /terms.html; every page footer carries the short notice with a link to it.
 DISCLAIMER = ""
+
+THIRD_PARTY = ("Artisans of Sound does not manage or represent the celebrity and third-party artists named on this site, and a listing does not imply endorsement by or affiliation with the artist or their management. All names, images and trademarks belong to their owners.")
 
 PLAYER = r'''<script>(function(){var s=document.getElementById("astage");if(!s)return;
 function emb(u){var m;
