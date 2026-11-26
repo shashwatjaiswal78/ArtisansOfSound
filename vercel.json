@@ -106,6 +106,16 @@
       "source": "/top/top-female-celebrity-for-appearances",
       "destination": "/top/top-female-celebrity-artists/",
       "permanent": true
+    },
+    {
+      "source": "/artists/wadali-brothers/",
+      "destination": "/artists/the-legendary-wadalis/",
+      "permanent": true
+    },
+    {
+      "source": "/artists/wadali-brothers",
+      "destination": "/artists/the-legendary-wadalis/",
+      "permanent": true
     }
   ]
 }
