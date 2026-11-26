@@ -11,7 +11,7 @@ import build_artists as A
 ROOT, SITE, esc = U.ROOT, U.SITE, U.esc
 L = json.load(open(os.path.join(ROOT, "tools", "landing.json"), encoding="utf8"))
 LAB, OCC = A.LAB, A.OCC
-MIN_FMT, MIN_OCC, MIN_CITY, MIN_COMBO = 1, 1, 3, 3
+MIN_FMT, MIN_OCC, MIN_CITY, MIN_COMBO = 1, 1, 3, 1   # a category appears in a city as soon as one act matches
 CAP = 72
 _dims = {}
 
@@ -123,13 +123,14 @@ def combo(k, c, acts, reg):
     d = L["formats"][k]; cd = L["cities"][c]; mine = [a for a in acts if k in a["f"] and a["city"] == c]
     name = d["name"]; ph = A.phrase(name); url = f"{SITE}/book/{d['slug']}/{cd['slug']}/"
     title = f"{name} in {c} | Artisans of Sound"
-    desc = trim(f"Book {ph} in {c}: {len(mine)} acts based in the city, with videos and one clear quote within 24 hours.")
+    desc = trim(f"Book {ph} in {c}: {na(len(mine))} based in the city, with videos and one clear quote within 24 hours.")
     names = [a["base"] for a in sorted(mine, key=rank)[:3]]
     ex = names[0] if len(names) == 1 else ", ".join(names[:-1]) + " and " + names[-1]
-    intro = (f"{len(mine)} {ph} based in {c} are on the Artisans of Sound roster, including {ex}. "
+    intro = ((f"{ex} is on the Artisans of Sound roster as one of our {ph} based in {c}. " if len(mine) == 1 else
+              f"{len(mine)} {ph} based in {c} are on the Artisans of Sound roster, including {ex}. ") +
              f"Acts from our wider network can also travel to {c}.")
     w = wa(f"Hi Artisans of Sound, I am looking for {ph} in {c}.")
-    body = (head_block(f"{len(mine)} acts in {c}", f"{name} in {c}", intro, w) + sec(f"{name} based in {c}", grid(mine, ctx=[k])) +
+    body = (head_block(f"{na(len(mine))} in {c}", f"{name} in {c}", intro, w) + sec(f"{name} based in {c}", grid(mine, ctx=[k])) +
             sec("How to choose", f'<div class="ubody"><p>{esc(d["tips"])}</p></div>') +
             sec("See more", links([(f"/book/{d['slug']}/", f"All {ph} across India"), (f"/cities/{cd['slug']}/", f"All acts in {c}")])) + cta(w, CTA))
     write(["book", d["slug"], cd["slug"]], shell(url, title, desc, [("Home", "/"), ("Categories", "/book/"), (name, f"/book/{d['slug']}/"), (c, f"/book/{d['slug']}/{cd['slug']}/")], body, sorted(mine, key=rank), None, f"Hi Artisans of Sound, I am looking for {ph} in {c}."))
