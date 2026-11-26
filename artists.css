@@ -49,6 +49,10 @@
 .hublist{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
 .hublist a{display:grid;gap:4px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;text-decoration:none;color:var(--ink);height:100%}
 .hublist b{font-size:18px}.hublist span{color:var(--ink2);font-size:15px;line-height:1.45}.hublist a:hover{border-color:var(--ink)}
+.hublist a.hasimg{grid-template-columns:72px minmax(0,1fr);gap:0 16px;align-items:center}
+.hublist .hubimg{display:block;width:72px;height:72px;border-radius:12px;overflow:hidden;background:var(--line)}
+.hublist .hubimg img{display:block;width:100%;height:100%;object-fit:cover}
+.hublist .hubtxt{display:grid;gap:4px;min-width:0}
 @media (max-width:700px){.hublist{grid-template-columns:minmax(0,1fr)}.agrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}}
 
 /* Why book */

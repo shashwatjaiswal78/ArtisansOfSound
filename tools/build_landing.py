@@ -188,10 +188,18 @@ def city(c, acts, reg):
     write(["cities", d["slug"]], shell(url, title, desc, [("Home", "/"), ("Cities", "/cities/"), (c, f"/cities/{d['slug']}/")], body, sorted(mine, key=rank)[:CAP], d["faq"], f"Hi Artisans of Sound, I would like a quote for an event in {c}."))
     return url
 
+def hub_item(e):
+    """One card on a hub page. An optional 4th value is a photo shown at the left of the card."""
+    h, t, sub = e[0], e[1], e[2]
+    img = e[3] if len(e) > 3 and e[3] else ""
+    if not img: return f'<li><a href="{h}"><b>{esc(t)}</b><span>{esc(sub)}</span></a></li>'
+    return (f'<li><a class="hasimg" href="{h}"><span class="hubimg"><img src="/{esc(img)}" alt="" width="72" height="72" loading="lazy"></span>'
+            f'<span class="hubtxt"><b>{esc(t)}</b><span>{esc(sub)}</span></span></a></li>')
+
 def hub(parts, title, h1, intro, entries, crumb_name):
     url = f"{SITE}/{'/'.join(parts)}/"
     body = (f'    <p class="kicker">{len(entries)} pages</p>\n    <h1 class="uh">{esc(h1)}</h1>\n    <p class="alead">{esc(intro)}</p>\n' +
-            '<ul class="hublist">' + "".join(f'<li><a href="{h}"><b>{esc(t)}</b><span>{esc(s)}</span></a></li>' for h, t, s in entries) + '</ul>\n' + cta(wa("Hi Artisans of Sound, I would like a quote for an event."), CTA))
+            '<ul class="hublist">' + "".join(hub_item(e) for e in entries) + '</ul>\n' + cta(wa("Hi Artisans of Sound, I would like a quote for an event."), CTA))
     write(parts, shell(url, title, trim(intro), [("Home", "/"), (crumb_name, f"/{'/'.join(parts)}/")], body))
     return url
 
@@ -270,7 +278,7 @@ def build(acts, reg):
         [(f"/book/{L['formats'][k]['slug']}/", L["formats"][k]["name"], f"{na(sum(k in a['f'] for a in acts))}. {first(L['formats'][k])}") for k in reg["fmt"]], "Categories"))
     urls.append(hub(["occasions"], "Book artists by occasion | Artisans of Sound", "Book artists by occasion",
         "Weddings, sangeets, parties, corporate events and festivals. Find the right kind of act for your occasion.",
-        [(f"/occasions/{L['occasions'][k]['slug']}/", L["occasions"][k]["name"], first(L["occasions"][k])) for k in reg["occ"]], "Occasions"))
+        [(f"/occasions/{L['occasions'][k]['slug']}/", L["occasions"][k]["name"], first(L["occasions"][k]), L["occasions"][k].get("photo")) for k in reg["occ"]], "Occasions"))
     urls.append(hub(["top"], "Top artist lists | Artisans of Sound", "Top artist lists",
         "Ready-made shortlists: top wedding bands, singers, DJs, anchors, sufi acts and more.",
         [(f"/top/{L['tops'][t[0]]['slug']}/", t[0], L["tops"][t[0]]["intro"].split(". ")[0].rstrip(".") + ".") for t in A.TAX["TOP"] if t[0] in reg["top"]], "Top lists"))

@@ -537,7 +537,8 @@
      "Can you plan music for the whole wedding?",
      "Yes. We shortlist, finalise and coordinate acts across the events, with one person to call."
     ]
-   ]
+   ],
+   "photo": "img/act-sonu.jpg"
   },
   "sangeet": {
    "slug": "sangeet",
@@ -564,7 +565,8 @@
      "Do you provide an anchor for the sangeet?",
      "Yes, we have anchors who host sangeets and coordinate family performances."
     ]
-   ]
+   ],
+   "photo": "img/act-tamasha.jpg"
   },
   "reception": {
    "slug": "reception",
@@ -591,7 +593,8 @@
      "Can I add a celebrity performance?",
      "Yes. Share the date and venue and we will check availability."
     ]
-   ]
+   ],
+   "photo": "img/act-bollytales.jpg"
   },
   "haldi": {
    "slug": "haldi",
@@ -615,7 +618,8 @@
      "Can artists perform outdoors in the daytime?",
      "Yes. Tell us the venue and we will confirm the setup."
     ]
-   ]
+   ],
+   "photo": "img/act-yellow.jpg"
   },
   "mehendi": {
    "slug": "mehendi",
@@ -639,7 +643,8 @@
      "Can the act perform at a home or a lawn?",
      "Yes. Share the space and the guest count."
     ]
-   ]
+   ],
+   "photo": "img/act-aishwarya.jpg"
   },
   "engagement": {
    "slug": "engagement-roka",
@@ -665,7 +670,8 @@
      "How big should the act be?",
      "Match it to the guest count and the venue."
     ]
-   ]
+   ],
+   "photo": "img/act-siddharth.jpg"
   },
   "baraat": {
    "slug": "baraat",
@@ -689,7 +695,8 @@
      "Do you arrange dhol players?",
      "Several acts on our roster include live percussion."
     ]
-   ]
+   ],
+   "photo": "img/act-hiten.jpg"
   },
   "pheras": {
    "slug": "musical-pheras",
@@ -713,7 +720,8 @@
      "Can we choose the songs?",
      "Yes. Share your list and we will confirm with the artist."
     ]
-   ]
+   ],
+   "photo": "img/act-himanshu.jpg"
   },
   "birthday": {
    "slug": "birthday",
@@ -740,7 +748,8 @@
      "Do you cover home parties?",
      "Yes, we match acts to home, banquet and restaurant venues."
     ]
-   ]
+   ],
+   "photo": "img/act-zaeden.jpg"
   },
   "kidsbday": {
    "slug": "kids-birthday",
@@ -764,7 +773,8 @@
      "How long should the entertainment run?",
      "It depends on the age group and the act. Share the schedule and we will suggest a length."
     ]
-   ]
+   ],
+   "photo": "img/act-mangesh.jpg"
   },
   "anniversary": {
    "slug": "anniversary",
@@ -790,7 +800,8 @@
      "Can the artist dedicate a song?",
      "Many can. Mention it when you enquire."
     ]
-   ]
+   ],
+   "photo": "img/act-anuv.jpg"
   },
   "babyshower": {
    "slug": "baby-shower",
@@ -815,7 +826,8 @@
      "Can an anchor run the games?",
      "Yes, many anchors host games and rituals."
     ]
-   ]
+   ],
+   "photo": "img/act-anupam.jpg"
   },
   "housewarming": {
    "slug": "housewarming",
@@ -838,7 +850,8 @@
      "Do you offer devotional singers?",
      "Yes, for pujas and chowkis."
     ]
-   ]
+   ],
+   "photo": "img/act-ankurc.jpg"
   },
   "retirement": {
    "slug": "retirement-farewell",
@@ -862,7 +875,8 @@
      "Do we need an anchor?",
      "Useful for speeches and tributes."
     ]
-   ]
+   ],
+   "photo": "img/act-raghav.jpg"
   },
   "bachelor": {
    "slug": "bachelor-bachelorette",
@@ -886,7 +900,8 @@
      "Can we add a live act?",
      "Yes, a DJ and percussionist or a band can add live energy."
     ]
-   ]
+   ],
+   "photo": "img/act-rink.jpg"
   },
   "diwali": {
    "slug": "diwali-party",
@@ -912,7 +927,8 @@
      "Do you cover corporate Diwali parties?",
      "Yes, with acts suited to office crowds."
     ]
-   ]
+   ],
+   "photo": "img/act-ranadholi.jpg"
   },
   "garba": {
    "slug": "garba-dandiya",
@@ -938,7 +954,8 @@
      "Can a DJ play garba music?",
      "Yes, with a set tuned for dandiya and garba."
     ]
-   ]
+   ],
+   "photo": "img/act-urvashi.jpg"
   },
   "holi": {
    "slug": "holi-party",
@@ -964,7 +981,8 @@
      "Which acts suit Holi?",
      "DJs, DJ and percussion acts, and energetic bands."
     ]
-   ]
+   ],
+   "photo": "img/act-perisha.jpg"
   },
   "chowki": {
    "slug": "mata-ki-chowki",
@@ -985,7 +1003,8 @@
      "Can an anchor help?",
      "Yes, for larger programmes."
     ]
-   ]
+   ],
+   "photo": "img/occ-chowki.jpg"
   },
   "christmas": {
    "slug": "christmas-party",
@@ -1011,7 +1030,8 @@
      "Can a band play both carols and party songs?",
      "Many can. Share your plan."
     ]
-   ]
+   ],
+   "photo": "img/act-elfe.jpg"
   },
   "newyear": {
    "slug": "new-year-party",
@@ -1037,7 +1057,8 @@
      "Can an act play across midnight?",
      "Yes. Share the schedule and we will plan the sets."
     ]
-   ]
+   ],
+   "photo": "img/act-chetas.jpg"
   },
   "college": {
    "slug": "college-fests",
@@ -1063,7 +1084,8 @@
      "Do you offer support acts?",
      "Yes, DJs and bands can fill pre-headline slots."
     ]
-   ]
+   ],
+   "photo": "img/act-mcsquare.jpg"
   },
   "corporate": {
    "slug": "corporate-events",
@@ -1091,7 +1113,8 @@
      "Do you have anchors and comedians?",
      "Yes, for hosting and entertainment."
     ]
-   ]
+   ],
+   "photo": "img/act-maneswita.jpg"
   },
   "launch": {
    "slug": "product-launch-brand-events",
@@ -1118,7 +1141,8 @@
      "Do you offer anchors?",
      "Yes, for launches and award nights."
     ]
-   ]
+   ],
+   "photo": "img/act-progressive.jpg"
   },
   "annualday": {
    "slug": "annual-day-award-nights",
@@ -1145,7 +1169,8 @@
      "Can we book a headline performance?",
      "Yes, share the budget and the date."
     ]
-   ]
+   ],
+   "photo": "img/act-shaan.jpg"
   },
   "venue": {
    "slug": "restaurant-cafe-hotel-nights",
@@ -1171,7 +1196,8 @@
      "How compact can the setup be?",
      "Solo and duo acts need very little space."
     ]
-   ]
+   ],
+   "photo": "img/act-izhar.jpg"
   },
   "brunch": {
    "slug": "brunch-lounge",
@@ -1195,7 +1221,8 @@
      "Can the act play a few sets?",
      "Yes, share the timings."
     ]
-   ]
+   ],
+   "photo": "img/act-pianowali.jpg"
   },
   "dinner": {
    "slug": "private-dinner",
@@ -1219,7 +1246,8 @@
      "Can the act play at a home or a small venue?",
      "Yes, compact acts suit homes and small venues. Share the space."
     ]
-   ]
+   ],
+   "photo": "img/act-nizamibrothers.jpg"
   },
   "house": {
    "slug": "house-party",
@@ -1244,7 +1272,8 @@
      "Do I need to arrange sound?",
      "Tell us what you have and we will confirm what to bring."
     ]
-   ]
+   ],
+   "photo": "img/act-osho.jpg"
   },
   "pool": {
    "slug": "pool-beach-party",
@@ -1269,7 +1298,8 @@
      "Do you arrange sound for outdoors?",
      "Tell us the venue and we will confirm."
     ]
-   ]
+   ],
+   "photo": "img/act-lijo.jpg"
   }
  },
  "cities": {
