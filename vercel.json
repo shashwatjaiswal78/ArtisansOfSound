@@ -176,6 +176,16 @@
       "source": "/artists/abhinav-narula",
       "destination": "/book/bollywood-rock-bands/",
       "permanent": false
+    },
+    {
+      "source": "/artists/naacheez/",
+      "destination": "/book/bollywood-live/lucknow/",
+      "permanent": false
+    },
+    {
+      "source": "/artists/naacheez",
+      "destination": "/book/bollywood-live/lucknow/",
+      "permanent": false
     }
   ]
 }
