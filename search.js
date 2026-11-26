@@ -4,7 +4,7 @@
   if (window.__aosSearch) return; window.__aosSearch = 1;
   var nav = document.querySelector('nav.nav'); if (!nav) return;
   var css = ".aos-sbtn{display:inline-flex;align-items:center;gap:8px;font:600 14px/1 inherit;font-family:inherit;color:inherit;background:transparent;border:1.5px solid currentColor;border-radius:999px;padding:9px 14px;cursor:pointer;white-space:nowrap}" +
-    ".aos-sbtn{margin-left:auto}.nav>ul{margin-left:auto!important}.bar.open .nav>ul{margin:0!important}" +
+    ".aos-sbtn{margin-left:auto}@media (min-width:901px){.nav{position:relative}.nav>ul{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);margin:0!important}}" +
     "@media (max-width:900px){.aos-sbtn{margin-left:0}.nav>.mbtn{margin-left:auto}}" +
     ".aos-sbtn:hover{opacity:.75}.aos-sbtn svg{flex:0 0 auto}" +
     "@media (max-width:700px){.aos-sbtn{padding:9px 10px}.aos-sbtn span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}}" +
