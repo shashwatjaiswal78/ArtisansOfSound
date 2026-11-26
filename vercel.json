@@ -216,6 +216,16 @@
       "source": "/artists/arush",
       "destination": "/book/bollywood-live/lucknow/",
       "permanent": false
+    },
+    {
+      "source": "/artists/suyash-medh/",
+      "destination": "/book/solo-singers/",
+      "permanent": false
+    },
+    {
+      "source": "/artists/suyash-medh",
+      "destination": "/book/solo-singers/",
+      "permanent": false
     }
   ]
 }
