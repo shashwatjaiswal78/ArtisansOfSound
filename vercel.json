@@ -136,6 +136,46 @@
       "source": "/artists/siraha-trio-harmeet-manseta-u-rajesh-sivamani",
       "destination": "/artists/siraha-trio/",
       "permanent": true
+    },
+    {
+      "source": "/artists/aqua-beats/",
+      "destination": "/book/dj-based-bands/",
+      "permanent": false
+    },
+    {
+      "source": "/artists/aqua-beats",
+      "destination": "/book/dj-based-bands/",
+      "permanent": false
+    },
+    {
+      "source": "/artists/blockbuster/",
+      "destination": "/book/dj-based-bands/",
+      "permanent": false
+    },
+    {
+      "source": "/artists/blockbuster",
+      "destination": "/book/dj-based-bands/",
+      "permanent": false
+    },
+    {
+      "source": "/artists/abhinav-nagpal/",
+      "destination": "/book/bollywood-rock-bands/",
+      "permanent": false
+    },
+    {
+      "source": "/artists/abhinav-nagpal",
+      "destination": "/book/bollywood-rock-bands/",
+      "permanent": false
+    },
+    {
+      "source": "/artists/abhinav-narula/",
+      "destination": "/book/bollywood-rock-bands/",
+      "permanent": false
+    },
+    {
+      "source": "/artists/abhinav-narula",
+      "destination": "/book/bollywood-rock-bands/",
+      "permanent": false
     }
   ]
 }
