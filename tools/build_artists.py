@@ -210,12 +210,15 @@ def page(a, acts, reg):
       f'    <div class="ucta"><h2>Planning an event?</h2><p>Tell us the date, city and venue. We check {esc(n)}\'s availability and send '+('' if celeb else 'videos with ')+'a clear quote within 24 hours.</p>'
       f'<div class="ask"><a class="dark-pill" href="/#enquiry">Get a quote</a><a class="ghost-pill" href="{esc(wa)}" target="_blank" rel="noopener">Message us on WhatsApp</a></div></div>\n'
       + rel_html + DISCLAIMER + '  </article>\n</main>\n'
-      f'<a class="uwa" href="{esc(wa)}" target="_blank" rel="noopener" aria-label="Message us on WhatsApp">WhatsApp</a>\n' + U.FOOTER + PLAYER + U.tail + '</body></html>\n')
+      f'<a class="uwa" href="{esc(wa)}" target="_blank" rel="noopener" aria-label="Message us on WhatsApp">WhatsApp</a>\n' + FOOTER_NO_NOTE + PLAYER + U.tail + '</body></html>\n')
     d = os.path.join(ROOT, "artists", a["slug"]); os.makedirs(d)
     open(os.path.join(d, "index.html"), "w", encoding="utf8").write(body)
 
 # The full disclaimer lives only on /terms.html; every page footer carries the short notice with a link to it.
 DISCLAIMER = ""
+
+# artist pages already carry the notice in the bio, so their footer leaves out the short one
+FOOTER_NO_NOTE = re.sub(r'\s*<p class="fdisc".*?</p>', '', U.FOOTER, flags=re.S)
 
 THIRD_PARTY = ("Artisans of Sound does not manage or represent the celebrity and third-party artists named on this site, and a listing does not imply endorsement by or affiliation with the artist or their management. All names, images and trademarks belong to their owners.")
 
