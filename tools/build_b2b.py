@@ -18,6 +18,8 @@ def ocard(key, title=None, sub=None):
 def qcard(seg, key, title, sub, kind="fmt"):
     d = L["formats" if kind == "fmt" else "occasions"][key]
     return (f"/?for={seg}#enquiry", title, sub, d.get("photo"))
+def pcard(path, key, title, sub):
+    return (f"/{path}/", title, sub, L["formats"][key].get("photo"))
 def cards(items):
     return '<ul class="hublist">' + "".join(B.hub_item(e) for e in items) + "</ul>"
 
@@ -93,8 +95,8 @@ PAGES = [
      fcard("anchor", "Anchors and emcees", "Hosts for award nights, annual days and launches, in Hindi, English and regional languages."),
      fcard("instrband", "Instrumental and welcome acts", "Solo instrumentalists, duos and jazz or acoustic ensembles for arrivals, networking and dinners."),
      fcard("celeb", "Celebrity and special acts", "Well-known singers, comedians, magicians and performers, where your budget and date allow."),
-     qcard("corporate", "djband", "Dealer meets and sales conferences", "DJ-based bands, hosts and high-energy acts for dealer meets, conferences and gala dinners."),
-     qcard("corporate", "magic", "Employee engagement events", "Magicians, mentalists, comedians and interactive acts for team days and offsites."),
+     pcard("corporate/dealer-meets", "djband", "Dealer meets and sales conferences", "DJ-based bands, hosts and high-energy acts for dealer meets, conferences and gala dinners."),
+     pcard("corporate/employee-engagement", "magic", "Employee engagement events", "Magicians, mentalists, comedians and interactive acts for team days and offsites."),
    ])),
    ("How a corporate booking works", steps([
      ("Share the brief", "Event type, city, date, audience size, venue, and a rough budget."),
@@ -157,9 +159,9 @@ PAGES = [
   sections=[
    ("What we cover", cards([
      ocard("college", "College festivals", "DJs, bands, rappers and celebrity performers for fest nights and cultural evenings."),
-     qcard("other", "bollyrock", "Music festivals and concerts", "Rock, Bollywood and live bands for ticketed shows and open-air festivals."),
-     qcard("other", "rajfusion", "Government and cultural events", "Folk, classical and ghazal acts for cultural programmes and official functions."),
-     qcard("other", "lounge", "Exhibitions and trade shows", "Instrumentalists and lounge acts for exhibition openings and networking evenings."),
+     pcard("other-events/music-festivals", "bollyrock", "Music festivals and concerts", "Rock, Bollywood and live bands for ticketed shows and open-air festivals."),
+     pcard("other-events/government-cultural-events", "rajfusion", "Government and cultural events", "Folk, classical and ghazal acts for cultural programmes and official functions."),
+     pcard("other-events/exhibitions", "lounge", "Exhibitions and trade shows", "Instrumentalists and lounge acts for exhibition openings and networking evenings."),
      ocard("house", "Private parties", "Singers, DJs and hosts for birthdays, house parties and family celebrations."),
      fcard("intl", "International acts", "International bands and performers, where dates and travel allow."),
      ocard("launch", "Brand collaborations", "Artists and performers for brand activations, launches and campaigns."),
@@ -175,6 +177,149 @@ PAGES = [
        ("Do you handle college fests outside Delhi NCR?", "Yes. We have artists in many states. Share the city and dates and we check who is available."),
        ("Can you help with brand collaborations?", "Yes. Send the brief and we suggest artists and performers that suit the brand and the audience, and quote for the activation."),
        ("Do you supply sound, stage and lighting?", "Many acts bring basic sound, and bigger events need a full production. Tell us the venue and we confirm what each act needs and what is included.")],
+ ),
+ dict(
+  slug='corporate/dealer-meets', parent=('corporate', 'Corporate events'), name='Dealer meets and sales conferences', seg='corporate',
+  title='Entertainment for Dealer Meets and Sales Conferences | Artisans of Sound',
+  desc='Hosts, DJ-based bands, live acts and gala-night entertainment for dealer meets, distributor conferences and sales kick-offs across India.',
+  kicker='Corporate events: dealer meets and sales conferences',
+  h1='Entertainment for dealer meets and sales conferences',
+  lead='Dealer meets, distributor conferences and sales kick-offs need an evening that rewards the room and runs on schedule. We arrange the host, the acts and the gala night around your agenda.',
+  wa='Hi Artisans of Sound, I would like entertainment options for a dealer meet / sales conference.',
+  cta1='Plan a dealer meet on WhatsApp', seg_q='corporate',
+  acts=dict(formats=("djband", "anchor", "bollylive", "comedy", "standup"), occs=("corporate", "annualday"), title="Popular for dealer meets and conferences"),
+  sections=[
+   ('What we can arrange', cards([
+     fcard("anchor", "Anchors and emcees", "A host to run recognition, awards and the flow of the evening, in Hindi, English and regional languages."),
+     fcard("djband", "DJ-based bands", "High-energy sets that get a conference crowd on the dance floor after the sessions."),
+     fcard("bollylive", "Live Bollywood acts", "Bands and singers for the gala dinner and after-party."),
+     fcard("standup", "Stand-up comedians", "A clean, crowd-friendly set to open or close the evening."),
+     fcard("celeb", "Celebrity and special guests", "Well-known performers for the headline night, where budget and date allow."),
+   ])),
+   ("How it works", steps([
+     ('Share the agenda', 'City, dates, number of attendees, session timings and the evening you have in mind.'),
+     ('We plan around your sessions', 'A shortlist of hosts and acts for the gala night, with videos and one clear quote within 24 hours.'),
+     ('Confirm in writing', 'An advance and a written confirmation of the artists, fees and timings.'),
+     ('We coordinate to the event', 'We stay in touch with the artists and your team on travel, sound and the run of show.'),
+   ])),
+  ],
+  links=[ocard("corporate"), ocard("annualday"), ocard("newyear"), pcard("corporate/employee-engagement", "magic", "Employee engagement events", "Interactive acts for team days and offsites.")],
+  faq=[('Can the entertainment fit around our conference sessions?', 'Yes. Share the agenda and we plan the acts around session timings, breaks and the gala evening.'), ('Can you provide a host in Hindi and English?', 'Yes. We have anchors who host in Hindi, English and regional languages.'), ('Can you plan for a large gathering?', 'Tell us the number of attendees and the venue. We confirm which acts and sound set-up suit the room before you decide.'), ('Can we get options before we fix the date?', 'Yes. Send the city, month and attendance and we reply with options and a quote.')],
+ ),
+ dict(
+  slug='corporate/employee-engagement', parent=('corporate', 'Corporate events'), name='Employee engagement events', seg='corporate',
+  title='Entertainment for Employee Engagement Events and Offsites | Artisans of Sound',
+  desc='Magicians, mentalists, comedians, hosts and live music for employee engagement events, team days, offsites and office celebrations across India.',
+  kicker='Corporate events: employee engagement',
+  h1='Entertainment for employee engagement events',
+  lead='Team days, offsites, office celebrations and festive parties work best when everyone joins in. We arrange interactive acts, a host and light live music for your group.',
+  wa='Hi Artisans of Sound, I would like entertainment options for an employee engagement event.',
+  cta1='Plan a team event on WhatsApp', seg_q='corporate',
+  acts=dict(formats=("magic", "comedy", "standup", "anchor", "duotrio"), occs=("corporate", "annualday"), title="Popular for team events"),
+  sections=[
+   ('What we can arrange', cards([
+     fcard("magic", "Magicians and mentalists", "Close-up and stage acts that suit mixed groups and keep people talking."),
+     fcard("standup", "Stand-up comedians", "A crowd-friendly set for team days and annual gatherings."),
+     fcard("anchor", "Hosts and emcees", "A host to run games, recognition and the flow of the day."),
+     fcard("duotrio", "Acoustic duos and trios", "Live music for lunches, evenings and relaxed office celebrations."),
+     fcard("djband", "DJ-based bands", "Party sets for the closing night of an offsite."),
+   ])),
+   ("How it works", steps([
+     ('Share the format', 'Team size, city, date, venue and whether it is a day event, an evening or an offsite.'),
+     ('We shortlist', 'A shortlist with videos and one clear quote within 24 hours.'),
+     ('Confirm in writing', 'An advance and a written confirmation of the artists, fees and timings.'),
+     ('We coordinate to the event', 'We stay in touch with the artists and your team on timings, space and sound.'),
+   ])),
+  ],
+  links=[ocard("corporate"), ocard("diwali"), ocard("christmas"), ocard("retirement"), pcard("corporate/dealer-meets", "djband", "Dealer meets and sales conferences", "Hosts and gala-night acts.")],
+  faq=[('What suits an offsite or team day?', 'Interactive acts such as magicians, mentalists and comedians, with a host and light live music. Tell us the group size and format and we suggest a mix.'), ('Can acts work in a small room or an office?', 'Many solo and duo acts suit smaller spaces. We confirm the space and sound needs of each act before you decide.'), ('Do you plan festive office parties?', 'Yes. See our Diwali and Christmas party pages, or tell us the occasion and the number of people.'), ('Can you cover several locations or cities?', 'Yes. We have artists in many states. Share the cities and dates and we check who is available.')],
+ ),
+ dict(
+  slug='other-events/music-festivals', parent=('other-events', 'Other events'), name='Music festivals and concerts', seg='other',
+  title='Bands, DJs and Headliners for Music Festivals and Concerts | Artisans of Sound',
+  desc='Rock, Bollywood and live bands, DJs, rappers and international acts for music festivals, ticketed concerts and open-air shows across India.',
+  kicker='Other events: music festivals and concerts',
+  h1='Acts for music festivals and concerts',
+  lead='Ticketed concerts, open-air festivals and city music nights need a line-up that suits the crowd and the budget. Tell us the format and we suggest headliners, supporting acts and DJs.',
+  wa='Hi Artisans of Sound, I would like act options for a music festival / concert.',
+  cta1='Plan a festival line-up on WhatsApp', seg_q='other',
+  acts=dict(formats=("bollyrock", "western", "rap", "dj", "intl", "bollylive"), occs=("college", "newyear"), title="Popular for festivals and concerts"),
+  sections=[
+   ('What we can arrange', cards([
+     fcard("bollyrock", sub="Rock bands with Bollywood and original sets for festival stages."),
+     fcard("western", sub="Western and rock bands for open-air shows and festival slots."),
+     fcard("rap", sub="Rappers and hip hop acts for youth-focused and city festival line-ups."),
+     fcard("dj", sub="DJs for stage closers, after-parties and silent-disco style nights."),
+     fcard("intl", sub="International bands and performers, where dates and travel allow."),
+     fcard("celeb", sub="Well-known performers to headline, where budget and date allow."),
+   ])),
+   ("How it works", steps([
+     ('Share the format', 'Festival or concert, city, date, venue, expected crowd and a budget range.'),
+     ('We build the line-up', 'Headliners, supporting acts and DJs with videos, and one clear quote within 24 hours.'),
+     ('Confirm in writing', 'An advance and a written confirmation of each act, fee and set time.'),
+     ('We coordinate to the event', 'We stay in touch with the artists and your production team on travel, sound checks and set times.'),
+   ])),
+  ],
+  links=[ocard("college"), ocard("newyear"), fcard("intl"), pcard("other-events/government-cultural-events", "rajfusion", "Government and cultural events", "Folk and classical acts for cultural programmes.")],
+  faq=[('Can you build a full line-up?', 'Tell us the format, the crowd and the budget. We suggest headliners, supporting bands and DJs across the running order and send one quote.'), ('Do you work with ticketed concerts?', 'Yes. Share the capacity, venue, date and budget and we suggest acts that suit the audience.'), ('Can you bring international acts?', 'Where dates, travel and budget allow. See our international bands page for the acts we can approach.'), ('Who provides sound, stage and lighting?', 'Festivals normally need a full production. Tell us what the venue or your production partner provides and we confirm what each act needs.')],
+ ),
+ dict(
+  slug='other-events/government-cultural-events', parent=('other-events', 'Other events'), name='Government and cultural events', seg='other',
+  title='Artists for Government and Cultural Events in India | Artisans of Sound',
+  desc='Folk, classical, ghazal, Sufi qawwali and devotional acts, instrumentalists and anchors for cultural programmes, festivals and official functions across India.',
+  kicker='Other events: government and cultural events',
+  h1='Artists for government and cultural events',
+  lead='Cultural festivals, state and civic programmes, heritage events and official functions call for acts with the right tradition and the right stage presence. We arrange the artists, the anchor and the coordination.',
+  wa='Hi Artisans of Sound, I would like artist options for a cultural / government event.',
+  cta1='Plan a cultural event on WhatsApp', seg_q='other',
+  acts=dict(formats=("rajfusion", "ghazal", "sufiq", "devotional", "instrband", "anchor"), occs=(), title="Acts for cultural programmes"),
+  sections=[
+   ('What we can arrange', cards([
+     fcard("rajfusion", sub="Rajasthani folk and fusion acts for cultural festivals and heritage events."),
+     fcard("ghazal", sub="Ghazal and classical singers for evening programmes and cultural nights."),
+     fcard("sufiq", sub="Qawwali and Sufi groups for festivals and special evenings."),
+     fcard("devotional", sub="Devotional and bhajan singers for religious and festival programmes."),
+     fcard("instrband", sub="Instrumental ensembles for official functions and receptions."),
+     fcard("anchor", sub="Anchors and emcees to host programmes in Hindi, English and regional languages."),
+   ])),
+   ("How it works", steps([
+     ('Share the brief', 'Event, city, date, venue, programme length, audience and any protocol or documentation you need.'),
+     ('We shortlist', 'A shortlist with videos and one clear quote within 24 hours.'),
+     ('Confirm in writing', 'A quotation, an advance and a written booking confirmation of the artists, fees and timings.'),
+     ('We coordinate to the event', 'We stay in touch with the artists and your team on travel, sound and the run of show.'),
+   ])),
+  ],
+  links=[ocard("college"), fcard("rajfusion"), fcard("sufiq"), fcard("ghazal")],
+  faq=[("Can you work with a department's paperwork requirements?", 'We provide a quotation, booking confirmation and invoice for each booking. Tell us what documents your department needs and we confirm what we can supply.'), ('Do you have folk and regional traditions on your roster?', 'Our roster includes Rajasthani folk and fusion, Sufi qawwali, ghazal, classical and devotional acts across several states. Tell us the region and tradition you need.'), ('Can you supply an anchor for an official programme?', 'Yes. We have anchors who host in Hindi, English and regional languages.'), ('Can you plan multi-day programmes?', 'Yes. Share the number of days and the programme length and we suggest a mix of acts across the days.')],
+ ),
+ dict(
+  slug='other-events/exhibitions', parent=('other-events', 'Other events'), name='Exhibitions and trade shows', seg='other',
+  title='Live Music for Exhibitions and Trade Shows | Artisans of Sound',
+  desc='Instrumentalists, jazz and lounge acts, acoustic duos and anchors for exhibition openings, trade shows and networking evenings across India.',
+  kicker='Other events: exhibitions and trade shows',
+  h1='Live music for exhibitions and trade shows',
+  lead='Exhibition openings, trade shows and networking evenings need music that sets the mood without drowning out conversation. We arrange instrumentalists, acoustic acts and hosts that suit the floor.',
+  wa='Hi Artisans of Sound, I would like entertainment options for an exhibition / trade show.',
+  cta1='Plan an exhibition on WhatsApp', seg_q='other',
+  acts=dict(formats=("lounge", "soloinst", "instrband", "jazz", "duotrio"), occs=("venue",), title="Acts that suit exhibitions"),
+  sections=[
+   ('What we can arrange', cards([
+     fcard("lounge", sub="Lounge acts for stands, atriums and networking areas."),
+     fcard("soloinst", sub="Violin, sax, piano and more for openings and arrivals."),
+     fcard("jazz", sub="Jazz bands for evening receptions and hospitality areas."),
+     fcard("duotrio", sub="Acoustic duos and trios for relaxed, low-volume sets."),
+     fcard("instrband", sub="Instrumental ensembles for opening ceremonies."),
+     fcard("anchor", sub="Anchors and emcees to host stage programmes and launches."),
+   ])),
+   ("How it works", steps([
+     ('Share the layout', 'City, dates, venue, floor plan or stage area, daily timings and a budget range.'),
+     ('We shortlist', 'A shortlist with videos and one clear quote within 24 hours.'),
+     ('Confirm in writing', 'An advance and a written confirmation of the artists, fees and timings.'),
+     ('We coordinate to the event', 'We stay in touch with the artists and the organisers on set-up, sound levels and timings.'),
+   ])),
+  ],
+  links=[ocard("corporate"), ocard("launch"), ocard("venue"), fcard("soloinst")],
+  faq=[('Can acts play at low volume near the stalls?', 'Yes. Acoustic and instrumental acts suit exhibition floors and openings. Tell us the layout and we suggest acts and volume levels that work for exhibitors and visitors.'), ('Can you cover a multi-day show?', 'Yes. Share the days and daily timings and we plan a rotation of acts across the show.'), ('Do you supply sound for the performances?', 'Many solo and duo acts bring basic sound. Tell us the venue and we confirm what each act needs and what is included.'), ('Can you provide a host for the stage programme?', 'Yes. We have anchors who host in Hindi, English and regional languages.')],
  ),
 ]
 
@@ -241,7 +386,9 @@ def build(acts, reg):
         body += B.faq_block(p["faq"])
         body += (f'    <div class="ucta"><h2>Ready to talk?</h2><p>Send a short brief. We reply with options and one clear quote within 24 hours.</p><div class="ask">'
                  f'<a class="dark-pill" href="{enq}">Send an enquiry</a><a class="ghost-pill" href="{esc(w)}" target="_blank" rel="noopener">Message us on WhatsApp</a></div></div>\n')
-        B.write([p["slug"]], B.shell(url, p["title"], p["desc"], [("Home", "/"), (p["name"], f"/{p['slug']}/")], body, mine, p["faq"], p["wa"]))
+        par = p.get("parent")
+        crumbs = [("Home", "/")] + ([(par[1], f"/{par[0]}/")] if par else []) + [(p["name"], f"/{p['slug']}/")]
+        B.write(p["slug"].split("/"), B.shell(url, p["title"], p["desc"], crumbs, body, mine, p["faq"], p["wa"]))
         urls.append(url)
     urls.append(build_destination(acts))
     return [f"<url><loc>{u}</loc></url>" for u in urls]
