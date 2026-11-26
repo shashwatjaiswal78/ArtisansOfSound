@@ -1753,7 +1753,7 @@ a.rc{text-decoration:none}.act:focus-visible{outline:3px solid currentColor;outl
       return {key:key, label:fm[1], cover:cv, code:CODE[key] || fm[1].charAt(0), go:function(){ st.f = [key]; st.x = []; st.shown = STEP; pick('cat:' + key); openList(); }};
     }));
     seeAll.textContent = 'See all acts';
-    var wAct = document.getElementById('watchActs'); if (wAct) wAct.addEventListener('click', function(e){ e.preventDefault(); seeAll.click(); });
+    var wAct = document.getElementById('watchActs'); if (wAct) wAct.addEventListener('click', function(e){ e.preventDefault(); var sec = document.getElementById('acts'); if (!sec) return; var y = sec.getBoundingClientRect().top + (window.pageYOffset || 0) - 60; try { window.scrollTo({top: Math.max(0, y), behavior: 'smooth'}); } catch (x) { window.scrollTo(0, Math.max(0, y)); } });
     seeAll.addEventListener('click', function(){ st.x = []; st.all = true; st.shown = STEP; openList(); });
   }
 
