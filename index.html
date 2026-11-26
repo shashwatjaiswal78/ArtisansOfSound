@@ -304,6 +304,22 @@ h3{font-family:var(--display);font-weight:800;text-transform:uppercase;line-heig
 .segrow input:focus-visible + span{outline:2px solid #FFFFFF;outline-offset:2px}
 .segx{display:grid;gap:14px}
 .segx[hidden],.segx [hidden]{display:none!important}
+
+/* four ways in: who is the entertainment for */
+#for{padding-top:var(--sg,64px)}
+.fgrid{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.fgrid a{position:relative;display:block;border-radius:18px;overflow:hidden;aspect-ratio:4/5;background:#14101f;color:#F6F2E8;text-decoration:none;isolation:isolate}
+.fgrid img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .35s ease}
+.fgrid a::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to top,rgba(6,3,16,.88) 0%,rgba(6,3,16,.35) 48%,rgba(6,3,16,0) 72%)}
+.fgrid a:hover img,.fgrid a:focus-visible img{transform:scale(1.04)}
+.fgrid a:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.fgrid .ft{position:absolute;left:18px;right:18px;bottom:16px;display:grid;gap:4px}
+.fgrid b{font-family:var(--display);font-weight:800;font-size:clamp(24px,2.4vw,32px);line-height:1;text-transform:uppercase}
+.fgrid span{font-size:14.5px;line-height:1.35;color:#E4DECF}
+.fnote{margin:18px 0 0;font-size:16px;color:var(--ink2)}
+.fnote a{color:inherit;font-weight:700;text-underline-offset:3px}
+@media (prefers-reduced-motion:reduce){.fgrid img{transition:none}}
+@media (max-width:900px){.fgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .cpanel .cother{margin-top:8px}
 
 .sub.wide{max-width:none}
@@ -1089,6 +1105,20 @@ footer{padding:56px 0 72px;border-top:1px solid var(--line);margin-top:clamp(64p
     </div>
   </section>
 
+  <section class="block" id="for">
+    <div class="in">
+      <p class="kicker">Start here</p>
+      <h2>What are you planning?</h2>
+      <ul class="fgrid">
+        <li><a href="occasions/wedding/"><img src="img/act-bollytales.jpg" alt="" width="362" height="362" loading="lazy"><span class="ft"><b>Weddings</b><span>Sangeet, mehendi, cocktail and reception</span></span></a></li>
+        <li><a href="corporate/"><img src="img/act-elfe.jpg" alt="" width="447" height="447" loading="lazy"><span class="ft"><b>Corporate</b><span>Award nights, launches and annual days</span></span></a></li>
+        <li><a href="hotels/"><img src="img/act-nirakar.jpg" alt="" width="720" height="720" loading="lazy"><span class="ft"><b>Hospitality</b><span>A live music calendar for your venue</span></span></a></li>
+        <li><a href="occasions/"><img src="img/act-chetas.jpg" alt="" width="400" height="400" loading="lazy"><span class="ft"><b>Other events</b><span>Parties, festivals, college fests and more</span></span></a></li>
+      </ul>
+      <p class="fnote">Wedding planner or event agency? <a href="for-planners/">Partner with us</a>.</p>
+    </div>
+  </section>
+
   <section class="block why" id="why">
     <div class="in">
       <p class="kicker">Why choose us</p>
@@ -1276,7 +1306,7 @@ footer{padding:56px 0 72px;border-top:1px solid var(--line);margin-top:clamp(64p
   <footer>
     <div class="in foot">
       <img width="700" height="350" src="img/logo-dark.png" alt="Artisans of Sound">
-      <nav aria-label="Footer"><a href="categories.html">Artists</a><a href="about.html">About</a><a href="updates.html">Updates</a><a href="terms.html">Terms</a><a href="book/">Book by category</a><a href="occasions/">Book by event</a><a href="top/">Top lists</a><a href="#enquiry">Enquire</a></nav>
+      <nav aria-label="Footer"><a href="categories.html">Artists</a><a href="about.html">About</a><a href="updates.html">Updates</a><a href="terms.html">Terms</a><a href="book/">Book by category</a><a href="occasions/">Book by event</a><a href="top/">Top lists</a><a href="corporate/">Corporate</a><a href="hotels/">Hotels</a><a href="for-planners/">For planners</a><a href="#enquiry">Enquire</a></nav>
       <p>Artisans of Sound, Delhi, Lucknow. Artist management and live events.</p>
     <p class="fdisc" style="flex:0 0 100%;max-width:62em;margin:0;font-size:12.5px;line-height:1.55;color:var(--ink2,#5B5B61)">Artisans of Sound does not manage or represent the celebrity and third-party artists named on this site, and a listing does not imply endorsement by or affiliation with the artist or their management. All names, images and trademarks belong to their owners. <a href="/terms.html#third-party-artists" style="color:inherit;text-underline-offset:3px">Read the full notice</a>.</p>
     </div>
