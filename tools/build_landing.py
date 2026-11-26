@@ -45,15 +45,19 @@ def dims(path):
     if path not in _dims: _dims[path] = A.img_dims(path)
     return _dims[path]
 
-def card(a):
-    d = dims(a["photo"]) if a["photo"] else None
-    ph = (f'<img src="/{esc(a["photo"])}" alt="{esc(a["base"])}, {esc(a["fmt_label"].lower())}" loading="lazy" width="{d[0]}" height="{d[1]}">' if d
+def card(a, ctx=None):
+    photo = a["photo"]
+    if ctx and a.get("alt"):
+        alt = [a["alt"][f] for f in ctx if f in a["alt"]]
+        if alt and len(ctx) == 1: photo = alt[0]
+    d = dims(photo) if photo else None
+    ph = (f'<img src="/{esc(photo)}" alt="{esc(a["base"])}, {esc(a["fmt_label"].lower())}" loading="lazy" width="{d[0]}" height="{d[1]}">' if d
           else f'<span class="acinit" aria-hidden="true">{esc(A.initials(a["base"]))}</span>')
     return (f'<a class="acard" href="/artists/{a["slug"]}/"><span class="acimg">{ph}</span>'
             f'<b>{esc(a["base"])}</b><small>{esc(a["label"])} &middot; {esc(a["city"])}</small></a>')
 
-def grid(acts, cap=CAP):
-    return '<div class="agrid">' + "".join(card(a) for a in sorted(acts, key=rank)[:cap]) + '</div>'
+def grid(acts, cap=CAP, ctx=None):
+    return '<div class="agrid">' + "".join(card(a, ctx) for a in sorted(acts, key=rank)[:cap]) + '</div>'
 
 def wa(msg): return "https://wa.me/919129237566?text=" + urllib.parse.quote(msg)
 
@@ -108,7 +112,7 @@ def category(k, acts, reg):
     cities = [(f"/book/{d['slug']}/{L['cities'][c]['slug']}/", f"{name} in {c}") for c in reg["city"] if (k, c) in reg["combo"]]
     other = [(f"/book/{L['formats'][x]['slug']}/", L["formats"][x]["name"]) for x in sorted(reg["fmt"], key=lambda x: -sum(x in a["f"] for a in acts)) if x != k][:8]
     body = (head_block(na(len(mine)), d["h1"], d["intro"], w) +
-            sec("Acts you can book", grid(mine) + (f'<p class="anote">Showing {CAP} of {len(mine)}. <a href="/artists/">See every act</a>.</p>' if len(mine) > CAP else "")) +
+            sec("Acts you can book", grid(mine, ctx=[k]) + (f'<p class="anote">Showing {CAP} of {len(mine)}. <a href="/artists/">See every act</a>.</p>' if len(mine) > CAP else "")) +
             sec("How to choose", f'<div class="ubody"><p>{esc(d["tips"])}</p></div>') +
             (sec("Popular for", links(occs)) if occs else "") + (sec("In your city", links(cities)) if cities else "") +
             faq_block(d["faq"]) + cta(w, CTA) + sec("Other categories", links(other + [("/book/", "All categories")])))
@@ -125,7 +129,7 @@ def combo(k, c, acts, reg):
     intro = (f"{len(mine)} {ph} based in {c} are on the Artisans of Sound roster, including {ex}. "
              f"Acts from our wider network can also travel to {c}.")
     w = wa(f"Hi Artisans of Sound, I am looking for {ph} in {c}.")
-    body = (head_block(f"{len(mine)} acts in {c}", f"{name} in {c}", intro, w) + sec(f"{name} based in {c}", grid(mine)) +
+    body = (head_block(f"{len(mine)} acts in {c}", f"{name} in {c}", intro, w) + sec(f"{name} based in {c}", grid(mine, ctx=[k])) +
             sec("How to choose", f'<div class="ubody"><p>{esc(d["tips"])}</p></div>') +
             sec("See more", links([(f"/book/{d['slug']}/", f"All {ph} across India"), (f"/cities/{cd['slug']}/", f"All acts in {c}")])) + cta(w, CTA))
     write(["book", d["slug"], cd["slug"]], shell(url, title, desc, [("Home", "/"), ("Categories", "/book/"), (name, f"/book/{d['slug']}/"), (c, f"/book/{d['slug']}/{cd['slug']}/")], body, sorted(mine, key=rank), None, f"Hi Artisans of Sound, I am looking for {ph} in {c}."))
@@ -144,7 +148,7 @@ def top(t, acts, reg):
         if o in reg["occ"]: rel.append((f"/occasions/{reg['occ'][o]}/", L["occasions"][o]["name"]))
     other = [(f"/top/{L['tops'][x[0]]['slug']}/", x[0]) for x in A.TAX["TOP"] if x[0] in reg["top"] and x[0] != label][:10]
     body = (head_block(na(len(mine)), label, d["intro"], w) +
-            sec("Acts you can book", grid(mine) + (f'<p class="anote">Showing {CAP} of {len(mine)}. <a href="/artists/">See every act</a>.</p>' if len(mine) > CAP else "")) +
+            sec("Acts you can book", grid(mine, ctx=list(t[1])) + (f'<p class="anote">Showing {CAP} of {len(mine)}. <a href="/artists/">See every act</a>.</p>' if len(mine) > CAP else "")) +
             (sec("Related", links(rel)) if rel else "") + cta(w, CTA) + sec("More top lists", links(other + [("/top/", "All top lists")])))
     write(["top", d["slug"]], shell(url, title, desc, [("Home", "/"), ("Top lists", "/top/"), (label, f"/top/{d['slug']}/")], body, sorted(mine, key=rank)[:CAP], None, f"Hi Artisans of Sound, I am looking for: {label}."))
     return url
@@ -218,8 +222,8 @@ def wedding_kind_page(kind, c, acts):
     others = [(f"/wedding/{cd['slug']}/{WED['kinds'][k]['slug']}/", f"Wedding {WED['kinds'][k]['plural']} in {c}") for k in WED["kinds"] if k != kind]
     same = [(f"/wedding/{WED['cities'][x]['slug']}/{kd['slug']}/", f"Wedding {plural} in {x}") for x in WED["cities"] if x != c][:8]
     body = (head_block(f"{len(pool)} {plural} for weddings in {c}", h1, intro, w) +
-            (sec(f"Based in {c}", grid(local)) if local else "") +
-            sec(f"Available for weddings in {c}", grid(rest, 24) + (f'<p class="anote">Showing {min(24, len(rest))} of {len(rest)}. <a href="/book/">Browse every category</a>.</p>' if len(rest) > 24 else "")) +
+            (sec(f"Based in {c}", grid(local, ctx=kd["formats"])) if local else "") +
+            sec(f"Available for weddings in {c}", grid(rest, 24, ctx=kd["formats"]) + (f'<p class="anote">Showing {min(24, len(rest))} of {len(rest)}. <a href="/book/">Browse every category</a>.</p>' if len(rest) > 24 else "")) +
             sec("How to choose", f'<div class="ubody"><p>{esc(kd["tips"])}</p></div>') + faq_block(faq) + cta(w, CTA) +
             sec(f"More for weddings in {c}", links(others + [(f"/wedding/{cd['slug']}/", f"All wedding artists in {c}"), ("/occasions/wedding/", "Wedding artists across India")])) +
             sec(f"Wedding {plural} in other cities", links(same)))

@@ -1421,7 +1421,7 @@ a.rc{text-decoration:none}.act:focus-visible{outline:3px solid currentColor;outl
   var ACTS = RAW.map(function(r){ var f = r[1].split(','), o = [], g = [];
     f.forEach(function(k){ (FO[k] || []).forEach(function(x){ if (o.indexOf(x) < 0) o.push(x); }); });
     f.forEach(function(k){ (FG[k] || []).forEach(function(x){ if (g.indexOf(x) < 0) g.push(x); }); });
-    (r[7] || []).forEach(function(x){ if (o.indexOf(x) < 0) o.push(x); }); return {m:r[6] ? 1 : 0, n:r[0], f:f, o:o, g:g, x:SEX[r[0]] ? SEX[r[0]].split('') : [], c:r[2], l:r[3] || LAB[f[0]], p:r[4], t:r[5]};
+    (r[7] || []).forEach(function(x){ if (o.indexOf(x) < 0) o.push(x); }); return {m:r[6] ? 1 : 0, n:r[0], f:f, o:o, g:g, x:SEX[r[0]] ? SEX[r[0]].split('') : [], c:r[2], l:r[3] || LAB[f[0]], p:r[4], t:r[5], alt:(window.AOS_ALT_PHOTOS || {})[r[0]] || null};
   });
   var st = {o:[], f:[], g:[], c:[], x:[], q:'', shown:STEP, all:false};
   // search: every word typed has to appear in the act's name, city, category, event, genre or label
@@ -1542,7 +1542,7 @@ a.rc{text-decoration:none}.act:focus-visible{outline:3px solid currentColor;outl
   function card(a){
     var fig = document.createElement('figure'); fig.className = 'act'; fig.tabIndex = -1;
     if (a.p) {
-      var img = document.createElement('img'); img.src = a.p; img.alt = a.n; img.loading = 'lazy'; fig.appendChild(img);
+      var img = document.createElement('img'); img.src = (a.alt && st.f.length === 1 && a.alt[st.f[0]]) || a.p; img.alt = a.n; img.loading = 'lazy'; fig.appendChild(img);
     } else {
       var ph = document.createElement('div'); ph.className = 'ph'; ph.setAttribute('aria-hidden','true');
       var em = document.createElement('em'); em.textContent = initials(a.n); ph.appendChild(em); fig.appendChild(ph);

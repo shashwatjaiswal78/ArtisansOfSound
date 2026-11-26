@@ -20,7 +20,7 @@ PERSON = {"dj", "solosing", "soloinst", "anchor", "standup", "reality", "magic",
 def load_js(*files):
     js = ("const fs=require('fs');global.window={};" +
           "".join(f"eval(fs.readFileSync({json.dumps(os.path.join(ROOT, f))},'utf8'));" for f in files) +
-          "console.log(JSON.stringify({raw:window.AOS_RAW,bios:window.AOS_BIOS||{},vid:window.AOS_VIDEOS||{},al:window.AOS_ALIASES||{}}))")
+          "console.log(JSON.stringify({raw:window.AOS_RAW,bios:window.AOS_BIOS||{},vid:window.AOS_VIDEOS||{},al:window.AOS_ALIASES||{},alt:window.AOS_ALT_PHOTOS||{}}))")
     return json.loads(subprocess.check_output(["node", "-e", js]))
 
 def slugify(t):
@@ -73,6 +73,7 @@ def load_acts():
         a["bio"] = D["bios"].get(a["name"]); v = D["vid"].get(a["name"], [])
         a["vid"] = [{"u": x, "l": ""} if isinstance(x, str) else {"u": x["u"], "l": x.get("l", "")} for x in (v if isinstance(v, list) else [v])]
         a["alias"] = D["al"].get(a["name"], "")
+        a["alt"] = D.get("alt", {}).get(a["name"], {})
     return acts
 
 def build(acts=None, reg=None):
