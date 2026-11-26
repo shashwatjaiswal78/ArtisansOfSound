@@ -1384,5 +1384,169 @@
    "slug": "top-ghazal-and-classical-artists",
    "intro": "Ghazal and classical performers for refined evenings, anniversaries, dinners and cultural events."
   }
+ },
+ "wedding": {
+  "kinds": {
+   "dj": {
+    "slug": "dj",
+    "noun": "DJ",
+    "plural": "DJs",
+    "formats": [
+     "dj",
+     "djperc"
+    ],
+    "celeb": true,
+    "fmt_tip": "dj",
+    "tips": "Ask how long the DJ plays, whether they bring sound, lights and a console, and how they handle a mixed-age crowd. For a sangeet or reception, tell us the mood you want and the songs that must be played. A DJ paired with a live percussionist adds a visual moment to the dance floor."
+   },
+   "band": {
+    "slug": "band",
+    "noun": "band",
+    "plural": "bands",
+    "formats": [
+     "bollylive",
+     "punjabi",
+     "bollyrock",
+     "bollyretro",
+     "djband",
+     "western",
+     "allgirl",
+     "sufibolly",
+     "sufiq",
+     "rajfusion"
+    ],
+    "celeb": false,
+    "tips": "Start with the room and the crowd. Ask how long the band plays, how many sets it can break into, and whether it brings its own sound and backline. A band that mixes Bollywood and Punjabi hits with a few English numbers suits a mixed family crowd best."
+   },
+   "anchor": {
+    "slug": "anchor",
+    "noun": "anchor",
+    "plural": "anchors",
+    "formats": [
+     "anchor"
+    ],
+    "celeb": true,
+    "tips": "Share the language mix of your guests and the flow of the evening. A good wedding anchor keeps the programme on time, introduces family moments and keeps the mood up between acts. Ask whether they host in Hindi, English, Punjabi or a mix."
+   },
+   "singer": {
+    "slug": "singer",
+    "noun": "singer",
+    "plural": "singers",
+    "formats": [
+     "solosing",
+     "duotrio",
+     "ghazal",
+     "sufibolly",
+     "sufiq",
+     "devotional",
+     "bollylive",
+     "punjabi"
+    ],
+    "celeb": true,
+    "tips": "Decide the moment first: a soft solo for the ceremony or cocktails, a sufi or ghazal set for an evening of music, or a full performance for the sangeet. Ask for the song list and whether the singer performs with live musicians or a track."
+   }
+  },
+  "cities": {
+   "Delhi": {
+    "slug": "delhi",
+    "alias": [
+     "Delhi"
+    ],
+    "blurb": "Delhi and the wider NCR host weddings in farmhouses, banquet halls and hotels right through the winter season, so the best artists book out early for the peak dates."
+   },
+   "Mumbai": {
+    "slug": "mumbai",
+    "alias": [
+     "Mumbai"
+    ],
+    "blurb": "Mumbai weddings run from hotel ballrooms and sea-facing venues to lawns and clubs, and guests often expect a polished, well-timed evening."
+   },
+   "Lucknow": {
+    "slug": "lucknow",
+    "alias": [
+     "Lucknow"
+    ],
+    "blurb": "Lucknow weddings are known for warm hospitality and a love of music, from sufi and ghazal evenings to full-energy sangeets in hotels and lawns."
+   },
+   "Jaipur": {
+    "slug": "jaipur",
+    "alias": [
+     "Jaipur"
+    ],
+    "blurb": "Jaipur is a favourite for palace, fort and heritage-hotel weddings, where the artist needs to suit a grand setting as well as a dancing crowd."
+   },
+   "Udaipur": {
+    "slug": "udaipur",
+    "alias": [
+     "Udaipur"
+    ],
+    "blurb": "Udaipur is one of India's best-known destination wedding cities, with lakeside palaces and resorts where families travel in for several days of functions."
+   },
+   "Jodhpur": {
+    "slug": "jodhpur",
+    "alias": [
+     "Jodhpur"
+    ],
+    "blurb": "Jodhpur weddings are often held in forts and palaces, and Rajasthani folk and fusion acts sit naturally beside Bollywood sets."
+   },
+   "Chandigarh": {
+    "slug": "chandigarh",
+    "alias": [
+     "Chandigarh"
+    ],
+    "blurb": "Chandigarh, Mohali and Panchkula are known for big Punjabi weddings, where dhol, bhangra and Punjabi hits keep the floor full."
+   },
+   "Gurugram": {
+    "slug": "gurugram",
+    "alias": [
+     "Gurugram",
+     "Gurgaon"
+    ],
+    "blurb": "Gurugram weddings are usually held in farmhouses, banquet venues and hotels, with large guest lists and long, late-night sangeets."
+   },
+   "Ahmedabad": {
+    "slug": "ahmedabad",
+    "alias": [
+     "Ahmedabad"
+    ],
+    "blurb": "Ahmedabad weddings often bring together a sangeet, a garba night and large family gatherings, so a mix of folk and Bollywood sets works well."
+   },
+   "Hyderabad": {
+    "slug": "hyderabad",
+    "alias": [
+     "Hyderabad"
+    ],
+    "blurb": "Hyderabad weddings are held in hotels, convention venues and resorts, and a mix of Hindi, Telugu and English music often suits the crowd."
+   },
+   "Bengaluru": {
+    "slug": "bengaluru",
+    "alias": [
+     "Bengaluru",
+     "Bangalore"
+    ],
+    "blurb": "Bengaluru weddings are held in resorts, gardens and hotels, with mixed crowds that enjoy Bollywood, English and regional music."
+   },
+   "Kolkata": {
+    "slug": "kolkata",
+    "alias": [
+     "Kolkata"
+    ],
+    "blurb": "Kolkata weddings blend Bengali traditions with Bollywood evenings, with a long-standing appreciation for live music."
+   },
+   "Pune": {
+    "slug": "pune",
+    "alias": [
+     "Pune"
+    ],
+    "blurb": "Pune weddings are held in hotels, resorts and lawns, with a young crowd that enjoys live bands and DJs."
+   },
+   "Goa": {
+    "slug": "goa",
+    "alias": [
+     "Goa"
+    ],
+    "blurb": "Goa is a popular beach and destination wedding location, where sunset ceremonies and open-air parties call for acts that suit the setting."
+   }
+  }
  }
 }

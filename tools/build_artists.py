@@ -163,12 +163,25 @@ def page(a, acts, reg):
     gen_html = ('<section class="asec"><h2>Music style</h2><ul class="achips">' + "".join(f"<li>{esc(GEN[g])}</li>" for g in a["gen"] if g in GEN) + '</ul></section>') if a["gen"] else ""
     rel = related(a, acts)
     rel_html = (f'<section class="asec"><h2>More {esc(phrase(a["fmt_label"]))} acts</h2><div class="amgrid">' + "".join(mini(b) for b in rel) + '</div></section>') if rel else ""
-    kind = "Person" if all(f in PERSON for f in a["f"]) else "PerformingGroup"
-    about = {"@type": kind, "name": n, "description": desc}
-    if dims: about["image"] = f"{SITE}/{a['photo']}"
+    kind = "Person" if ("celeb" in a["f"] or all(f in PERSON for f in a["f"])) else "PerformingGroup"
+    about = {"@type": kind, "@id": canon + "#artist", "name": n, "description": desc, "url": canon}
+    if n != a["name"]: about["alternateName"] = a["name"]
+    if dims: about["image"] = {"@type": "ImageObject", "url": f"{SITE}/{a['photo']}", "width": dims[0], "height": dims[1], "caption": f"{n}, {a['fmt_label'].lower()}"}
+    if kind == "Person": about["jobTitle"] = a["fmt_label"]
+    else: about["genre"] = a["fmt_label"]
+    if a["city"] != "Pan-India": about["homeLocation"] = {"@type": "Place", "address": {"@type": "PostalAddress", "addressLocality": a["city"], "addressCountry": "IN"}}
+    gen = [GEN[g] for g in a["gen"] if g in GEN]
+    if gen: about["knowsAbout"] = gen
+    org = {"@type": "Organization", "name": "Artisans of Sound", "url": SITE + "/"}
+    service = {"@type": "Service", "@id": canon + "#booking", "name": f"Book {n} for your event", "serviceType": a["fmt_label"],
+               "description": f"Booking of {n} ({ph}) through Artisans of Sound, with availability checked for your date and one clear quote within 24 hours.",
+               "provider": org, "areaServed": {"@type": "Country", "name": "India"}, "url": canon}
+    if dims: service["image"] = f"{SITE}/{a['photo']}"
+    if occ_names: service["audience"] = {"@type": "Audience", "audienceType": ", ".join(occ_names[:6])}
     ld = {"@context": "https://schema.org", "@graph": [
-        {"@type": "WebPage", "name": title, "url": canon, "description": desc, "about": about,
+        {"@type": "ProfilePage", "name": title, "url": canon, "description": desc, "mainEntity": {"@id": canon + "#artist"}, "inLanguage": "en-IN",
          "isPartOf": {"@type": "WebSite", "name": "Artisans of Sound", "url": SITE + "/"}},
+        about, service,
         {"@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE + "/"},
             {"@type": "ListItem", "position": 2, "name": "Artists", "item": SITE + "/artists/"},

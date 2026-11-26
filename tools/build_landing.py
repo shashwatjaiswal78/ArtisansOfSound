@@ -163,6 +163,7 @@ def occasion(k, acts, reg):
     body = (head_block("Occasion", d["h1"], d["intro"], w) + (sec("Popular formats", links(fm)) if fm else "") +
             sec("Featured acts", grid(feat) + '<p class="anote"><a href="/artists/">See every act</a> or <a href="/book/">browse by category</a>.</p>') +
             sec("How to plan the music", f'<div class="ubody"><p>{esc(d["tips"])}</p></div>') + faq_block(d["faq"]) + cta(w, CTA) +
+            (sec("Wedding artists by city", links([(f"/wedding/{v['slug']}/", f"Wedding artists in {c}") for c, v in WED["cities"].items()])) if k == "wedding" and WED["cities"] else "") +
             sec("Other occasions", links(other + [("/occasions/", "All occasions")])))
     write(["occasions", d["slug"]], shell(url, title, desc, [("Home", "/"), ("Occasions", "/occasions/"), (name, f"/occasions/{d['slug']}/")], body, feat, d["faq"], f"Hi Artisans of Sound, I would like a quote for artists for a {name.lower()} event."))
     return url
@@ -178,7 +179,7 @@ def city(c, acts, reg):
     combos = [(f"/book/{L['formats'][k]['slug']}/{d['slug']}/", f"{L['formats'][k]['name']} in {c}") for (k, cc) in sorted(reg["combo"]) if cc == c]
     body = (head_block(f"{len(mine)} acts in {c}", f"Live bands, DJs and singers in {c}", d["intro"], w) + (sec("Browse by category", links(combos)) if combos else "") + secs +
             sec("How to book", f'<div class="ubody"><p>{esc(d["tips"])}</p></div>') + faq_block(d["faq"]) + cta(w, CTA) +
-            sec("More", links([("/book/", "All categories"), ("/occasions/", "All occasions"), ("/artists/", "All artists")])))
+            sec("More", links(([(f"/wedding/{WED['cities'][c]['slug']}/", f"Wedding artists in {c}")] if c in WED["cities"] else []) + [("/book/", "All categories"), ("/occasions/", "All occasions"), ("/artists/", "All artists")])))
     write(["cities", d["slug"]], shell(url, title, desc, [("Home", "/"), ("Cities", "/cities/"), (c, f"/cities/{d['slug']}/")], body, sorted(mine, key=rank)[:CAP], d["faq"], f"Hi Artisans of Sound, I would like a quote for an event in {c}."))
     return url
 
@@ -189,8 +190,67 @@ def hub(parts, title, h1, intro, entries, crumb_name):
     write(parts, shell(url, title, trim(intro), [("Home", "/"), (crumb_name, f"/{'/'.join(parts)}/")], body))
     return url
 
+
+# ---------------- wedding artists by city: /wedding/<city>/ and /wedding/<city>/<kind>/ ----------------
+WED = L.get("wedding", {"kinds": {}, "cities": {}})
+
+def wedding_acts(kind, acts):
+    kd = WED["kinds"][kind]
+    out = [a for a in acts if "wedding" in a["occ"] and any(f in a["f"] for f in kd["formats"]) and (kd["celeb"] or "celeb" not in a["f"])]
+    return sorted(out, key=rank)
+
+def wedding_kind_page(kind, c, acts):
+    kd = WED["kinds"][kind]; cd = WED["cities"][c]; noun, plural = kd["noun"], kd["plural"]
+    pool = wedding_acts(kind, acts)
+    local = [a for a in pool if a["city"] in cd["alias"]]
+    rest = [a for a in pool if a not in local]
+    url = f"{SITE}/wedding/{cd['slug']}/{kd['slug']}/"
+    title = f"Wedding {plural.capitalize() if False else plural[0].upper() + plural[1:]} in {c} | Artisans of Sound"
+    desc = trim(f"Book a wedding {noun} in {c}. {len(pool)} {plural} on the roster for weddings in {c}, shortlisted for your date with one clear quote within 24 hours.")
+    h1 = f"Wedding {plural} in {c}"
+    intro = (f"Looking for a wedding {noun} in {c}? {cd['blurb']} "
+             + (f"{len(local)} {plural} on our roster are based in {c}, and the rest of the network travels to {c} for your dates." if local
+                else f"Our {plural} work across India and travel to {c} for your dates."))
+    w = wa(f"Hi Artisans of Sound, I am looking for a wedding {noun} in {c}.")
+    faq = [[f"Can I book a wedding {noun} for {c} through Artisans of Sound?", f"Yes. Share your date, venue and guest count and we shortlist {plural} for {c} and send one clear quote within 24 hours."],
+           [f"Do {plural} travel to {c}?", f"Yes. Our acts are available across India. Acts based in {c} save on travel and stay, and the rest of the network travels to {c} for your dates."],
+           [f"How early should I book a wedding {noun} in {c}?", f"As early as your date and venue are fixed. Peak wedding dates in {c} fill first, so earlier bookings give you more choice."]]
+    others = [(f"/wedding/{cd['slug']}/{WED['kinds'][k]['slug']}/", f"Wedding {WED['kinds'][k]['plural']} in {c}") for k in WED["kinds"] if k != kind]
+    same = [(f"/wedding/{WED['cities'][x]['slug']}/{kd['slug']}/", f"Wedding {plural} in {x}") for x in WED["cities"] if x != c][:8]
+    body = (head_block(f"{len(pool)} {plural} for weddings in {c}", h1, intro, w) +
+            (sec(f"Based in {c}", grid(local)) if local else "") +
+            sec(f"Available for weddings in {c}", grid(rest, 24) + (f'<p class="anote">Showing {min(24, len(rest))} of {len(rest)}. <a href="/book/">Browse every category</a>.</p>' if len(rest) > 24 else "")) +
+            sec("How to choose", f'<div class="ubody"><p>{esc(kd["tips"])}</p></div>') + faq_block(faq) + cta(w, CTA) +
+            sec(f"More for weddings in {c}", links(others + [(f"/wedding/{cd['slug']}/", f"All wedding artists in {c}"), ("/occasions/wedding/", "Wedding artists across India")])) +
+            sec(f"Wedding {plural} in other cities", links(same)))
+    write(["wedding", cd["slug"], kd["slug"]], shell(url, title, desc, [("Home", "/"), ("Weddings", "/wedding/"), (c, f"/wedding/{cd['slug']}/"), (f"Wedding {plural}", f"/wedding/{cd['slug']}/{kd['slug']}/")],
+                                                      body, (local + rest)[:CAP], faq, f"Hi Artisans of Sound, I am looking for a wedding {noun} in {c}."))
+    return url
+
+def wedding_city_page(c, acts):
+    cd = WED["cities"][c]; url = f"{SITE}/wedding/{cd['slug']}/"
+    title = f"Wedding DJs, bands, singers and anchors in {c} | Artisans of Sound"
+    desc = trim(f"Book wedding DJs, live bands, singers and anchors for your wedding in {c}. One shortlist and one clear quote within 24 hours.")
+    w = wa(f"Hi Artisans of Sound, I would like artists for a wedding in {c}.")
+    items = [(f"/wedding/{cd['slug']}/{k['slug']}/", f"Wedding {k['plural']} in {c}", f"{len(wedding_acts(key, acts))} on the roster") for key, k in WED["kinds"].items()]
+    body = (head_block(f"Weddings in {c}", f"Wedding artists in {c}", f"{cd['blurb']} Pick what you need and we shortlist acts for your date, venue and guest count.", w) +
+            '<ul class="hublist">' + "".join(f'<li><a href="{h}"><b>{esc(t)}</b><span>{esc(s)}</span></a></li>' for h, t, s in items) + '</ul>\n' +
+            cta(w, CTA) + sec("More", links([("/occasions/wedding/", "Wedding artists across India"), ("/wedding/", "Weddings in other cities")])))
+    write(["wedding", cd["slug"]], shell(url, title, desc, [("Home", "/"), ("Weddings", "/wedding/"), (c, f"/wedding/{cd['slug']}/")], body))
+    return url
+
+def wedding_pages(acts):
+    urls = []
+    for c in WED["cities"]:
+        urls.append(wedding_city_page(c, acts))
+        for kind in WED["kinds"]: urls.append(wedding_kind_page(kind, c, acts))
+    entries = [(f"/wedding/{d['slug']}/", f"Wedding artists in {c}", d["blurb"].split(". ")[0].rstrip(".") + ".") for c, d in WED["cities"].items()]
+    urls.append(hub(["wedding"], "Wedding DJs, bands, singers and anchors by city | Artisans of Sound", "Wedding artists by city",
+                    "Find wedding DJs, live bands, singers and anchors for your city. Pick a city to see the acts and get a quote.", entries, "Weddings"))
+    return urls
+
 def build(acts, reg):
-    for p in ("book", "occasions", "cities", "top"): shutil.rmtree(os.path.join(ROOT, p), ignore_errors=True)
+    for p in ("book", "occasions", "cities", "top", "wedding"): shutil.rmtree(os.path.join(ROOT, p), ignore_errors=True)
     urls = []
     for k in reg["fmt"]: urls.append(category(k, acts, reg))
     for k, c in sorted(reg["combo"]): urls.append(combo(k, c, acts, reg))
@@ -198,6 +258,7 @@ def build(acts, reg):
     for c in reg["city"]: urls.append(city(c, acts, reg))
     for t in A.TAX["TOP"]:
         if t[0] in reg["top"]: urls.append(top(t, acts, reg))
+    urls += wedding_pages(acts)
     first = lambda d: d["intro"].split(". ")[0].rstrip(".") + "."
     urls.append(hub(["book"], "Book artists by category | Artisans of Sound", "Book artists by category",
         "Live bands, DJs, singers, anchors, celebrity and special acts. Pick a category to see the acts and videos.",
@@ -242,6 +303,10 @@ def write_search_index(acts, reg):
         rows.append(["Top list", label, f"/top/{slug}/", "", ""])
     for c, slug in reg["city"].items():
         rows.append(["City", c, f"/cities/{slug}/", "Acts based here", f"bands djs singers in {c}"])
+    for c, d in WED["cities"].items():
+        rows.append(["City", f"Wedding artists in {c}", f"/wedding/{d['slug']}/", "Wedding DJs, bands, singers, anchors", f"wedding {c} dj band singer anchor"])
+        for kk, k in WED["kinds"].items():
+            rows.append(["Category", f"Wedding {k['plural']} in {c}", f"/wedding/{d['slug']}/{k['slug']}/", "", f"wedding {k['noun']} in {c} {' '.join(d['alias'])}"])
     for p in U2.posts:
         rows.append(["Guide", p["title"], f"/updates/{p['slug']}/", p["cat"], p["intro"]])
     for t, u, k in (("Join as an artist", "/join.html", "apply musician performer roster"), ("About Artisans of Sound", "/about.html", "founder maneswita team"), ("Booking terms", "/terms.html", "payment advance cancellation contract")):
