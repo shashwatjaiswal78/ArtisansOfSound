@@ -1556,6 +1556,7 @@ footer{padding:56px 0 72px;border-top:1px solid var(--line);margin-top:clamp(64p
   // categories with no acts yet borrow a photo of their own
   var COVEROVER = {lounge:'img/act-ayush.jpg', choir:'img/cat-choir.jpg', devotional:'img/cat-devotional.jpg', intl:'img/act-stellar.jpg', jazz:'img/cat-westjazz.jpg', western:'img/cat-westjazz.jpg', solosing:'img/cat-solo.jpg', celeb:'img/cat-celeb.jpg'};
   var OCCOVER = {chowki:'img/occ-chowki.jpg'};
+  var TOPOVER = {'Top Male DJ for Wedding':'img/act-sukhbir.jpg'};
   // only photos listed in AOS_COVERS (acts.js) may be a tile cover; other artist photos stay on their own card
   function coverOK(p){ return !window.AOS_COVERS || window.AOS_COVERS.indexOf(p) > -1; }
   // every distinct photo we have, so rows with many cards do not keep repeating the same one
@@ -1613,7 +1614,7 @@ footer{padding:56px 0 72px;border-top:1px solid var(--line);margin-top:clamp(64p
     var usedT = [];
     function hasAny(arr, want){ return !want.length || want.some(function(w){ return arr.indexOf(w) > -1; }); }
     buildRail('rtop', 'Top artists', '', '', TOP.map(function(t, i){
-      var cv = (t[1].length === 1 && !t[2].length && COVEROVER[t[1][0]]) || pickCover(function(a){ return hasAny(a.f, t[1]) && hasAny(a.o, t[2]) && hasAny(a.x, t[3] ? [t[3]] : []); }, usedT, true); if (cv) usedT.push(cv);
+      var cv = TOPOVER[t[0]] || (t[1].length === 1 && !t[2].length && COVEROVER[t[1][0]]) || pickCover(function(a){ return hasAny(a.f, t[1]) && hasAny(a.o, t[2]) && hasAny(a.x, t[3] ? [t[3]] : []); }, usedT, true); if (cv) usedT.push(cv);
       return {key:'top' + i, label:t[0], cover:cv, code:'TA', go:function(){ st.f = t[1].slice(); st.o = t[2].slice(); st.x = t[3] ? [t[3]] : []; st.shown = STEP; pick('top:' + t[0]); openList(); }};
     }));
     var used = [];
