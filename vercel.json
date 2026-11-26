@@ -118,13 +118,13 @@
       "permanent": true
     },
     {
-      "source": "/artists/ankit-bathla/",
-      "destination": "/artists/ankit-bhatla/",
+      "source": "/artists/ankit-bhatla/",
+      "destination": "/artists/ankit-bathla/",
       "permanent": true
     },
     {
-      "source": "/artists/ankit-bathla",
-      "destination": "/artists/ankit-bhatla/",
+      "source": "/artists/ankit-bhatla",
+      "destination": "/artists/ankit-bathla/",
       "permanent": true
     }
   ]
