@@ -116,6 +116,16 @@
       "source": "/artists/wadali-brothers",
       "destination": "/artists/the-legendary-wadalis/",
       "permanent": true
+    },
+    {
+      "source": "/artists/ankit-bathla/",
+      "destination": "/artists/ankit-bhatla/",
+      "permanent": true
+    },
+    {
+      "source": "/artists/ankit-bathla",
+      "destination": "/artists/ankit-bhatla/",
+      "permanent": true
     }
   ]
 }
