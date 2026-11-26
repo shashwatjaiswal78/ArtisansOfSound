@@ -56,9 +56,10 @@ window.AOS_BIOS = {
       ["Honour", "Padma Shri"]
     ],
     why: [
-      "A headline name whose hits guests know by heart, so the whole room sings along.",
-      "A pianist and singer who can carry a full live set, from pop favourites to film songs.",
-      "Suits a grand wedding, reception, corporate gala or concert-style night."
+      "A name guests recognise at once. \"Lift Kara De\", \"Kabhi To Nazar Milao\" and \"Bhar Do Jholi Meri\" are songs the whole room can sing along to.",
+      "A pianist as well as a singer, so he brings real musicianship to the stage and not just a vocal over a track.",
+      "A Padma Shri honouree with a career of over two decades, which gives your event a genuine headline moment.",
+      "Suits a grand wedding, reception, corporate gala or concert-style night where the headline act matters."
     ]
   },
   "Shreya Ghoshal": {
