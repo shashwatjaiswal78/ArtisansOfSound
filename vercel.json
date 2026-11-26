@@ -226,6 +226,16 @@
       "source": "/artists/suyash-medh",
       "destination": "/book/solo-singers/",
       "permanent": false
+    },
+    {
+      "source": "/book/solo-singers/mumbai/",
+      "destination": "/book/solo-singers/",
+      "permanent": false
+    },
+    {
+      "source": "/book/solo-singers/mumbai",
+      "destination": "/book/solo-singers/",
+      "permanent": false
     }
   ]
 }
