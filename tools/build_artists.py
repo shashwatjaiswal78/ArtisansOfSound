@@ -108,13 +108,14 @@ def mini(b):
 
 def page(a, acts, reg):
     n, lab = a["base"], a["label"]
+    celeb = "celeb" in a["f"] or "standup" in a["f"]   # well-known names: no showreel section, their videos are all over the web
     canon = f"{SITE}/artists/{a['slug']}/"
     ph = phrase(lab)
     title = f"Book {n} ({ph}) {'in ' + a['city'] if a['city'] != 'Pan-India' else 'in India'} | Artisans of Sound"
     occ_names = [OCC[o] for o in a["occ"] if o in OCC]
     for k in (4, 3, 2, 1, 0):
         top_occ = ", ".join(occ_names[:k])
-        desc = (f"Book {n} ({ph}) {where(a)}. " + (f"Suited to {top_occ}. " if top_occ else "") + "Videos and a clear quote within 24 hours.")
+        desc = (f"Book {n} ({ph}) {where(a)}. " + (f"Suited to {top_occ}. " if top_occ else "") + ("A clear quote within 24 hours." if celeb else "Videos and a clear quote within 24 hours."))
         if len(desc) <= 160: break
     if a["bio"]:
         first = (paras_bio := (a["bio"] if isinstance(a["bio"], list) else a["bio"].get("about", [])))[0] if (a["bio"] and (a["bio"] if isinstance(a["bio"], list) else a["bio"].get("about", []))) else ""
@@ -135,7 +136,7 @@ def page(a, acts, reg):
         tg = a["tag"]
         tag_s = (f" Seen on {tg}." if "idol" in tg.lower() else f" Known as {'an' if tg[:1].lower() in 'aeiou' else 'a'} {tg[:1].lower() + tg[1:] if not tg[:2].isupper() else tg}." if tg else "")
         paras = [f"{n} ({ph}) {based}available to book across India through Artisans of Sound." + tag_s + (f" {a['par']}." if a["par"] else ""),
-                 ("Artisans of Sound handles the whole booking: we check availability for your date, send videos and give you one clear quote within 24 hours, "
+                 ("Artisans of Sound handles the whole booking: we check availability for your date, " + ("" if celeb else "send videos and ") + "give you one clear quote within 24 hours, "
                   "with a replacement act arranged if anyone drops out.")]
         facts = []; why = []
     fl = f"/book/{reg['fmt'][a['main']]}/" if a["main"] in reg["fmt"] else None
@@ -147,7 +148,9 @@ def page(a, acts, reg):
                 if dims else f'<div class="aph aph0" aria-hidden="true">{esc(initials(n))}</div>')
     why_html = ('<section class="asec"><h2>Why book ' + esc(n) + '</h2><ul class="awhy">' + "".join(f"<li>{esc(x)}</li>" for x in why) + '</ul></section>\n') if why else ""
     vids = ""
-    if a["vid"]:
+    if celeb:
+        vids = ""
+    elif a["vid"]:
         vids = ('<section class="asec"><h2>Watch ' + esc(n) + '</h2><div class="avid">' +
                 "".join(f'<button type="button" class="avb" data-u="{esc(v["u"])}">{esc(v["l"] or "Video " + str(i + 1))}</button>' for i, v in enumerate(a["vid"])) +
                 '</div><div class="astage" id="astage"></div></section>')
@@ -188,7 +191,7 @@ def page(a, acts, reg):
       '    </div></header>\n'
       '    <section class="asec"><h2>About ' + esc(n) + '</h2><div class="ubody">' + "".join(f"<p>{esc(p)}</p>" for p in paras) + '</div></section>\n'
       + why_html + vids + occ_html + gen_html +
-      f'    <div class="ucta"><h2>Planning an event?</h2><p>Tell us the date, city and venue. We check {esc(n)}\'s availability and send videos with a clear quote within 24 hours.</p>'
+      f'    <div class="ucta"><h2>Planning an event?</h2><p>Tell us the date, city and venue. We check {esc(n)}\'s availability and send '+('' if celeb else 'videos with ')+'a clear quote within 24 hours.</p>'
       f'<div class="ask"><a class="dark-pill" href="/#enquiry">Get a quote</a><a class="ghost-pill" href="{esc(wa)}" target="_blank" rel="noopener">Message us on WhatsApp</a></div></div>\n'
       + rel_html + '  </article>\n</main>\n'
       f'<a class="uwa" href="{esc(wa)}" target="_blank" rel="noopener" aria-label="Message us on WhatsApp">WhatsApp</a>\n' + U.FOOTER + PLAYER + U.tail + '</body></html>\n')
