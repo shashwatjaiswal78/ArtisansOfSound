@@ -136,6 +136,10 @@ PHOTOS = {
  "jaggo-ladies-sangeet": "img/wedding-jaggo.webp",
  "pool-party": "img/wedding-pool-party.webp",
  "welcome-dinner": "img/wedding-welcome-dinner.webp",
+ "baraat": "img/wedding-baraat.webp",
+ "varmala-jaimala": "img/wedding-varmala.webp",
+ "pheras": "img/wedding-pheras.webp",
+ "after-party": "img/wedding-after-party.webp",
 }
 
 # one short line per function for the tiles on the hub page
