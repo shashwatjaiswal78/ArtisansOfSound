@@ -72,7 +72,8 @@ PAGES = [
      ("We coordinate to the event", "We stay in touch with the artists on travel, sound and timings, and with your team on the day."),
    ])),
   ],
-  links=[("/destination-events/", "Destination weddings and events", "Palace, beach and resort celebrations, with travel and logistics handled.", L["occasions"]["wedding"].get("photo")),
+  links=[("/weddings/", "Wedding entertainment by function", "Engagement, mehendi, haldi, sangeet, baraat, reception and more, with the acts that suit each.", L["occasions"]["sangeet"].get("photo")),
+         ("/destination-events/", "Destination weddings and events", "Palace, beach and resort celebrations, with travel and logistics handled.", L["occasions"]["wedding"].get("photo")),
          ocard("sangeet"), ocard("reception")],
   faq=[("Do you work with planners outside Delhi NCR?", "Yes. We have artists in many states and book for weddings across India, including destination weddings. Tell us the city and dates and we check who is available."),
        ("Can you handle several functions of one wedding?", "Yes. We plan the music across mehendi, haldi, sangeet, cocktail and reception together, so the acts suit each night and the budget is kept in one place."),
@@ -361,6 +362,7 @@ def build_destination(acts):
         ("One quote, costs listed", "The artist fee, travel, stay and sound needs are shown separately where they apply."),
         ("Coordination to the event", "We stay in touch with the artists and your team on arrival, sound checks and timings."),
     ]))
+    body += B.sec("More for your wedding", cards([("/weddings/", "Wedding entertainment by function", "Pick the function, see the acts that suit it: engagement, mehendi, haldi, sangeet, baraat and more.", L["occasions"]["sangeet"].get("photo"))]))
     body += B.faq_block(faq)
     body += (f'    <div class="ucta"><h2>Planning a destination event?</h2><p>Send the destination and dates. We reply with options and one clear quote within 24 hours.</p><div class="ask">'
              f'<a class="dark-pill" href="{enq}">Send an enquiry</a><a class="ghost-pill" href="{esc(w)}" target="_blank" rel="noopener">Message us on WhatsApp</a></div></div>\n')

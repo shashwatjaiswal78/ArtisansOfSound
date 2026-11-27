@@ -4,10 +4,10 @@ Usage:  python3 tools/build.py      (needs Python 3 with Pillow, and Node)
 Commit the generated files; Vercel serves them as they are."""
 import os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import build_updates, build_artists, build_landing, build_b2b
+import build_updates, build_artists, build_landing, build_b2b, build_weddings
 acts = build_artists.load_acts()
 reg = build_landing.plan(acts)
-extra = build_artists.build(acts, reg) + build_landing.build(acts, reg) + build_b2b.build(acts, reg)
+extra = build_artists.build(acts, reg) + build_landing.build(acts, reg) + build_b2b.build(acts, reg) + build_weddings.build(acts, reg)
 build_landing.write_links(acts, reg)
 build_landing.write_search_index(acts, reg)
 import re, subprocess
