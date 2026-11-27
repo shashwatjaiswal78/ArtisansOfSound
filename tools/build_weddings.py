@@ -382,7 +382,7 @@ def cities_hub():
     build_landing, so it replaces the plain list page build_landing makes at the same address. The address is already in the sitemap."""
     W = L["wedding"]["cities"]
     w = B.wa("Hi Artisans of Sound, I am planning a wedding and would like entertainment options.")
-    items = [(f"/wedding/{d['slug']}/", c, CITY_TAG[c], d["slug"]) for c, d in sorted(W.items())]   # alphabetical
+    items = [(f"/wedding/{d['slug']}/", c, CITY_TAG[c], d["slug"]) for c, d in W.items()]   # the order of the cities in tools/landing.json
     intro = "Find wedding DJs, live bands, singers and anchors for your city. Pick a city to see the acts and get a quote."
     body = (f'    <p class="kicker">{len(items)} cities</p>\n    <h1 class="uh">Wedding artists by city</h1>\n    <p class="alead">{esc(intro)}</p>\n'
             + X.CSS + ({"photos": lambda: TILE_CSS + CITY_TILE_CSS + city_tiles(items),
