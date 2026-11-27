@@ -48,6 +48,36 @@
   ],
   "redirects": [
     {
+      "source": "/corporate/conferences-summits/",
+      "destination": "/corporate/conferences-summits-business-events/",
+      "permanent": false
+    },
+    {
+      "source": "/corporate/annual-days-employee-engagement/",
+      "destination": "/corporate/employee-engagement-internal-events/",
+      "permanent": false
+    },
+    {
+      "source": "/corporate/parties-gala-dinners/",
+      "destination": "/corporate/parties-entertainment-nights/",
+      "permanent": false
+    },
+    {
+      "source": "/corporate/launches-brand-activations/",
+      "destination": "/corporate/brand-activations-marketing-events/",
+      "permanent": false
+    },
+    {
+      "source": "/corporate/mice-offsites-destination/",
+      "destination": "/corporate/mice-offsites-destination-events/",
+      "permanent": false
+    },
+    {
+      "source": "/corporate/award-ceremonies-celebrations/",
+      "destination": "/corporate/conferences-summits-business-events/",
+      "permanent": false
+    },
+    {
       "source": "/artists/veronika-x-taishul/",
       "destination": "/artists/taishul/",
       "permanent": true
