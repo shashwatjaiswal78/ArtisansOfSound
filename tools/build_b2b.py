@@ -27,6 +27,32 @@ def pcard(path, key, title, sub):
 def cards(items):
     return '<ul class="hublist">' + "".join(B.hub_item(e) for e in items) + "</ul>"
 
+TILE_CSS = ('<style>.wtiles{list-style:none;margin:18px 0 0;padding:0;display:grid;grid-template-columns:repeat(var(--c,4),minmax(0,1fr));gap:16px}'
+ '.wtiles.c3{--c:3}.wtiles.c4{--c:4}.wtiles.c5{--c:5}.wtiles.c6{--c:6;gap:14px}'
+ '.wtiles a{position:relative;display:block;border-radius:18px;overflow:hidden;aspect-ratio:4/5;background:#14101f;color:#F6F2E8;text-decoration:none;isolation:isolate}'
+ '.wtiles img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .35s ease}'
+ '.wtiles a::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to top,rgba(6,3,16,.92) 0%,rgba(6,3,16,.55) 42%,rgba(6,3,16,0) 70%)}'
+ '.wtiles a:hover img,.wtiles a:focus-visible img{transform:scale(1.04)}'
+ '.wtiles a:focus-visible{outline:3px solid var(--ink);outline-offset:3px}'
+ '.wtiles .ft{position:absolute;left:16px;right:16px;bottom:14px;display:grid;gap:5px}'
+ '.wtiles b{font-family:var(--display);font-weight:800;font-size:clamp(21px,2vw,26px);line-height:1.02;text-transform:uppercase}'
+ '.wtiles .ft span{font-size:13.5px;line-height:1.35;color:#E4DECF}'
+ '.wtiles.c5 .ft{left:14px;right:14px}.wtiles.c5 b{font-size:clamp(18px,1.7vw,22px)}.wtiles.c5 .ft span{font-size:13px}'
+ '.wtiles.c6 .ft{left:12px;right:12px;bottom:12px}.wtiles.c6 b{font-size:clamp(16px,1.45vw,19px);overflow-wrap:anywhere}.wtiles.c6 .ft span{font-size:12px;line-height:1.3}'
+ '@media (prefers-reduced-motion:reduce){.wtiles img{transition:none}}'
+ '@media (max-width:1100px){.wtiles.c5,.wtiles.c6{--c:3}}'
+ '@media (max-width:900px){.wtiles.c4{--c:2}}'
+ '@media (max-width:700px){.wtiles,.wtiles.c3,.wtiles.c4,.wtiles.c5,.wtiles.c6{--c:2;gap:12px}.wtiles .ft,.wtiles.c5 .ft,.wtiles.c6 .ft{left:12px;right:12px;bottom:12px}.wtiles b,.wtiles.c5 b,.wtiles.c6 b{font-size:19px;overflow-wrap:anywhere}.wtiles .ft span,.wtiles.c5 .ft span,.wtiles.c6 .ft span{font-size:12.5px}}</style>\n')
+
+def tiles(items, cols=4):
+    """items: (href, title, description, photo). Big photo tiles, the same look as the homepage tiles."""
+    out = []
+    for href, title, desc, img in items:
+        d = B.dims(img) if img else None
+        im = f'<img src="/{esc(img)}" alt="" loading="lazy"' + (f' width="{d[0]}" height="{d[1]}"' if d else "") + ">" if img else ""
+        out.append(f'<li><a href="{esc(href)}">{im}<span class="ft"><b>{esc(title)}</b><span>{esc(desc)}</span></span></a></li>')
+    return f'<ul class="wtiles c{cols}">' + "".join(out) + "</ul>"
+
 def pick(acts, formats=(), occs=(), n=6):
     out = [a for a in acts if any(f in a["f"] for f in formats) or any(o in a["occ"] for o in occs)]
     return sorted(out, key=B.rank)[:n]
@@ -99,14 +125,14 @@ PAGES = [
      ("Availability before price", "We confirm the date with the artist first, so you do not quote your client an act that is not free."),
      ("Videos and details ready to share", "Performance videos, line-up, duration and sound needs for each act, in a form you can pass on to your client."),
    ])),
-   ("Formats we arrange for weddings", cards([
+   ("Formats we arrange for weddings", tiles([
      fcard("bollylive", sub="Live Bollywood bands and singers for sangeet, cocktail and reception nights."),
      fcard("punjabi", sub="Punjabi singers and bands for baraat, sangeet and dance floors."),
      fcard("sufibolly", sub="Sufi and Bollywood sets for cocktail evenings and receptions."),
      fcard("dj", sub="Wedding DJs for sangeet and after-parties."),
      fcard("soloinst", sub="Violin, sax, piano and more for entrances, welcomes and dinners."),
      fcard("anchor", sub="Anchors and emcees to run the sangeet and keep the evening moving."),
-   ])),
+   ], 6)),
    ("How we work with you", steps([
      ("Send the brief", "Dates, venues, functions, guest count and budget range. A short WhatsApp message is enough."),
      ("We shortlist", "A shortlist with videos for each function, and a clear quote, within 24 hours."),
@@ -419,7 +445,7 @@ def build(acts, reg):
         mine = pick(acts, a["formats"], a["occs"])
         enq = f"/?for={p['seg_q']}#enquiry"
         body = (f'    <p class="kicker">{esc(p["kicker"])}</p>\n    <h1 class="uh">{esc(p["h1"])}</h1>\n    <p class="alead">{esc(p["lead"])}</p>\n'
-                f'    <div class="ask"><a class="dark-pill" href="{esc(w)}" target="_blank" rel="noopener">{esc(p["cta1"])}</a><a class="ghost-pill" href="{enq}">Send an enquiry</a></div>\n' + CSS)
+                f'    <div class="ask"><a class="dark-pill" href="{esc(w)}" target="_blank" rel="noopener">{esc(p["cta1"])}</a><a class="ghost-pill" href="{enq}">Send an enquiry</a></div>\n' + CSS + TILE_CSS)
         for title, inner in p["sections"]:
             body += B.sec(title, inner)
         body += B.sec(a["title"], B.grid(mine, ctx=None) + '<p class="anote"><a href="/artists/">See every act</a>.</p>')

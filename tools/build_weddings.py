@@ -181,30 +181,8 @@ BLURB = {
  "destination-wedding-welcome": "Folk and cultural acts to welcome guests with local flavour.",
 }
 
-TILE_CSS = ('<style>.wtiles{list-style:none;margin:18px 0 0;padding:0;display:grid;grid-template-columns:repeat(var(--c,4),minmax(0,1fr));gap:16px}'
- '.wtiles.c3{--c:3}.wtiles.c4{--c:4}.wtiles.c5{--c:5}'
- '.wtiles a{position:relative;display:block;border-radius:18px;overflow:hidden;aspect-ratio:4/5;background:#14101f;color:#F6F2E8;text-decoration:none;isolation:isolate}'
- '.wtiles img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .35s ease}'
- '.wtiles a::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to top,rgba(6,3,16,.92) 0%,rgba(6,3,16,.55) 42%,rgba(6,3,16,0) 70%)}'
- '.wtiles a:hover img,.wtiles a:focus-visible img{transform:scale(1.04)}'
- '.wtiles a:focus-visible{outline:3px solid var(--ink);outline-offset:3px}'
- '.wtiles .ft{position:absolute;left:16px;right:16px;bottom:14px;display:grid;gap:5px}'
- '.wtiles b{font-family:var(--display);font-weight:800;font-size:clamp(21px,2vw,26px);line-height:1.02;text-transform:uppercase}'
- '.wtiles .ft span{font-size:13.5px;line-height:1.35;color:#E4DECF}'
- '.wtiles.c5 .ft{left:14px;right:14px}.wtiles.c5 b{font-size:clamp(18px,1.7vw,22px)}.wtiles.c5 .ft span{font-size:13px}'
- '@media (prefers-reduced-motion:reduce){.wtiles img{transition:none}}'
- '@media (max-width:1100px){.wtiles.c5{--c:3}}'
- '@media (max-width:900px){.wtiles.c4{--c:2}}'
- '@media (max-width:700px){.wtiles,.wtiles.c3,.wtiles.c4,.wtiles.c5{--c:2;gap:12px}.wtiles .ft,.wtiles.c5 .ft{left:12px;right:12px;bottom:12px}.wtiles b,.wtiles.c5 b{font-size:19px;overflow-wrap:anywhere}.wtiles .ft span,.wtiles.c5 .ft span{font-size:12.5px}}</style>\n')
-
-def tiles(items, cols=4):
-    """items: (href, title, description, photo). Big photo tiles, the same look as the homepage tiles."""
-    out = []
-    for href, title, desc, img in items:
-        d = B.dims(img) if img else None
-        im = f'<img src="/{esc(img)}" alt="" loading="lazy"' + (f' width="{d[0]}" height="{d[1]}"' if d else "") + ">" if img else ""
-        out.append(f'<li><a href="{esc(href)}">{im}<span class="ft"><b>{esc(title)}</b><span>{esc(desc)}</span></span></a></li>')
-    return f'<ul class="wtiles c{cols}">' + "".join(out) + "</ul>"
+TILE_CSS = X.TILE_CSS   # big photo tiles live in build_b2b (shared with the business pages)
+tiles = X.tiles
 
 def fmt_acts(acts, key):
     return sorted([a for a in acts if key in a["f"]], key=B.rank)
