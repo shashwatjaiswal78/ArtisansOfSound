@@ -356,6 +356,13 @@ CARD_PIC_CSS = ('<style>.cgrid .cimg{display:block;width:124px;height:124px;marg
 # where to centre the square crop of each photo (x y, in percent), for the few that need it
 CITY_FOCUS = {}
 
+# card colour for CITY_STYLE "cards": "dark" (black cards, light text) or "light" (white cards)
+CITY_CARD_THEME = "dark"
+CARD_DARK_CSS = ('<style>.cgrid.dark a{background:#110e1b;border-color:#110e1b;color:#F6F2E8}'
+ '.cgrid.dark .t{color:#BDB5A3}'
+ '.cgrid.dark a:hover,.cgrid.dark a:focus-visible{border-color:#F6F2E8}'
+ '.cgrid.dark a:focus-visible{outline-color:#F6F2E8}</style>\n')
+
 def photo_cards(items):
     """Same white cards as icon_cards, with the city photo (img/city/photo-<slug>.webp) as a small rounded square instead of the icon.
     A city without a photo yet falls back to its line icon."""
@@ -368,7 +375,7 @@ def photo_cards(items):
         else:
             media = f'<span class="cico" style="--i:url(/img/city/{esc(slug)}.svg)" aria-hidden="true"></span>'
         out.append(f'<li><a href="{esc(h)}">{media}<b>{esc(c)}</b><span class="t">{esc(tag)}</span></a></li>')
-    return '<ul class="cgrid">' + "".join(out) + "</ul>"
+    return f'<ul class="cgrid{" dark" if CITY_CARD_THEME == "dark" else ""}">' + "".join(out) + "</ul>"
 
 def cities_hub():
     """/wedding/ (wedding artists by city): one card per city with a line icon of its best-known monument. Written after
@@ -379,7 +386,7 @@ def cities_hub():
     intro = "Find wedding DJs, live bands, singers and anchors for your city. Pick a city to see the acts and get a quote."
     body = (f'    <p class="kicker">{len(items)} cities</p>\n    <h1 class="uh">Wedding artists by city</h1>\n    <p class="alead">{esc(intro)}</p>\n'
             + X.CSS + ({"photos": lambda: TILE_CSS + CITY_TILE_CSS + city_tiles(items),
-                        "cards": lambda: ICON_CSS + CARD_PIC_CSS + photo_cards(items),
+                        "cards": lambda: ICON_CSS + CARD_PIC_CSS + (CARD_DARK_CSS if CITY_CARD_THEME == "dark" else "") + photo_cards(items),
                         "icons": lambda: ICON_CSS + icon_cards(items)}[CITY_STYLE])() + "\n" +
             B.sec("More for your wedding", B.links([("/weddings/", "Wedding entertainment by function"), ("/destination-events/", "Destination weddings"), ("/for-planners/", "For wedding planners and agencies")])) +
             B.cta(w, B.CTA))
