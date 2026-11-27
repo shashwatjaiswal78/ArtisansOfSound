@@ -128,6 +128,59 @@ FUNCS = [
   [("Folk ensembles", "rajfusion"), ("Instrumentalists", "soloinst"), ("Qawwali and Sufi groups", "sufiq"), ("Instrumental ensembles", "instrband")], ["Other cultural acts"]),
 ]
 
+# one short line per function for the tiles on the hub page
+BLURB = {
+ "engagement-sagai": "Soft, romantic music for the ring ceremony: acoustic singers, violin, flute and live bands.",
+ "haldi-mehendi": "Light, folk-flavoured and rhythmic music for the colourful days before the wedding.",
+ "sangeet-cocktail": "Live bands, singers, DJs and hosts for the big dancing night and the cocktail hour.",
+ "pool-party": "Upbeat DJs, percussion and lounge acts for daytime and sunset by the water.",
+ "jaggo-ladies-sangeet": "Punjabi folk songs, dhol and dancing for the traditional ladies' night.",
+ "welcome-dinner": "Acoustic, jazz, piano and ghazal for guests arriving and dining together.",
+ "baraat": "Dhol, percussion and folk acts to lead the groom's procession.",
+ "varmala-jaimala": "Violin, flute and soft live singers for the garland exchange.",
+ "pheras": "Traditional, devotional and classical music around the sacred rituals.",
+ "vidaai": "Gentle flute, violin and folk music for the emotional farewell.",
+ "reception": "Live bands, Sufi, jazz, celebrity singers and DJs for the formal evening.",
+ "after-party": "DJs, rock and party bands for the late-night celebration.",
+ "post-wedding-brunch": "Acoustic duos, jazz and piano for a relaxed farewell lunch.",
+ "roka": "Acoustic singers and a single instrumentalist for a small family ceremony.",
+ "chunni-ceremony": "Folk and devotional singers for the blessing ceremony.",
+ "chooda-ceremony": "Punjabi folk singing and dhol for the pre-wedding ceremony.",
+ "mayra-bhaat": "Rajasthani folk and traditional singers for the maternal family's ceremony.",
+ "mata-ki-chowki": "Bhajan singers and devotional groups for the evening of prayer.",
+ "jagran": "Devotional singers and bhajan groups for an all-night gathering.",
+ "qawwali-night": "Qawwali and Sufi groups for a powerful, celebratory evening.",
+ "sufi-night": "Soulful Sufi singers and bands, paired with dinner or cocktails.",
+ "ghazal-evening": "Ghazal singers and instrumentalists for a refined, seated evening.",
+ "bollywood-retro-night": "Classic Bollywood hits that get every generation singing.",
+ "musical-evening": "Live bands and fusion ensembles for a relaxed evening of music.",
+ "bachelor-bachelorette-party": "DJs, party bands and electronic acts for the friends' night out.",
+ "family-get-together": "Gentle acoustic, ghazal and jazz acts for both families together.",
+ "destination-wedding-welcome": "Folk and cultural acts to welcome guests with local flavour.",
+}
+
+TILE_CSS = ('<style>.wtiles{list-style:none;margin:18px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}'
+ '.wtiles a{position:relative;display:block;border-radius:18px;overflow:hidden;aspect-ratio:4/5;background:#14101f;color:#F6F2E8;text-decoration:none;isolation:isolate}'
+ '.wtiles img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .35s ease}'
+ '.wtiles a::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to top,rgba(6,3,16,.92) 0%,rgba(6,3,16,.55) 42%,rgba(6,3,16,0) 70%)}'
+ '.wtiles a:hover img,.wtiles a:focus-visible img{transform:scale(1.04)}'
+ '.wtiles a:focus-visible{outline:3px solid var(--ink);outline-offset:3px}'
+ '.wtiles .ft{position:absolute;left:16px;right:16px;bottom:14px;display:grid;gap:5px}'
+ '.wtiles b{font-family:var(--display);font-weight:800;font-size:clamp(21px,2vw,26px);line-height:1.02;text-transform:uppercase}'
+ '.wtiles .ft span{font-size:13.5px;line-height:1.35;color:#E4DECF}'
+ '@media (prefers-reduced-motion:reduce){.wtiles img{transition:none}}'
+ '@media (max-width:1000px){.wtiles{grid-template-columns:repeat(3,minmax(0,1fr))}}'
+ '@media (max-width:700px){.wtiles{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.wtiles .ft{left:12px;right:12px;bottom:12px}.wtiles b{font-size:19px;overflow-wrap:anywhere}.wtiles .ft span{font-size:12.5px}}</style>\n')
+
+def tiles(items):
+    """items: (href, title, description, photo). Big photo tiles, the same look as the homepage tiles."""
+    out = []
+    for href, title, desc, img in items:
+        d = B.dims(img) if img else None
+        im = f'<img src="/{esc(img)}" alt="" loading="lazy"' + (f' width="{d[0]}" height="{d[1]}"' if d else "") + ">" if img else ""
+        out.append(f'<li><a href="{esc(href)}">{im}<span class="ft"><b>{esc(title)}</b><span>{esc(desc)}</span></span></a></li>')
+    return '<ul class="wtiles">' + "".join(out) + "</ul>"
+
 def fmt_acts(acts, key):
     return sorted([a for a in acts if key in a["f"]], key=B.rank)
 
@@ -195,11 +248,11 @@ def hub_page(acts):
     desc = "Find artists for every wedding function: engagement, mehendi, haldi, sangeet, cocktail, baraat, pheras, reception and more, with videos and one quote in 24 hours."
     body = ('    <p class="kicker">Weddings</p>\n    <h1 class="uh">Entertainment for every wedding function</h1>\n'
             '    <p class="alead">An Indian wedding is many events, and each one calls for different music. Pick the function you are planning to see the kinds of acts that suit it, and the artists you can book.</p>\n'
-            f'    <div class="ask"><a class="dark-pill" href="{esc(w)}" target="_blank" rel="noopener">Plan my wedding on WhatsApp</a><a class="ghost-pill" href="{enq}">Send an enquiry</a></div>\n' + X.CSS)
+            f'    <div class="ask"><a class="dark-pill" href="{esc(w)}" target="_blank" rel="noopener">Plan my wedding on WhatsApp</a><a class="ghost-pill" href="{enq}">Send an enquiry</a></div>\n' + X.CSS + TILE_CSS)
     for gk, gname, gsub in GROUPS:
-        items = [(fn_url(f[0]), f[2], B.trim(f[4].split(". ")[0].rstrip(".") + ".", 110), photo(f)) for f in FUNCS if f[1] == gk]
-        body += B.sec(esc(gname), f'<p class="anote" style="margin:0 0 4px">{esc(gsub)}</p>' + X.cards(items))
-    body += B.sec("More for your wedding", X.cards([
+        items = [(fn_url(f[0]), f[2], BLURB[f[0]], photo(f)) for f in FUNCS if f[1] == gk]
+        body += B.sec(esc(gname), f'<p class="anote" style="margin:0 0 4px">{esc(gsub)}</p>' + tiles(items))
+    body += B.sec("More for your wedding", tiles([
         ("/destination-events/", "Destination weddings", "Palace, beach and resort celebrations, with travel and logistics handled.", L["occasions"]["wedding"].get("photo")),
         ("/wedding/", "Wedding artists by city", "Wedding DJs, bands, singers and anchors in your city.", L["formats"]["bollylive"].get("photo")),
         ("/for-planners/", "For wedding planners and agencies", "One contact for every function's music.", L["formats"]["anchor"].get("photo"))]))
