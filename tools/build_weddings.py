@@ -275,9 +275,9 @@ def hub_page(acts):
         items = [(fn_url(f[0]), f[2], BLURB[f[0]], photo(f)) for f in FUNCS if f[1] == gk]
         body += B.sec(esc(gname), f'<p class="anote" style="margin:0 0 4px">{esc(gsub)}</p>' + tiles(items, cols[gk]))
     body += B.sec("More for your wedding", tiles([
-        ("/destination-events/", "Destination weddings", "Palace, beach and resort celebrations, with travel and logistics handled.", L["occasions"]["wedding"].get("photo")),
-        ("/wedding/", "Wedding artists by city", "Wedding DJs, bands, singers and anchors in your city.", L["formats"]["bollylive"].get("photo")),
-        ("/for-planners/", "For wedding planners and agencies", "One contact for every function's music.", L["formats"]["anchor"].get("photo"))], 3))
+        ("/destination-events/", "Destination weddings", "Palace, beach and resort celebrations, with travel and logistics handled.", "img/wedding-destination.webp"),
+        ("/wedding/", "Wedding artists by city", "Wedding DJs, bands, singers and anchors in your city.", "img/wedding-by-city.webp"),
+        ("/for-planners/", "For wedding planners and agencies", "One contact for every function's music.", "img/wedding-planners.webp")], 3))
     faq = [("Can you plan the music for the whole wedding?", "Yes. Tell us the functions, cities and dates, and we send one shortlist and one quote across them."),
            ("Do I need a different artist for each function?", "Often yes, because each function has a different mood. We suggest a mix so the acts suit each night and the budget stays in one place."),
            ("How quickly will I get a quote?", "We send a shortlist with videos and one clear quote within 24 hours of a clear brief.")]
