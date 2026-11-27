@@ -331,7 +331,7 @@ def icon_cards(items):
 
 # /wedding/ can show line icons ("icons") or one photo per city ("photos"). Photos live in img/city/photo-<slug>.webp (portrait 4:5);
 # a city without a photo yet shows its line icon on a dark tile, so the grid stays even while photos are added.
-CITY_STYLE = "photos"
+CITY_STYLE = "cards"   # "cards" = small photo on a white card (name and line underneath), "photos" = tall photo tiles with text over, "icons" = line icons
 
 CITY_TILE_CSS = ('<style>.wtiles .cph{position:absolute;inset:0;z-index:-2;background:linear-gradient(160deg,#2c2745,#12101c)}'
  '.wtiles .cph::before{content:"";position:absolute;left:50%;top:36%;width:54%;aspect-ratio:1;transform:translate(-50%,-50%);background:#e9e2d0;opacity:.88;'
@@ -350,6 +350,26 @@ def city_tiles(items):
         out.append(f'<li><a href="{esc(h)}">{media}<span class="ft"><b>{esc(c)}</b><span>{esc(tag)}</span></span></a></li>')
     return '<ul class="wtiles c4">' + "".join(out) + "</ul>"
 
+CARD_PIC_CSS = ('<style>.cgrid .cimg{display:block;width:124px;height:124px;margin-bottom:6px;border-radius:16px;object-fit:cover;object-position:var(--pos,50% 30%)}'
+ '@media (max-width:700px){.cgrid .cimg{width:96px;height:96px;border-radius:14px}}</style>\n')
+
+# where to centre the square crop of each photo (x y, in percent), for the few that need it
+CITY_FOCUS = {}
+
+def photo_cards(items):
+    """Same white cards as icon_cards, with the city photo (img/city/photo-<slug>.webp) as a small rounded square instead of the icon.
+    A city without a photo yet falls back to its line icon."""
+    out = []
+    for h, c, tag, slug in items:
+        ph = f"img/city/photo-{slug}.webp"
+        if os.path.exists(os.path.join(U.ROOT, ph)):
+            pos = CITY_FOCUS.get(slug)
+            media = f'<img class="cimg" src="/{ph}" alt="" loading="lazy" width="124" height="124"' + (f' style="--pos:{pos}"' if pos else "") + ">"
+        else:
+            media = f'<span class="cico" style="--i:url(/img/city/{esc(slug)}.svg)" aria-hidden="true"></span>'
+        out.append(f'<li><a href="{esc(h)}">{media}<b>{esc(c)}</b><span class="t">{esc(tag)}</span></a></li>')
+    return '<ul class="cgrid">' + "".join(out) + "</ul>"
+
 def cities_hub():
     """/wedding/ (wedding artists by city): one card per city with a line icon of its best-known monument. Written after
     build_landing, so it replaces the plain list page build_landing makes at the same address. The address is already in the sitemap."""
@@ -358,7 +378,9 @@ def cities_hub():
     items = [(f"/wedding/{d['slug']}/", c, CITY_TAG[c], d["slug"]) for c, d in W.items()]
     intro = "Find wedding DJs, live bands, singers and anchors for your city. Pick a city to see the acts and get a quote."
     body = (f'    <p class="kicker">{len(items)} cities</p>\n    <h1 class="uh">Wedding artists by city</h1>\n    <p class="alead">{esc(intro)}</p>\n'
-            + X.CSS + (TILE_CSS + CITY_TILE_CSS + city_tiles(items) if CITY_STYLE == "photos" else ICON_CSS + icon_cards(items)) + "\n" +
+            + X.CSS + ({"photos": lambda: TILE_CSS + CITY_TILE_CSS + city_tiles(items),
+                        "cards": lambda: ICON_CSS + CARD_PIC_CSS + photo_cards(items),
+                        "icons": lambda: ICON_CSS + icon_cards(items)}[CITY_STYLE])() + "\n" +
             B.sec("More for your wedding", B.links([("/weddings/", "Wedding entertainment by function"), ("/destination-events/", "Destination weddings"), ("/for-planners/", "For wedding planners and agencies")])) +
             B.cta(w, B.CTA))
     B.write(["wedding"], B.shell(SITE + "/wedding/", "Wedding DJs, bands, singers and anchors by city | Artisans of Sound", intro, [("Home", "/"), ("Weddings", "/wedding/")], body))
