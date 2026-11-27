@@ -205,7 +205,7 @@ def func_page(f, acts):
     title = f"{name}: Artists and Entertainment | Artisans of Sound"
     desc = B.trim(f"Artists and entertainment for a {name.lower()}: {', '.join(t[0].lower() for t in types[:3])} and more, with videos and one clear quote in 24 hours.", 160)
     body = (f'    <p class="kicker">Wedding functions</p>\n    <h1 class="uh">{esc(name)}</h1>\n    <p class="alead">{esc(intro)}</p>\n'
-            f'    <div class="ask"><a class="dark-pill" href="{esc(w)}" target="_blank" rel="noopener">Get a quote on WhatsApp</a><a class="ghost-pill" href="{enq}">Send an enquiry</a></div>\n' + X.CSS)
+            f'    <div class="ask"><a class="dark-pill" href="{esc(w)}" target="_blank" rel="noopener">Get a quote on WhatsApp</a><a class="ghost-pill" href="{enq}">Send an enquiry</a></div>\n' + X.CSS + TILE_CSS + X.CTEXT_CSS)
     body += B.sec("How to choose", f'<div class="ubody"><p>{esc(tip)}</p></div>')
     shown, seen = [], set()
     for label, key in types:
@@ -220,9 +220,11 @@ def func_page(f, acts):
         shown.append(key)
     if ask:
         body += B.sec("Ask us", f'<div class="ubody"><p>Looking for something specific, such as {esc(", ".join(a.lower() for a in ask[:-1]) + (" or " if len(ask) > 1 else "") + ask[-1].lower())}? Tell us the city, date and tradition and we check who is available.</p></div>')
-    sib = [(fn_url(s[0]), s[2], None, None) for s in FUNCS if s[1] == grp and s[0] != slug]
-    sibs = [s for s in FUNCS if s[1] == grp and s[0] != slug]
-    body += B.sec("Other wedding functions", B.links([(fn_url(s[0]), s[2]) for s in sibs] + [("/weddings/", "All wedding functions")]))
+    pics = function_photos(acts)
+    sibs = [x for x in FUNCS if x[1] == grp and x[0] != slug]
+    cols = 3 if len(sibs) <= 3 else 4 if len(sibs) == 4 else 5
+    body += B.sec("Other wedding functions", tiles([(fn_url(x[0]), x[2], BLURB[x[0]], pics[x[0]]) for x in sibs], cols) +
+                  '<p class="ctext">Or see <a href="/weddings/">all wedding functions</a>.</p>')
     occs = [o for o in (occ or ()) if o in L["occasions"]]
     if occs:
         rel = [(f"/occasions/{L['occasions'][o]['slug']}/", f"More acts for {L['occasions'][o]['name'].lower()}") for o in occs]
@@ -237,22 +239,29 @@ def func_page(f, acts):
     B.write(["weddings", slug], B.shell(url, title, desc, [("Home", "/"), ("Weddings", "/weddings/"), (name, fn_url(slug))], body, mine, faq, f"Hi Artisans of Sound, I am looking for entertainment for a {name.lower()}."))
     return url
 
+def function_photos(acts):
+    """slug -> picture for every function. Chosen pictures (PHOTOS) first; otherwise a distinct act photo that suits the function."""
+    used = set(PHOTOS.values())   # chosen pictures are reserved so no other tile picks the same photo
+    out = {}
+    for f in FUNCS:
+        if f[0] in PHOTOS:
+            out[f[0]] = PHOTOS[f[0]]; continue
+        pool = []
+        for label, key in f[6]:
+            if key: pool += fmt_acts(acts, key)
+        pick = next((a["photo"] for a in pool if a["photo"] and a["photo"] not in used), None)
+        if pick: used.add(pick)
+        else:
+            k = next((k for _, k in f[6] if k), "bollylive"); pick = L["formats"][k].get("photo")
+        out[f[0]] = pick
+    return out
+
 def hub_page(acts):
     url = SITE + "/weddings/"
     w = B.wa("Hi Artisans of Sound, I am planning a wedding and would like entertainment options.")
     enq = "/?for=wedding#enquiry"
-    used = set(PHOTOS.values())   # chosen pictures are reserved so no other tile picks the same photo
-    def photo(f):
-        if f[0] in PHOTOS: return PHOTOS[f[0]]   # a chosen picture for this function
-        # a distinct act photo per function where possible: first unused photo among the function's matching acts
-        pool = []
-        for label, key in f[6]:
-            if key: pool += fmt_acts(acts, key)
-        for a in pool:
-            if a["photo"] and a["photo"] not in used:
-                used.add(a["photo"]); return a["photo"]
-        k = next((k for _, k in f[6] if k), "bollylive")
-        return L["formats"][k].get("photo")
+    pics = function_photos(acts)
+    photo = lambda f: pics[f[0]]
     title = "Wedding Entertainment by Function: Sangeet, Mehendi, Haldi, Baraat and More | Artisans of Sound"
     desc = "Find artists for every wedding function: engagement, mehendi, haldi, sangeet, cocktail, baraat, pheras, reception and more, with videos and one quote in 24 hours."
     body = ('    <p class="kicker">Weddings</p>\n    <h1 class="uh">Entertainment for every wedding function</h1>\n'

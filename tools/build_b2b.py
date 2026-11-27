@@ -116,6 +116,8 @@ def photo_cards(items, dark=False):
         out.append(f'<li><a href="{esc(h)}">{media}<b>{esc(c)}</b><span class="t">{esc(tag)}</span></a></li>')
     return f'<ul class="cgrid{" dark" if dark else ""}">' + "".join(out) + "</ul>"
 
+CTEXT_CSS = '<style>.ctext{margin:22px 0 0;font-size:17px;line-height:1.7;color:var(--ink2,#5B5B61);max-width:60em}.ctext a{color:var(--ink,#1B1B1D);font-weight:600;text-decoration:underline;text-underline-offset:3px}.ctext a:hover,.ctext a:focus-visible{text-decoration-thickness:2px}</style>\n'
+
 def pick(acts, formats=(), occs=(), n=6):
     out = [a for a in acts if any(f in a["f"] for f in formats) or any(o in a["occ"] for o in occs)]
     return sorted(out, key=B.rank)[:n]
@@ -487,7 +489,7 @@ def build_destination(acts):
            ("How early should we book?", "Peak wedding dates in destination cities fill up early, so ask for options as soon as you have dates and a venue.")]
     body = ('    <p class="kicker">Destination weddings and events</p>\n    <h1 class="uh">Entertainment for destination weddings and events</h1>\n'
             '    <p class="alead">Palace, beach and resort celebrations need acts that suit the setting and can handle the travel. Tell us the destination, dates and functions, and we send options with one clear quote.</p>\n'
-            f'    <div class="ask"><a class="dark-pill" href="{esc(w)}" target="_blank" rel="noopener">Plan a destination event on WhatsApp</a><a class="ghost-pill" href="{enq}">Send an enquiry</a></div>\n' + CSS + TILE_CSS + ICON_CSS + CARD_PIC_CSS + '<style>.ctext{margin:22px 0 0;font-size:17px;line-height:1.7;color:var(--ink2,#5B5B61);max-width:60em}.ctext a{color:var(--ink,#1B1B1D);font-weight:600;text-decoration:underline;text-underline-offset:3px}.ctext a:hover,.ctext a:focus-visible{text-decoration-thickness:2px}</style>\n')
+            f'    <div class="ask"><a class="dark-pill" href="{esc(w)}" target="_blank" rel="noopener">Plan a destination event on WhatsApp</a><a class="ghost-pill" href="{enq}">Send an enquiry</a></div>\n' + CSS + TILE_CSS + ICON_CSS + CARD_PIC_CSS + CTEXT_CSS)
     body += B.sec("Popular destinations", photo_cards(top) + (city_text(more) if more else ""))
     body += B.sec("Formats that suit a destination event", tiles([
         fcard("sufiq", sub="Qawwali and Sufi groups for evenings in forts, palaces and courtyards."),
