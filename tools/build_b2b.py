@@ -319,6 +319,125 @@ def corp_page(c):
       links=c["related"], faq=c["faq"])
 
 
+# Hotels & Hospitality: six venue categories (A-F). Each gets a tile on /hotels/ and a page at /hotels/<slug>/.
+# Pictures: img/hospitality-<name>.webp, 640x800. Replace a file with a better photo of the same name and rebuild.
+HOSP_STEPS = steps([
+  ("Tell us about the venue", "The property, the outlets or rooms, your guests, your busy and slow nights, and a rough budget."),
+  ("We plan the calendar", "A proposed schedule and mix of acts, with videos and one clear quote, within 24 hours."),
+  ("We manage the artists", "Scheduling, confirmations, sound needs and replacements are handled, so your team does not have to."),
+  ("Review and adjust", "After the first month we look at what worked and change the programme."),
+])
+HOSP = [
+ dict(slug="luxury-hotels-resorts", name="Luxury Hotels & Resorts", img="img/hospitality-hotels-resorts.webp",
+  short="Lobby pianists, violinists, jazz trios, acoustic duos and live bands for special evenings.",
+  title="Live Music for Luxury Hotels and Resorts | Artisans of Sound",
+  desc="Lobby pianists, violinists, saxophonists, jazz trios, acoustic singers, live bands and DJs for luxury hotels and resorts, on a daily, weekly or monthly programme.",
+  lead="Hotels use live entertainment to lift the guest experience, set the ambience and make special occasions memorable.",
+  provide=["Lobby pianists", "Violinists and saxophonists", "Classical instrumentalists", "Jazz trios and quartets", "Acoustic singers and duos", "Live bands for special evenings", "DJs for hotel parties", "Folk and cultural performances"],
+  clients="General Managers, Directors of Operations, Food & Beverage Directors, Guest Experience Managers and Entertainment Managers.",
+  formats=[fcard("soloinst", sub="Piano, violin, sax and flute for lobbies and lounges."), fcard("jazz", sub="Jazz trios and quartets for dinners and special evenings."),
+           fcard("duotrio", sub="Acoustic singers and duos for restaurants and bars."), fcard("bollylive", sub="Live bands for New Year's Eve and gala nights.")],
+  acts=dict(formats=("soloinst", "jazz", "lounge", "duotrio", "bollylive"), occs=("venue", "dinner", "brunch"), title="Acts that suit hotels and resorts"),
+  related=[ocard("venue"), ocard("dinner"), ocard("newyear"), fcard("lounge")],
+  wa="Hi Artisans of Sound, I manage a hotel / resort and would like to discuss live entertainment.", cta="Discuss a programme on WhatsApp",
+  faq=[("Can one hotel have different acts in different outlets?", "Yes. A common plan is a lobby pianist, a restaurant singer, a weekend DJ and a jazz band for special dinners, all coordinated by us."),
+       ("Can we start with a trial?", "Yes. A one-month programme is a sensible way to start. Tell us the outlets and nights you want covered."),
+       ("Who pays for sound equipment?", "It depends on the venue and the act. We confirm sound needs for each artist and agree who provides what before the programme starts.")]),
+ dict(slug="restaurants-fine-dining", name="Restaurants & Fine Dining", img="img/hospitality-restaurants.webp",
+  short="Acoustic singers, guitarists, pianists, jazz, ghazal and Bollywood unplugged for the dining room.",
+  title="Live Music for Restaurants and Fine Dining | Artisans of Sound",
+  desc="Solo acoustic singers, guitarists, pianists, jazz bands, saxophonists, violinists, ghazal singers and Bollywood unplugged acts for restaurants and fine dining.",
+  lead="Good live music sets the atmosphere and gives guests a reason to stay a little longer.",
+  provide=["Solo acoustic singers", "Guitarists and pianists", "Jazz bands", "Saxophonists", "Violinists", "Ghazal singers", "Bollywood unplugged performers", "Light instrumental ensembles"],
+  clients="Restaurant owners, F&B managers, outlet managers and restaurant groups.",
+  formats=[fcard("duotrio", sub="Acoustic singers and duos for dinner service."), fcard("jazz", sub="Jazz for dinners and Sunday brunch."),
+           fcard("ghazal", sub="Ghazal and classical singers for wine and dine evenings."), fcard("soloinst", sub="Violin, piano and sax for a refined room.")],
+  acts=dict(formats=("duotrio", "soloinst", "jazz", "ghazal", "lounge"), occs=("dinner", "brunch", "venue"), title="Acts that suit restaurants"),
+  related=[ocard("dinner"), ocard("brunch"), fcard("duotrio"), fcard("ghazal")],
+  wa="Hi Artisans of Sound, I manage a restaurant and would like to discuss live music on weekends.", cta="Discuss live music on WhatsApp",
+  faq=[("Can you cover Friday to Sunday every week?", "Yes. We schedule the artists, rotate them through the month and arrange a replacement if someone is unavailable."),
+       ("Will the music suit a quiet dining room?", "Yes. We suggest acoustic, jazz and instrumental acts and agree the volume and set times with your team."),
+       ("Do you work with restaurant groups?", "Yes. One relationship can cover several outlets.")]),
+ dict(slug="bars-pubs-nightclubs", name="Bars, Pubs & Nightclubs", img="img/hospitality-bars-nightclubs.webp",
+  short="DJs, live bands, DJ with sax or percussion, and solo singers for weekend nights.",
+  title="DJs and Live Music for Bars, Pubs and Nightclubs | Artisans of Sound",
+  desc="DJs, Bollywood DJs, live rock and pop bands, DJ and saxophone or percussion combinations, karaoke hosts and cover bands for bars, pubs and nightclubs.",
+  lead="Bars and clubs need regular entertainment, especially on weekends. We keep the calendar full and the acts fresh.",
+  provide=["DJs and electronic music artists", "Bollywood DJs", "Live rock and pop bands", "Acoustic performers", "DJ + saxophone combinations", "DJ + live percussion", "Karaoke hosts and musicians", "Solo singers and cover bands"],
+  clients="Bar owners, nightlife operators, club managers and hospitality groups.",
+  formats=[fcard("dj", sub="Resident and guest DJs for weekend nights."), fcard("djperc", sub="DJ with live percussion for a bigger night."),
+           fcard("bollyrock", sub="Rock and pop bands for pubs."), fcard("djband", sub="DJ-based bands for a high-energy floor.")],
+  acts=dict(formats=("dj", "djperc", "djband", "bollyrock", "western"), occs=("venue", "newyear"), title="Acts that suit bars and clubs"),
+  related=[ocard("venue"), ocard("newyear"), fcard("dj"), fcard("djperc")],
+  wa="Hi Artisans of Sound, I run a bar / club and would like to discuss weekend entertainment.", cta="Discuss weekend nights on WhatsApp",
+  faq=[("Can you supply a resident DJ?", "Yes. We can place a regular DJ and rotate guests through the month."),
+       ("Can you plan big nights like New Year's Eve?", "Yes. See our New Year party page, or tell us the venue and the capacity."),
+       ("What if an artist cancels?", "We confirm artists in writing and arrange a replacement where we can.")]),
+ dict(slug="rooftop-lounges-poolside", name="Rooftop Lounges & Poolside Venues", img="img/hospitality-rooftop-poolside.webp",
+  short="Sunset acoustic sessions, deep house, saxophone, percussion and jazz for lounges and poolsides.",
+  title="Live Music for Rooftop Lounges and Poolside Venues | Artisans of Sound",
+  desc="Sunset acoustic sessions, deep house and lounge DJs, saxophone, live percussion, jazz and Bollywood unplugged acts for rooftop lounges and poolside venues.",
+  lead="Rooftops and poolsides need entertainment that complements the view and the hour. We curate it to the ambience.",
+  provide=["Sunset acoustic sessions", "Deep house and lounge DJs", "Saxophone performances", "Live percussion", "Jazz ensembles", "Chill electronic music", "Bollywood unplugged acts"],
+  clients="Rooftop lounge managers, resort managers and F&B directors.",
+  formats=[fcard("lounge", sub="Lounge sets for sunset and early evening."), fcard("dj", sub="Deep house and chill DJs for the night."),
+           fcard("djperc", sub="DJ with percussion or sax for poolside parties."), fcard("jazz", sub="Jazz for a relaxed afternoon.")],
+  acts=dict(formats=("lounge", "dj", "djperc", "jazz", "duotrio"), occs=("pool", "venue"), title="Acts that suit lounges and poolsides"),
+  related=[ocard("pool"), ocard("venue"), fcard("lounge")],
+  wa="Hi Artisans of Sound, I manage a rooftop / poolside venue and would like to discuss live music.", cta="Discuss a lounge programme on WhatsApp",
+  faq=[("Can you plan a sunset-to-night programme?", "Yes. A typical plan is an acoustic or sax session at sunset, then a lounge DJ as the evening builds."),
+       ("Do the acts need power and sound set-up?", "Some bring their own basic sound. We confirm what each act needs and what you provide."),
+       ("Can you run pool parties?", "Yes. DJs, saxophone and percussion acts suit pool parties.")]),
+ dict(slug="banquet-halls-event-venues", name="Banquet Halls & Hospitality Event Venues", img="img/hospitality-banquets.webp",
+  short="Wedding bands, Bollywood and Sufi singers, jazz, DJs and curated packages for banquet teams.",
+  title="Entertainment Partner for Banquet Halls and Hotel Event Venues | Artisans of Sound",
+  desc="Live wedding bands, Bollywood and Sufi singers, jazz ensembles, DJs, folk performers, celebrity artists and curated entertainment packages for banquet halls and event venues.",
+  lead="Hotels and banquet venues host weddings, corporate gatherings and private parties all year. Give your sales team an entertainment partner they can quote from.",
+  provide=["Live wedding bands", "Bollywood and Sufi singers", "Jazz ensembles", "DJs", "Instrumentalists", "Folk and cultural performers", "Celebrity artists", "Specially curated entertainment packages"],
+  clients="Banquet managers, hotel sales directors, event sales teams and venue owners.",
+  formats=[fcard("bollylive", sub="Live bands and singers for weddings and parties."), fcard("sufibolly", sub="Sufi and Bollywood sets for receptions."),
+           fcard("dj", sub="DJs for sangeet and after-parties."), fcard("celeb", sub="Celebrity artists for headline nights.")],
+  acts=dict(formats=("bollylive", "sufibolly", "dj", "jazz", "celeb"), occs=("venue", "wedding", "corporate"), title="Acts for banquet and event venues"),
+  related=[("/weddings/", "Wedding entertainment by function", "Pick the function, see the acts that suit it.", "img/wedding-haldi-mehendi.webp"), ("/corporate/", "Corporate events", "Entertainment for conferences, parties and launches.", "img/tile-corporate.webp"), ocard("venue"), ("/for-planners/", "For planners and agencies", "One contact for every function's music.", "img/wedding-planners.webp")],
+  wa="Hi Artisans of Sound, I manage a banquet venue and would like to discuss an entertainment partnership.", cta="Partner with us on WhatsApp",
+  faq=[("Can your acts be quoted to our clients?", "Yes. We share artist details, videos and quotes in a form your sales team can pass on."),
+       ("Can you supply entertainment packages?", "Yes. Tell us the kinds of events you host and the price bands, and we design packages around them."),
+       ("Do you work with venues outside Delhi NCR?", "Yes. We have artists in many states. Tell us the city and we check who is available.")]),
+ dict(slug="destination-resorts-boutique-properties", name="Destination Resorts & Boutique Properties", img="img/hospitality-destination.webp",
+  short="Folk musicians, cultural performances, bonfire sessions, wellness music and weekend programmes.",
+  title="Entertainment for Destination Resorts and Boutique Properties | Artisans of Sound",
+  desc="Regional folk musicians, cultural performances, acoustic bands, bonfire sessions, live DJs, instrumental ensembles and wellness music for destination resorts and boutique properties.",
+  lead="A destination property can set itself apart with entertainment that belongs to its place. We curate weekend and seasonal programmes around it.",
+  provide=["Regional folk musicians", "Cultural performances", "Acoustic bands", "Bonfire music sessions", "Live DJs", "Instrumental ensembles", "Wellness and meditation music", "Special weekend entertainment"],
+  clients="Resort owners, property managers, destination wedding teams and hospitality groups.",
+  formats=[fcard("rajfusion", sub="Folk and fusion acts for welcomes and heritage evenings."), fcard("duotrio", sub="Acoustic acts for bonfire sessions."),
+           fcard("instrband", sub="Instrumental ensembles for dinners and wellness."), fcard("sufiq", sub="Sufi and qawwali evenings in forts and courtyards.")],
+  acts=dict(formats=("rajfusion", "duotrio", "instrband", "sufiq", "dj"), occs=("venue",), title="Acts that suit destination properties"),
+  related=[("/destination-events/", "Destination weddings and events", "Palace, beach and resort celebrations, with travel and logistics handled.", "img/wedding-destination.webp"), ocard("venue"), fcard("rajfusion")],
+  wa="Hi Artisans of Sound, I manage a resort / boutique property and would like to discuss a weekend entertainment programme.", cta="Plan a resort programme on WhatsApp",
+  faq=[("Can artists travel to a remote property?", "Many can. We list travel, stay and sound separately in the quote."),
+       ("Can you plan seasonal programmes?", "Yes. Tell us the seasons and the guests you host, and we propose a calendar."),
+       ("Can you help with wellness or meditation music?", "Yes. Tell us the format and we suggest instrumentalists and sound artists.")]),
+]
+HOSP_CSS = ('<style>.plist{list-style:none;margin:18px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 28px;max-width:60em}'
+ '.plist li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:0 12px;align-items:center;font-size:17px;line-height:1.45;color:var(--ink2,#5B5B61)}'
+ '.plist .btick{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--ink,#1B1B1D);color:#FFFFFF}'
+ '.pclients{margin:22px 0 0;max-width:60em;font-size:17px;line-height:1.6;color:var(--ink2,#5B5B61)}.pclients b{color:var(--ink,#1B1B1D)}'
+ '@media (max-width:700px){.plist{grid-template-columns:minmax(0,1fr)}}</style>\n')
+def hosp_page(c):
+    prov = HOSP_CSS + '<ul class="plist">' + "".join(f"<li>{TICK}<span>{esc(i)}</span></li>" for i in c["provide"]) + "</ul>"
+    return dict(slug="hotels/" + c["slug"], parent=("hotels", "Hotels & Hospitality"), name=c["name"], seg="hotel",
+      title=c["title"], desc=c["desc"], kicker="Hotels & Hospitality: " + c["name"], h1=c["name"].replace("&", "and"), lead=c["lead"],
+      wa=c["wa"], cta1=c["cta"], seg_q="hotel", acts=c["acts"],
+      sections=[("What we can provide", prov), ("Who we work with", HOSP_CSS + f'<p class="pclients">{esc(c["clients"])}</p>'),
+                ("Entertainment for this kind of venue", tiles(c["formats"], 4)), ("How a programme works", HOSP_STEPS)],
+      links=c["related"], faq=c["faq"])
+HOSP_OCC = [("Hotel breakfast / brunch", "Piano, acoustic, flute"), ("Sunday brunch", "Jazz bands, Bollywood acoustic"), ("High tea", "Classical instrumentalists, piano"),
+            ("Christmas dinners", "Jazz, choirs, instrumentalists"), ("New Year's Eve", "DJs, live bands, celebrity singers"), ("Valentine's Day", "Romantic singers, violin, piano"),
+            ("Ladies' nights", "DJs, Bollywood singers"), ("Wine & dine evenings", "Jazz, ghazal, acoustic"), ("Themed dining nights", "Folk, regional and cultural acts"),
+            ("Hotel guest welcome", "Shehnai, violin, flute"), ("Pool parties", "DJs, saxophone, percussion"), ("Private hotel parties", "Bands, singers, DJs")]
+
+
 PAGES = [
  dict(
   slug="for-planners", name="For wedding planners and agencies", seg="wedding",
@@ -392,39 +511,39 @@ PAGES = [
        ("What if an artist cannot perform on the day?", "We confirm artists in writing and keep in touch until the event. Where it is possible we plan a backup option, and we will tell you plainly what that looks like for your date.")],
  ),
  dict(
-  slug="hotels", name="Hotels and restaurants", seg="hotel",
-  title="Live Music for Hotels, Resorts and Restaurants | Artisans of Sound",
-  desc="A monthly live music programme for hotels, resorts and restaurants: acoustic, jazz, Sufi, bands and DJs, with artist rotation and one point of contact.",
-  kicker="Hotels, resorts and restaurants",
-  h1="A live music calendar for your venue",
-  lead="Skip booking one evening at a time. We plan a monthly programme of live acts for your venue, rotate the artists, and handle the coordination.",
-  wa="Hi Artisans of Sound, I manage a hotel / restaurant and would like to discuss a monthly live music programme.",
+  slug="hotels", name="Hotels & Hospitality", seg="hotel",
+  title="Live Music and Entertainment for Hotels, Resorts and Restaurants | Artisans of Sound",
+  desc="Live music for hotels, resorts, restaurants, bars, lounges and banquet venues: acoustic, jazz, Sufi, bands and DJs, planned as a daily, weekly or monthly programme.",
+  kicker="Hotels & Hospitality",
+  h1="Creating memorable experiences through live entertainment",
+  lead="We curate live music and entertainment for hotels, resorts, restaurants, bars and luxury hospitality venues. From intimate acoustic sets to live bands and DJ nights, we help your venue create moments guests remember, on a daily, weekly or monthly programme.",
+  wa="Hi Artisans of Sound, I manage a hotel / restaurant and would like to discuss a live music programme.",
   cta1="Discuss a programme on WhatsApp", seg_q="hotel",
   acts=dict(formats=("lounge", "jazz", "duotrio", "soloinst", "sufibolly"), occs=("venue", "brunch", "dinner"), title="Acts that suit hotels and restaurants"),
   sections=[
-   ("A sample weekly calendar", cards([
-     fcard("duotrio", "Friday: acoustic Bollywood", "A solo singer or duo for the dinner crowd."),
-     fcard("bollylive", "Saturday: live band", "A Bollywood, retro or party band for the busiest night."),
-     fcard("jazz", "Sunday: jazz brunch", "Jazz, piano or instrumental acts for a relaxed afternoon."),
-     fcard("sufibolly", "Monthly: Sufi or ghazal evening", "A special night that gives guests a reason to book ahead."),
+   ("Venues we work with", tiles([("/hotels/" + c["slug"] + "/", c["name"], c["short"], c["img"]) for c in HOSP], 3)),
+   ("Three ways to work with us", steps([
+     ("Monthly entertainment partnership", "Musicians on a fixed schedule, for example a live acoustic singer on Friday, a jazz band on Saturday and an instrumental duo on Sunday. We manage the artists, the scheduling and the replacements."),
+     ("Special event entertainment", "Artists for New Year's Eve, Christmas, Valentine's Day, Diwali, restaurant anniversaries and special guest nights."),
+     ("Curated entertainment experiences", "A complete evening designed for your venue, not just a musician: Jazz & Dinner Nights, Bollywood Unplugged, Sufi Nights, Sunday Brunch Sessions, Cultural Heritage Evenings or Sunset Sessions."),
    ])),
-   ("Resident and seasonal programming", cards([
-     fcard("dj", "Resident DJs", "A regular DJ for lounge, poolside and weekend nights."),
-     ocard("diwali", "Festive entertainment", "Holi, Diwali and Christmas programmes that give guests a reason to visit."),
-     ocard("newyear", "New Year's Eve programming", "A full New Year's Eve line-up: live acts, DJs and a host."),
+   ("Occasions through the year", occtable(HOSP_OCC)),
+   ("Our entertainment", cards([
+     fcard("bollylive", "Live bands and singers", "Bollywood, retro and party bands, and solo and duo singers."),
+     fcard("instrband", "Instrumentalists and ensembles", "Piano, violin, sax, flute and ensembles for lobbies, lounges and dinners."),
+     fcard("dj", "DJs and electronic music", "Resident and guest DJs for lounges, bars and poolsides."),
+     fcard("jazz", "Jazz, Sufi and acoustic performances", "Jazz, Sufi, ghazal and acoustic sets for dinners and special evenings."),
+     fcard("rajfusion", "Folk and cultural entertainment", "Regional folk and cultural acts for heritage and destination properties."),
+     ocard("venue", "Curated experiences and recurring programming", "Evenings and series designed for your venue, run week after week."),
    ])),
-   ("What a programme includes", steps([
-     ("A plan for your venue", "We learn your guests, your slow and busy nights and your room, then propose a schedule and a mix of acts."),
-     ("Artist rotation", "Different acts through the month so regulars see something new."),
-     ("Coordination", "We handle artist scheduling, confirmations and communication, so your team does not have to."),
-     ("Review and adjust", "After the first month we look at what worked and change the calendar."),
-   ])),
+   ("How a programme works", HOSP_STEPS),
   ],
-  links=[ocard("venue"), ocard("brunch"), fcard("lounge"), fcard("jazz"), fcard("duotrio"), fcard("sufibolly")],
+  links=[ocard("venue"), ocard("brunch"), ocard("dinner"), ocard("newyear"), ocard("christmas"), fcard("lounge"), fcard("jazz")],
   faq=[("Can we start with a trial?", "Yes. A one-month programme is a sensible way to start. Tell us your venue and the nights you want covered and we propose a calendar."),
        ("Who pays for sound equipment?", "It depends on the venue and the act. We confirm sound needs for each artist and agree who provides what before the programme starts."),
        ("How is a programme priced?", "It depends on the number of performances, the acts and your venue. Share the nights you want covered and a budget range, and we send a quote."),
-       ("Do you work with venues outside Delhi NCR?", "Yes. We have artists in many states. Tell us the city and we check who can perform there regularly.")],
+       ("Do you work with venues outside Delhi NCR?", "Yes. We have artists in many states. Tell us the city and we check who can perform there regularly."),
+       ("Do you work with hotel groups?", "Yes. One relationship can cover several properties and outlets.")],
  ),
  dict(
   slug="other-events", name="Other events", seg="other",
@@ -654,6 +773,7 @@ def build_destination(acts):
 def build(acts, reg):
     urls = []
     PAGES.extend(corp_page(c) for c in CORP if not any(p["slug"] == "corporate/" + c["slug"] for p in PAGES))
+    PAGES.extend(hosp_page(c) for c in HOSP if not any(p["slug"] == "hotels/" + c["slug"] for p in PAGES))
     for p in PAGES:
         url = f"{SITE}/{p['slug']}/"
         w = B.wa(p["wa"])
