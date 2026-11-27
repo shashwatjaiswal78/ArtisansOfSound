@@ -346,6 +346,46 @@
       "source": "/cities",
       "destination": "/book/",
       "permanent": false
+    },
+    {
+      "source": "/weddings/haldi/",
+      "destination": "/weddings/haldi-mehendi/",
+      "permanent": true
+    },
+    {
+      "source": "/weddings/haldi",
+      "destination": "/weddings/haldi-mehendi/",
+      "permanent": true
+    },
+    {
+      "source": "/weddings/mehendi/",
+      "destination": "/weddings/haldi-mehendi/",
+      "permanent": true
+    },
+    {
+      "source": "/weddings/mehendi",
+      "destination": "/weddings/haldi-mehendi/",
+      "permanent": true
+    },
+    {
+      "source": "/weddings/sangeet/",
+      "destination": "/weddings/sangeet-cocktail/",
+      "permanent": true
+    },
+    {
+      "source": "/weddings/sangeet",
+      "destination": "/weddings/sangeet-cocktail/",
+      "permanent": true
+    },
+    {
+      "source": "/weddings/cocktail-party/",
+      "destination": "/weddings/sangeet-cocktail/",
+      "permanent": true
+    },
+    {
+      "source": "/weddings/cocktail-party",
+      "destination": "/weddings/sangeet-cocktail/",
+      "permanent": true
     }
   ]
 }

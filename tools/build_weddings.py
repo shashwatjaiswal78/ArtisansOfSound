@@ -3,6 +3,7 @@
 The hub groups functions into pre-wedding, wedding day, post-wedding and other celebrations. Each function page shows the act types
 that suit it, with the acts on the roster for each. Edit FUNCS below (copy, act types, grouping), then run tools/build.py.
 An act type is (label, format key). A key of None means we have no listed acts of that kind: it appears under "Ask us" instead of as a section."""
+import os, shutil
 import build_updates as U
 import build_landing as B
 import build_b2b as X
@@ -17,27 +18,19 @@ GROUPS = [
 
 # slug, group, name, occasion page (or None), intro, tip, act types
 FUNCS = [
- ("engagement-sagai", "pre", "Engagement / Ring ceremony (Sagai)", "engagement",
+ ("engagement-sagai", "pre", "Engagement / Ring ceremony (Sagai)", ("engagement",),
   "An engagement is intimate and romantic, so the music is usually soft, melodic and easy to talk over.",
   "Pick acts that suit a smaller room: acoustic singers and instrumentalists work well, and a live band suits a bigger celebration.",
   [("Romantic singers and acoustic duos", "duotrio"), ("Solo singers", "solosing"), ("Violin, flute and solo instrumentalists", "soloinst"), ("Bollywood live bands", "bollylive")], []),
- ("mehendi", "pre", "Mehendi ceremony", "mehendi",
-  "Mehendi is relaxed and colourful: guests sit for hours, so the music is light, folk-flavoured and made for singing along.",
-  "Unplugged and folk acts keep the mood warm without drowning out conversation. Add a dhol player if you want a bigger moment.",
-  [("Bollywood unplugged singers", "solosing"), ("Acoustic bands and duos", "duotrio"), ("Folk and Rajasthani folk artists", "rajfusion"), ("Punjabi singers and live bands", "punjabi")], ["Dhol players"]),
- ("haldi", "pre", "Haldi ceremony", "haldi",
-  "Haldi is loud, messy and joyful, and the music should be high on rhythm so everyone joins in.",
-  "Percussion-led acts and dhol groups work best. Outdoor haldis need acts that can set up quickly and handle a crowd.",
-  [("DJ with live percussion", "djperc"), ("Punjabi singers and live bands", "punjabi"), ("Folk musicians", "rajfusion"), ("Bollywood singers", "solosing"), ("DJs", "dj")], ["Dhol and nagada players"]),
- ("sangeet", "pre", "Sangeet night", "sangeet",
-  "The sangeet is usually the biggest entertainment night of a wedding, with performances, dancing and a long programme.",
-  "Think in blocks: a live act for the first half and a DJ for the second works for many families. Hosts and anchors keep it moving.",
-  [("Bollywood live bands", "bollylive"), ("Playback-style singers", "solosing"), ("Sufi and Bollywood fusion acts", "sufibolly"), ("Instrumental ensembles", "instrband"), ("Celebrity performers", "celeb"), ("DJs and electronic acts", "dj"), ("Anchors and emcees", "anchor")], []),
- ("cocktail-party", "pre", "Cocktail party", None,
-  "A cocktail evening is stylish and social, with music that keeps the energy up while people mingle.",
-  "A DJ with a live instrumentalist, a jazz band or a Bollywood singer all suit a cocktail setting. Ask for a set that builds through the night.",
-  [("DJs", "dj"), ("Jazz bands", "jazz"), ("Bollywood singers", "solosing"), ("Rock and pop bands", "western"), ("DJ-based bands", "djband"), ("Lounge acts", "lounge")], ["Saxophone and DJ combinations", "Live electronic music"]),
- ("pool-party", "pre", "Pool party", "pool",
+ ("haldi-mehendi", "pre", "Haldi & Mehendi ceremony", ("haldi", "mehendi"),
+  "Haldi and mehendi are the relaxed, colourful days before the wedding: guests sit, play and sing for hours, so the music is light, rhythmic and made for joining in.",
+  "Unplugged and folk acts keep the mood warm without drowning out conversation, and percussion-led acts bring the energy for haldi. Outdoor ceremonies need acts that set up quickly and handle a crowd.",
+  [("Bollywood unplugged singers", "solosing"), ("Acoustic bands and duos", "duotrio"), ("Folk and Rajasthani folk artists", "rajfusion"), ("Punjabi singers and live bands", "punjabi"), ("DJ with live percussion", "djperc"), ("DJs", "dj")], ["Dhol and nagada players"]),
+ ("sangeet-cocktail", "pre", "Sangeet & Cocktail night", ("sangeet",),
+  "The sangeet and the cocktail evening are the big entertainment nights of a wedding, with performances, dancing and a long programme, and a stylish, social mood.",
+  "Think in blocks: a live act for the first half and a DJ for the second works for many families. A host keeps the programme moving, and jazz or lounge acts suit the cocktail hour.",
+  [("Bollywood live bands", "bollylive"), ("Playback-style singers", "solosing"), ("Sufi and Bollywood fusion acts", "sufibolly"), ("Instrumental ensembles", "instrband"), ("Celebrity performers", "celeb"), ("DJs and electronic acts", "dj"), ("DJ-based bands", "djband"), ("Jazz bands", "jazz"), ("Rock and pop bands", "western"), ("Lounge acts", "lounge"), ("Anchors and emcees", "anchor")], ["Saxophone and DJ combinations", "Live electronic music"]),
+ ("pool-party", "pre", "Pool party", ("pool",),
   "Daytime or sunset by the water: the music is upbeat, rhythmic and relaxed.",
   "Electronic and percussion-led acts suit pool parties. Check the poolside power and space before you book.",
   [("DJs", "dj"), ("DJ and percussion acts", "djperc"), ("DJ-based bands", "djband"), ("Lounge and acoustic acts", "lounge"), ("Western and tropical-style bands", "western")], ["Live saxophone", "Reggae bands"]),
@@ -49,7 +42,7 @@ FUNCS = [
   "A dinner for guests arriving from out of town: the music should set the mood without getting in the way of conversation.",
   "Keep it soft: acoustic singers, jazz, piano and violin are all good fits. A ghazal singer suits an older crowd.",
   [("Acoustic singers and duos", "duotrio"), ("Jazz trios and quartets", "jazz"), ("Piano, violin and instrumentalists", "soloinst"), ("Ghazal singers", "ghazal"), ("Light instrumental ensembles", "instrband")], []),
- ("baraat", "day", "Baraat / Ghodi entry", "baraat",
+ ("baraat", "day", "Baraat / Ghodi entry", ("baraat",),
   "The groom's arrival is loud and joyous: the music has to lead the procession and make the whole street dance.",
   "Dhol and percussion matter most here. Share the route, timing and whether it is on foot or on a vehicle so we plan the sound.",
   [("Punjabi singers and live bands", "punjabi"), ("Percussion and DJ acts", "djperc"), ("Folk and Rajasthani acts", "rajfusion")], ["Dhol groups", "Brass bands", "Nagada players", "Tasha parties", "Shehnai"]),
@@ -57,7 +50,7 @@ FUNCS = [
   "A short, emotional moment where the couple exchange garlands, usually with soft live music in the background.",
   "A violin or flute adds a cinematic touch. Keep the act simple and well timed to the entry.",
   [("Violin, flute and solo instrumentalists", "soloinst"), ("Romantic instrumental ensembles", "instrband"), ("Live singers", "solosing"), ("Acoustic duos", "duotrio")], []),
- ("pheras", "day", "Wedding ceremony / Pheras", "pheras",
+ ("pheras", "day", "Wedding ceremony / Pheras", ("pheras",),
   "The pheras are sacred, so the music is traditional and respectful, played softly around the rituals.",
   "Match the music to the family's tradition. We can check which classical, devotional and traditional artists are available.",
   [("Classical instrumentalists", "soloinst"), ("Bhajan and devotional singers", "devotional"), ("Instrumental ensembles", "instrband"), ("Ghazal and classical singers", "ghazal")], ["Shehnai players", "Vedic chant artists", "Traditional wedding musicians"]),
@@ -65,7 +58,7 @@ FUNCS = [
   "The farewell is the most emotional moment of the day, and the music should hold that feeling.",
   "Soft instrumentals such as flute and violin are a common choice. Plan the timing with the family and the photographer.",
   [("Flute, violin and instrumentalists", "soloinst"), ("Emotional instrumental ensembles", "instrband"), ("Devotional and folk singers", "devotional"), ("Traditional folk musicians", "rajfusion")], ["Shehnai"]),
- ("reception", "post", "Wedding reception", "reception",
+ ("reception", "post", "Wedding reception", ("reception",),
   "The reception is a formal, glamorous evening for a large guest list, so the music has to suit every age.",
   "Many families book a live band or singer for the dinner hours and a DJ for the dance floor afterwards.",
   [("Bollywood live bands", "bollylive"), ("Sufi singers and bands", "sufibolly"), ("Celebrity singers", "celeb"), ("Jazz ensembles", "jazz"), ("DJs", "dj"), ("Instrumental acts", "instrband"), ("Anchors and emcees", "anchor")], []),
@@ -73,11 +66,11 @@ FUNCS = [
   "The late-night party after the formal events: loud, fast and made for the younger crowd.",
   "DJs and electronic or rock acts keep the night going. Check venue timings and sound limits before you book.",
   [("DJs", "dj"), ("DJ and percussion acts", "djperc"), ("DJ-based bands", "djband"), ("Rock bands", "bollyrock"), ("Bollywood party bands", "bollylive")], ["Live electronic percussion"]),
- ("post-wedding-brunch", "post", "Post-wedding brunch / Farewell lunch", "brunch",
+ ("post-wedding-brunch", "post", "Post-wedding brunch / Farewell lunch", ("brunch",),
   "A relaxed last gathering, where light music sets a warm, unhurried mood.",
   "Soft, daytime sets work best: acoustic duos, jazz, piano or flute and guitar.",
   [("Acoustic duos", "duotrio"), ("Jazz bands", "jazz"), ("Piano and instrumentalists", "soloinst"), ("Lounge acts", "lounge"), ("Light Bollywood singers", "solosing")], []),
- ("roka", "other", "Roka ceremony", "engagement",
+ ("roka", "other", "Roka ceremony", ("engagement",),
   "A small, early family ceremony where soft, romantic music is enough.",
   "Acoustic singers and a single instrumentalist suit a roka.",
   [("Acoustic singers and duos", "duotrio"), ("Solo singers", "solosing"), ("Violin and flute", "soloinst")], []),
@@ -93,11 +86,11 @@ FUNCS = [
   "A Rajasthani and North Indian tradition where the maternal family blesses the couple, often with folk singing.",
   "Rajasthani folk artists and traditional singers suit the occasion best.",
   [("Rajasthani folk artists", "rajfusion"), ("Punjabi singers and live bands", "punjabi")], ["Traditional folk singers"]),
- ("mata-ki-chowki", "other", "Mata ki Chowki", "chowki",
+ ("mata-ki-chowki", "other", "Mata ki Chowki", ("chowki",),
   "A devotional evening of bhajans and jagrata, often held before the wedding functions begin.",
   "Bhajan singers and devotional groups lead the night. Share the number of hours and the guest list so we plan the group size.",
   [("Bhajan and devotional singers", "devotional"), ("Sufi and qawwali groups", "sufiq")], ["Bhajan mandali"]),
- ("jagran", "other", "Jagran / Jagrata", "chowki",
+ ("jagran", "other", "Jagran / Jagrata", ("chowki",),
   "An all-night devotional gathering of bhajans and prayers.",
   "Devotional singers and bhajan groups are the core. Share the timings so we confirm the artists.",
   [("Devotional and bhajan singers", "devotional")], ["Bhajan mandali"]),
@@ -121,7 +114,7 @@ FUNCS = [
   "A relaxed programme of live music, usually before dinner, for family and close friends.",
   "Live bands and fusion ensembles suit a musical evening. Share the mood and we shape the set.",
   [("Live bands", "bollylive"), ("Fusion and Sufi bands", "sufibolly"), ("Instrumental ensembles", "instrband")], []),
- ("bachelor-bachelorette-party", "other", "Bachelor / Bachelorette party", "bachelor",
+ ("bachelor-bachelorette-party", "other", "Bachelor / Bachelorette party", ("bachelor",),
   "A party for the couple's friends, usually a late, high-energy night.",
   "DJs, party bands and electronic acts suit this best. Share the venue and the guest list.",
   [("DJs", "dj"), ("DJ-based bands", "djband"), ("Rock bands", "bollyrock"), ("DJ and percussion acts", "djperc")], ["Live electronic acts"]),
@@ -169,9 +162,10 @@ def func_page(f, acts):
     sib = [(fn_url(s[0]), s[2], None, None) for s in FUNCS if s[1] == grp and s[0] != slug]
     sibs = [s for s in FUNCS if s[1] == grp and s[0] != slug]
     body += B.sec("Other wedding functions", B.links([(fn_url(s[0]), s[2]) for s in sibs] + [("/weddings/", "All wedding functions")]))
-    if occ and occ in L["occasions"]:
-        od = L["occasions"][occ]
-        body += B.sec("Related", B.links([(f"/occasions/{od['slug']}/", f"More acts for {od['name'].lower()}"), ("/wedding/", "Wedding artists by city"), ("/destination-events/", "Destination weddings")]))
+    occs = [o for o in (occ or ()) if o in L["occasions"]]
+    if occs:
+        rel = [(f"/occasions/{L['occasions'][o]['slug']}/", f"More acts for {L['occasions'][o]['name'].lower()}") for o in occs]
+        body += B.sec("Related", B.links(rel + [("/wedding/", "Wedding artists by city"), ("/destination-events/", "Destination weddings")]))
     faq = [(f"How do I choose acts for a {name.lower()}?", tip),
            ("Can you arrange the other functions of the same wedding?", "Yes. We plan the music across the functions together, so the acts suit each night and the budget is kept in one place."),
            ("How quickly will I get a quote?", "We send a shortlist with videos and one clear quote within 24 hours of a clear brief.")]
@@ -219,5 +213,6 @@ def hub_page(acts):
     return url
 
 def build(acts, reg):
+    shutil.rmtree(os.path.join(U.ROOT, "weddings"), ignore_errors=True)
     urls = [hub_page(acts)] + [func_page(f, acts) for f in FUNCS]
     return [f"<url><loc>{u}</loc></url>" for u in urls]
