@@ -476,15 +476,19 @@ def build_destination(acts):
     title = "Entertainment for Destination Weddings and Events in India | Artisans of Sound"
     desc = "Live bands, Sufi and folk acts, DJs and anchors for destination weddings and events in Goa, Jaipur, Udaipur, Jodhpur and across India, with travel and logistics handled."
     top = [(f"/wedding/{W[c]['slug']}/", c, CITY_TAG[c], W[c]["slug"]) for c in DEST_CITIES]
-    more = [(f"/wedding/{v['slug']}/", f"Wedding artists in {c}") for c, v in W.items() if c not in DEST_CITIES]
+    more = [(f"/wedding/{v['slug']}/", c) for c, v in W.items() if c not in DEST_CITIES]
+    def city_text(items):
+        """The other cities as one sentence of links: 'More cities: Delhi, Mumbai, ... and Pune.'"""
+        links = [f'<a href="{h}">{esc(c)}</a>' for h, c in items]
+        return '<p class="ctext">More cities: ' + (", ".join(links[:-1]) + " and " + links[-1] if len(links) > 1 else links[0]) + ".</p>"
     faq = [("Do your artists travel for destination events?", "Many of them do. We confirm who is available for your dates and what travel, stay and local transport involve before we send a quote."),
            ("Can we use artists based in the destination city?", "Where the city has acts on our roster we show them, and using local artists can reduce travel costs. Tell us the city and we suggest both local and travelling options."),
            ("Who pays for travel and accommodation?", "It depends on the artist and the event. We list travel, stay and sound separately in the quote so you can see exactly what is included."),
            ("How early should we book?", "Peak wedding dates in destination cities fill up early, so ask for options as soon as you have dates and a venue.")]
     body = ('    <p class="kicker">Destination weddings and events</p>\n    <h1 class="uh">Entertainment for destination weddings and events</h1>\n'
             '    <p class="alead">Palace, beach and resort celebrations need acts that suit the setting and can handle the travel. Tell us the destination, dates and functions, and we send options with one clear quote.</p>\n'
-            f'    <div class="ask"><a class="dark-pill" href="{esc(w)}" target="_blank" rel="noopener">Plan a destination event on WhatsApp</a><a class="ghost-pill" href="{enq}">Send an enquiry</a></div>\n' + CSS + TILE_CSS + ICON_CSS + CARD_PIC_CSS)
-    body += B.sec("Popular destinations", photo_cards(top) + ('<div style="margin-top:18px">' + B.links(more) + "</div>" if more else ""))
+            f'    <div class="ask"><a class="dark-pill" href="{esc(w)}" target="_blank" rel="noopener">Plan a destination event on WhatsApp</a><a class="ghost-pill" href="{enq}">Send an enquiry</a></div>\n' + CSS + TILE_CSS + ICON_CSS + CARD_PIC_CSS + '<style>.ctext{margin:22px 0 0;font-size:17px;line-height:1.7;color:var(--ink2,#5B5B61);max-width:60em}.ctext a{color:var(--ink,#1B1B1D);font-weight:600;text-decoration:underline;text-underline-offset:3px}.ctext a:hover,.ctext a:focus-visible{text-decoration-thickness:2px}</style>\n')
+    body += B.sec("Popular destinations", photo_cards(top) + (city_text(more) if more else ""))
     body += B.sec("Formats that suit a destination event", tiles([
         fcard("sufiq", sub="Qawwali and Sufi groups for evenings in forts, palaces and courtyards."),
         fcard("rajfusion", sub="Rajasthani folk and fusion acts for welcomes, baraat and Rajasthan weddings."),
