@@ -128,6 +128,11 @@ FUNCS = [
   [("Folk ensembles", "rajfusion"), ("Instrumentalists", "soloinst"), ("Qawwali and Sufi groups", "sufiq"), ("Instrumental ensembles", "instrband")], ["Other cultural acts"]),
 ]
 
+# Functions kept in FUNCS above but switched off for now: no tile on the hub, no page of their own, not in the sitemap and not in the
+# "other functions" links. To bring one back, delete its name from this set and rebuild.
+HIDDEN = {"chunni-ceremony", "chooda-ceremony", "mayra-bhaat", "destination-wedding-welcome"}
+FUNCS = [f for f in FUNCS if f[0] not in HIDDEN]
+
 # pictures chosen for specific functions on the hub (otherwise the tile uses a photo of a matching act)
 PHOTOS = {
  "engagement-sagai": "img/wedding-engagement.webp",
