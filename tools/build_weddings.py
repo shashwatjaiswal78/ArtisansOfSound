@@ -130,6 +130,9 @@ FUNCS = [
 
 # pictures chosen for specific functions on the hub (otherwise the tile uses a photo of a matching act)
 PHOTOS = {
+ "engagement-sagai": "img/wedding-engagement.webp",
+ "haldi-mehendi": "img/wedding-haldi-mehendi.webp",
+ "sangeet-cocktail": "img/wedding-sangeet-cocktail.webp",
  "welcome-dinner": "img/wedding-welcome-dinner.webp",
 }
 
