@@ -329,6 +329,27 @@ def icon_cards(items):
         f'<li><a href="{esc(h)}"><span class="cico" style="--i:url(/img/city/{esc(slug)}.svg)" aria-hidden="true"></span><b>{esc(c)}</b><span class="t">{esc(tag)}</span></a></li>'
         for h, c, tag, slug in items) + "</ul>"
 
+# /wedding/ can show line icons ("icons") or one photo per city ("photos"). Photos live in img/city/photo-<slug>.webp (portrait 4:5);
+# a city without a photo yet shows its line icon on a dark tile, so the grid stays even while photos are added.
+CITY_STYLE = "photos"
+
+CITY_TILE_CSS = ('<style>.wtiles .cph{position:absolute;inset:0;z-index:-2;background:linear-gradient(160deg,#2c2745,#12101c)}'
+ '.wtiles .cph::before{content:"";position:absolute;left:50%;top:36%;width:54%;aspect-ratio:1;transform:translate(-50%,-50%);background:#e9e2d0;opacity:.88;'
+ '-webkit-mask:var(--i) center/contain no-repeat;mask:var(--i) center/contain no-repeat}</style>\n')
+
+def city_tiles(items):
+    """items: (href, city, tagline, slug). A photo tile when img/city/photo-<slug>.webp exists, otherwise the icon on a dark tile."""
+    out = []
+    for h, c, tag, slug in items:
+        ph = f"img/city/photo-{slug}.webp"
+        if os.path.exists(os.path.join(U.ROOT, ph)):
+            d = B.dims(ph); wh = f' width="{d[0]}" height="{d[1]}"' if d else ""
+            media = f'<img src="/{ph}" alt="" loading="lazy"{wh}>'
+        else:
+            media = f'<span class="cph" style="--i:url(/img/city/{esc(slug)}.svg)" aria-hidden="true"></span>'
+        out.append(f'<li><a href="{esc(h)}">{media}<span class="ft"><b>{esc(c)}</b><span>{esc(tag)}</span></span></a></li>')
+    return '<ul class="wtiles c4">' + "".join(out) + "</ul>"
+
 def cities_hub():
     """/wedding/ (wedding artists by city): one card per city with a line icon of its best-known monument. Written after
     build_landing, so it replaces the plain list page build_landing makes at the same address. The address is already in the sitemap."""
@@ -337,7 +358,7 @@ def cities_hub():
     items = [(f"/wedding/{d['slug']}/", c, CITY_TAG[c], d["slug"]) for c, d in W.items()]
     intro = "Find wedding DJs, live bands, singers and anchors for your city. Pick a city to see the acts and get a quote."
     body = (f'    <p class="kicker">{len(items)} cities</p>\n    <h1 class="uh">Wedding artists by city</h1>\n    <p class="alead">{esc(intro)}</p>\n'
-            + X.CSS + ICON_CSS + icon_cards(items) + "\n" +
+            + X.CSS + (TILE_CSS + CITY_TILE_CSS + city_tiles(items) if CITY_STYLE == "photos" else ICON_CSS + icon_cards(items)) + "\n" +
             B.sec("More for your wedding", B.links([("/weddings/", "Wedding entertainment by function"), ("/destination-events/", "Destination weddings"), ("/for-planners/", "For wedding planners and agencies")])) +
             B.cta(w, B.CTA))
     B.write(["wedding"], B.shell(SITE + "/wedding/", "Wedding DJs, bands, singers and anchors by city | Artisans of Sound", intro, [("Home", "/"), ("Weddings", "/wedding/")], body))
