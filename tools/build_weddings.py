@@ -128,6 +128,11 @@ FUNCS = [
   [("Folk ensembles", "rajfusion"), ("Instrumentalists", "soloinst"), ("Qawwali and Sufi groups", "sufiq"), ("Instrumental ensembles", "instrband")], ["Other cultural acts"]),
 ]
 
+# pictures chosen for specific functions on the hub (otherwise the tile uses a photo of a matching act)
+PHOTOS = {
+ "welcome-dinner": "img/wedding-welcome-dinner.webp",
+}
+
 # one short line per function for the tiles on the hub page
 BLURB = {
  "engagement-sagai": "Soft, romantic music for the ring ceremony: acoustic singers, violin, flute and live bands.",
@@ -238,6 +243,7 @@ def hub_page(acts):
     enq = "/?for=wedding#enquiry"
     used = set()
     def photo(f):
+        if f[0] in PHOTOS: return PHOTOS[f[0]]   # a chosen picture for this function
         # a distinct act photo per function where possible: first unused photo among the function's matching acts
         pool = []
         for label, key in f[6]:
