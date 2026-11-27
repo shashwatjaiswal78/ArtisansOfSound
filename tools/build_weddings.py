@@ -292,7 +292,39 @@ def hub_page(acts):
     B.write(["weddings"], B.shell(url, title, desc, [("Home", "/"), ("Weddings", "/weddings/")], body, None, faq, "Hi Artisans of Sound, I am planning a wedding."))
     return url
 
+# one short line per city for the tiles on /wedding/ (from the city copy in tools/landing.json)
+CITY_TAG = {
+ "Delhi": "Farmhouses, banquet halls and hotels across NCR",
+ "Mumbai": "Hotel ballrooms, sea-facing venues and lawns",
+ "Lucknow": "Sufi and ghazal evenings to full-energy sangeets",
+ "Jaipur": "Palace, fort and heritage-hotel weddings",
+ "Udaipur": "Lakeside palaces and destination weddings",
+ "Jodhpur": "Fort and palace weddings, folk beside Bollywood",
+ "Chandigarh": "Big Punjabi weddings with dhol and bhangra",
+ "Gurugram": "Farmhouses, banquets and late-night sangeets",
+ "Ahmedabad": "Sangeet and garba nights, large family weddings",
+ "Hyderabad": "Hotels, convention venues and resorts",
+ "Bengaluru": "Resorts, gardens and hotels, Bollywood to English",
+ "Kolkata": "Bengali traditions with Bollywood evenings",
+ "Pune": "Hotels, resorts and lawns, live bands and DJs",
+ "Goa": "Beach and sunset destination weddings",
+}
+
+def cities_hub():
+    """/wedding/ (wedding artists by city): one tile per city with a drawn monument (tools/city_art.py). Written after
+    build_landing, so it replaces the plain list page build_landing makes at the same address. The address is already in the sitemap."""
+    W = L["wedding"]["cities"]
+    w = B.wa("Hi Artisans of Sound, I am planning a wedding and would like entertainment options.")
+    items = [(f"/wedding/{d['slug']}/", c, CITY_TAG[c], f"img/city/{d['slug']}.svg") for c, d in W.items()]
+    intro = "Find wedding DJs, live bands, singers and anchors for your city. Pick a city to see the acts and get a quote."
+    body = (f'    <p class="kicker">{len(items)} cities</p>\n    <h1 class="uh">Wedding artists by city</h1>\n    <p class="alead">{esc(intro)}</p>\n'
+            + X.CSS + TILE_CSS + tiles(items, 5) + "\n" +
+            B.sec("More for your wedding", B.links([("/weddings/", "Wedding entertainment by function"), ("/destination-events/", "Destination weddings"), ("/for-planners/", "For wedding planners and agencies")])) +
+            B.cta(w, B.CTA))
+    B.write(["wedding"], B.shell(SITE + "/wedding/", "Wedding DJs, bands, singers and anchors by city | Artisans of Sound", intro, [("Home", "/"), ("Weddings", "/wedding/")], body))
+
 def build(acts, reg):
     shutil.rmtree(os.path.join(U.ROOT, "weddings"), ignore_errors=True)
+    cities_hub()
     urls = [hub_page(acts)] + [func_page(f, acts) for f in FUNCS]
     return [f"<url><loc>{u}</loc></url>" for u in urls]
