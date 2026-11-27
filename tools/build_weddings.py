@@ -133,6 +133,8 @@ PHOTOS = {
  "engagement-sagai": "img/wedding-engagement.webp",
  "haldi-mehendi": "img/wedding-haldi-mehendi.webp",
  "sangeet-cocktail": "img/wedding-sangeet-cocktail.webp",
+ "jaggo-ladies-sangeet": "img/wedding-jaggo.webp",
+ "pool-party": "img/wedding-pool-party.webp",
  "welcome-dinner": "img/wedding-welcome-dinner.webp",
 }
 
