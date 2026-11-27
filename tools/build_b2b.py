@@ -96,8 +96,12 @@ def _items(items):
 def steps(items):
     return '<ol class="bsteps">' + _items(items) + "</ol>"
 
+TICK = ('<span class="btick" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.6" '
+        'stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>')
+
 def bullets(items):
-    return '<ul class="bsteps bul">' + _items(items) + "</ul>"
+    """Benefit points as an open list: a tick mark, the bold point and a line under it. No boxes."""
+    return '<ul class="blist">' + "".join(f'<li>{TICK}<div class="bt"><b>{esc(t)}</b><span>{esc(d)}</span></div></li>' for t, d in items) + "</ul>"
 
 CSS = ('<style>.bsteps{list-style:none;margin:18px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;counter-reset:s}'
        '.bsteps li{background:var(--card,#fff);border:1px solid var(--line,#E3DFD3);border-radius:14px;padding:16px 18px;display:grid;grid-template-columns:48px minmax(0,1fr);gap:0 16px;align-items:start;counter-increment:s}'
@@ -105,7 +109,11 @@ CSS = ('<style>.bsteps{list-style:none;margin:18px 0 0;padding:0;display:grid;gr
        '.bsteps .bt{display:grid;gap:4px;align-content:center;min-height:48px}'
        'ol.bsteps li b::before{content:counter(s) ". ";color:var(--ink2,#5B5B61)}'
        '.bsteps b{font-size:17px}.bsteps .bt span{color:var(--ink2,#5B5B61);font-size:15px;line-height:1.5}'
-       '@media (max-width:700px){.bsteps{grid-template-columns:minmax(0,1fr)}.bsteps li{gap:0 14px;padding:14px 16px}}</style>\n')
+       '.blist{list-style:none;margin:20px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 48px}'
+       '.blist li{display:grid;grid-template-columns:30px minmax(0,1fr);gap:0 16px;align-items:start}'
+       '.blist .btick{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--ink,#1B1B1D);color:#FFFFFF;margin-top:-1px}'
+       '.blist .bt{display:grid;gap:4px}.blist b{font-size:18px;line-height:1.3}.blist .bt span{color:var(--ink2,#5B5B61);font-size:15.5px;line-height:1.55}'
+       '@media (max-width:700px){.bsteps,.blist{grid-template-columns:minmax(0,1fr)}.bsteps li{gap:0 14px;padding:14px 16px}.blist{gap:22px}}</style>\n')
 
 PAGES = [
  dict(
