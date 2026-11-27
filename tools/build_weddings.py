@@ -144,7 +144,7 @@ PHOTOS = {
  "post-wedding-brunch": "img/wedding-brunch.webp",
  "reception": "img/wedding-reception.webp",
  "chooda-ceremony": "img/wedding-chooda.webp",
- "musical-evening": "img/act-qaafila.jpg",             # Qaafila, Sufi band
+ "musical-evening": "img/act-seher.jpg",               # Seher Band
  "roka": "img/act-ankurc.jpg",                       # Ankur Chakravorty, violin
  "family-get-together": "img/act-namansharma.jpg",   # Naman Sharma
  "bachelor-bachelorette-party": "img/act-chetas.jpg",  # DJ Chetas
