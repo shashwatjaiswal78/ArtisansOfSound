@@ -1592,6 +1592,13 @@
     ],
     "blurb": "Lucknow weddings are known for warm hospitality and a love of music, from sufi and ghazal evenings to full-energy sangeets in hotels and lawns."
    },
+   "Agra": {
+    "slug": "agra",
+    "alias": [
+     "Agra"
+    ],
+    "blurb": "Agra is a popular heritage-hotel and destination wedding city, where the setting near the Taj Mahal calls for acts that suit a grand occasion."
+   },
    "Jaipur": {
     "slug": "jaipur",
     "alias": [
@@ -1641,6 +1648,13 @@
      "Hyderabad"
     ],
     "blurb": "Hyderabad weddings are held in hotels, convention venues and resorts, and a mix of Hindi, Telugu and English music often suits the crowd."
+   },
+   "Chennai": {
+    "slug": "chennai",
+    "alias": [
+     "Chennai"
+    ],
+    "blurb": "Chennai weddings blend Tamil traditions with film music, and are held in hotels, convention halls and beach-side resorts along the coast."
    },
    "Bengaluru": {
     "slug": "bengaluru",

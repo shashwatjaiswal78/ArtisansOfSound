@@ -297,6 +297,7 @@ CITY_TAG = {
  "Delhi": "Farmhouses, banquet halls and hotels across NCR",
  "Mumbai": "Hotel ballrooms, sea-facing venues and lawns",
  "Lucknow": "Sufi and ghazal evenings to full-energy sangeets",
+ "Agra": "Heritage hotels and destination weddings",
  "Jaipur": "Palace, fort and heritage-hotel weddings",
  "Udaipur": "Lakeside palaces and destination weddings",
  "Jodhpur": "Fort and palace weddings, folk beside Bollywood",
@@ -304,21 +305,22 @@ CITY_TAG = {
  "Gurugram": "Farmhouses, banquets and late-night sangeets",
  "Ahmedabad": "Sangeet and garba nights, large family weddings",
  "Hyderabad": "Hotels, convention venues and resorts",
+ "Chennai": "Tamil traditions with film music and Bollywood",
  "Bengaluru": "Resorts, gardens and hotels, Bollywood to English",
  "Kolkata": "Bengali traditions with Bollywood evenings",
  "Pune": "Hotels, resorts and lawns, live bands and DJs",
  "Goa": "Beach and sunset destination weddings",
 }
 
-ICON_CSS = ('<style>.cgrid{--ico:#3b3b40;--ico-hover:#c8102e;list-style:none;margin:22px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}'
+ICON_CSS = ('<style>.cgrid{--ico:#3b3b40;--ico-hover:#c8102e;list-style:none;margin:22px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}'
  '.cgrid a{display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;height:100%;padding:26px 14px 22px;background:var(--card,#fff);border:1px solid var(--line,#E3DFD3);border-radius:16px;color:var(--ink,#1B1B1D);text-decoration:none}'
  '.cgrid .cico{display:block;width:92px;height:92px;margin-bottom:6px;background:var(--ico);-webkit-mask:var(--i) center/contain no-repeat;mask:var(--i) center/contain no-repeat;transition:background .2s ease}'
  '.cgrid b{font-size:18px;line-height:1.2}.cgrid .t{font-size:13.5px;line-height:1.4;color:var(--ink2,#5B5B61)}'
  '.cgrid a:hover,.cgrid a:focus-visible{border-color:var(--ink,#1B1B1D)}.cgrid a:hover .cico,.cgrid a:focus-visible .cico{background:var(--ico-hover)}'
  '.cgrid a:focus-visible{outline:3px solid var(--ink,#1B1B1D);outline-offset:2px}'
  '@media (prefers-reduced-motion:reduce){.cgrid .cico{transition:none}}'
- '@media (max-width:1100px){.cgrid{grid-template-columns:repeat(3,minmax(0,1fr))}}'
- '@media (max-width:700px){.cgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.cgrid a{padding:20px 10px 16px}.cgrid .cico{width:76px;height:76px}.cgrid b{font-size:16px}.cgrid .t{font-size:12.5px}}</style>\n')
+ '@media (max-width:760px){.cgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}}'
+ '@media (max-width:700px){.cgrid a{padding:20px 10px 16px}.cgrid .cico{width:76px;height:76px}.cgrid b{font-size:16px}.cgrid .t{font-size:12.5px}}</style>\n')
 
 def icon_cards(items):
     """items: (href, city, tagline, slug). One-colour line icon of the city's monument (img/city/<slug>.svg, drawn by tools/city_icons.py),
