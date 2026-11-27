@@ -27,6 +27,7 @@
 .ainit{display:grid;place-items:center;color:#F6F2E8;font-family:var(--display);font-weight:800;font-size:22px}
 .amini span{display:grid;min-width:0}.amini b{font-size:15px;overflow-wrap:anywhere}.amini small{color:var(--ink2);font-size:13px}
 .alead{max-width:42em;color:var(--ink2);margin:0 0 20px}
+.uh + .alead{margin-top:20px}   /* breathing room between the big page title and the intro line under it */
 .ajump{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 8px}
 .ajump a{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:5px 13px;font-size:14px;text-decoration:none;color:var(--ink)}
 .adir{list-style:none;margin:0;padding:0;columns:3;column-gap:28px}
