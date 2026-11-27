@@ -12,9 +12,13 @@ def first(d): return d["intro"].split(". ")[0].rstrip(".") + "."
 def fcard(key, title=None, sub=None):
     d = L["formats"][key]
     return (f"/book/{d['slug']}/", title or d["name"], sub or first(d), d.get("photo"))
-def ocard(key, title=None, sub=None):
+# chosen pictures for the wedding cards (the same ones used on the /weddings/ hub)
+WEDDING_PICS = {"hub": "img/wedding-haldi-mehendi.webp", "destination": "img/wedding-destination.webp",
+                "sangeet": "img/wedding-sangeet-cocktail.webp", "reception": "img/wedding-reception.webp"}
+
+def ocard(key, title=None, sub=None, photo=None):
     d = L["occasions"][key]
-    return (f"/occasions/{d['slug']}/", title or d["name"], sub or first(d), d.get("photo"))
+    return (f"/occasions/{d['slug']}/", title or d["name"], sub or first(d), photo or d.get("photo"))
 def qcard(seg, key, title, sub, kind="fmt"):
     d = L["formats" if kind == "fmt" else "occasions"][key]
     return (f"/?for={seg}#enquiry", title, sub, d.get("photo"))
@@ -72,9 +76,9 @@ PAGES = [
      ("We coordinate to the event", "We stay in touch with the artists on travel, sound and timings, and with your team on the day."),
    ])),
   ],
-  links=[("/weddings/", "Wedding entertainment by function", "Engagement, mehendi, haldi, sangeet, baraat, reception and more, with the acts that suit each.", L["occasions"]["sangeet"].get("photo")),
-         ("/destination-events/", "Destination weddings and events", "Palace, beach and resort celebrations, with travel and logistics handled.", L["occasions"]["wedding"].get("photo")),
-         ocard("sangeet"), ocard("reception")],
+  links=[("/weddings/", "Wedding entertainment by function", "Engagement, mehendi, haldi, sangeet, baraat, reception and more, with the acts that suit each.", WEDDING_PICS["hub"]),
+         ("/destination-events/", "Destination weddings and events", "Palace, beach and resort celebrations, with travel and logistics handled.", WEDDING_PICS["destination"]),
+         ocard("sangeet", photo=WEDDING_PICS["sangeet"]), ocard("reception", photo=WEDDING_PICS["reception"])],
   faq=[("Do you work with planners outside Delhi NCR?", "Yes. We have artists in many states and book for weddings across India, including destination weddings. Tell us the city and dates and we check who is available."),
        ("Can you handle several functions of one wedding?", "Yes. We plan the music across mehendi, haldi, sangeet, cocktail and reception together, so the acts suit each night and the budget is kept in one place."),
        ("How quickly can I get options?", "We send a shortlist and a quote within 24 hours of a clear brief."),
@@ -325,11 +329,9 @@ PAGES = [
 ]
 
 DEST_CITIES = ("Goa", "Jaipur", "Udaipur", "Jodhpur")
-# few acts are based in these cities, so each card falls back to a category photo that suits the destination
-DEST_FALLBACK = {"Goa": "western", "Jaipur": "bollyretro", "Udaipur": "sufibolly", "Jodhpur": "ghazal"}
+# each destination card uses the city photo from the /wedding/ page (img/city/photo-<slug>.webp)
 def city_photo(acts, aliases, city):
-    loc = sorted([a for a in acts if a["city"] in aliases and a["photo"]], key=B.rank)
-    return loc[0]["photo"] if loc else L["formats"][DEST_FALLBACK[city]].get("photo")
+    return f"img/city/photo-{L['wedding']['cities'][city]['slug']}.webp"
 
 def build_destination(acts):
     W = L["wedding"]["cities"]
@@ -362,7 +364,7 @@ def build_destination(acts):
         ("One quote, costs listed", "The artist fee, travel, stay and sound needs are shown separately where they apply."),
         ("Coordination to the event", "We stay in touch with the artists and your team on arrival, sound checks and timings."),
     ]))
-    body += B.sec("More for your wedding", cards([("/weddings/", "Wedding entertainment by function", "Pick the function, see the acts that suit it: engagement, mehendi, haldi, sangeet, baraat and more.", L["occasions"]["sangeet"].get("photo"))]))
+    body += B.sec("More for your wedding", cards([("/weddings/", "Wedding entertainment by function", "Pick the function, see the acts that suit it: engagement, mehendi, haldi, sangeet, baraat and more.", WEDDING_PICS["hub"])]))
     body += B.faq_block(faq)
     body += (f'    <div class="ucta"><h2>Planning a destination event?</h2><p>Send the destination and dates. We reply with options and one clear quote within 24 hours.</p><div class="ask">'
              f'<a class="dark-pill" href="{enq}">Send an enquiry</a><a class="ghost-pill" href="{esc(w)}" target="_blank" rel="noopener">Message us on WhatsApp</a></div></div>\n')
