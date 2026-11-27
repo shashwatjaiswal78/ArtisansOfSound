@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Business pages for the people who buy entertainment in volume: /for-planners/, /corporate/, /hotels/, /destination-events/ and /other-events/.
 Run by tools/build.py. Edit the copy in PAGES below, then rebuild. No prices are shown on these pages on purpose."""
+import os
 import build_updates as U
 import build_landing as B
 esc = U.esc
@@ -52,6 +53,68 @@ def tiles(items, cols=4):
         im = f'<img src="/{esc(img)}" alt="" loading="lazy"' + (f' width="{d[0]}" height="{d[1]}"' if d else "") + ">" if img else ""
         out.append(f'<li><a href="{esc(href)}">{im}<span class="ft"><b>{esc(title)}</b><span>{esc(desc)}</span></span></a></li>')
     return f'<ul class="wtiles c{cols}">' + "".join(out) + "</ul>"
+
+# one short line per city for the tiles on /wedding/ (from the city copy in tools/landing.json)
+CITY_TAG = {
+ "Delhi": "Farmhouses, banquet halls and hotels across NCR",
+ "Mumbai": "Hotel ballrooms, sea-facing venues and lawns",
+ "Lucknow": "Sufi and ghazal evenings to full-energy sangeets",
+ "Agra": "Heritage hotels and destination weddings",
+ "Jaipur": "Palace, fort and heritage-hotel weddings",
+ "Udaipur": "Lakeside palaces and destination weddings",
+ "Jodhpur": "Fort and palace weddings, folk beside Bollywood",
+ "Chandigarh": "Big Punjabi weddings with dhol and bhangra",
+ "Gurugram": "Farmhouses, banquets and late-night sangeets",
+ "Ahmedabad": "Sangeet and garba nights, large family weddings",
+ "Hyderabad": "Hotels, convention venues and resorts",
+ "Chennai": "Tamil traditions with film music and Bollywood",
+ "Bengaluru": "Resorts, gardens and hotels, Bollywood to English",
+ "Kolkata": "Bengali traditions with Bollywood evenings",
+ "Pune": "Hotels, resorts and lawns, live bands and DJs",
+ "Goa": "Beach and sunset destination weddings",
+}
+
+ICON_CSS = ('<style>.cgrid{--ico:#3b3b40;--ico-hover:#c8102e;list-style:none;margin:22px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}'
+ '.cgrid a{display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;height:100%;padding:26px 14px 22px;background:var(--card,#fff);border:1px solid var(--line,#E3DFD3);border-radius:16px;color:var(--ink,#1B1B1D);text-decoration:none}'
+ '.cgrid .cico{display:block;width:92px;height:92px;margin-bottom:6px;background:var(--ico);-webkit-mask:var(--i) center/contain no-repeat;mask:var(--i) center/contain no-repeat;transition:background .2s ease}'
+ '.cgrid b{font-size:18px;line-height:1.2}.cgrid .t{font-size:13.5px;line-height:1.4;color:var(--ink2,#5B5B61)}'
+ '.cgrid a:hover,.cgrid a:focus-visible{border-color:var(--ink,#1B1B1D)}.cgrid a:hover .cico,.cgrid a:focus-visible .cico{background:var(--ico-hover)}'
+ '.cgrid a:focus-visible{outline:3px solid var(--ink,#1B1B1D);outline-offset:2px}'
+ '@media (prefers-reduced-motion:reduce){.cgrid .cico{transition:none}}'
+ '@media (max-width:760px){.cgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}}'
+ '@media (max-width:700px){.cgrid a{padding:20px 10px 16px}.cgrid .cico{width:76px;height:76px}.cgrid b{font-size:16px}.cgrid .t{font-size:12.5px}}</style>\n')
+
+def icon_cards(items):
+    """items: (href, city, tagline, slug). One-colour line icon of the city's monument (img/city/<slug>.svg, drawn by tools/city_icons.py),
+    coloured by --ico; it turns --ico-hover on hover. To make the icons red all the time, set --ico to the same colour as --ico-hover."""
+    return '<ul class="cgrid">' + "".join(
+        f'<li><a href="{esc(h)}"><span class="cico" style="--i:url(/img/city/{esc(slug)}.svg)" aria-hidden="true"></span><b>{esc(c)}</b><span class="t">{esc(tag)}</span></a></li>'
+        for h, c, tag, slug in items) + "</ul>"
+
+CARD_PIC_CSS = ('<style>.cgrid .cimg{display:block;width:124px;height:124px;margin-bottom:6px;border-radius:16px;object-fit:cover;object-position:var(--pos,50% 30%)}'
+ '@media (max-width:700px){.cgrid .cimg{width:96px;height:96px;border-radius:14px}}</style>\n')
+
+# where to centre the square crop of each photo (x y, in percent), for the few that need it
+CITY_FOCUS = {}
+
+CARD_DARK_CSS = ('<style>.cgrid.dark a{background:#110e1b;border-color:#110e1b;color:#F6F2E8}'
+ '.cgrid.dark .t{color:#BDB5A3}'
+ '.cgrid.dark a:hover,.cgrid.dark a:focus-visible{border-color:#F6F2E8}'
+ '.cgrid.dark a:focus-visible{outline-color:#F6F2E8}</style>\n')
+
+def photo_cards(items, dark=False):
+    """Same white cards as icon_cards, with the city photo (img/city/photo-<slug>.webp) as a small rounded square instead of the icon.
+    A city without a photo yet falls back to its line icon."""
+    out = []
+    for h, c, tag, slug in items:
+        ph = f"img/city/photo-{slug}.webp"
+        if os.path.exists(os.path.join(U.ROOT, ph)):
+            pos = CITY_FOCUS.get(slug)
+            media = f'<img class="cimg" src="/{ph}" alt="" loading="lazy" width="124" height="124"' + (f' style="--pos:{pos}"' if pos else "") + ">"
+        else:
+            media = f'<span class="cico" style="--i:url(/img/city/{esc(slug)}.svg)" aria-hidden="true"></span>'
+        out.append(f'<li><a href="{esc(h)}">{media}<b>{esc(c)}</b><span class="t">{esc(tag)}</span></a></li>')
+    return f'<ul class="cgrid{" dark" if dark else ""}">' + "".join(out) + "</ul>"
 
 def pick(acts, formats=(), occs=(), n=6):
     out = [a for a in acts if any(f in a["f"] for f in formats) or any(o in a["occ"] for o in occs)]
@@ -412,7 +475,7 @@ def build_destination(acts):
     enq = "/?for=wedding#enquiry"
     title = "Entertainment for Destination Weddings and Events in India | Artisans of Sound"
     desc = "Live bands, Sufi and folk acts, DJs and anchors for destination weddings and events in Goa, Jaipur, Udaipur, Jodhpur and across India, with travel and logistics handled."
-    top = [(f"/wedding/{W[c]['slug']}/", f"Wedding artists in {c}", W[c]["blurb"].split(". ")[0].rstrip(".") + ".", city_photo(acts, W[c]["alias"], c)) for c in DEST_CITIES]
+    top = [(f"/wedding/{W[c]['slug']}/", c, CITY_TAG[c], W[c]["slug"]) for c in DEST_CITIES]
     more = [(f"/wedding/{v['slug']}/", f"Wedding artists in {c}") for c, v in W.items() if c not in DEST_CITIES]
     faq = [("Do your artists travel for destination events?", "Many of them do. We confirm who is available for your dates and what travel, stay and local transport involve before we send a quote."),
            ("Can we use artists based in the destination city?", "Where the city has acts on our roster we show them, and using local artists can reduce travel costs. Tell us the city and we suggest both local and travelling options."),
@@ -420,16 +483,16 @@ def build_destination(acts):
            ("How early should we book?", "Peak wedding dates in destination cities fill up early, so ask for options as soon as you have dates and a venue.")]
     body = ('    <p class="kicker">Destination weddings and events</p>\n    <h1 class="uh">Entertainment for destination weddings and events</h1>\n'
             '    <p class="alead">Palace, beach and resort celebrations need acts that suit the setting and can handle the travel. Tell us the destination, dates and functions, and we send options with one clear quote.</p>\n'
-            f'    <div class="ask"><a class="dark-pill" href="{esc(w)}" target="_blank" rel="noopener">Plan a destination event on WhatsApp</a><a class="ghost-pill" href="{enq}">Send an enquiry</a></div>\n' + CSS)
-    body += B.sec("Popular destinations", cards(top) + ('<div style="margin-top:18px">' + B.links(more) + "</div>" if more else ""))
-    body += B.sec("Formats that suit a destination event", cards([
+            f'    <div class="ask"><a class="dark-pill" href="{esc(w)}" target="_blank" rel="noopener">Plan a destination event on WhatsApp</a><a class="ghost-pill" href="{enq}">Send an enquiry</a></div>\n' + CSS + TILE_CSS + ICON_CSS + CARD_PIC_CSS)
+    body += B.sec("Popular destinations", photo_cards(top) + ('<div style="margin-top:18px">' + B.links(more) + "</div>" if more else ""))
+    body += B.sec("Formats that suit a destination event", tiles([
         fcard("sufiq", sub="Qawwali and Sufi groups for evenings in forts, palaces and courtyards."),
         fcard("rajfusion", sub="Rajasthani folk and fusion acts for welcomes, baraat and Rajasthan weddings."),
         fcard("bollylive", sub="Live Bollywood bands and singers for sangeet and reception nights."),
         fcard("djperc", sub="DJ and percussion acts for sundowners and after-parties."),
         fcard("soloinst", sub="Solo instrumentalists for arrivals, ceremonies and dinners."),
         fcard("anchor", sub="Anchors and emcees to host multi-day programmes."),
-    ]))
+    ], 6))
     body += B.sec("How we handle the logistics", steps([
         ("Share the plan", "Destination, venue, dates, the functions that need music and a budget range."),
         ("We check availability and travel", "We confirm which artists are free and able to travel, and what travel, stay and local transport would involve."),
