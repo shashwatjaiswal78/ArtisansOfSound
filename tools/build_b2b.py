@@ -10,9 +10,33 @@ SITE = U.SITE
 
 L = B.L
 def first(d): return d["intro"].split(". ")[0].rstrip(".") + "."
+# Format cards show one of OUR core-roster acts (not the famous wider-network names that the format covers default to).
+# A format with no core act borrows the photo of the closest format that has one.
+import build_artists as _A
+_ROSTER = _A.load_acts()
+_PHOTO_FALLBACK = {"bollypunjabi": "bollylive", "celeb": "bollylive", "bollyretro": "bollylive", "bollyrock": "western", "rap": "dj", "comedy": "anchor", "standup": "anchor",
+                   "magic": "anchor", "sufiq": "sufibolly", "ghazal": "sufibolly", "devotional": "sufibolly", "rajfusion": "djperc", "reality": "solosing", "choir": None}
+_USED = set()
+def fmt_photo(key):
+    """First core-roster (not wider-network, not celebrity) act with this format whose photo is not already used on a card; the photo is kept per format."""
+    if key in _PHOTO_CACHE: return _PHOTO_CACHE[key]
+    src = key
+    while True:
+        pool = sorted([a for a in _ROSTER if src in a["f"] and not a["wider"] and "celeb" not in a["f"] and a["photo"]], key=B.rank)
+        if pool or _PHOTO_FALLBACK.get(src) is None: break
+        src = _PHOTO_FALLBACK[src]
+    if not pool:
+        ph = L["formats"][key].get("photo")
+    else:
+        fresh = [a for a in pool if a["photo"] not in _USED]
+        ph = (fresh or pool)[0]["photo"]
+        _USED.add(ph)
+    _PHOTO_CACHE[key] = ph
+    return ph
+_PHOTO_CACHE = {}
 def fcard(key, title=None, sub=None):
     d = L["formats"][key]
-    return (f"/book/{d['slug']}/", title or d["name"], sub or first(d), d.get("photo"))
+    return (f"/book/{d['slug']}/", title or d["name"], sub or first(d), fmt_photo(key))
 # chosen pictures for the wedding cards (the same ones used on the /weddings/ hub)
 WEDDING_PICS = {"hub": "img/wedding-haldi-mehendi.webp", "destination": "img/wedding-destination.webp",
                 "sangeet": "img/wedding-sangeet-cocktail.webp", "reception": "img/wedding-reception.webp"}
@@ -24,7 +48,7 @@ def qcard(seg, key, title, sub, kind="fmt"):
     d = L["formats" if kind == "fmt" else "occasions"][key]
     return (f"/?for={seg}#enquiry", title, sub, d.get("photo"))
 def pcard(path, key, title, sub):
-    return (f"/{path}/", title, sub, L["formats"][key].get("photo"))
+    return (f"/{path}/", title, sub, fmt_photo(key))
 def cards(items):
     return '<ul class="hublist">' + "".join(B.hub_item(e) for e in items) + "</ul>"
 
