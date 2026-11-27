@@ -143,6 +143,9 @@ PHOTOS = {
  "vidaai": "img/wedding-vidaai.webp",
  "post-wedding-brunch": "img/wedding-brunch.webp",
  "reception": "img/wedding-reception.webp",
+ "roka": "img/act-ankurc.jpg",                       # Ankur Chakravorty, violin
+ "family-get-together": "img/act-namansharma.jpg",   # Naman Sharma
+ "bachelor-bachelorette-party": "img/act-chetas.jpg",  # DJ Chetas
 }
 
 # one short line per function for the tiles on the hub page
@@ -253,7 +256,7 @@ def hub_page(acts):
     url = SITE + "/weddings/"
     w = B.wa("Hi Artisans of Sound, I am planning a wedding and would like entertainment options.")
     enq = "/?for=wedding#enquiry"
-    used = set()
+    used = set(PHOTOS.values())   # chosen pictures are reserved so no other tile picks the same photo
     def photo(f):
         if f[0] in PHOTOS: return PHOTOS[f[0]]   # a chosen picture for this function
         # a distinct act photo per function where possible: first unused photo among the function's matching acts
