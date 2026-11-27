@@ -31,17 +31,55 @@ def pick(acts, formats=(), occs=(), n=6):
     out = [a for a in acts if any(f in a["f"] for f in formats) or any(o in a["occ"] for o in occs)]
     return sorted(out, key=B.rank)[:n]
 
+# line icons for the step and benefit cards (24x24, drawn with currentColor); each card title maps to one icon
+ICONS = {
+ "chat": '<path d="M4 5h16v11H10l-4 3.5V16H4z"/><path d="M8 9.5h8M8 12.5h5"/>',
+ "shield": '<path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/>',
+ "calendar": '<rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M8 3v4M16 3v4M9 15l2 2 4-4"/>',
+ "video": '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M10 9.5v5l4.5-2.5z"/>',
+ "clipboard": '<rect x="5" y="4.5" width="14" height="16.5" rx="2"/><path d="M9 3h6v3H9zM8.5 11h7M8.5 14.5h7M8.5 18h4"/>',
+ "list": '<path d="M9.5 6h10.5M9.5 12h10.5M9.5 18h10.5M3.5 6l1.3 1.3L7 5M3.5 12l1.3 1.3L7 11M3.5 18l1.3 1.3L7 16.5"/>',
+ "document": '<path d="M7 3h8l4 4v14H7z"/><path d="M15 3v4h4M10 12h6M10 15.5h6M10 18.5h3.5"/>',
+ "pin": '<path d="M12 21s-6-5.6-6-10.5a6 6 0 0 1 12 0C18 15.4 12 21 12 21z"/><circle cx="12" cy="10.5" r="2.3"/>',
+ "clock": '<circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3.5 2"/>',
+ "plane": '<path d="M21 4L3 11l6.5 2.5L12 20z"/><path d="M9.5 13.5L21 4"/>',
+ "receipt": '<path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6M9 16h3.5"/>',
+ "building": '<path d="M5 21V8l7-4 7 4v13"/><path d="M3 21h18M9.5 21v-5h5v5M9.5 11h.01M14.5 11h.01"/>',
+ "refresh": '<path d="M20 11a8 8 0 0 0-14-4.5L4 9"/><path d="M4 4.5V9h4.5"/><path d="M4 13a8 8 0 0 0 14 4.5L20 15"/><path d="M20 19.5V15h-4.5"/>',
+ "users": '<circle cx="9" cy="8.5" r="3"/><path d="M3.5 19c.5-3.5 3-5 5.5-5s5 1.5 5.5 5"/><circle cx="17" cy="9.5" r="2.3"/><path d="M16 14.2c2.6-.3 4.6 1.2 5 4.3"/>',
+ "sliders": '<path d="M4 7h9M17 7h3M4 17h3M11 17h9"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="17" r="2"/>',
+ "star": '<path d="M12 4l2.4 5 5.4.7-4 3.8 1 5.4-4.8-2.6-4.8 2.6 1-5.4-4-3.8 5.4-.7z"/>',
+}
+TITLE_ICON = {
+ "One contact for all functions": "chat", "Artists checked before we quote": "shield", "Availability before price": "calendar", "Videos and details ready to share": "video",
+ "Send the brief": "clipboard", "Share the brief": "clipboard", "Share the agenda": "clipboard", "Share the format": "clipboard", "Share the plan": "clipboard", "Share the layout": "clipboard",
+ "We shortlist": "list", "We build the line-up": "list", "We plan around your sessions": "calendar", "Proposal in 24 hours": "clock",
+ "Confirm in writing": "document", "Written confirmation": "document",
+ "We coordinate to the event": "pin", "Event-day coordination": "pin", "Coordination to the event": "pin",
+ "We check availability and travel": "plane", "One quote, costs listed": "receipt",
+ "A plan for your venue": "building", "Artist rotation": "refresh", "Coordination": "users", "Review and adjust": "sliders",
+}
+def icon(title):
+    path = ICONS[TITLE_ICON.get(title, "star")]
+    return ('<span class="bico" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" '
+            f'stroke-linecap="round" stroke-linejoin="round">{path}</svg></span>')
+
+def _items(items):
+    return "".join(f'<li>{icon(t)}<div class="bt"><b>{esc(t)}</b><span>{esc(d)}</span></div></li>' for t, d in items)
+
 def steps(items):
-    return '<ol class="bsteps">' + "".join(f"<li><b>{esc(t)}</b><span>{esc(d)}</span></li>" for t, d in items) + "</ol>"
+    return '<ol class="bsteps">' + _items(items) + "</ol>"
 
 def bullets(items):
-    return '<ul class="bsteps bul">' + "".join(f"<li><b>{esc(t)}</b><span>{esc(d)}</span></li>" for t, d in items) + "</ul>"
+    return '<ul class="bsteps bul">' + _items(items) + "</ul>"
 
 CSS = ('<style>.bsteps{list-style:none;margin:18px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;counter-reset:s}'
-       '.bsteps li{background:var(--card,#fff);border:1px solid var(--line,#E3DFD3);border-radius:14px;padding:16px 18px;display:grid;gap:4px;counter-increment:s}'
+       '.bsteps li{background:var(--card,#fff);border:1px solid var(--line,#E3DFD3);border-radius:14px;padding:16px 18px;display:grid;grid-template-columns:48px minmax(0,1fr);gap:0 16px;align-items:start;counter-increment:s}'
+       '.bsteps .bico{display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:var(--ink,#1B1B1D);color:#FFFFFF}'
+       '.bsteps .bt{display:grid;gap:4px;align-content:center;min-height:48px}'
        'ol.bsteps li b::before{content:counter(s) ". ";color:var(--ink2,#5B5B61)}'
-       '.bsteps b{font-size:17px}.bsteps span{color:var(--ink2,#5B5B61);font-size:15px;line-height:1.5}'
-       '@media (max-width:700px){.bsteps{grid-template-columns:minmax(0,1fr)}}</style>\n')
+       '.bsteps b{font-size:17px}.bsteps .bt span{color:var(--ink2,#5B5B61);font-size:15px;line-height:1.5}'
+       '@media (max-width:700px){.bsteps{grid-template-columns:minmax(0,1fr)}.bsteps li{gap:0 14px;padding:14px 16px}}</style>\n')
 
 PAGES = [
  dict(
