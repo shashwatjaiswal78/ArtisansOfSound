@@ -14,7 +14,7 @@ def first(d): return d["intro"].split(". ")[0].rstrip(".") + "."
 # A format with no core act borrows the photo of the closest format that has one.
 import build_artists as _A
 _ROSTER = _A.load_acts()
-_PHOTO_FALLBACK = {"bollypunjabi": "bollylive", "celeb": "bollylive", "bollyretro": "bollylive", "bollyrock": "western", "rap": "dj", "comedy": "anchor", "standup": "anchor",
+_PHOTO_FALLBACK = {"bollypunjabi": "bollylive", "celeb": "bollylive", "bollyretro": "bollylive", "bollyrock": "western", "western": "bollylive", "jazz": "lounge", "rap": "dj", "comedy": "anchor", "standup": "anchor",
                    "magic": "anchor", "sufiq": "sufibolly", "ghazal": "sufibolly", "devotional": "sufibolly", "rajfusion": "djperc", "reality": "solosing", "choir": None}
 _USED = set()
 def fmt_photo(key):
